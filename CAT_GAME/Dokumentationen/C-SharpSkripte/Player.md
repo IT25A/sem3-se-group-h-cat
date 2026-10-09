@@ -51,13 +51,13 @@ public class PlayerController : MonoBehaviour
 
             if (hitObjects.Length > 0)
             {
-                Debug.Log("Simba redet gerade mit: " + hitObjects[0].gameObject.name);
+                Debug.Log("Simba redet gerade mit: " + hitObjects[0].gameObject.name)
             }
         }
     }
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.blue;
+        Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, interactionRadius);
     }
 }

@@ -370,7 +370,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
 --- !u!4 &624027995
 Transform:
@@ -421,7 +421,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.00028576702, y: -0.0006737858}
+  m_Offset: {x: 0.0009280741, y: -0.13338645}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -431,7 +431,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.3395931, y: 0.31826958}
+  m_Size: {x: 0.3420208, y: 0.052844256}
   m_EdgeRadius: 0
 --- !u!50 &624027997
 Rigidbody2D:
@@ -476,6 +476,10 @@ MonoBehaviour:
   rigidbody: {fileID: 624027997}
   animator: {fileID: 624028000}
   spriteRenderer: {fileID: 624027994}
+  interactionRadius: 0.3
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &624027999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -709,8 +713,8 @@ GameObject:
   - component: {fileID: 1033467305}
   - component: {fileID: 1033467304}
   - component: {fileID: 1033467303}
-  m_Layer: 0
-  m_Name: Test-Hindernis
+  m_Layer: 6
+  m_Name: Test-NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
