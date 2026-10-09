@@ -1,0 +1,24 @@
+- Sprite aufklappen (wenn mehrere Posen vorhanden sind)
+- mit Strg alle markieren und direkt auf die entsprechende Figur ziehen
+- .anim-Datei benennen
+- jetzt sind im Ordner die .anim-Datei und eine Controller-Datei (basierend auf dem C#-Skript)
+- für die Figur Add Component
+	- Animation
+	- Animator
+	- ggf. den neu erstellten Controller in die Animator-Komponente ziehen, wenn bei Controller None steht
+- Animator-Fenster öffnen
+	- Window
+	- Animation
+	- Animator
+	- und Figur laufen lassen
+	- wenns eine Idle-Animation gibt, Rechtsklick auf den Layer und Set as Layer Default State
+	- auf Parameter und dann +
+	- Bool und isWalking benennen 
+	- Rechtsklick auf den Idle und mit Walk verbinden
+	- dann Rechtsklick auf Walk und mit Idle verbinden
+	- Pfeil von Idle zu Walk klicken
+		- Haken bei Has Exit Time entfernen
+		- bei Conditions auf +, damit isWalking und true kommen
+	- Pfeil von Walk zu Idle klicken
+		- Haken bei Has Exit Time entfernen
+		- bei Conditions auf + und true zu false machen
