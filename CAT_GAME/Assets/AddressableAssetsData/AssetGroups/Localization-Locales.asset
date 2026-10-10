@@ -27,12 +27,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bf097b47df6de1242845dceb485c128b
-    m_Address: German (Germany) (de-DE)
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d7173a84742286f439bd38f2488e256a
     m_Address: English (en)
     m_ReadOnly: 1

@@ -66,6 +66,18 @@ MonoBehaviour:
     m_Localized: Reset to default
     m_Metadata:
       m_Items: []
+  - m_Id: 625665745342464
+    m_Localized: You can move on to the next level.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 626066926325760
+    m_Localized: Your water level is very low. Try drinking some water!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 626565251584000
+    m_Localized: "There's a water source there now\u2014try having a drink."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

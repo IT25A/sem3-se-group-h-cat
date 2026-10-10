@@ -2,6 +2,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement; 
 
 public class MenuManager : MonoBehaviour {
+
+    public static bool autoStartGame = false; 
+
     [Header("Panels")]
     public GameObject startPanel;
     public GameObject settingsPanel;
@@ -9,12 +12,20 @@ public class MenuManager : MonoBehaviour {
     public GameObject inGamePanel; 
     public GameObject inGameSettings; 
     public GameObject pausePanel; 
+    public GameObject endPanel; 
+    public GameObject notifyPanel; 
+    public GameObject gameOver; 
 
     [Header("Settings")]
     public string gameSceneName = "GameScene"; //hier GameScene name ändern
 
     private void Start() {
-        ShowStartPanel();
+        if (autoStartGame) {
+            StartGame();
+            autoStartGame = false; 
+        }else {
+            ShowStartPanel(); 
+        }
     }
 
     public void StartGame() {
@@ -23,10 +34,16 @@ public class MenuManager : MonoBehaviour {
             settingsPanel.SetActive(false);
             inGameSettings.SetActive(false);
             pausePanel.SetActive(false);
+            endPanel.SetActive(false);
 
         }
         inGamePanel.SetActive(true);
         Time.timeScale = 1; 
+
+        WaterManager waterManager = FindObjectOfType<WaterManager>();
+        if (waterManager != null) {
+            waterManager.StartWaterDecrease();
+        }
     }
 
     public void OpenSettings() {
@@ -40,11 +57,13 @@ public class MenuManager : MonoBehaviour {
         settingsPanel.SetActive(false);
         pausePanel.SetActive(false);
         inGamePanel.SetActive(false);
+        endPanel.SetActive(false); 
     }
 
     public void QuitGame() {
         Debug.Log("exit game");
         Time.timeScale = 0; 
+        gameOver.SetActive(false);
         ShowStartPanel();
     }
 
@@ -60,9 +79,19 @@ public class MenuManager : MonoBehaviour {
     }
 
     public void RestartGame() {
-        Time.timeScale = 1;
+        autoStartGame = true; 
+        Time.timeScale = 1; 
+        gameOver.SetActive(false); 
         Scene activeScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(activeScene.name);
-        StartGame();
+    }
+
+    public void FinishGame() {
+        Time.timeScale = 0; 
+        endPanel.SetActive(true);
+    }
+
+    public void CloseNotify() {
+        notifyPanel.SetActive(false); 
     }
 }

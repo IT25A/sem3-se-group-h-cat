@@ -66,6 +66,18 @@ MonoBehaviour:
     m_Localized: "Auf Standard zur\xFCcksetzen"
     m_Metadata:
       m_Items: []
+  - m_Id: 625665745342464
+    m_Localized: "Du kannst zur n\xE4chsten Stufe \xFCbergehen. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 626066926325760
+    m_Localized: Dein Wasserstand ist sehr niedrig. Versuche, etwas Wasser zu trinken!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 626565251584000
+    m_Localized: Da ist eine Wasserstelle entstanden, versuch mal, etwas zu trinken.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
