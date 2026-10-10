@@ -17,7 +17,7 @@ Etappe 1 (Ziel: 10P)
 
 Situation: Die Katze startet mit 0 Futterstücken und weiß nicht, wohin sie gehen soll.
 
-Die Aufgabe: Eine NPC-Katze bittet Simba, einen Blumenstrauß zusammenzustellen (z.B. durch das Finden von 3 versteckten Blumen im Startgebiet)(10P).
+Die Aufgabe: Eine NPC-Katze bittet Simba, einen Blumenstrauß zusammenzustellen (durch das Finden von 10 Blumen im Startgebiet)(10P).
 
 Hinweis: "Wenn du Durst hast, findest du an Wasserquellen frisches Wasser. Das ist sehr wichtig für dein Überleben."
 
