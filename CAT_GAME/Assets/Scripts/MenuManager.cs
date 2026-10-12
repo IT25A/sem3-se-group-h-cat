@@ -38,10 +38,14 @@ public class MenuManager : MonoBehaviour {
 
         }
         inGamePanel.SetActive(true);
-        Time.timeScale = 1; 
+        Time.timeScale = 1;
 
         WaterManager waterManager = FindObjectOfType<WaterManager>();
         if (waterManager != null) {
+            waterManager.isGameOver = false;
+            waterManager.isGameStarted = false;
+
+            waterManager.RefillWater(100f);
             waterManager.StartWaterDecrease();
         }
     }

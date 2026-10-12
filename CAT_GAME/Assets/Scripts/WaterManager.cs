@@ -1,8 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WaterManager : MonoBehaviour
-{
+public class WaterManager : MonoBehaviour {
     [Header("UI References")]
     public Slider waterSlider;      
     public GameObject gameOverUI;    
@@ -19,11 +18,12 @@ public class WaterManager : MonoBehaviour
     [Header("Localization Keys")]
     public string tableName = "UI_TextTable";
     public string warningKey = "water_low_warning";
+    public string newWaterKey = "water_refilled";
 
     public bool isGameOver = false;
     public bool isGameStarted = false; 
 
-    private void Start() {
+    void Start() {
         currentWater = maxWater;
 
         if (waterSlider != null) {
