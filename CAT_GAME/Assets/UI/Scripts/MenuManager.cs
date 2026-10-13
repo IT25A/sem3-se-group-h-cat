@@ -5,6 +5,9 @@ public class MenuManager : MonoBehaviour {
 
     public static bool autoStartGame = false; 
 
+    public enum GameState { MainMenu, Playing, Paused, GameOver }
+    public static GameState currentState;
+
     [Header("Panels")]
     public GameObject startPanel;
     public GameObject settingsPanel;
@@ -20,6 +23,7 @@ public class MenuManager : MonoBehaviour {
     public string gameSceneName = "GameScene"; //hier GameScene name ändern
 
     private void Start() {
+        SetGameState(GameState.MainMenu);
         if (autoStartGame) {
             StartGame();
             autoStartGame = false; 
@@ -27,15 +31,36 @@ public class MenuManager : MonoBehaviour {
             ShowStartPanel(); 
         }
     }
+    public void SetGameState(GameState newState) {
+        currentState = newState;
+
+        switch (currentState) {
+            case GameState.MainMenu:
+                Time.timeScale = 1f;
+                break;
+
+            case GameState.Playing:
+                Time.timeScale = 1f;
+                break;
+
+            case GameState.Paused:
+                Time.timeScale = 0f;
+                break;
+
+            case GameState.GameOver:
+                Time.timeScale = 0f;
+                break;
+        }
+    }
 
     public void StartGame() {
+        SetGameState(GameState.Playing);
         if (mainCanvas != null) {
             startPanel.SetActive(false);
             settingsPanel.SetActive(false);
             inGameSettings.SetActive(false);
             pausePanel.SetActive(false);
             endPanel.SetActive(false);
-
         }
         inGamePanel.SetActive(true);
         Time.timeScale = 1;
@@ -66,20 +91,39 @@ public class MenuManager : MonoBehaviour {
 
     public void QuitGame() {
         Debug.Log("exit game");
-        Time.timeScale = 1; 
+            WaterManager waterManager = FindObjectOfType<WaterManager>();
+        if (waterManager != null) {
+            waterManager.isGameOver = false;
+            waterManager.isGameStarted = false;
+        }
         gameOver.SetActive(false);
+        ShowStartPanel();
+        SetGameState(GameState.MainMenu);
+        ShowStartPanel();
+    }
+    public void QuitToMainMenu() {
+        SetGameState(GameState.MainMenu);
+    
+        WaterManager waterManager = FindObjectOfType<WaterManager>();
+        if (waterManager != null) {
+            waterManager.isGameOver = false;
+            waterManager.isGameStarted = false;
+        }
+
+        if(gameOver != null) gameOver.SetActive(false);
+        if(pausePanel != null) pausePanel.SetActive(false);
         ShowStartPanel();
     }
 
     public void PauseMenu() {
         pausePanel.SetActive(true);
         inGameSettings.SetActive(false);
-        Time.timeScale = 0; 
+        SetGameState(GameState.Paused);
     }
 
     public void ContinueGame() {
         pausePanel.SetActive(false);
-        Time.timeScale = 1; 
+        SetGameState(GameState.Playing);
     }
 
     public void OpenInGameSettings() {
@@ -89,14 +133,14 @@ public class MenuManager : MonoBehaviour {
 
     public void RestartGame() {
         autoStartGame = true; 
-        Time.timeScale = 1; 
+        SetGameState(GameState.Playing);
         gameOver.SetActive(false); 
         Scene activeScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(activeScene.name);
     }
 
     public void FinishGame() {
-        Time.timeScale = 0; 
+        SetGameState(GameState.GameOver);
         endPanel.SetActive(true);
     }
 

@@ -37,7 +37,7 @@ public class WaterManager : MonoBehaviour {
     }
 
     private void Update() {
-        if (isGameOver || !isGameStarted) return;
+        if (isGameOver || !isGameStarted || MenuManager.currentState != MenuManager.GameState.Playing) return;
 
         if (currentWater > 0) {
             currentWater -= decreaseSpeed * Time.deltaTime;
