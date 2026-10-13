@@ -8,5 +8,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene x (no defined yet).unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Scene 2 - Phase 2.unity
+    guid: 046838b8f17f1d848966dbcd12aa720f
+  - enabled: 1
+    path: Assets/Scenes/Scene 1 - Phase 1.unity
+    guid: 90bb7c44574094ce68c75021cf9fa152
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
