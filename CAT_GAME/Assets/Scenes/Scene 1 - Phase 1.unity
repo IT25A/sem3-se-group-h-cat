@@ -1355,7 +1355,7 @@ Transform:
   m_GameObject: {fileID: 201836927}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.42, y: -4.76, z: 0}
+  m_LocalPosition: {x: 11.08, y: 5.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11366,6 +11366,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6590444533945914129, guid: 9d8248f42511a6f49b9dfa0c2856d3b4, type: 3}
   m_PrefabInstance: {fileID: 1537467087}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1548674422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1548674423}
+  - component: {fileID: 1548674424}
+  m_Layer: 0
+  m_Name: SpwanPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1548674423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548674422}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.13, y: -3.27, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1548674424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548674422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3495c380489bb9c4f961be6ed45f7ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnPoint
+  spawnID: CurrentScene
 --- !u!1001 &1580043571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12638,7 +12683,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneTransition
   targetSceneName: Scene 2 - Phase 2
-  targetSpawnID: SpawnA
+  targetSpawnID: NextScene
+  returnID: LastScene
 --- !u!4 &1826724165
 Transform:
   m_ObjectHideFlags: 0
@@ -12648,7 +12694,7 @@ Transform:
   m_GameObject: {fileID: 1826724163}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.11, y: -4.68, z: 0}
+  m_LocalPosition: {x: -0.32, y: -5.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12688,7 +12734,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.5, y: 0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -13473,6 +13519,7 @@ SceneRoots:
   - {fileID: 1184071715}
   - {fileID: 1826724165}
   - {fileID: 201836929}
+  - {fileID: 1548674423}
   - {fileID: 292996914}
   - {fileID: 284511771}
   - {fileID: 262908151}
