@@ -39,8 +39,8 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Sorgt für eigentliche Bewegung des physikalischen Körpers
-        rigidbody.MovePosition(rigidbody.position + movement * moveSpeed * Time.fixedDeltaTime);
+        // velocity überlässt der Physik-Engine die volle Kontrolle zur Kollisionsvermeidung
+        rigidbody.linearVelocity = movement * moveSpeed;
     }
 
     void OnInteract(InputValue value)
