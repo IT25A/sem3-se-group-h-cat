@@ -1,30 +1,30 @@
 using System.Collections;
 using UnityEngine;
 
+/// Handles relocating the persistent player to the correct spawn point upon scene load.
 public class SpawnPointManager : MonoBehaviour
 {
     private void Start()
     {
-        // Iniciamos una corrutina para asegurar que la escena y los objetos estén listos
+        // Start a routine to delay positioning by one frame for scene stability
         StartCoroutine(MovePlayerToSpawnPointRoutine());
     }
-
     private IEnumerator MovePlayerToSpawnPointRoutine()
     {
-        // Esperamos un pequeño instante (un frame) para que todo se estabilice al cambiar de escena
+        // Wait for one frame to ensure all scene components are fully initialized
         yield return null;
 
-        // Busca al jugador en la escena mediante su Tag
+        // Find the player in the newly loaded scene
         GameObject player = GameObject.FindGameObjectWithTag("Player");
 
         if (player != null && !string.IsNullOrEmpty(SceneData.TargetSpawnID))
         {
-            // Busca todos los componentes SpawnPoint activos en la nueva escena
-            SpawnPoint[] spawnPoints = FindObjectsByType<SpawnPoint>(FindObjectsSortMode.None);
+            // Find all active SpawnPoint components in the scene
+            SpawnPoint[] spawnPoints = FindObjectsByType<SpawnPoint>(FindObjectsInactive.Exclude);
 
             foreach (SpawnPoint sp in spawnPoints)
             {
-                // Si encontramos el SpawnPoint con el mismo ID guardado, movemos al jugador ahí
+                // Teleport player if the spawn point ID matches the target
                 if (sp.spawnID == SceneData.TargetSpawnID)
                 {
                     player.transform.position = sp.transform.position;
