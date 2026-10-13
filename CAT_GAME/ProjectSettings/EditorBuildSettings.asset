@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene 1 - Phase 1.unity
     guid: 90bb7c44574094ce68c75021cf9fa152
+  - enabled: 1
+    path: Assets/Scenes/Flower Field.unity
+    guid: ffd029398c5b7bf4b8b8607def8afac2
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
