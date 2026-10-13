@@ -3,20 +3,27 @@ using UnityEngine;
 public class MenuBackCamera : MonoBehaviour {
     private RectTransform rectTransform;
     public float moveSpeed = 30f; 
-    public Vector2 minPosition = new Vector2(-200f, -100f);
-    public Vector2 maxPosition = new Vector2(200f, 100f);
+    public Vector2 minPosition = new Vector2(-400f, -200f);
+    public Vector2 maxPosition = new Vector2(400f, 200f);
 
     private Vector2 targetPosition;
 
-    void Start() {
+    void Awake() {
         rectTransform = GetComponent<RectTransform>();
+    }
+
+    void OnEnable() {
+        if (rectTransform == null)
+            rectTransform = GetComponent<RectTransform>();
+            
         GetNewRandomTarget();
+        rectTransform.anchoredPosition = targetPosition; 
     }
 
     void Update() {
         rectTransform.anchoredPosition = Vector2.MoveTowards(rectTransform.anchoredPosition, targetPosition, moveSpeed * Time.deltaTime);
 
-        if (Vector2.Distance(rectTransform.anchoredPosition, targetPosition) < 1f) {
+        if (Vector2.Distance(rectTransform.anchoredPosition, targetPosition) < 1f)  {
             GetNewRandomTarget();
         }
     }

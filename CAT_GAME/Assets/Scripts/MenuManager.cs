@@ -66,7 +66,7 @@ public class MenuManager : MonoBehaviour {
 
     public void QuitGame() {
         Debug.Log("exit game");
-        Time.timeScale = 0; 
+        Time.timeScale = 1; 
         gameOver.SetActive(false);
         ShowStartPanel();
     }
