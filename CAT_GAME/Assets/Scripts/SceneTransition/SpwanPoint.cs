@@ -1,13 +1,15 @@
 using UnityEngine;
 
+
+/// Marker component to identify a spawn location within a scene.
 public class SpawnPoint : MonoBehaviour
 {
-    [Tooltip("Identificador único para este punto (ej. 'Entrada_Casa', 'Salida_Bosque')")]
+    [Tooltip("Unique identifier for this spawn point (e.g., 'House_Entrance', 'Forest_Exit')")]
     public string spawnID;
 
     private void OnDrawGizmos()
     {
-        // Dibuja una esfera verde en la vista Scene de Unity para ver fácilmente dónde está el SpawnPoint
+        // Draws a green wire sphere in Unity's Scene view to easily visualize the spawn location
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, 0.5f);
     }
