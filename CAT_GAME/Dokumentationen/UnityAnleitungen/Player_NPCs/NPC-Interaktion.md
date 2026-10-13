@@ -1,0 +1,31 @@
+- Hierarchy
+- Player
+- Player Input anklicken
+- Actions (mit z. B. der Datei InputSystem_Actions)
+- diesen Dateinamen anklicken
+- bei Actions auf +
+- neue Aktion "Interact" erstellen
+- bei Action Properties auf Action Typ und Button auswählen
+- Links auf Interact klicken
+- No Binding und auf Tastatur E drücken
+- Save Asset
+- bei Inspector auf Layers klicken
+- Add
+- Bei leerem User Layer Interactable schreiben
+- auf Test-Hindernis klicken
+- bei Layer nun auf Interactable 
+- z. B. in Test-NPC umbenennen 
+- auf Player wechseln
+- beim Skript-Komponent ist gibt es nun die Variable Interactable Layer
+- hier von Nothing auf Interactable wechseln
+- der Kreis um den Player ist der Interaktionsradius, was man auch in dem Menü anpassen kann
+- wenn man die zugehörige Taste in der Nähe eines interaktionsfähiges Objekt drückt, beginnt eine entsprechende Aktion
+
+ **Damit das Drücken der Taste schnell erkannt wird, kann folgendes getan werden:**
+ - Player 
+ - Player Input
+ - Actions 
+ - Interact 
+ - +
+ - Press
+ - Save Asset

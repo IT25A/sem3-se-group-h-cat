@@ -1,0 +1,22 @@
+- im Browser zu Itch.io gehen
+- auf Assets klicken
+- nach Design suchen 
+- Free als Filter auswählen
+- ein Design herunterladen
+- bei .zip-Datei alle extrahieren
+- für Sprites eigenen Ordner im Projekt-Fenster erstellen
+- Bilder der Sprites in diesen Ordner ziehen
+- Bild anklicken und bei Inspector Filter Mode auf Point (no filter) wechseln, damit das Design scharf bleibt
+- Compression auf None
+- Apply klicken
+- Wenn auf Bild mehrere Posen sind für die Figur, muss Sprite Mode Multiple sein, ansonsten Single
+- Apply
+- Open Sprite Editor
+- Oben auf Slice klicken
+- Type bei Automatic belassen
+- wieder mit Slice bestätigen
+- Apply
+- in Hierarchy auf Player bzw. die entsprechende Figur klicken
+- Sprite Renderer aufklappen
+- heruntergeladenes Sprite aufklappen 
+- in das Sprite-Feld (wo z. B. Square steht) ziehen
