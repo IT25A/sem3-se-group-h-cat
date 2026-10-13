@@ -77,6 +77,11 @@ public class MenuManager : MonoBehaviour {
         Time.timeScale = 0; 
     }
 
+    public void ContinueGame() {
+        pausePanel.SetActive(false);
+        Time.timeScale = 1; 
+    }
+
     public void OpenInGameSettings() {
         inGameSettings.SetActive(true);
         pausePanel.SetActive(false);
