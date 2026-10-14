@@ -69,6 +69,7 @@ public class WaterManager : MonoBehaviour {
         if (gameOverUI != null) {
             gameOverUI.SetActive(true);
         }
+        Time.timeScale = 0f;
     }
 
     public void RefillWater(float amount) {

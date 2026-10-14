@@ -13631,6 +13631,10 @@ PrefabInstance:
       propertyPath: gameOverUI
       value: 
       objectReference: {fileID: 493839024}
+    - target: {fileID: 982378693034959027, guid: 3b66670a6cb9b164ba29c63d603ec231, type: 3}
+      propertyPath: decreaseSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1042841971196530969, guid: 3b66670a6cb9b164ba29c63d603ec231, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
