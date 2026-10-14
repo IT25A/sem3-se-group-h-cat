@@ -11,7 +11,6 @@ public class MenuManager : MonoBehaviour {
     [Header("Panels")]
     public GameObject startPanel;
     public GameObject settingsPanel;
-    public GameObject mainCanvas;
     public GameObject inGamePanel; 
     public GameObject inGameSettings; 
     public GameObject pausePanel; 
@@ -55,14 +54,13 @@ public class MenuManager : MonoBehaviour {
 
     public void StartGame() {
         Debug.Log("Start Game");
-        SetGameState(GameState.Playing);
-        if (mainCanvas != null) {
-            startPanel.SetActive(false);
-            settingsPanel.SetActive(false);
-            inGameSettings.SetActive(false);
-            pausePanel.SetActive(false);
-            endPanel.SetActive(false);
-        }
+        
+        startPanel.SetActive(false);
+        settingsPanel.SetActive(false);
+        inGameSettings.SetActive(false);
+        pausePanel.SetActive(false);
+        endPanel.SetActive(false);
+        
         inGamePanel.SetActive(true);
         Time.timeScale = 1;
 
@@ -74,6 +72,7 @@ public class MenuManager : MonoBehaviour {
             waterManager.RefillWater(100f);
             waterManager.StartWaterDecrease();
         }
+        SetGameState(GameState.Playing);
     }
 
     public void OpenSettings() {
@@ -82,25 +81,11 @@ public class MenuManager : MonoBehaviour {
     }
 
     public void ShowStartPanel() {
-        mainCanvas.SetActive(true);
         startPanel.SetActive(true);
         settingsPanel.SetActive(false);
         pausePanel.SetActive(false);
         inGamePanel.SetActive(false);
         endPanel.SetActive(false); 
-    }
-
-    public void QuitGame() {
-        Debug.Log("exit game");
-            WaterManager waterManager = FindObjectOfType<WaterManager>();
-        if (waterManager != null) {
-            waterManager.isGameOver = false;
-            waterManager.isGameStarted = false;
-        }
-        gameOver.SetActive(false);
-        ShowStartPanel();
-        SetGameState(GameState.MainMenu);
-        ShowStartPanel();
     }
     public void QuitToMainMenu() {
         SetGameState(GameState.MainMenu);
