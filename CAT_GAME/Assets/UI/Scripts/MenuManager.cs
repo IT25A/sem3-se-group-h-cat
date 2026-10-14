@@ -20,7 +20,7 @@ public class MenuManager : MonoBehaviour {
     public GameObject gameOver; 
 
     [Header("Settings")]
-    public string gameSceneName = "GameScene"; //hier GameScene name ändern
+    public string gameSceneName = "Scene 1 - Phase 1"; //hier GameScene name ändern
 
     private void Start() {
         SetGameState(GameState.MainMenu);
@@ -54,6 +54,7 @@ public class MenuManager : MonoBehaviour {
     }
 
     public void StartGame() {
+        Debug.Log("Start Game");
         SetGameState(GameState.Playing);
         if (mainCanvas != null) {
             startPanel.SetActive(false);

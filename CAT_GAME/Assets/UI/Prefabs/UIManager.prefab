@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2517476542188820731}
   - component: {fileID: 3162808663044543745}
   m_Layer: 0
-  m_Name: GaneManager
+  m_Name: UIManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,13 +84,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dee789e2a3c73e4c9b65485b1afe10b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuManager
-  startPanel: {fileID: 0}
-  settingsPanel: {fileID: 0}
-  mainCanvas: {fileID: 0}
-  inGamePanel: {fileID: 0}
-  inGameSettings: {fileID: 0}
-  pausePanel: {fileID: 0}
-  endPanel: {fileID: 0}
-  notifyPanel: {fileID: 0}
-  gameOver: {fileID: 0}
+  startPanel: {fileID: 3720860401716266805, guid: b43dd8198401ef240baaf5c61250f9ce, type: 3}
+  settingsPanel: {fileID: 1794789384420514073, guid: 7b5a8940dd5957448b681e184e82b105, type: 3}
+  mainCanvas: {fileID: 333035040178071795, guid: 0858e8af9ed771046983468c309f45d2, type: 3}
+  inGamePanel: {fileID: 4193148462647606065, guid: af38ddbdf3c58454f8c12b6437c8d852, type: 3}
+  inGameSettings: {fileID: 3254308531610786935, guid: 8121a07aebecbd2458118dc849fca878, type: 3}
+  pausePanel: {fileID: 399961749707661424, guid: 118ee021a4bcc90488cb6bdde6c24f00, type: 3}
+  endPanel: {fileID: 1096790667714795100, guid: 6b29350a94018af408bb6028b7677e8b, type: 3}
+  notifyPanel: {fileID: 8654677996784033976, guid: 27ca65dd254630c4184af1fdc766a350, type: 3}
+  gameOver: {fileID: 2611712707986046365, guid: 7f6381233dc72d043b098c6ea39d1d43, type: 3}
   gameSceneName: GameScene
