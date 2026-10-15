@@ -132,28 +132,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cave
-      rect:
-        serializedVersion: 2
-        x: 1600
-        y: 1280
-        width: 377
-        height: 384
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 55ddaa040981ba04ab189d755ca202b4
-      internalID: 1480505166
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Bush
       rect:
         serializedVersion: 2
@@ -844,7 +822,7 @@ TextureImporter:
         width: 509
         height: 433
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -853,6 +831,50 @@ TextureImporter:
       bones: []
       spriteID: 1c9601642f4844c21bbca40401d2c17a
       internalID: 766728586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "H\xF6hle_oben"
+      rect:
+        serializedVersion: 2
+        x: 1603
+        y: 1438
+        width: 371
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a25c214e6faf4835924ee1169fede9c
+      internalID: 1806421777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "H\xF6hle_unten"
+      rect:
+        serializedVersion: 2
+        x: 1603
+        y: 1256
+        width: 363
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 283edbd4691bf43d7b46b096feb618a0
+      internalID: 1660701248
       vertices: []
       indices: 
       edges: []
@@ -883,6 +905,8 @@ TextureImporter:
       House_0: 349632745
       House_1: 430192704
       House_2: 1183965214
+      "H\xF6hle_oben": -54061573
+      "H\xF6hle_unten": 1660701248
       LilaHaus_Dach: 1526638773
       LilaHaus_Unten: -1338923068
       Lotus Leaf_0: 948642653
@@ -912,7 +936,6 @@ TextureImporter:
       Props (1)_38: -2146518207
       Props (1)_9: -1320702135
       Props_0: 766728586
-      Props_1: -54061573
       Stones: 1792615456
       Tannen_Unten: -2000035663
       Tannen_oben: -672004544

@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbb109fa977984832b53154bd07d68f7, type: 3}
-  m_Name: NPCDialogue
+  m_Name: BlackCatDialogue
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
-  npcName: blackCat
-  npcPortrait: {fileID: -3000867240451323480, guid: bbe034fe7d8ce89448bf91e2107ebc9a, type: 3}
+  npcName: Blackie
+  npcPortrait: {fileID: -3024794978037222719, guid: bbe034fe7d8ce89448bf91e2107ebc9a, type: 3}
   dialogueLines:
   - Hey there young man
   - You seem lost
-  - You seem lost
-  autoProgressLines: 01y
+  autoProgressLines: 0100y
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   voiceSound: []
