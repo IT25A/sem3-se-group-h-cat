@@ -18,6 +18,8 @@ public class MenuManager : MonoBehaviour {
     public GameObject notifyPanel; 
     public GameObject gameOver; 
 
+    public GameObject creditsPanel; 
+
     [Header("Settings")]
     public string gameSceneName = "Scene 1 - Phase 1"; //hier GameScene name ändern
 
@@ -60,6 +62,7 @@ public class MenuManager : MonoBehaviour {
         inGameSettings.SetActive(false);
         pausePanel.SetActive(false);
         endPanel.SetActive(false);
+        creditsPanel.SetActive(false);
         
         inGamePanel.SetActive(true);
         Time.timeScale = 1;
@@ -80,12 +83,18 @@ public class MenuManager : MonoBehaviour {
         settingsPanel.SetActive(true);
     }
 
+    public void OpenCredits() {
+        startPanel.SetActive(false);
+        creditsPanel.SetActive(true);
+    }
+
     public void ShowStartPanel() {
         startPanel.SetActive(true);
         settingsPanel.SetActive(false);
         pausePanel.SetActive(false);
         inGamePanel.SetActive(false);
         endPanel.SetActive(false); 
+        creditsPanel.SetActive(false);
     }
     public void QuitToMainMenu() {
         SetGameState(GameState.MainMenu);
