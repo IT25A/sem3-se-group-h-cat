@@ -30,7 +30,7 @@ public class NPCPatrol : MonoBehaviour
         animator.SetBool("isWalking", true);
 
         // 4. Prüfen, ob der Punkt erreicht wurde (auf 0.2 Units genau)
-        if (Vector2.Distance(transform.position, target.position) < 0.2f)
+        if (Vector2.Distance(transform.position, target.position) < 1f)
         {
             currentPointIndex++; // Nächster Punkt
             if (currentPointIndex >= waypoints.Length)
