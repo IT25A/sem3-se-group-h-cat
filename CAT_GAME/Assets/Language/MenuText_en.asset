@@ -78,6 +78,10 @@ MonoBehaviour:
     m_Localized: "There's a water source there now\u2014try having a drink."
     m_Metadata:
       m_Items: []
+  - m_Id: 3507603404255232
+    m_Localized: 'Use WASD or the arrow keys to move, and press E to interact. '
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

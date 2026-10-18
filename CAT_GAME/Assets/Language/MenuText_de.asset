@@ -78,6 +78,10 @@ MonoBehaviour:
     m_Localized: Da ist eine Wasserstelle entstanden, versuch mal, etwas zu trinken.
     m_Metadata:
       m_Items: []
+  - m_Id: 3507603404255232
+    m_Localized: 'Bewege dich mit WASD oder mit den Pfeiltasten und interagiere mit E. '
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -75,6 +75,10 @@ MonoBehaviour:
     m_Key: NotificationWaterFind
     m_Metadata:
       m_Items: []
+  - m_Id: 3507603404255232
+    m_Key: startMessage
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

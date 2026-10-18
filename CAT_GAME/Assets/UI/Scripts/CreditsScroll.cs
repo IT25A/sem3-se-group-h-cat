@@ -7,6 +7,7 @@ public class CreditsScroll : MonoBehaviour {
     public float resetPosition = 600f; 
 
     private Vector2 startPosition;
+    private bool isScrolling = false;
 
     void Start() {
         if (creditsTextRect == null)
@@ -21,5 +22,15 @@ public class CreditsScroll : MonoBehaviour {
         if (creditsTextRect.anchoredPosition.y > resetPosition) {
             creditsTextRect.anchoredPosition = startPosition;
         }
+    }
+
+    public void StartScrolling() {
+        creditsTextRect.anchoredPosition = startPosition;
+        isScrolling = true;
+    }
+
+    public void StopScrolling() {
+        isScrolling = false;
+        creditsTextRect.anchoredPosition = startPosition;
     }
 }
