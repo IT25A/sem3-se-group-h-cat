@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbb109fa977984832b53154bd07d68f7, type: 3}
-  m_Name: BlackCatDialogue
+  m_Name: WhiteCatDialogue
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
-  npcName: Blackie
-  npcPortrait: {fileID: -3024794978037222719, guid: bbe034fe7d8ce89448bf91e2107ebc9a, type: 3}
+  npcName: White Cat
+  npcPortrait: {fileID: 5966939996050926052, guid: 91d6ed83c02b96d43b5c6f1c35aa9a3c, type: 3}
   dialogueLines:
-  - Hey there young man
-  - You seem lost
-  autoProgressLines: 0100y
+  - Hi Simba! My Name is Mimo. Nice to meet you!!!
+  - I have been living in this villiage since ages. You don't look like you are from here.
+  - We all survive on dry food, but it doesn't grow on trees.
+  - Just earlier today, I helped someone with their grocery shopping, and I earned a nice bowl of food for my trouble. Meow
+  autoProgressLines: 01010000y
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   voiceSound: []
