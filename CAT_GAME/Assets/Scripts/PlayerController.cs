@@ -50,26 +50,23 @@ public class PlayerController : MonoBehaviour
             Collider2D[] hitObjects = Physics2D.OverlapCircleAll(transform.position, interactionRadius, interactableLayer);
 
             if (hitObjects.Length > 0)
-            {
-                GameObject ziel = hitObjects[0].gameObject;
-                Debug.Log("Schritt 1: Simba berührt " + ziel.name);
+{
+    GameObject ziel = hitObjects[0].gameObject;
+    Debug.Log("Schritt 1: Simba berührt " + ziel.name);
 
-                NPCTalk npc = ziel.GetComponent<NPCTalk>();
-                
-                if (npc != null)
-                {
-                    Debug.Log("Schritt 2: NPCTalk-Skript gefunden! Öffne Fenster...");
-                    
-                    if (npc.isDialogueActive)
-                        npc.NextLine();
-                    else
-                        npc.StartDialogue();
-                }
-                else
-                {
-                    Debug.LogError("Fehler: Auf " + ziel.name + " wurde kein NPCTalk-Skript gefunden!");
-                }
-            }
+    // Sucht nach ALLEN Objekten, die das IInteractable-Interface nutzen
+    IInteractable interactable = ziel.GetComponent<IInteractable>();
+    
+    if (interactable != null)
+    {
+        Debug.Log("Schritt 2: Interagierbares Objekt gefunden! Öffne Fenster...");
+        interactable.Interact(); 
+    }
+    else
+    {
+        Debug.LogError("Fehler: Auf " + ziel.name + " fehlt das IInteractable-Skript!");
+    }
+}
         }
     }
     private void OnDrawGizmosSelected()
