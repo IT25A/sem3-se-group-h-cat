@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb109fa977984832b53154bd07d68f7, type: 3}
+  m_Name: BlackCatDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Blackie
+  npcPortrait: {fileID: -3024794978037222719, guid: bbe034fe7d8ce89448bf91e2107ebc9a, type: 3}
+  dialogueLines:
+  - Hey there young man. Welcome to our village! You seem lost!
+  - "You're free to explore the area and meet the locals around here. But remember, nothing in life is truly free\u2014if you want to get by, you'll have to help others out in return. That's just how this world works."
+  - Anyway, my birthday is coming up, and I would love a beautiful bouquet of white flowers. If you go through that fence over there, you'll reach a meadow. Could you gather 10 flowers for me?
+  - Come back to me once you have them all. I've got a nice surprise waiting for you!
+  autoProgressLines: 01000000y
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05
+  voiceSound: []
+  voicePitch: 1

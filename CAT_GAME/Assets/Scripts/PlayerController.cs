@@ -51,7 +51,24 @@ public class PlayerController : MonoBehaviour
 
             if (hitObjects.Length > 0)
             {
-                Debug.Log("Simba redet gerade mit: " + hitObjects[0].gameObject.name);
+                GameObject ziel = hitObjects[0].gameObject;
+                Debug.Log("Schritt 1: Simba berührt " + ziel.name);
+
+                NPCTalk npc = ziel.GetComponent<NPCTalk>();
+                
+                if (npc != null)
+                {
+                    Debug.Log("Schritt 2: NPCTalk-Skript gefunden! Öffne Fenster...");
+                    
+                    if (npc.isDialogueActive)
+                        npc.NextLine();
+                    else
+                        npc.StartDialogue();
+                }
+                else
+                {
+                    Debug.LogError("Fehler: Auf " + ziel.name + " wurde kein NPCTalk-Skript gefunden!");
+                }
             }
         }
     }
