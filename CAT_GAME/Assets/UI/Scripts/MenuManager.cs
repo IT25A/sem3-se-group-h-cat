@@ -18,17 +18,9 @@ public class MenuManager : MonoBehaviour {
     public GameObject notifyPanel; 
     public GameObject gameOver; 
 
-    public GameObject creditsPanel; 
-    public GameObject notifyHistory; 
-
     [Header("Settings")]
     public string gameSceneName = "Scene 1 - Phase 1"; //hier GameScene name ändern
 
-    [Header("LocalizationKeys")]
-    public string tableName = "UI_TextTable";
-    public string sM = "startMessage";
-
-    [System.Obsolete]
     private void Start() {
         SetGameState(GameState.MainMenu);
         if (autoStartGame) {
@@ -59,6 +51,7 @@ public class MenuManager : MonoBehaviour {
                 break;
         }
     }
+
     public void StartGame() {
         Debug.Log("Start Game");
         
@@ -67,12 +60,8 @@ public class MenuManager : MonoBehaviour {
         inGameSettings.SetActive(false);
         pausePanel.SetActive(false);
         endPanel.SetActive(false);
-        creditsPanel.SetActive(false);
         
         inGamePanel.SetActive(true);
-        if (NotificationManager.Instance != null) {
-                    NotificationManager.Instance.ShowLocalizedNotification(tableName, sM);
-                }
         Time.timeScale = 1;
 
         WaterManager waterManager = FindObjectOfType<WaterManager>();
@@ -91,20 +80,13 @@ public class MenuManager : MonoBehaviour {
         settingsPanel.SetActive(true);
     }
 
-    public void OpenCredits() {
-        startPanel.SetActive(false);
-        creditsPanel.SetActive(true);
-    }
-
     public void ShowStartPanel() {
         startPanel.SetActive(true);
         settingsPanel.SetActive(false);
         pausePanel.SetActive(false);
         inGamePanel.SetActive(false);
         endPanel.SetActive(false); 
-        creditsPanel.SetActive(false);
     }
-
     public void QuitToMainMenu() {
         SetGameState(GameState.MainMenu);
     
@@ -123,16 +105,6 @@ public class MenuManager : MonoBehaviour {
         pausePanel.SetActive(true);
         inGameSettings.SetActive(false);
         SetGameState(GameState.Paused);
-    }
-
-    public void NotificationHistory() {
-        NotificationHistoryUI nhUI = FindObjectOfType<NotificationHistoryUI>();
-        bool newState = !notifyHistory.activeSelf;
-        notifyHistory.SetActive(newState);
-
-        if (newState) {
-            nhUI.UpdateHistoryDisplay();
-        }
     }
 
     public void ContinueGame() {

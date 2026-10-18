@@ -65,7 +65,6 @@ public class WaterManager : MonoBehaviour {
 
     private void TriggerGameOver() {
         isGameOver = true;
-        Time.timeScale = 0f;
 
         if (gameOverUI != null) {
             gameOverUI.SetActive(true);
