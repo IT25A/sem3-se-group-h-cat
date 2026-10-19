@@ -13746,7 +13746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1faf2771baa97441289ada03d37c4628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCTalk
-  dialogueData: {fileID: 0}
+  dialogueData: {fileID: 11400000, guid: 66e69d7b077774b5baec5208dba4df4a, type: 2}
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
   nameText: {fileID: 0}
@@ -13837,7 +13837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1faf2771baa97441289ada03d37c4628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCTalk
-  dialogueData: {fileID: 0}
+  dialogueData: {fileID: 11400000, guid: 2e20a401b037a415baa57aa12da36093, type: 2}
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
   nameText: {fileID: 0}

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb109fa977984832b53154bd07d68f7, type: 3}
   m_Name: BlackCatDialogue
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
-  npcName: Blackie
+  npcName: Luna
   npcPortrait: {fileID: -3024794978037222719, guid: bbe034fe7d8ce89448bf91e2107ebc9a, type: 3}
   dialogueLines:
-  - Hey there young man. Welcome to our village! You seem lost!
+  - Hey there, welcome to our village! You seem lost.
   - "You're free to explore the area and meet the locals around here. But remember, nothing in life is truly free\u2014if you want to get by, you'll have to help others out in return. That's just how this world works."
   - Anyway, my birthday is coming up, and I would love a beautiful bouquet of white flowers. If you go through that fence over there, you'll reach a meadow. Could you gather 10 flowers for me?
   - Come back to me once you have them all. I've got a nice surprise waiting for you!
