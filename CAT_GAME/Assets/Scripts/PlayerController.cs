@@ -47,28 +47,45 @@ public class PlayerController : MonoBehaviour
     {
         if (value.isPressed)
         {
-            Collider2D[] hitObjects = Physics2D.OverlapCircleAll(transform.position, interactionRadius, interactableLayer);
+            Debug.Log("E-Taste wurde gedrückt");
+            // Lösche den interactableLayer-Filter kurz testweise:
+            Collider2D[] hitObjects = Physics2D.OverlapCircleAll(transform.position, interactionRadius);
 
             if (hitObjects.Length > 0)
-{
-    GameObject ziel = hitObjects[0].gameObject;
-    Debug.Log("Schritt 1: Simba berührt " + ziel.name);
+            {
+                NPCTalk targetNpc = null;
 
-    // Sucht nach ALLEN Objekten, die das IInteractable-Interface nutzen
-    IInteractable interactable = ziel.GetComponent<IInteractable>();
-    
-    if (interactable != null)
-    {
-        Debug.Log("Schritt 2: Interagierbares Objekt gefunden! Öffne Fenster...");
-        interactable.Interact(); 
-    }
-    else
-    {
-        Debug.LogError("Fehler: Auf " + ziel.name + " fehlt das IInteractable-Skript!");
-    }
-}
+                // Wir durchsuchen alle getroffenen Collider nach dem NPC-Skript (und überspringen den Spieler selbst)
+                foreach (var hit in hitObjects)
+                {
+                    if (hit.gameObject != this.gameObject) // Ignoriere den Spieler
+                    {
+                        NPCTalk npc = hit.GetComponent<NPCTalk>();
+                        if (npc != null)
+                        {
+                            targetNpc = npc;
+                            break; // Gefunden! Schleife stoppen.
+                        }
+                    }
+                }
+
+                // Wenn ein NPC gefunden wurde, Dialog starten/fortsetzen
+                if (targetNpc != null)
+                {
+                    Debug.Log("DIAGNOSE: NPC gefunden, starte Dialog!");
+                    if (targetNpc.isDialogueActive)
+                        targetNpc.NextLine();
+                    else
+                        targetNpc.StartDialogue();
+                }
+                else
+                {
+                    Debug.LogWarning("DIAGNOSE: Kein NPC mit NPCTalk-Skript im Radius gefunden.");
+                }
+            }
         }
     }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;
