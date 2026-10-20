@@ -13922,6 +13922,7 @@ MonoBehaviour:
   rb: {fileID: 4750085976247164735}
   spriteRenderer: {fileID: 3077718067306129888}
   animator: {fileID: 8490482490490454265}
+  isInteracting: 0
   waypoints:
   - {fileID: 1699301542}
   - {fileID: 914473148}
@@ -13991,6 +13992,7 @@ MonoBehaviour:
   rb: {fileID: 2136737202435425379}
   spriteRenderer: {fileID: 7676453987798628342}
   animator: {fileID: 8710450064991215888}
+  isInteracting: 0
   waypoints:
   - {fileID: 550872814}
   - {fileID: 749065343}
