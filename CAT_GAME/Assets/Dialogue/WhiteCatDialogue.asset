@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb109fa977984832b53154bd07d68f7, type: 3}
   m_Name: WhiteCatDialogue
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
-  npcName: White Cat
+  npcName: Mimo
   npcPortrait: {fileID: 5966939996050926052, guid: 91d6ed83c02b96d43b5c6f1c35aa9a3c, type: 3}
   dialogueLines:
-  - Hi Simba! My Name is Mimo. Nice to meet you!!!
-  - I have been living in this villiage since ages. You don't look like you are from here.
+  - Hello, my name is Mimo. Nice to meet you!
+  - I have been living in this village since ages. You don't look like you are from here.
   - We all survive on dry food, but it doesn't grow on trees.
-  - Just earlier today, I helped someone with their grocery shopping, and I earned a nice bowl of food for my trouble. Meow
+  - Just earlier today, I helped someone with their grocery shopping, and I earned a nice bowl of food!
   autoProgressLines: 01010000y
   autoProgressDelay: 1.5
   typingSpeed: 0.05
