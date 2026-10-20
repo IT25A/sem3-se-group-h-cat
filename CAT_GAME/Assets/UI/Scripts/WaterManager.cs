@@ -78,7 +78,7 @@ public class WaterManager : MonoBehaviour {
     public void RefillWater(float amount) {
         SceneData.savedWater += amount;
         SceneData.savedWater = Mathf.Min(SceneData.savedWater, maxWater);
-
+        Debug.Log("Refill aufgerufen: " + amount);
         if (SceneData.savedWater > warningThreshold) {
             hasWarned = false;
         }
