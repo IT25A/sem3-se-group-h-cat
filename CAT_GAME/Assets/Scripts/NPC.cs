@@ -6,13 +6,25 @@ public class NPCPatrol : MonoBehaviour
     public Rigidbody2D rb;
     public SpriteRenderer spriteRenderer;
     public Animator animator;
+    public bool isInteracting = false;
 
     // Array für beliebig viele Wegpunkte
     public Transform[] waypoints;
     private int currentPointIndex = 0;
 
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
     private void FixedUpdate()
     {
+        if (isInteracting)
+        {
+            if (rb != null) rb.linearVelocity = Vector2.zero;
+            return;
+        }
+
         // Abbruch, falls keine Punkte im Inspector zugewiesen wurden
         if (waypoints.Length == 0) return;
 
