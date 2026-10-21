@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -14,7 +13,8 @@ public class NotificationHistoryUI : MonoBehaviour {
     }
 
     public void NotificationHistory() {
-        bool newState = !historyPanel.activeSelf;
+        bool isActive = historyPanel.activeSelf;
+        bool newState = !isActive;
         historyPanel.SetActive(newState);
 
         if (newState) {
