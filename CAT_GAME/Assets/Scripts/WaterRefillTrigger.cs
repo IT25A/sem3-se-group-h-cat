@@ -13,7 +13,7 @@ public class WaterRefillTrigger : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Player")) {
             currentStaticPlayer = collision.gameObject;
-            Debug.Log("Am Fluss! Drücke Q zum Auffüllen.");
+            Debug.Log("Am Fluss! Drücke E zum Auffüllen.");
         }
     }
 

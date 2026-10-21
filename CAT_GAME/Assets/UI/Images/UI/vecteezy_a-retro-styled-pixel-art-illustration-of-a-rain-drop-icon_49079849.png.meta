@@ -105,12 +105,12 @@ TextureImporter:
       name: vecteezy_a-retro-styled-pixel-art-illustration-of-a-rain-drop-icon_49079849_0
       rect:
         serializedVersion: 2
-        x: 499
+        x: 0
         y: 0
-        width: 2752
+        width: 4000
         height: 4000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -127,7 +127,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 55480b42bde5b8a4c99959a1d2ecd6be
     internalID: 0
     vertices: []
     indices: 
