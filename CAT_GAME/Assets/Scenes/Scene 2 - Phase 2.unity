@@ -220,6 +220,44 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d062a1710aa9454c899d3a6fcf9e00f, type: 3}
+--- !u!114 &128327809 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 218237388577914217, guid: 9d062a1710aa9454c899d3a6fcf9e00f, type: 3}
+  m_PrefabInstance: {fileID: 128327808}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &128327810 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5808583791083398402, guid: 9d062a1710aa9454c899d3a6fcf9e00f, type: 3}
+  m_PrefabInstance: {fileID: 128327808}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &128327811 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1191581651125468289, guid: 9d062a1710aa9454c899d3a6fcf9e00f, type: 3}
+  m_PrefabInstance: {fileID: 128327808}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!1 &128327812 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2339381064623536717, guid: 9d062a1710aa9454c899d3a6fcf9e00f, type: 3}
+  m_PrefabInstance: {fileID: 128327808}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &209107599
 GameObject:
   m_ObjectHideFlags: 0
@@ -4963,10 +5001,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCTalk
   dialogueData: {fileID: 0}
-  dialoguePanel: {fileID: 0}
-  dialogueText: {fileID: 0}
-  nameText: {fileID: 0}
-  portraitImage: {fileID: 0}
+  dialoguePanel: {fileID: 128327812}
+  dialogueText: {fileID: 128327809}
+  nameText: {fileID: 128327810}
+  portraitImage: {fileID: 128327811}
   isDialogueActive: 1
 --- !u!210 &1606202074
 SortingGroup:
