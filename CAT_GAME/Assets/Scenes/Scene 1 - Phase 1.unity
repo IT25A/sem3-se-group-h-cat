@@ -7357,6 +7357,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.453099, y: 0.43227434}
   m_EdgeRadius: 0
+--- !u!1 &438355323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8433008039937827531, guid: 6a9d36370b9be8c4b84ca847d6ee187d, type: 3}
+  m_PrefabInstance: {fileID: 8522842430145398543}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &498138659
 GameObject:
   m_ObjectHideFlags: 0
@@ -11261,7 +11266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1551650588
 Transform:
   m_ObjectHideFlags: 0
@@ -13973,6 +13978,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 302442941004605875, guid: 6a9d36370b9be8c4b84ca847d6ee187d, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2678091578921554819, guid: 6a9d36370b9be8c4b84ca847d6ee187d, type: 3}
+      propertyPath: historyPanel
+      value: 
+      objectReference: {fileID: 438355323}
+    - target: {fileID: 3146319285741467463, guid: 6a9d36370b9be8c4b84ca847d6ee187d, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3588173239335323061, guid: 6a9d36370b9be8c4b84ca847d6ee187d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -13980,6 +13997,14 @@ PrefabInstance:
     - target: {fileID: 4423239791378100779, guid: 6a9d36370b9be8c4b84ca847d6ee187d, type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6631350478137430059, guid: 6a9d36370b9be8c4b84ca847d6ee187d, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074961871880659175, guid: 6a9d36370b9be8c4b84ca847d6ee187d, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7403381731182424658, guid: 6a9d36370b9be8c4b84ca847d6ee187d, type: 3}
       propertyPath: m_Pivot.x

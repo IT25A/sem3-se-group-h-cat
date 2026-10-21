@@ -20,6 +20,7 @@ public static class SceneData
     private static void ResetOnStart() {
         isGameStarted = false;
         savedWater = -1f;
+        savedFood = 0;
         TargetSpawnID = null;
         LastSpawnID = null;
         savedNotificationHistory.Clear();

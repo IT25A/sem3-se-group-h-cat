@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class NotificationHistoryUI : MonoBehaviour {
@@ -13,13 +14,12 @@ public class NotificationHistoryUI : MonoBehaviour {
     }
 
     public void NotificationHistory() {
-        bool isActive = historyPanel.activeSelf;
-        bool newState = !isActive;
-        historyPanel.SetActive(newState);
-
-        if (newState) {
-            UpdateHistoryDisplay();
+        
+        if (historyPanel != null) {
+            bool newState = !historyPanel.activeSelf;
+            historyPanel.SetActive(newState);
         }
+        UpdateHistoryDisplay();
     }
 
     public void UpdateHistoryDisplay() {
