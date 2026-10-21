@@ -18,7 +18,6 @@ public class WaterManager : MonoBehaviour {
     [Header("Localization Keys")]
     public string tableName = "UI_TextTable";
     public string warningKey = "water_low_warning";
-    public string newWaterKey = "water_refilled";
 
     public bool isGameOver = false;
     public bool isGameStarted = false; 

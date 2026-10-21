@@ -1,27 +1,31 @@
 using UnityEngine;
-using UnityEngine.InputSystem; // Wichtig: Bindet das neue Input System ein!
+using UnityEngine.InputSystem;
 
 public class WaterRefillTrigger : MonoBehaviour {
     [Header("Refill Settings")]
-    public float refillAmount = 50f; 
-    private bool playerIsNearby = false;
+    public float refillAmount = 50f;
+    [Header("Localization Keys")]
+    public string tableName = "UI_TextTable";
+    public string waterRefilled = "waterRefill";
+    
+    private GameObject currentStaticPlayer = null;
 
-    private void OnTriggerStay2D(Collider2D collision) {
+    private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Player")) {
-            playerIsNearby = true;
+            currentStaticPlayer = collision.gameObject;
+            Debug.Log("Am Fluss! Drücke Q zum Auffüllen.");
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision) {
         if (collision.CompareTag("Player")) {
-            playerIsNearby = false;
-            Debug.Log("Spieler hat den Fluss verlassen.");
+            currentStaticPlayer = null;
+            Debug.Log("Fluss verlassen.");
         }
     }
 
     private void Update() {
-        // NEU: Abfrage für das neue Input System (prüft, ob das Keyboard existiert und E gedrückt wurde)
-        if (playerIsNearby && Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame) {
+        if (currentStaticPlayer != null && Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame) {
             RefillPlayerWater();
         }
     }
@@ -30,7 +34,9 @@ public class WaterRefillTrigger : MonoBehaviour {
         WaterManager waterManager = FindAnyObjectByType<WaterManager>();
         if (waterManager != null) {
             waterManager.RefillWater(refillAmount);
-            Debug.Log("Wasser am Fluss aufgefüllt!");
+        }
+        if (NotificationManager.Instance != null) {
+            NotificationManager.Instance.ShowLocalizedNotification(tableName, waterRefilled);
         }
     }
 }

@@ -96,8 +96,8 @@ public class MenuManager : MonoBehaviour {
         
         inGamePanel.SetActive(true);
         if (NotificationManager.Instance != null) {
-                    NotificationManager.Instance.ShowLocalizedNotification(tableName, sM);
-                }
+            NotificationManager.Instance.ShowLocalizedNotification(tableName, sM);
+        }
         Time.timeScale = 1;
 
         WaterManager waterManager = FindAnyObjectByType<WaterManager>();
