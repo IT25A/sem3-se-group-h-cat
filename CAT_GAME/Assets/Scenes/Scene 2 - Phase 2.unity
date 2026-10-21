@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 371748330}
   m_Layer: 0
   m_Name: egg
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -374,7 +374,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -724,7 +724,7 @@ Transform:
   m_GameObject: {fileID: 497931964}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.025745869, y: 1.8886998, z: -10}
+  m_LocalPosition: {x: -0.08620167, y: 1.8886998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1158,7 +1158,7 @@ GameObject:
   - component: {fileID: 727779259}
   m_Layer: 0
   m_Name: egg (2)
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1268,7 +1268,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1466,7 +1466,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 0}
+    TrackingTarget: {fileID: 1892739795}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -1498,7 +1498,7 @@ Transform:
   m_GameObject: {fileID: 834399662}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02574557, y: 2.0621955, z: -10}
+  m_LocalPosition: {x: -0.08620265, y: 4.0329905, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2222,7 +2222,7 @@ GameObject:
   - component: {fileID: 1080902507}
   m_Layer: 0
   m_Name: egg (3)
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2332,7 +2332,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -3737,7 +3737,7 @@ GameObject:
   - component: {fileID: 1256931467}
   m_Layer: 0
   m_Name: farming-chicken_10
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6828,7 +6828,7 @@ GameObject:
   - component: {fileID: 1800983639}
   m_Layer: 0
   m_Name: egg (1)
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6938,7 +6938,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -7009,8 +7009,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2096382794653451845, guid: ecda4d1433689ca439c0447251788dd1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1892739796}
   m_SourcePrefab: {fileID: 100100000, guid: ecda4d1433689ca439c0447251788dd1, type: 3}
+--- !u!1 &1892739786 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2096382794653451845, guid: ecda4d1433689ca439c0447251788dd1, type: 3}
+  m_PrefabInstance: {fileID: 1892739785}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1892739795 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3303769618113623496, guid: ecda4d1433689ca439c0447251788dd1, type: 3}
+  m_PrefabInstance: {fileID: 1892739785}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1892739796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892739786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eab1dc90ee1a72e49bcd9a310e8b906e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCollector
 --- !u!1001 &1896522654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7682,7 +7707,7 @@ Transform:
   m_GameObject: {fileID: 2129543029}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.025745869, y: 1.8886998, z: -10}
+  m_LocalPosition: {x: -0.08620167, y: 1.8886998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
