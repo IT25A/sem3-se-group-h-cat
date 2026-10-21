@@ -90,6 +90,10 @@ MonoBehaviour:
     m_Localized: 'You received new dry food. '
     m_Metadata:
       m_Items: []
+  - m_Id: 4716534541611008
+    m_Localized: You just received 100 dry food! Maybe something special will happen.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

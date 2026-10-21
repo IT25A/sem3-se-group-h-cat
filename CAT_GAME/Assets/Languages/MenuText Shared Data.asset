@@ -87,6 +87,10 @@ MonoBehaviour:
     m_Key: foodCount
     m_Metadata:
       m_Items: []
+  - m_Id: 4716534541611008
+    m_Key: 100food
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
