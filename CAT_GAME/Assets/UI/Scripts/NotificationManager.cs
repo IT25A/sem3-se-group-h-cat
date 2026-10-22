@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI; 
 using System.Collections.Generic; 
 using UnityEngine.Localization.Settings; 
 
@@ -11,6 +12,14 @@ public class NotificationManager : MonoBehaviour {
     public GameObject notificationPanel; 
     public TextMeshProUGUI messageText;  
     public CanvasGroup canvasGroup;
+    public Image notificationIcon; 
+
+    [Header("Images")]
+    public Sprite waterIcon;
+    public Sprite startIcon;
+    public Sprite foodIcon;
+    public Sprite lowWaterIcon; 
+    public Sprite defaultIcon; 
 
     [Header("Verlauf (History)")]
     public List<string> notificationHistory = new List<string>();
@@ -22,6 +31,12 @@ public class NotificationManager : MonoBehaviour {
 
         if (notificationPanel != null)
             notificationPanel.SetActive(false);
+    }
+
+    private void Start() {
+        if (SceneData.savedNotificationHistory.Count > 0) {
+            notificationHistory = new List<string>(SceneData.savedNotificationHistory);
+        }
     }
 
     public void ShowLocalizedNotification(string tableCollectionName, string entryKey, float duration = 5f) {
@@ -43,6 +58,24 @@ public class NotificationManager : MonoBehaviour {
         if (messageText != null) {
             messageText.text = finalMessage;
         }
+
+        if (notificationIcon != null) {
+            if (entryKey.Contains("water") || entryKey.Contains("waterRefill")) {
+                notificationIcon.sprite = waterIcon; 
+            } 
+            else if (entryKey.Contains("food") || entryKey.Contains("foodCount")) {
+                notificationIcon.sprite = foodIcon; 
+            } 
+            else if (entryKey.Contains("waterLow") || entryKey.Contains("NotificationWaterEnding")) {
+                notificationIcon.sprite = lowWaterIcon; 
+            } 
+            else if (entryKey.Contains("start") || entryKey.Contains("startMessage")) {
+                notificationIcon.sprite = startIcon;  
+            }
+            else {
+                notificationIcon.sprite = defaultIcon; 
+            }
+        }
         
         AddToHistory(finalMessage);
 
@@ -57,6 +90,7 @@ public class NotificationManager : MonoBehaviour {
         if (notificationHistory.Count > maxHistoryCount) {
             notificationHistory.RemoveAt(0);
         }
+        SceneData.savedNotificationHistory = new List<string>(notificationHistory);
     }
 
     private IEnumerator FadeCanvasGroup(CanvasGroup cg, float start, float end, float time) {

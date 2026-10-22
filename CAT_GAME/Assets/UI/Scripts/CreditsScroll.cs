@@ -7,16 +7,26 @@ public class CreditsScroll : MonoBehaviour {
     public float resetPosition = 600f; 
 
     private Vector2 startPosition;
-    private bool isScrolling = false;
+    public bool isScrolling = false;
 
-    void Start() {
+    void Awake() {
         if (creditsTextRect == null)
             creditsTextRect = GetComponent<RectTransform>();
         
         startPosition = creditsTextRect.anchoredPosition;
     }
 
+    private void OnEnable() {
+        ResetAndStart();
+    }
+
+    private void OnDisable() {
+        StopScrolling();
+    }
+
     void Update() {
+        if (!isScrolling) return;
+
         creditsTextRect.anchoredPosition += Vector2.up * scrollSpeed * Time.deltaTime;
 
         if (creditsTextRect.anchoredPosition.y > resetPosition) {
@@ -24,13 +34,17 @@ public class CreditsScroll : MonoBehaviour {
         }
     }
 
-    public void StartScrolling() {
-        creditsTextRect.anchoredPosition = startPosition;
+    public void ResetAndStart() {
+        if (creditsTextRect != null) {
+            creditsTextRect.anchoredPosition = startPosition;
+        }
         isScrolling = true;
     }
 
     public void StopScrolling() {
         isScrolling = false;
-        creditsTextRect.anchoredPosition = startPosition;
+        if (creditsTextRect != null) {
+            creditsTextRect.anchoredPosition = startPosition;
+        }
     }
 }

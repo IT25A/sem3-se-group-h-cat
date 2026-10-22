@@ -82,6 +82,18 @@ MonoBehaviour:
     m_Localized: 'Bewege dich mit WASD oder mit den Pfeiltasten und interagiere mit E. '
     m_Metadata:
       m_Items: []
+  - m_Id: 4538996641001472
+    m_Localized: "Dein Wasserstand wurde aufgef\xFCllt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4547384636633088
+    m_Localized: 'Du hast neues Trockenfutter erhalten. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4716534541611008
+    m_Localized: Du hast 100mal Trockenfutter erhalten! Vielleicht passiert was spezielles.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

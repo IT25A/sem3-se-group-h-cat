@@ -8,7 +8,7 @@ public class WaterManager : MonoBehaviour {
 
     [Header("Settings")]
     public float maxWater = 100f;
-    public float currentWater;
+    public static float currentWater = -1f;
     public float decreaseSpeed = 5f; 
 
     [Header("Notification")]
@@ -18,17 +18,18 @@ public class WaterManager : MonoBehaviour {
     [Header("Localization Keys")]
     public string tableName = "UI_TextTable";
     public string warningKey = "water_low_warning";
-    public string newWaterKey = "water_refilled";
 
     public bool isGameOver = false;
     public bool isGameStarted = false; 
 
     void Start() {
-        currentWater = maxWater;
+        if (SceneData.savedWater < 0) {
+            SceneData.savedWater = maxWater;
+        }
 
         if (waterSlider != null) {
             waterSlider.maxValue = maxWater;
-            waterSlider.value = currentWater;
+            waterSlider.value = SceneData.savedWater;
         }
 
         if (gameOverUI != null) {
@@ -39,15 +40,15 @@ public class WaterManager : MonoBehaviour {
     private void Update() {
         if (isGameOver || !isGameStarted || MenuManager.currentState != MenuManager.GameState.Playing) return;
 
-        if (currentWater > 0) {
-            currentWater -= decreaseSpeed * Time.deltaTime;
-            currentWater = Mathf.Max(currentWater, 0); 
+        if (SceneData.savedWater > 0) {
+            SceneData.savedWater -= decreaseSpeed * Time.deltaTime;
+            SceneData.savedWater = Mathf.Max(SceneData.savedWater, 0); 
 
             if (waterSlider != null) {
-                waterSlider.value = currentWater;
+                waterSlider.value = SceneData.savedWater;
             }
 
-            if (currentWater <= warningThreshold && !hasWarned) {
+            if (SceneData.savedWater <= warningThreshold && !hasWarned) {
                 hasWarned = true;
                 if (NotificationManager.Instance != null) {
                     NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
@@ -74,10 +75,10 @@ public class WaterManager : MonoBehaviour {
     }
 
     public void RefillWater(float amount) {
-        currentWater += amount;
-        currentWater = Mathf.Min(currentWater, maxWater);
-
-        if (currentWater > warningThreshold) {
+        SceneData.savedWater += amount;
+        SceneData.savedWater = Mathf.Min(SceneData.savedWater, maxWater);
+        Debug.Log("Refill aufgerufen: " + amount);
+        if (SceneData.savedWater > warningThreshold) {
             hasWarned = false;
         }
     }

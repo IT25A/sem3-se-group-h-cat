@@ -27,15 +27,38 @@ public class MenuManager : MonoBehaviour {
     [Header("LocalizationKeys")]
     public string tableName = "UI_TextTable";
     public string sM = "startMessage";
-
-    [System.Obsolete]
     private void Start() {
-        SetGameState(GameState.MainMenu);
-        if (autoStartGame) {
-            StartGame();
-            autoStartGame = false; 
-        }else {
-            ShowStartPanel(); 
+
+        string currentSceneName = SceneManager.GetActiveScene().name;
+
+        if (SceneData.isGameStarted) {
+            SetGameState(GameState.Playing);
+
+            if (startPanel != null) startPanel.SetActive(false);
+            if (settingsPanel != null) settingsPanel.SetActive(false);
+            if (inGameSettings != null) inGameSettings.SetActive(false);
+            if (pausePanel != null) pausePanel.SetActive(false);
+            if (endPanel != null) endPanel.SetActive(false);
+            if (creditsPanel != null) creditsPanel.SetActive(false);
+            if (inGamePanel != null) inGamePanel.SetActive(true);
+
+            Time.timeScale = 1f;
+
+            WaterManager waterManager = FindAnyObjectByType<WaterManager>();
+            if (waterManager != null) {
+                waterManager.isGameOver = false;
+                waterManager.isGameStarted = true; 
+                waterManager.StartWaterDecrease();
+            }
+        }
+        else  {
+            SetGameState(GameState.MainMenu);
+            if (autoStartGame) {
+                StartGame();
+                autoStartGame = false; 
+            } else {
+                ShowStartPanel(); 
+            }
         }
     }
     public void SetGameState(GameState newState) {
@@ -61,6 +84,8 @@ public class MenuManager : MonoBehaviour {
     }
     public void StartGame() {
         Debug.Log("Start Game");
+
+        SceneData.isGameStarted = true; 
         
         startPanel.SetActive(false);
         settingsPanel.SetActive(false);
@@ -71,16 +96,17 @@ public class MenuManager : MonoBehaviour {
         
         inGamePanel.SetActive(true);
         if (NotificationManager.Instance != null) {
-                    NotificationManager.Instance.ShowLocalizedNotification(tableName, sM);
-                }
+            NotificationManager.Instance.ShowLocalizedNotification(tableName, sM);
+        }
         Time.timeScale = 1;
 
-        WaterManager waterManager = FindObjectOfType<WaterManager>();
+        WaterManager waterManager = FindAnyObjectByType<WaterManager>();
         if (waterManager != null) {
             waterManager.isGameOver = false;
             waterManager.isGameStarted = false;
 
             waterManager.RefillWater(100f);
+            SceneData.savedWater = 100f; 
             waterManager.StartWaterDecrease();
         }
         SetGameState(GameState.Playing);
@@ -108,7 +134,7 @@ public class MenuManager : MonoBehaviour {
     public void QuitToMainMenu() {
         SetGameState(GameState.MainMenu);
     
-        WaterManager waterManager = FindObjectOfType<WaterManager>();
+        WaterManager waterManager = FindAnyObjectByType<WaterManager>();
         if (waterManager != null) {
             waterManager.isGameOver = false;
             waterManager.isGameStarted = false;
@@ -126,7 +152,7 @@ public class MenuManager : MonoBehaviour {
     }
 
     public void NotificationHistory() {
-        NotificationHistoryUI nhUI = FindObjectOfType<NotificationHistoryUI>();
+        NotificationHistoryUI nhUI = FindAnyObjectByType<NotificationHistoryUI>();
         bool newState = !notifyHistory.activeSelf;
         notifyHistory.SetActive(newState);
 
@@ -149,8 +175,10 @@ public class MenuManager : MonoBehaviour {
         autoStartGame = true; 
         SetGameState(GameState.Playing);
         gameOver.SetActive(false); 
-        Scene activeScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(activeScene.name);
+        SceneData.savedWater = 100f; 
+        //Scene activeScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(gameSceneName);
+        
     }
 
     public void FinishGame() {

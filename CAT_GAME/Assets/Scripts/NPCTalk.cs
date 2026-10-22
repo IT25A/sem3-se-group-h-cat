@@ -13,6 +13,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
 
     private int dialogueIndex;
     private bool isTyping;
+    private NPCPatrol patrolScript;
     public bool isDialogueActive;
 
     public bool CanInteract()
@@ -35,9 +36,21 @@ public class NPCTalk : MonoBehaviour, IInteractable
             StartDialogue();
         }
     }
+
+    void Start()
+    {
+        patrolScript = GetComponent<NPCPatrol>();
+    }
+
     public void StartDialogue()
     {
         isDialogueActive = true;
+
+        if (patrolScript != null)
+        {
+            patrolScript.isInteracting = true;
+        }
+
         dialogueIndex = 0;
         nameText.SetText(dialogueData.npcName);
         portraitImage.sprite = dialogueData.npcPortrait;
@@ -88,6 +101,12 @@ public class NPCTalk : MonoBehaviour, IInteractable
     {
         StopAllCoroutines();
         isDialogueActive = false;
+
+        if (patrolScript != null)
+        {
+            patrolScript.isInteracting = false;
+        }
+
         dialogueText.SetText("");
         dialoguePanel.SetActive(false);
         //PauseController.SetPaused(false);

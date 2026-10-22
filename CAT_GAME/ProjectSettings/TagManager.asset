@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Collectible
   layers:
   - Default
   - TransparentFX
@@ -44,11 +45,11 @@ TagManager:
   - name: WalkInfront
     uniqueID: 1956882665
     locked: 0
-  - name: Collision
-    uniqueID: 145183311
-    locked: 0
   - name: Player
     uniqueID: 3037342597
+    locked: 0
+  - name: Collision
+    uniqueID: 145183311
     locked: 0
   - name: WalkBehind
     uniqueID: 2786211663
