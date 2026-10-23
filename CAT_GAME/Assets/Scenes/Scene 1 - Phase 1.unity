@@ -9373,6 +9373,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3683216295565664807, guid: 9bec2560bab442a4cbe502d50a96fa29, type: 3}
   m_PrefabInstance: {fileID: 882724617}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &894088216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 894088217}
+  - component: {fileID: 894088218}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &894088217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894088216}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.95, y: -2.81, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &894088218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894088216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b745218edbab04988b60dfc1e9f3c410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerQuestManager
+  currentFlowerCount: 5
 --- !u!1 &907834214
 GameObject:
   m_ObjectHideFlags: 0
@@ -13745,6 +13790,7 @@ GameObject:
   - component: {fileID: 8710450064991215888}
   - component: {fileID: 8710450064991215889}
   - component: {fileID: 8710450064991215890}
+  - component: {fileID: 8710450064991215891}
   m_Layer: 6
   m_Name: blackCat
   m_TagString: Untagged
@@ -13969,7 +14015,7 @@ MonoBehaviour:
   dialogueText: {fileID: 1530679506190537031}
   nameText: {fileID: 1530679506190537030}
   portraitImage: {fileID: 1530679506190537029}
-  isDialogueActive: 1
+  isDialogueActive: 0
 --- !u!1001 &8522842430145398543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14183,6 +14229,21 @@ MonoBehaviour:
   nameText: {fileID: 1530679506190537030}
   portraitImage: {fileID: 1530679506190537029}
   isDialogueActive: 0
+--- !u!114 &8710450064991215891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6575260009620475886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fe333e9d79914d3287ae84f2c405386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerQuestCheck
+  startDialog: {fileID: 11400000, guid: 2e20a401b037a415baa57aa12da36093, type: 2}
+  inbetweenDialog: {fileID: 11400000, guid: 4485d1f7e8f2f4a55af3f5ad0787dde9, type: 2}
+  finalDialog: {fileID: 11400000, guid: aeb532356a0b24bcc87b39b688ec6b58, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -14202,3 +14263,4 @@ SceneRoots:
   - {fileID: 3310303352726495097}
   - {fileID: 1460372670}
   - {fileID: 801454229}
+  - {fileID: 894088217}
