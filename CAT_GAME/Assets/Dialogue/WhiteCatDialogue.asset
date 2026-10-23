@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WhiteCatDialogue
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Mimo
-  npcPortrait: {fileID: 5966939996050926052, guid: 91d6ed83c02b96d43b5c6f1c35aa9a3c, type: 3}
+  npcPortrait: {fileID: -2248930328496868200, guid: e2daa49a030084ade9dffd744df42adf, type: 3}
   dialogueLines:
   - Hello, my name is Mimo. Nice to meet you!
   - I have been living in this village since ages. You don't look like you are from here.

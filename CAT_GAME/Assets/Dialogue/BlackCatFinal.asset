@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BlackCatFinal
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Luna
-  npcPortrait: {fileID: -8596644409503246276, guid: ca9c68aa74bac874db71c9d03feba432, type: 3}
+  npcPortrait: {fileID: 1249528229709072894, guid: 73cbac8e7f0394358b49d788852c3611, type: 3}
   dialogueLines:
   - Great! Maybe i should open a shop
   - Let me tell you

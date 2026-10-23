@@ -147,7 +147,7 @@ Transform:
   m_GameObject: {fileID: 10682621}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.7038, y: 1.4688, z: 0}
+  m_LocalPosition: {x: 4.66, y: 1.56, z: 0}
   m_LocalScale: {x: 5.946165, y: 2.004034, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -259,8 +259,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1956882665
+  m_SortingLayer: -5
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
@@ -3866,9 +3866,9 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 8.343861, y: 2.9294586}
-      - {x: 3.1666796, y: 3.0657876}
-      - {x: 3.045648, y: 2.4309855}
-      - {x: 3.053019, y: 0.8995397}
+      - {x: 3.4555242, y: 2.852401}
+      - {x: 3.176094, y: 2.4031525}
+      - {x: 3.1275597, y: 0.89026195}
       - {x: 0.9736723, y: 0.95356464}
       - {x: 1.0332985, y: 0.8036958}
       - {x: 1.0738778, y: -5.2478404}
@@ -7525,6 +7525,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 585395581874367494, guid: ecda4d1433689ca439c0447251788dd1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2096382794653451845, guid: ecda4d1433689ca439c0447251788dd1, type: 3}
       propertyPath: m_Name
       value: Player
