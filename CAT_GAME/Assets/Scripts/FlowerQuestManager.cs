@@ -11,6 +11,11 @@ public class FlowerQuestManager : MonoBehaviour
     [Header("Quest Progress")]
     public int currentFlowerCount = 0;
     public bool isQuestCompleted = false;
+    public bool finalDialogueFinished = false;
+
+    [Header("Localization Keys")]
+    public string tableName = "MenuText";
+    public string warningKey = "received_flowers";
 
     // List used to store which flowers have already been collected (using their unique names or IDs)
     private HashSet<string> collectedFlowerIDs = new HashSet<string>();
@@ -61,5 +66,10 @@ public class FlowerQuestManager : MonoBehaviour
         isQuestCompleted = true;
 
         Debug.Log("Quest Completed: All specific flowers collected!");
+        if (NotificationManager.Instance != null)
+        {
+            NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
+            Debug.Log("[Quest] 10 Blumen erreicht - Notification gesendet!");
+        }
     }
 }

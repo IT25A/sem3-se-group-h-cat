@@ -3,13 +3,25 @@ using TMPro;
 using Unity.VisualScripting;
 
 public class FoodManager : MonoBehaviour {
+
+    public static FoodManager Instance { get; private set; }
+
     [Header("UI Reference")]
     public TextMeshProUGUI foodText; 
 
     [Header("Localization Keys")]
     public string tableName = "MenuText";
     public string foodReceivedKey = "foodCount";
-    public string hundredfoodKey = "100food"; 
+    public string hundredfoodKey = "100food";
+
+    private void Awake() {
+        if (Instance == null) {
+            Instance = this; 
+        } else {
+            Destroy(gameObject);
+        }
+    }
+
     void Start() {
         UpdateFoodUI();
     }
