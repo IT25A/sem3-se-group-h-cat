@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: BlackCatDialogue
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Luna
-  npcPortrait: {fileID: -8596644409503246276, guid: ca9c68aa74bac874db71c9d03feba432, type: 3}
+  npcPortrait: {fileID: 1249528229709072894, guid: 73cbac8e7f0394358b49d788852c3611, type: 3}
   dialogueLines:
   - Hey there, welcome to our village! You seem lost.
   - "You're free to explore the area and meet the locals around here. But remember, nothing in life is truly free\u2014if you want to get by, you'll have to help others out in return. That's just how this world works."
-  - Anyway, my birthday is coming up, and I would love a beautiful bouquet of white flowers. If you go through that fence over there, you'll reach a meadow. Could you gather 10 flowers for me?
+  - Anyway, my birthday is coming up, and I would love a beautiful bouquet of blue daisy. If you go through that fence over there, you'll reach a meadow. Could you gather 10 flowers for me?
   - Come back to me once you have them all. I've got a nice surprise waiting for you!
   autoProgressLines: 01000000y
   autoProgressDelay: 1.5
