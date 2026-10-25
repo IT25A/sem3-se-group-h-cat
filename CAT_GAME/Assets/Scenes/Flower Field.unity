@@ -12907,6 +12907,7 @@ MonoBehaviour:
   targetSceneName: Scene 1 - Phase 1
   targetSpawnID: Scene1
   returnID: FlowerField
+  isLocked: 0
 --- !u!61 &940025354
 BoxCollider2D:
   m_ObjectHideFlags: 0

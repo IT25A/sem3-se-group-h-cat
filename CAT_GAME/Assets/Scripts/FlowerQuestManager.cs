@@ -12,7 +12,7 @@ public class FlowerQuestManager : MonoBehaviour
     public int currentFlowerCount = 0;
     public bool isQuestCompleted = false;
 
-    // Lista para guardar cuáles flores ya fueron recogidas (guardamos sus nombres o IDs únicos)
+    // List used to store which flowers have already been collected (using their unique names or IDs)
     private HashSet<string> collectedFlowerIDs = new HashSet<string>();
 
     private void Awake()
@@ -20,12 +20,13 @@ public class FlowerQuestManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            // Esto hace que el manager NO se destruya al cambiar de escena
+
+            // Prevent the manager from being destroyed when changing scenes
             DontDestroyOnLoad(gameObject);
         }
         else
         {
-            // Si ya existe otro manager en la nueva escena, destruimos el duplicado
+            // If another manager already exists in the new scene, destroy the duplicate
             Destroy(gameObject);
         }
     }
@@ -34,11 +35,12 @@ public class FlowerQuestManager : MonoBehaviour
     {
         if (isQuestCompleted) return;
 
-        // Evitamos contar la misma flor dos veces si por algo se buguea
+        // Prevent the same flower from being counted twice in case of a bug
         if (!collectedFlowerIDs.Contains(flowerID))
         {
             collectedFlowerIDs.Add(flowerID);
             currentFlowerCount++;
+
             Debug.Log($"Flower collected: {currentFlowerCount}/{requiredFlowers}");
 
             if (currentFlowerCount >= requiredFlowers)
@@ -48,7 +50,7 @@ public class FlowerQuestManager : MonoBehaviour
         }
     }
 
-    // Método para que la flor sepa si ya fue recogida antes de que el jugador la vea
+    // Method used by the flower to check if it has already been collected before the player sees it
     public bool IsFlowerCollected(string flowerID)
     {
         return collectedFlowerIDs.Contains(flowerID);
@@ -57,6 +59,7 @@ public class FlowerQuestManager : MonoBehaviour
     private void CompleteQuest()
     {
         isQuestCompleted = true;
+
         Debug.Log("Quest Completed: All specific flowers collected!");
     }
 }

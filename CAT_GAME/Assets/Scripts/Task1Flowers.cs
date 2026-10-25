@@ -7,17 +7,17 @@ public class QuestFlower : MonoBehaviour
 
     private void Awake()
     {
-        // Creamos un ID único para esta flor basado en su posición en el mundo y el nombre de la escena
-        // (Ejemplo: "SceneName_X12.5_Y5.1")
+        // Create a unique ID for this flower based on its world position and the scene name
+        // (Example: "SceneName_X12.5_Y5.1")
         flowerID = gameObject.scene.name + "_" + transform.position.x + "_" + transform.position.y;
     }
 
     private void Start()
     {
-        // Al iniciar la escena, comprobamos si ya fue recogida en el pasado
+        // When the scene starts, check if this flower has already been collected
         if (FlowerQuestManager.Instance != null && FlowerQuestManager.Instance.IsFlowerCollected(flowerID))
         {
-            // Si ya la habían recogido, la destruimos inmediatamente para que no aparezca
+            // If it has already been collected, destroy it immediately so it does not appear
             Destroy(gameObject);
         }
     }
@@ -28,13 +28,13 @@ public class QuestFlower : MonoBehaviour
         {
             isCollected = true;
 
-            // Le avisamos al manager pasándole su ID único
+            // Notify the manager and pass its unique ID
             if (FlowerQuestManager.Instance != null)
             {
                 FlowerQuestManager.Instance.CollectFlower(flowerID);
             }
 
-            // Destruimos la flor actual
+            // Destroy the current flower
             Destroy(gameObject);
         }
     }
