@@ -16,8 +16,8 @@ MonoBehaviour:
   npcPortrait: {fileID: 1249528229709072894, guid: 73cbac8e7f0394358b49d788852c3611, type: 3}
   dialogueLines:
   - Great! Maybe i should open a shop
-  - Let me tell you
-  - Go up on the stairs and you will arrive a lake where you can drink water
+  - 'By the way you can drink water from the lake. Otherwise you will die of thirst '
+  - 'Go up on the stairs and you will arrive a lake '
   - ...oh and say hi to Duke
   autoProgressLines: 01000000y
   autoProgressDelay: 1.5

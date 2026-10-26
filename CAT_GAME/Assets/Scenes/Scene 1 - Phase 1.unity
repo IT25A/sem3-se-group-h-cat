@@ -13837,7 +13837,7 @@ MonoBehaviour:
   dialogueText: {fileID: 1530679506190537031}
   nameText: {fileID: 1530679506190537030}
   portraitImage: {fileID: 1530679506190537029}
-  isDialogueActive: 1
+  isDialogueActive: 0
 --- !u!1001 &8522842430145398543
 PrefabInstance:
   m_ObjectHideFlags: 0

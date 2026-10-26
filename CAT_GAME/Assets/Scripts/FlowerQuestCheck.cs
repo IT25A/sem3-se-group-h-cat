@@ -39,7 +39,7 @@ public class FlowerQuestCheck : MonoBehaviour
             // Zustand 3: Er hat 10 Blumen
             npcTalk.dialogueData = finalDialog;
         }
-        else if (FlowerQuestManager.Instance.currentFlowerCount < 10)
+        else if (Taskgiven && FlowerQuestManager.Instance.currentFlowerCount < 10)
         {
             // Zustand 2: Er hat die Aufgabe bekommen, aber noch keine 10 Blumen
             npcTalk.dialogueData = inbetweenDialog;
