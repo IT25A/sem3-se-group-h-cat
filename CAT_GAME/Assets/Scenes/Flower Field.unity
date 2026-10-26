@@ -743,19 +743,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7575023706846161090, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.13553238
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7575023706846161090, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8694
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7575023706846161090, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 8414980027500515728, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.13553238
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8414980027500515728, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8694
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414980027500515728, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4600,6 +4608,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: flowertask1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4820121509099594499, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
+      propertyPath: m_TagString
+      value: Flower
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4826,6 +4838,10 @@ PrefabInstance:
     - target: {fileID: 4820121509099594499, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_Name
       value: flowertask1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820121509099594499, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
+      propertyPath: m_TagString
+      value: Flower
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5347,6 +5363,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4731063094888486946, guid: 33d43466555bb974abad87257d08c0d8, type: 3}
   m_PrefabInstance: {fileID: 540381998}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &557547020 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3042703038440092805, guid: a2034902f62b053489ec3e1882f1a019, type: 3}
+  m_PrefabInstance: {fileID: 6974221}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &567560143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5828,6 +5849,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: flowertask1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4820121509099594499, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
+      propertyPath: m_TagString
+      value: Flower
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6085,6 +6110,10 @@ PrefabInstance:
     - target: {fileID: 4820121509099594499, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_Name
       value: flowertask1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820121509099594499, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
+      propertyPath: m_TagString
+      value: Flower
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7001,6 +7030,10 @@ PrefabInstance:
     - target: {fileID: 9048753344400024747, guid: 3662115b436724041a2e09e288c854ca, type: 3}
       propertyPath: m_Name
       value: flower_bluebell_03_purple_sway
+      objectReference: {fileID: 0}
+    - target: {fileID: 9048753344400024747, guid: 3662115b436724041a2e09e288c854ca, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13150,6 +13183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: flowertask1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4820121509099594499, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
+      propertyPath: m_TagString
+      value: Flower
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14103,6 +14140,10 @@ PrefabInstance:
     - target: {fileID: 4820121509099594499, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_Name
       value: flowertask1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820121509099594499, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
+      propertyPath: m_TagString
+      value: Flower
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15854,6 +15895,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: flowertask1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4820121509099594499, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
+      propertyPath: m_TagString
+      value: Flower
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16801,6 +16846,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8246304811670395539, guid: 6dbd4cda3886a50449782517bb9a57fb, type: 3}
   m_PrefabInstance: {fileID: 495829772}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1260235773
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1187969555844842131, guid: 6f1500ef01906d0469a215166b02f16a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.03656
+      objectReference: {fileID: 0}
+    - target: {fileID: 1187969555844842131, guid: 6f1500ef01906d0469a215166b02f16a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.73060006
+      objectReference: {fileID: 0}
+    - target: {fileID: 1187969555844842131, guid: 6f1500ef01906d0469a215166b02f16a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1187969555844842131, guid: 6f1500ef01906d0469a215166b02f16a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1187969555844842131, guid: 6f1500ef01906d0469a215166b02f16a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1187969555844842131, guid: 6f1500ef01906d0469a215166b02f16a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1187969555844842131, guid: 6f1500ef01906d0469a215166b02f16a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1187969555844842131, guid: 6f1500ef01906d0469a215166b02f16a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1187969555844842131, guid: 6f1500ef01906d0469a215166b02f16a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1187969555844842131, guid: 6f1500ef01906d0469a215166b02f16a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695606395437986408, guid: 6f1500ef01906d0469a215166b02f16a, type: 3}
+      propertyPath: m_Name
+      value: CinemachineCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 6074902445734935750, guid: 6f1500ef01906d0469a215166b02f16a, type: 3}
+      propertyPath: Target.TrackingTarget
+      value: 
+      objectReference: {fileID: 557547020}
+    - target: {fileID: 7969068963372157275, guid: 6f1500ef01906d0469a215166b02f16a, type: 3}
+      propertyPath: BoundingShape2D
+      value: 
+      objectReference: {fileID: 484619836}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6f1500ef01906d0469a215166b02f16a, type: 3}
 --- !u!1 &1262983092 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6546730991220994830, guid: b9213b90abbfe284ba4ffffdaf709899, type: 3}
@@ -17866,6 +17976,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: flower_bluebell_02_blue_sway
       objectReference: {fileID: 0}
+    - target: {fileID: 4776201145318885982, guid: 9b67fb8ea54e66d4da23a0dde5334e62, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5609135850629782920, guid: 9b67fb8ea54e66d4da23a0dde5334e62, type: 3}
       propertyPath: m_SortingLayer
       value: -4
@@ -18689,6 +18803,10 @@ PrefabInstance:
     - target: {fileID: 4820121509099594499, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_Name
       value: flowertask1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820121509099594499, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
+      propertyPath: m_TagString
+      value: Flower
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20652,6 +20770,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: flowertask1 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 4820121509099594499, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
+      propertyPath: m_TagString
+      value: Flower
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21440,6 +21562,10 @@ PrefabInstance:
     - target: {fileID: 4820121509099594499, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_Name
       value: flowertask1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820121509099594499, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
+      propertyPath: m_TagString
+      value: Flower
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25215,6 +25341,7 @@ SceneRoots:
   - {fileID: 670146108}
   - {fileID: 940025352}
   - {fileID: 75200137}
+  - {fileID: 1260235773}
   - {fileID: 1227084254}
   - {fileID: 32137309}
   - {fileID: 6974221}
