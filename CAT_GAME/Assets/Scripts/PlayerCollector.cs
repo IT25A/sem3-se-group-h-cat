@@ -4,16 +4,14 @@ public class PlayerCollector : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Prüfen, ob das berührte Objekt das Tag "Collectible" hat
         if (collision.CompareTag("Egg"))
         {
             CollectibleItem item = collision.GetComponent<CollectibleItem>();
             string id = item != null ? item.uniqueId : null;
 
-            TaskCollectibleState.RegisterCollectible(id);
-            Debug.Log("Ei eingesammelt! Gesamt: " + TaskCollectibleState.CollectedCount);
+            TaskCollectibleState.RegisterEgg(id);
+            Debug.Log("Ei eingesammelt! Eier gesamt: " + TaskCollectibleState.EggCount);
 
-            // Zerstört das Objekt, das berührt wurde 
             Destroy(collision.gameObject);
         }
 
@@ -22,10 +20,9 @@ public class PlayerCollector : MonoBehaviour
             CollectibleItem item = collision.GetComponent<CollectibleItem>();
             string id = item != null ? item.uniqueId : null;
 
-            TaskCollectibleState.RegisterCollectible(id);
-            Debug.Log("Blume eingesammelt! Gesamt: " + TaskCollectibleState.CollectedCount);
+            TaskCollectibleState.RegisterFlower(id);
+            Debug.Log("Blume eingesammelt! Blumen gesamt: " + TaskCollectibleState.FlowerCount);
 
-            // Zerstört das Objekt, das berührt wurde 
             Destroy(collision.gameObject);
         }
     }
