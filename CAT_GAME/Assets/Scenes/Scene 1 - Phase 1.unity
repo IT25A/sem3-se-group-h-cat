@@ -1768,9 +1768,41 @@ PrefabInstance:
       propertyPath: BoundingShape2D
       value: 
       objectReference: {fileID: 174569666}
+    - target: {fileID: 2970719257773607714, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
+      propertyPath: Target.TrackingTarget
+      value: 
+      objectReference: {fileID: 815107474}
     - target: {fileID: 3040286778120252321, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: m_Name
       value: CameraManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618172599143697842, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
+      propertyPath: Composition.DeadZone.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7575023706846161090, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.269774
+      objectReference: {fileID: 0}
+    - target: {fileID: 7575023706846161090, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.620096
+      objectReference: {fileID: 0}
+    - target: {fileID: 7856805519316546935, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.269774
+      objectReference: {fileID: 0}
+    - target: {fileID: 7856805519316546935, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.620096
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414980027500515728, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.269774
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414980027500515728, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.620096
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9037,6 +9069,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.25037593, y: 0.0962913}
   m_EdgeRadius: 0
+--- !u!4 &815107474 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3042703038440092805, guid: a2034902f62b053489ec3e1882f1a019, type: 3}
+  m_PrefabInstance: {fileID: 148449236}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &848986272
 GameObject:
   m_ObjectHideFlags: 0
