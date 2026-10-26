@@ -3,7 +3,8 @@ using UnityEngine;
 
 public static class TaskCollectibleState
 {
-    public static int CollectedCount { get; private set; } = 0;
+    public static int EggCount { get; private set; } = 0;
+    public static int FlowerCount { get; private set; } = 0;
 
     // Stores unique IDs of collectibles picked up during the current task
     private static readonly HashSet<string> collectedIds = new HashSet<string>();
@@ -20,19 +21,29 @@ public static class TaskCollectibleState
         return !string.IsNullOrEmpty(id) && collectedIds.Contains(id);
     }
 
-    public static void RegisterCollectible(string id)
+    public static void RegisterEgg(string id)
     {
         if (!string.IsNullOrEmpty(id))
         {
             collectedIds.Add(id);
         }
-        CollectedCount++;
+        EggCount++;
+    }
+
+    public static void RegisterFlower(string id)
+    {
+        if (!string.IsNullOrEmpty(id))
+        {
+            collectedIds.Add(id);
+        }
+        FlowerCount++;
     }
 
     // Call this when your task/event is completed!
     public static void ResetTaskCollectibles()
     {
-        CollectedCount = 0;
+        EggCount = 0;
+        FlowerCount = 0;
         collectedIds.Clear();
         Debug.Log("Task collectibles wurden zurückgesetzt.");
     }
