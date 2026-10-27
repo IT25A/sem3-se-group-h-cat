@@ -106,7 +106,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -146,7 +146,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -175,11 +175,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2
-        width: 31
-        height: 30
+        y: 3
+        width: 30
+        height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -196,12 +196,12 @@ TextureImporter:
       name: key_32x32_24f_1
       rect:
         serializedVersion: 2
-        x: 31
-        y: 2
-        width: 32
-        height: 30
+        x: 32
+        y: 3
+        width: 30
+        height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -218,12 +218,12 @@ TextureImporter:
       name: key_32x32_24f_2
       rect:
         serializedVersion: 2
-        x: 65
-        y: 2
-        width: 29
-        height: 30
+        x: 66
+        y: 3
+        width: 27
+        height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -240,12 +240,12 @@ TextureImporter:
       name: key_32x32_24f_3
       rect:
         serializedVersion: 2
-        x: 99
-        y: 2
-        width: 25
-        height: 30
+        x: 100
+        y: 3
+        width: 23
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -262,12 +262,12 @@ TextureImporter:
       name: key_32x32_24f_4
       rect:
         serializedVersion: 2
-        x: 134
-        y: 2
-        width: 19
-        height: 30
+        x: 135
+        y: 3
+        width: 17
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -284,12 +284,12 @@ TextureImporter:
       name: key_32x32_24f_5
       rect:
         serializedVersion: 2
-        x: 169
-        y: 2
-        width: 13
-        height: 30
+        x: 170
+        y: 3
+        width: 11
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -306,12 +306,12 @@ TextureImporter:
       name: key_32x32_24f_6
       rect:
         serializedVersion: 2
-        x: 205
-        y: 2
-        width: 6
-        height: 30
+        x: 206
+        y: 3
+        width: 4
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -328,12 +328,12 @@ TextureImporter:
       name: key_32x32_24f_7
       rect:
         serializedVersion: 2
-        x: 234
-        y: 2
-        width: 13
-        height: 30
+        x: 235
+        y: 3
+        width: 11
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -350,12 +350,12 @@ TextureImporter:
       name: key_32x32_24f_8
       rect:
         serializedVersion: 2
-        x: 263
-        y: 2
-        width: 19
-        height: 30
+        x: 264
+        y: 3
+        width: 17
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -372,12 +372,12 @@ TextureImporter:
       name: key_32x32_24f_9
       rect:
         serializedVersion: 2
-        x: 292
-        y: 2
-        width: 25
-        height: 30
+        x: 293
+        y: 3
+        width: 23
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -394,12 +394,12 @@ TextureImporter:
       name: key_32x32_24f_10
       rect:
         serializedVersion: 2
-        x: 322
-        y: 2
-        width: 29
-        height: 30
+        x: 323
+        y: 3
+        width: 27
+        height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -416,12 +416,12 @@ TextureImporter:
       name: key_32x32_24f_11
       rect:
         serializedVersion: 2
-        x: 353
-        y: 2
-        width: 32
-        height: 30
+        x: 354
+        y: 3
+        width: 30
+        height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -438,12 +438,12 @@ TextureImporter:
       name: key_32x32_24f_12
       rect:
         serializedVersion: 2
-        x: 385
-        y: 2
-        width: 32
-        height: 30
+        x: 386
+        y: 3
+        width: 30
+        height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -460,12 +460,12 @@ TextureImporter:
       name: key_32x32_24f_13
       rect:
         serializedVersion: 2
-        x: 417
-        y: 2
-        width: 32
-        height: 30
+        x: 418
+        y: 3
+        width: 30
+        height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -482,12 +482,12 @@ TextureImporter:
       name: key_32x32_24f_14
       rect:
         serializedVersion: 2
-        x: 450
-        y: 2
-        width: 29
-        height: 30
+        x: 451
+        y: 3
+        width: 27
+        height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -504,12 +504,12 @@ TextureImporter:
       name: key_32x32_24f_15
       rect:
         serializedVersion: 2
-        x: 484
-        y: 2
-        width: 25
-        height: 30
+        x: 485
+        y: 3
+        width: 23
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -526,12 +526,12 @@ TextureImporter:
       name: key_32x32_24f_16
       rect:
         serializedVersion: 2
-        x: 519
-        y: 2
-        width: 19
-        height: 30
+        x: 520
+        y: 3
+        width: 17
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -548,12 +548,12 @@ TextureImporter:
       name: key_32x32_24f_17
       rect:
         serializedVersion: 2
-        x: 554
-        y: 2
-        width: 13
-        height: 30
+        x: 555
+        y: 3
+        width: 11
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -570,12 +570,12 @@ TextureImporter:
       name: key_32x32_24f_18
       rect:
         serializedVersion: 2
-        x: 589
-        y: 2
-        width: 6
-        height: 30
+        x: 590
+        y: 3
+        width: 4
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -592,12 +592,12 @@ TextureImporter:
       name: key_32x32_24f_19
       rect:
         serializedVersion: 2
-        x: 617
-        y: 2
-        width: 13
-        height: 30
+        x: 618
+        y: 3
+        width: 11
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -614,12 +614,12 @@ TextureImporter:
       name: key_32x32_24f_20
       rect:
         serializedVersion: 2
-        x: 646
-        y: 2
-        width: 19
-        height: 30
+        x: 647
+        y: 3
+        width: 17
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -636,12 +636,12 @@ TextureImporter:
       name: key_32x32_24f_21
       rect:
         serializedVersion: 2
-        x: 675
-        y: 2
-        width: 25
-        height: 30
+        x: 676
+        y: 3
+        width: 23
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -658,12 +658,12 @@ TextureImporter:
       name: key_32x32_24f_22
       rect:
         serializedVersion: 2
-        x: 705
-        y: 2
-        width: 29
-        height: 30
+        x: 706
+        y: 3
+        width: 27
+        height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -680,12 +680,12 @@ TextureImporter:
       name: key_32x32_24f_23
       rect:
         serializedVersion: 2
-        x: 735
-        y: 2
-        width: 32
-        height: 30
+        x: 736
+        y: 3
+        width: 30
+        height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -702,7 +702,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2575134290c94114bb7827a71434f836
     internalID: 0
     vertices: []
     indices: 
@@ -710,7 +710,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       key_32x32_24f_0: 1923592003837382580
       key_32x32_24f_1: -4487934404495891048
