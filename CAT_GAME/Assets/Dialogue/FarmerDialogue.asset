@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FarmerDialogue
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Duke
-  npcPortrait: {fileID: -2190146181211247990, guid: 57c635fae58ff4c4990adeddbea8da6b, type: 3}
+  npcPortrait: {fileID: -3898996263991517844, guid: 57c635fae58ff4c4990adeddbea8da6b, type: 3}
   dialogueLines:
   - Ouch, my aching back!
   - Simba, my furry little friend, am I lucky to see you
