@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb109fa977984832b53154bd07d68f7, type: 3}
+  m_Name: NPCDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Sad Cat
+  npcPortrait: {fileID: 0}
+  dialogueLines:
+  - Can you help? I have lost my key?
+  - 'Element 1: Don''t be selfish give me a hand. At least you can help me in one of the choices.'
+  - Omg I'm so nervous. I'm so helpless in anyway. Which one could you do me a favor?
+  - Great! I knew that you'd help me.
+  - Omg I'm so nervous. I'm so helpless in anyway. Which one could you do me a favor?
+  - A bird has stolen it from me.. please look around where it can be.
+  - Collect 10 woods to make a fire i'm cold pls be hurry.
+  - How many cats have you met in this journey?
+  - Nope
+  - Correct! Here is a hint...
+  autoProgressLines: 0000000000y
+  autoProgressDelay: 1.5
+  endDialogueLines: 00000000000001000001y
+  typingSpeed: 0.05
+  voiceSound: []
+  voicePitch: 1
+  choices:
+  - dialogueIndex: 0
+    choices:
+    - Yes
+    - No
+    nextDialogueIndexes: 0300000001000000i
+  - dialogueIndex: 2
+    choices:
+    - Find the house key
+    - 'Make a fire '
+    - 'Answer a tricky quiz '
+    nextDialogueIndexes: 050000000600000007000000i
+  - dialogueIndex: 4
+    choices:
+    - Find the house key
+    - Make a fire
+    - Answer a tricky quiz
+    nextDialogueIndexes: 080000000800000009000000i
+  - dialogueIndex: 0
+    choices: []
+    nextDialogueIndexes: 
