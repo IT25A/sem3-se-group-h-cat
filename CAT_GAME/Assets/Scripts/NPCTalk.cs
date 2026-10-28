@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections;
+using System.Reflection;
 
 
 public class NPCTalk : MonoBehaviour, IInteractable
@@ -10,6 +11,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
     public GameObject dialoguePanel;
     public TMP_Text dialogueText, nameText; 
     public Image portraitImage;
+   
 
     private int dialogueIndex;
     private bool isTyping;
