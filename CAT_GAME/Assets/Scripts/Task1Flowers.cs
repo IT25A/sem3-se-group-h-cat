@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class QuestFlower : MonoBehaviour
 {
-    private string flowerID;
+    public string flowerID;
     private bool isCollected = false;
 
     private void Awake()

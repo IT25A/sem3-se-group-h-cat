@@ -19,6 +19,7 @@ public class NotificationManager : MonoBehaviour {
     public Sprite startIcon;
     public Sprite foodIcon;
     public Sprite lowWaterIcon; 
+    public Sprite daisyFlowerIcon;
     public Sprite defaultIcon; 
 
     [Header("Verlauf (History)")]
@@ -71,6 +72,9 @@ public class NotificationManager : MonoBehaviour {
             } 
             else if (entryKey.Contains("start") || entryKey.Contains("startMessage")) {
                 notificationIcon.sprite = startIcon;  
+            }
+            else if (entryKey.Contains("received_flowers")) {
+                notificationIcon.sprite = daisyFlowerIcon;  
             }
             else {
                 notificationIcon.sprite = defaultIcon; 

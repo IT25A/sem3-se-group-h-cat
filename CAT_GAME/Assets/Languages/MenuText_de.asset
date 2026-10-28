@@ -94,6 +94,10 @@ MonoBehaviour:
     m_Localized: Du hast 100mal Trockenfutter erhalten! Vielleicht passiert was spezielles.
     m_Metadata:
       m_Items: []
+  - m_Id: 6123421136875520
+    m_Localized: "Du hast alle blauen G\xE4nsebl\xFCmchen blumen gefunden."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

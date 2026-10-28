@@ -1,19 +1,24 @@
+using System.Collections;
 using UnityEngine;
 
 public class FlowerQuestCheck : MonoBehaviour
 {
-    
+
     public NPCDialogue startDialog;       // 1. "Sammle 10 Blumen!"
     public NPCDialogue inbetweenDialog; // 2. "Du hast erst x Blumen..."
     public NPCDialogue finalDialog;      // 3. "Klasse, geh zur Treppe!"
 
+    [Header("Reward")]
+    public int reward = 10;
+    private bool RewardGiven = false;
     private NPCTalk npcTalk;
     private bool Taskgiven = false; // Gedächtnis der Katze
+    private bool dialogueActive = false;
 
     void Start()
     {
         npcTalk = GetComponent<NPCTalk>();
-        
+
         // Ganz am Anfang legen wir den 1. Dialog ein
         npcTalk.dialogueData = startDialog;
     }
@@ -21,28 +26,50 @@ public class FlowerQuestCheck : MonoBehaviour
     void Update()
     {
         // SICHERHEITS-CHECK: Wird gerade gesprochen?
-        if (npcTalk.isDialogueActive)
+        if (dialogueActive && !npcTalk.isDialogueActive)
         {
             // Wenn Simba gerade den allerersten Text liest, merkt sich das Skript
-            if (npcTalk.dialogueData == startDialog)
+            if (npcTalk.dialogueData == finalDialog && !RewardGiven)
             {
-                Taskgiven = true;
+                RewardGiven = true;
+
+                if (FlowerQuestManager.Instance != null)
+                {
+                    FlowerQuestManager.Instance.finalDialogueFinished = true;
+                }
+
+                // Wir brechen hier ab, damit der Text nicht mitten im Sprechen ausgetauscht wird
+                if (FoodManager.Instance != null)
+                {
+                    FoodManager.Instance.AddFood(reward);
+                    Debug.Log($"[Quest] {reward} Food hinzugefügt!");
+                }
             }
-            
-            // Wir brechen hier ab, damit der Text nicht mitten im Sprechen ausgetauscht wird
-            return; 
+        }
+
+        dialogueActive = npcTalk.isDialogueActive;
+        if (FlowerQuestManager.Instance != null)
+        {
+            int current = FlowerQuestManager.Instance.currentFlowerCount;
+            bool finished = FlowerQuestManager.Instance.finalDialogueFinished;
+
         }
 
         // Wenn das Fenster GESCHLOSSEN ist, bereiten wir den Text für das nächste Ansprechen vor:
-        if (FlowerQuestManager.Instance != null && FlowerQuestManager.Instance.currentFlowerCount >= 10)
+        if (npcTalk.isDialogueActive)
         {
-            // Zustand 3: Er hat 10 Blumen
-            npcTalk.dialogueData = finalDialog;
+            return;
         }
-        else if (Taskgiven && FlowerQuestManager.Instance.currentFlowerCount < 10)
+        if (FlowerQuestManager.Instance != null)
         {
-            // Zustand 2: Er hat die Aufgabe bekommen, aber noch keine 10 Blumen
-            npcTalk.dialogueData = inbetweenDialog;
+            if (FlowerQuestManager.Instance.currentFlowerCount >= 10)
+            {
+                npcTalk.dialogueData = finalDialog;
+            }
+            else
+            {
+                npcTalk.dialogueData = inbetweenDialog;
+            }
         }
     }
 }
