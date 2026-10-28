@@ -25,11 +25,10 @@ public class PlayerInteraction : MonoBehaviour
 				{
 					if (hit.gameObject != this.gameObject) // Ignoriere den Spieler
 					{
-						NPCTalk npc = hit.GetComponent<NPCTalk>();
-						if (npc != null)
+						IInteractable target = hit.GetComponent<IInteractable>();
+						if (target != null)
 						{
-							targetNpc = npc;
-							break; // Gefunden! Schleife stoppen.
+							target.Interact();
 						}
 					}
 				}
