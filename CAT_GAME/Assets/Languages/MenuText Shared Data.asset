@@ -91,6 +91,10 @@ MonoBehaviour:
     m_Key: 100food
     m_Metadata:
       m_Items: []
+  - m_Id: 6123421136875520
+    m_Key: received_flowers
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

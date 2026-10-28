@@ -2,17 +2,27 @@ using UnityEngine;
 
 public class PlayerCollector : MonoBehaviour
 {
-    private int collectedCount = 0;
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Prüfen, ob das berührte Objekt das Tag "Collectible" hat
-        if (collision.CompareTag("Collectible"))
+        if (collision.CompareTag("Egg"))
         {
-            collectedCount++;
-            Debug.Log("Gegenstand eingesammelt! Gesamt: " + collectedCount);
+            CollectibleItem item = collision.GetComponent<CollectibleItem>();
+            string id = item != null ? item.uniqueId : null;
 
-            // Zerstört das Objekt, das berührt wurde 
+            TaskCollectibleState.RegisterEgg(id);
+            Debug.Log("Ei eingesammelt! Eier gesamt: " + TaskCollectibleState.EggCount);
+
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.CompareTag("Flower"))
+        {
+            CollectibleItem item = collision.GetComponent<CollectibleItem>();
+            string id = item != null ? item.uniqueId : null;
+
+            TaskCollectibleState.RegisterFlower(id);
+            Debug.Log("Blume eingesammelt! Blumen gesamt: " + TaskCollectibleState.FlowerCount);
+
             Destroy(collision.gameObject);
         }
     }
