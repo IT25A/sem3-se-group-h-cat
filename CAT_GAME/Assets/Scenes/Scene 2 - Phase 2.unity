@@ -375,6 +375,44 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+--- !u!114 &30437750 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3929184651526550302, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+  m_PrefabInstance: {fileID: 30437749}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &30437751 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7285747835840179061, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+  m_PrefabInstance: {fileID: 30437749}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &30437752 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2668743496776151798, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+  m_PrefabInstance: {fileID: 30437749}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!1 &30437753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1582794884902040634, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+  m_PrefabInstance: {fileID: 30437749}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &209107599
 GameObject:
   m_ObjectHideFlags: 0
@@ -5091,10 +5129,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCTalk
   dialogueData: {fileID: 11400000, guid: 7082852ed050e409ea39b580dbe9100f, type: 2}
-  dialoguePanel: {fileID: 0}
-  dialogueText: {fileID: 0}
-  nameText: {fileID: 0}
-  portraitImage: {fileID: 0}
+  dialoguePanel: {fileID: 30437753}
+  dialogueText: {fileID: 30437750}
+  nameText: {fileID: 30437751}
+  portraitImage: {fileID: 30437752}
   isDialogueActive: 0
 --- !u!1 &1669741683
 GameObject:
