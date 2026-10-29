@@ -75,7 +75,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 626565251584000
-    m_Localized: Da ist eine Wasserstelle entstanden, versuch mal, etwas zu trinken.
+    m_Localized: Es ist eine Wasserstelle entstanden. Versuche, etwas zu trinken.
     m_Metadata:
       m_Items: []
   - m_Id: 3507603404255232
@@ -95,7 +95,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6123421136875520
-    m_Localized: "Du hast alle blauen G\xE4nsebl\xFCmchen blumen gefunden."
+    m_Localized: "Du hast alle blauen G\xE4nsebl\xFCmchen gefunden!"
     m_Metadata:
       m_Items: []
   references:
