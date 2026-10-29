@@ -15,7 +15,7 @@ MonoBehaviour:
   npcName: Luna
   npcPortrait: {fileID: 1249528229709072894, guid: 73cbac8e7f0394358b49d788852c3611, type: 3}
   dialogueLines:
-  - A birthday without many flowers is absolutely unacceptable
+  - I want all of the flowers for my birthday. Please keep looking!
   - 
   autoProgressLines: 01000000y
   autoProgressDelay: 1.5

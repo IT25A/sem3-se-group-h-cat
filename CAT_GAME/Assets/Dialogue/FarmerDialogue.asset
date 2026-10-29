@@ -16,9 +16,11 @@ MonoBehaviour:
   npcPortrait: {fileID: -3898996263991517844, guid: 57c635fae58ff4c4990adeddbea8da6b, type: 3}
   dialogueLines:
   - Ouch, my aching back!
-  - Simba, my furry little friend, am I lucky to see you
+  - 'Oh, hello, little cat. What''s your name? '
+  - Simba? What a beautiful name.
+  - Since you're already here, could you help me with something?
   - I need to get this basket of fresh eggs across the wooden bridge, but my back is cracking like a dry twig today. If I try to carry it, I'll turn the whole harvest into scrambled eggs!
-  - Could you carry the basket over for me? Bring them across safely and maybe i will let you eat some chicken
+  - Could you carry the basket over for me? Bring them across safely and maybe i will let you eat some chicken!
   autoProgressLines: 01010000y
   autoProgressDelay: 1.5
   typingSpeed: 0.05
