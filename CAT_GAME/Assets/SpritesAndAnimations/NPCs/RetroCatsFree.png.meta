@@ -136,7 +136,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -176,7 +176,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -204,12 +204,12 @@ TextureImporter:
       name: RetroCatsFree_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 371
-        width: 43
-        height: 47
+        x: 12
+        y: 372
+        width: 41
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -226,12 +226,12 @@ TextureImporter:
       name: RetroCatsFree_1
       rect:
         serializedVersion: 2
-        x: 75
-        y: 371
-        width: 43
-        height: 46
+        x: 76
+        y: 372
+        width: 41
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -248,12 +248,12 @@ TextureImporter:
       name: RetroCatsFree_2
       rect:
         serializedVersion: 2
-        x: 139
-        y: 371
-        width: 43
-        height: 46
+        x: 140
+        y: 372
+        width: 41
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -270,12 +270,12 @@ TextureImporter:
       name: RetroCatsFree_3
       rect:
         serializedVersion: 2
-        x: 203
-        y: 371
-        width: 43
-        height: 47
+        x: 204
+        y: 372
+        width: 41
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -292,12 +292,12 @@ TextureImporter:
       name: RetroCatsFree_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 306
-        width: 49
-        height: 48
+        x: 1
+        y: 307
+        width: 47
+        height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -314,12 +314,12 @@ TextureImporter:
       name: RetroCatsFree_5
       rect:
         serializedVersion: 2
-        x: 65
-        y: 306
-        width: 48
-        height: 47
+        x: 66
+        y: 307
+        width: 46
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -336,12 +336,12 @@ TextureImporter:
       name: RetroCatsFree_6
       rect:
         serializedVersion: 2
-        x: 1
-        y: 242
-        width: 62
-        height: 46
+        x: 2
+        y: 243
+        width: 60
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -358,12 +358,12 @@ TextureImporter:
       name: RetroCatsFree_7
       rect:
         serializedVersion: 2
-        x: 79
-        y: 281
-        width: 10
-        height: 14
+        x: 80
+        y: 282
+        width: 8
+        height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -380,12 +380,12 @@ TextureImporter:
       name: RetroCatsFree_8
       rect:
         serializedVersion: 2
-        x: 143
-        y: 281
-        width: 14
-        height: 20
+        x: 144
+        y: 282
+        width: 12
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -402,12 +402,12 @@ TextureImporter:
       name: RetroCatsFree_9
       rect:
         serializedVersion: 2
-        x: 207
-        y: 281
-        width: 10
-        height: 14
+        x: 208
+        y: 282
+        width: 8
+        height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -424,12 +424,12 @@ TextureImporter:
       name: RetroCatsFree_10
       rect:
         serializedVersion: 2
-        x: 65
-        y: 242
-        width: 62
-        height: 36
+        x: 66
+        y: 243
+        width: 60
+        height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -446,12 +446,12 @@ TextureImporter:
       name: RetroCatsFree_11
       rect:
         serializedVersion: 2
-        x: 129
-        y: 242
-        width: 62
-        height: 35
+        x: 130
+        y: 243
+        width: 60
+        height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -468,12 +468,12 @@ TextureImporter:
       name: RetroCatsFree_12
       rect:
         serializedVersion: 2
-        x: 193
-        y: 242
-        width: 62
-        height: 36
+        x: 194
+        y: 243
+        width: 60
+        height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -490,12 +490,12 @@ TextureImporter:
       name: RetroCatsFree_13
       rect:
         serializedVersion: 2
-        x: 8
-        y: 190
-        width: 45
-        height: 39
+        x: 9
+        y: 191
+        width: 43
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -512,12 +512,12 @@ TextureImporter:
       name: RetroCatsFree_14
       rect:
         serializedVersion: 2
-        x: 73
-        y: 190
-        width: 45
-        height: 39
+        x: 74
+        y: 191
+        width: 43
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -534,12 +534,12 @@ TextureImporter:
       name: RetroCatsFree_15
       rect:
         serializedVersion: 2
-        x: 138
-        y: 189
-        width: 45
-        height: 39
+        x: 139
+        y: 190
+        width: 43
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -556,12 +556,12 @@ TextureImporter:
       name: RetroCatsFree_16
       rect:
         serializedVersion: 2
-        x: 203
-        y: 189
-        width: 45
-        height: 39
+        x: 204
+        y: 190
+        width: 43
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -578,12 +578,12 @@ TextureImporter:
       name: RetroCatsFree_17
       rect:
         serializedVersion: 2
-        x: 5
-        y: 3
-        width: 87
-        height: 177
+        x: 6
+        y: 4
+        width: 85
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -600,12 +600,12 @@ TextureImporter:
       name: RetroCatsFree_18
       rect:
         serializedVersion: 2
-        x: 115
-        y: 131
-        width: 27
-        height: 48
+        x: 116
+        y: 132
+        width: 25
+        height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -622,12 +622,12 @@ TextureImporter:
       name: RetroCatsFree_19
       rect:
         serializedVersion: 2
-        x: 147
-        y: 130
-        width: 27
-        height: 48
+        x: 148
+        y: 131
+        width: 25
+        height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -644,12 +644,12 @@ TextureImporter:
       name: RetroCatsFree_20
       rect:
         serializedVersion: 2
-        x: 178
-        y: 131
-        width: 27
-        height: 48
+        x: 179
+        y: 132
+        width: 25
+        height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -666,12 +666,12 @@ TextureImporter:
       name: RetroCatsFree_21
       rect:
         serializedVersion: 2
-        x: 215
-        y: 105
-        width: 35
-        height: 64
+        x: 216
+        y: 106
+        width: 33
+        height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -688,12 +688,12 @@ TextureImporter:
       name: RetroCatsFree_22
       rect:
         serializedVersion: 2
-        x: 102
-        y: 73
-        width: 20
-        height: 20
+        x: 103
+        y: 74
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -710,12 +710,12 @@ TextureImporter:
       name: RetroCatsFree_23
       rect:
         serializedVersion: 2
-        x: 133
-        y: 73
-        width: 20
-        height: 20
+        x: 134
+        y: 74
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -732,12 +732,12 @@ TextureImporter:
       name: RetroCatsFree_24
       rect:
         serializedVersion: 2
-        x: 166
-        y: 73
-        width: 20
-        height: 20
+        x: 167
+        y: 74
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -754,12 +754,12 @@ TextureImporter:
       name: RetroCatsFree_25
       rect:
         serializedVersion: 2
-        x: 198
-        y: 73
-        width: 20
-        height: 20
+        x: 199
+        y: 74
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -776,12 +776,12 @@ TextureImporter:
       name: RetroCatsFree_26
       rect:
         serializedVersion: 2
-        x: 102
-        y: 40
-        width: 20
-        height: 20
+        x: 103
+        y: 41
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -798,12 +798,12 @@ TextureImporter:
       name: RetroCatsFree_27
       rect:
         serializedVersion: 2
-        x: 133
-        y: 40
-        width: 20
-        height: 20
+        x: 134
+        y: 41
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -820,12 +820,12 @@ TextureImporter:
       name: RetroCatsFree_28
       rect:
         serializedVersion: 2
-        x: 166
-        y: 40
-        width: 20
-        height: 20
+        x: 167
+        y: 41
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -842,12 +842,12 @@ TextureImporter:
       name: RetroCatsFree_29
       rect:
         serializedVersion: 2
-        x: 198
-        y: 40
-        width: 20
-        height: 20
+        x: 199
+        y: 41
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -864,12 +864,12 @@ TextureImporter:
       name: RetroCatsFree_30
       rect:
         serializedVersion: 2
-        x: 102
-        y: 9
-        width: 24
-        height: 22
+        x: 103
+        y: 10
+        width: 22
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -886,12 +886,12 @@ TextureImporter:
       name: RetroCatsFree_31
       rect:
         serializedVersion: 2
-        x: 136
-        y: 9
-        width: 19
-        height: 17
+        x: 137
+        y: 10
+        width: 17
+        height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -908,12 +908,12 @@ TextureImporter:
       name: RetroCatsFree_32
       rect:
         serializedVersion: 2
-        x: 167
-        y: 7
-        width: 24
-        height: 22
+        x: 168
+        y: 8
+        width: 22
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -930,12 +930,12 @@ TextureImporter:
       name: RetroCatsFree_33
       rect:
         serializedVersion: 2
-        x: 201
-        y: 7
-        width: 19
-        height: 17
+        x: 202
+        y: 8
+        width: 17
+        height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -952,7 +952,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d4236e80afa4aa14687df79f276f7105
     internalID: 0
     vertices: []
     indices: 
@@ -960,7 +960,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       RetroCatsFree_0: -3513057317577747854
       RetroCatsFree_1: -257452214851007813
