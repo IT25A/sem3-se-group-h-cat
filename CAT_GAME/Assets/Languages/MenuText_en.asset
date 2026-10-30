@@ -98,6 +98,10 @@ MonoBehaviour:
     m_Localized: You collected all blue daisy flowers!
     m_Metadata:
       m_Items: []
+  - m_Id: 7938492569776128
+    m_Localized: You collected all eggs!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

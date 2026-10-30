@@ -378,6 +378,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.00012207031
       objectReference: {fileID: 0}
+    - target: {fileID: 4376090839270291074, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+      propertyPath: questType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376090839270291074, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+      propertyPath: itemSprite
+      value: 
+      objectReference: {fileID: 21300254, guid: 2700e06d970d112489ff23cfb58c3f78, type: 3}
+    - target: {fileID: 4376090839270291074, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+      propertyPath: warningKey
+      value: received_eggs
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376090839270291074, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+      propertyPath: requiredAmount
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5131806786318153560, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

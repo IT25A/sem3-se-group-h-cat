@@ -95,6 +95,10 @@ MonoBehaviour:
     m_Key: received_flowers
     m_Metadata:
       m_Items: []
+  - m_Id: 7938492569776128
+    m_Key: received_eggs
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
