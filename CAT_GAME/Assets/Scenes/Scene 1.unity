@@ -8346,7 +8346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c1d37a495c4a34680936f36a8e811c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneTransition
-  targetSceneName: Scene 2 - Phase 2
+  targetSceneName: Scene 2
   targetSpawnID: Scene2
   returnID: Scene1
   isLocked: 0
