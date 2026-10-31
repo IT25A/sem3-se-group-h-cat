@@ -596,6 +596,7 @@ GameObject:
   - component: {fileID: 371748329}
   - component: {fileID: 371748328}
   - component: {fileID: 371748330}
+  - component: {fileID: 371748331}
   m_Layer: 0
   m_Name: egg
   m_TagString: Egg
@@ -724,6 +725,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &371748331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371748327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7701c6311e218e74480d07dd1c24c528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  uniqueId: 
 --- !u!1 &426220372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1578,6 +1592,7 @@ GameObject:
   - component: {fileID: 727779258}
   - component: {fileID: 727779257}
   - component: {fileID: 727779259}
+  - component: {fileID: 727779260}
   m_Layer: 0
   m_Name: egg (2)
   m_TagString: Egg
@@ -1706,6 +1721,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &727779260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727779256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7701c6311e218e74480d07dd1c24c528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  uniqueId: 
 --- !u!1 &827970721
 GameObject:
   m_ObjectHideFlags: 0
@@ -2669,6 +2697,7 @@ GameObject:
   - component: {fileID: 1080902506}
   - component: {fileID: 1080902505}
   - component: {fileID: 1080902507}
+  - component: {fileID: 1080902508}
   m_Layer: 0
   m_Name: egg (3)
   m_TagString: Egg
@@ -2797,6 +2826,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &1080902508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080902504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7701c6311e218e74480d07dd1c24c528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  uniqueId: 
 --- !u!1 &1126565167
 GameObject:
   m_ObjectHideFlags: 0
@@ -7491,6 +7533,7 @@ GameObject:
   - component: {fileID: 1800983638}
   - component: {fileID: 1800983637}
   - component: {fileID: 1800983639}
+  - component: {fileID: 1800983640}
   m_Layer: 0
   m_Name: egg (1)
   m_TagString: Egg
@@ -7619,6 +7662,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &1800983640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800983636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7701c6311e218e74480d07dd1c24c528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  uniqueId: 
 --- !u!1001 &1896522654
 PrefabInstance:
   m_ObjectHideFlags: 0

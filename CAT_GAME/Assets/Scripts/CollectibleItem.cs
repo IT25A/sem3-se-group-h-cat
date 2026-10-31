@@ -5,6 +5,7 @@ public class CollectibleItem : MonoBehaviour
 {
     [Tooltip("Leave empty to auto-generate from scene name and position")]
     public string uniqueId;
+    private bool hasBeenCollected = false;
 
     private void Awake()
     {
@@ -17,6 +18,17 @@ public class CollectibleItem : MonoBehaviour
         // If already collected during this task, destroy immediately on scene load
         if (TaskCollectibleState.IsCollected(uniqueId))
         {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!hasBeenCollected && collision.CompareTag("Player"))
+        {
+            hasBeenCollected = true; 
+            TaskCollectibleState.RegisterEgg(uniqueId);
+
             Destroy(gameObject);
         }
     }
