@@ -985,6 +985,7 @@ MonoBehaviour:
   foodIcon: {fileID: -4422624661965789088, guid: 69f4c1ad0dfddd94781ad050e6aa979d, type: 3}
   lowWaterIcon: {fileID: -4369224588719516549, guid: c03d1762ae93dc2498e413130e90bc03, type: 3}
   daisyFlowerIcon: {fileID: 21300000, guid: 2f290e29358c5824b825b235e584b4f9, type: 3}
+  eggs: {fileID: 21300254, guid: 2700e06d970d112489ff23cfb58c3f78, type: 3}
   defaultIcon: {fileID: 850381291693308957, guid: 8c40db533097b1d4397b9a1eb17d388c, type: 3}
   notificationHistory: []
   maxHistoryCount: 20
@@ -11572,6 +11573,9 @@ MonoBehaviour:
   itemText: {fileID: 4352245426399751915}
   itemSprite: {fileID: 21300000, guid: 2f290e29358c5824b825b235e584b4f9, type: 3}
   requiredAmount: 10
+  questType: 0
+  tableName: MenuText
+  warningKey: received_flowers
 --- !u!225 &4641091712330149817
 CanvasGroup:
   m_ObjectHideFlags: 0

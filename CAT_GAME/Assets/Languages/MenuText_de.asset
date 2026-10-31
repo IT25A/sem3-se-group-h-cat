@@ -98,6 +98,10 @@ MonoBehaviour:
     m_Localized: "Du hast alle blauen G\xE4nsebl\xFCmchen gefunden!"
     m_Metadata:
       m_Items: []
+  - m_Id: 7938492569776128
+    m_Localized: Du hast alle Eier gesammelt!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
