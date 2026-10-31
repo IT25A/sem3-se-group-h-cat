@@ -58,7 +58,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
         portraitImage.sprite = dialogueData.npcPortrait;
         
         // NEU: Sprache auslesen (0=EN, 1=DE, 2=ES)
-        int lang = PlayerPrefs.GetInt("Language", 1);
+        int lang = PlayerPrefs.GetInt("Language", 0);
         if (lang == 0) activeLines = dialogueData.dialogueLines;
         else if (lang == 1) activeLines = dialogueData.germanLines;
         else if (lang == 2) activeLines = dialogueData.spanishLines;

@@ -3,56 +3,50 @@ using UnityEngine.InputSystem;
 
 public class PlayerInteraction : MonoBehaviour
 {
-	[Header("Einstellungen")]
-	public float interactionRadius = 1.0f;
-	public LayerMask interactableLayer; // Aktuell nicht im Filter genutzt, aber bereit für später
+    [Header("Einstellungen")]
+    public float interactionRadius = 1.0f;
+    public LayerMask interactableLayer; 
 
-	// Wird vom Input System gesendet
-	void OnInteract(InputValue value)
-	{
-		if (value.isPressed)
-		{
-			Debug.Log("E-Taste wurde gedrückt");
+    // Wird vom Input System gesendet
+    void OnInteract(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            Debug.Log("E-Taste wurde gedrückt");
 
-			Collider2D[] hitObjects = Physics2D.OverlapCircleAll(transform.position, interactionRadius);
+            Collider2D[] hitObjects = Physics2D.OverlapCircleAll(transform.position, interactionRadius);
 
-			if (hitObjects.Length > 0)
-			{
-				NPCTalk targetNpc = null;
+            if (hitObjects.Length > 0)
+            {
+                bool interacted = false;
 
-				// Wir durchsuchen alle getroffenen Collider nach dem NPC-Skript
-				foreach (var hit in hitObjects)
-				{
-					if (hit.gameObject != this.gameObject) // Ignoriere den Spieler
-					{
-						IInteractable target = hit.GetComponent<IInteractable>();
-						if (target != null)
-						{
-							target.Interact();
-						}
-					}
-				}
+                // Wir durchsuchen alle getroffenen Collider nach einem IInteractable
+                foreach (var hit in hitObjects)
+                {
+                    if (hit.gameObject != this.gameObject) // Ignoriere den Spieler
+                    {
+                        IInteractable target = hit.GetComponent<IInteractable>();
+                        if (target != null)
+                        {
+                            target.Interact();
+                            interacted = true;
+                            Debug.Log("DIAGNOSE: Interaktion mit " + hit.gameObject.name + " erfolgreich ausgelöst!");
+                            break; // Sobald ein Ziel gefunden wurde, abbrechen
+                        }
+                    }
+                }
 
-				// Wenn ein NPC gefunden wurde, Dialog starten/fortsetzen
-				if (targetNpc != null)
-				{
-					Debug.Log("DIAGNOSE: NPC gefunden, starte Dialog!");
-					if (targetNpc.isDialogueActive)
-						targetNpc.NextLine();
-					else
-						targetNpc.StartDialogue();
-				}
-				else
-				{
-					Debug.LogWarning("DIAGNOSE: Kein NPC mit NPCTalk-Skript im Radius gefunden.");
-				}
-			}
-		}
-	}
+                if (!interacted)
+                {
+                    Debug.LogWarning("DIAGNOSE: Kein interagierbares Objekt im Radius gefunden.");
+                }
+            }
+        }
+    }
 
-	private void OnDrawGizmosSelected()
-	{
-		Gizmos.color = Color.blue;
-		Gizmos.DrawWireSphere(transform.position, interactionRadius);
-	}
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, interactionRadius);
+    }
 }
