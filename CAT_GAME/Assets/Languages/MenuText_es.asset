@@ -70,6 +70,42 @@ MonoBehaviour:
     m_Localized: Restaurar por defecto
     m_Metadata:
       m_Items: []
+  - m_Id: 625665745342464
+    m_Localized: Ya puedes pasar al siguiente nivel.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 626066926325760
+    m_Localized: "Tu nivel de agua est\xE1 muy bajo. \xA1Intenta beber un poco de agua!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 626565251584000
+    m_Localized: "Ya hay un lugar donde beber agua; int\xE9ntalo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3507603404255232
+    m_Localized: Utiliza las teclas WASD o las flechas para moverte y pulsa E para interactuar.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4538996641001472
+    m_Localized: "Se ha rellenado el dep\xF3sito de agua."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4547384636633088
+    m_Localized: Has recibido comida seca nueva.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4716534541611008
+    m_Localized: "\xA1Acabas de recibir 100 raciones de comida seca! Quiz\xE1s ocurra algo especial."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6123421136875520
+    m_Localized: "\xA1Has recogido todas las margaritas azules!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7938492569776128
+    m_Localized: "\xA1Has recogido todos los huevos!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
