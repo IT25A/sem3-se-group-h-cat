@@ -9,30 +9,30 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
     public NPCDialogue dialogueData;
 
     [Header("UI Elemente (Panel 2)")]
-    public GameObject dialoguePanel; // Hier Panel 2 reinziehen
+    public GameObject dialoguePanel; 
     public TMP_Text nameText;
     public TMP_Text dialogueText;
     public Image portraitImage;
 
     [Header("Choice Buttons")]
-    public GameObject[] choiceButtonObjects; // Die 3 GameObjects der Buttons
-    public TMP_Text[] choiceButtonTexts;     // Die 3 Text-Komponenten der Buttons
+    public GameObject[] choiceButtonObjects; 
+    public TMP_Text[] choiceButtonTexts;     
 
     private int dialogueIndex;
     private bool isDialogueActive = false;
     private bool isTyping = false;
     private bool isWaitingForChoice = false;
 
+    private string[] activeLines; 
+
     void Start()
     {
-        // Versteckt das Panel beim Start
         if (dialoguePanel != null)
         {
             dialoguePanel.SetActive(false);
         }
     }
 
-    // Wird vom PlayerController aufgerufen, wenn Simba "E" drückt
     public void Interact()
     {
         if (!isDialogueActive)
@@ -41,13 +41,13 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
         }
         else if (!isTyping && !isWaitingForChoice) 
         {
-            // Nur weiterklicken, wenn der Text fertig ist UND keine Auswahl ansteht
             NextLine();
         }
     }
+
     public bool CanInteract()
     {
-        return true; // Sagt dem Player, dass er jederzeit mit dem NPC interagieren darf
+        return true; 
     }
 
     public void StartDialogue()
@@ -56,14 +56,19 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
         dialogueIndex = 0;
         isWaitingForChoice = false;
 
-        // UI füllen
         if (nameText != null) nameText.text = dialogueData.npcName;
         if (portraitImage != null && dialogueData.npcPortrait != null) 
             portraitImage.sprite = dialogueData.npcPortrait;
 
-        // Alle Buttons zur Sicherheit erstmal ausblenden
-        HideAllChoices();
+        // Sprache auslesen (Der doppelte Eintrag wurde hier entfernt)
+        int lang = PlayerPrefs.GetInt("Language", 1);
+        Debug.Log("Der NPC liest Sprach-ID: " + lang);
 
+        if (lang == 0) activeLines = dialogueData.dialogueLines;
+        else if (lang == 1) activeLines = dialogueData.germanLines;
+        else if (lang == 2) activeLines = dialogueData.spanishLines;
+
+        HideAllChoices();
         dialoguePanel.SetActive(true);
         StartCoroutine(TypeLine());
     }
@@ -72,7 +77,7 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
     {
         dialogueIndex++;
 
-        if (dialogueIndex < dialogueData.dialogueLines.Length)
+        if (dialogueIndex < activeLines.Length)
         {
             StartCoroutine(TypeLine());
         }
@@ -87,37 +92,39 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
         isTyping = true;
         dialogueText.text = "";
 
-        // Text Buchstabe für Buchstabe tippen
-        foreach (char c in dialogueData.dialogueLines[dialogueIndex].ToCharArray())
+        foreach (char c in activeLines[dialogueIndex].ToCharArray())
         {
             dialogueText.text += c;
             yield return new WaitForSeconds(dialogueData.typingSpeed);
         }
 
         isTyping = false;
-        
-        // Sobald der Satz fertig getippt ist, prüfen wir, ob Buttons auftauchen sollen!
         ShowChoicesIfAny();
     }
 
     private void ShowChoicesIfAny()
     {
-        // Prüfen, ob für den aktuellen Satz (dialogueIndex) Entscheidungen hinterlegt sind
         foreach (DialogueChoice choice in dialogueData.choices)
         {
             if (choice.dialogueIndex == dialogueIndex)
             {
-                isWaitingForChoice = true; // Blockiert das Weiterklicken mit "E"
-
-                // Buttons aktivieren und befüllen
-                for (int i = 0; i < choice.choices.Length; i++)
+                isWaitingForChoice = true; 
+                
+                int lang = PlayerPrefs.GetInt("Language", 1);
+                string[] activeChoices = choice.choices; 
+                
+                // Hier wurde der Fehler behoben: Buttons nutzen jetzt die richtige Sprache
+                if (lang == 0) activeChoices = choice.choices;
+                else if (lang == 1) activeChoices = choice.germanChoices;
+                else if (lang == 2) activeChoices = choice.spanishChoices;
+                
+                for (int i = 0; i < activeChoices.Length; i++)
                 {
                     if (i < choiceButtonObjects.Length)
                     {
                         choiceButtonObjects[i].SetActive(true);
-                        choiceButtonTexts[i].text = choice.choices[i];
+                        choiceButtonTexts[i].text = activeChoices[i];
 
-                        // Klick-Befehl für den Button setzen
                         int nextIndex = choice.nextDialogueIndexes[i];
                         Button btnComp = choiceButtonObjects[i].GetComponent<Button>();
                         
@@ -125,7 +132,7 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
                         btnComp.onClick.AddListener(() => MakeChoice(nextIndex));
                     }
                 }
-                break; // Wir haben die Auswahl gefunden, Schleife beenden
+                break; 
             }
         }
     }
@@ -135,7 +142,6 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
         isWaitingForChoice = false;
         HideAllChoices();
 
-        // Simba hat geklickt -> Wir springen zum neuen Satz und tippen ihn
         dialogueIndex = nextIndex;
         StartCoroutine(TypeLine());
     }
@@ -148,7 +154,7 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
         }
     }
 
-    private void EndDialogue()
+   private void EndDialogue()
     {
         isDialogueActive = false;
         dialoguePanel.SetActive(false);

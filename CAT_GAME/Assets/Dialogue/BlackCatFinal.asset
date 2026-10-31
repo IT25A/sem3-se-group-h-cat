@@ -19,8 +19,20 @@ MonoBehaviour:
   - 'By the way, you can drink water from the lake. You need it to survive! '
   - Go up the stairs and you will arrive at a lake.
   - Oh, and say hi to Duke for me!
+  germanLines:
+  - "Klasse! Vielleicht sollte ich jetzt einen Laden er\xF6ffnen."
+  - "\xDCbrigens kannst du Wasser aus dem See trinken. Du brauchst es zum \xDCberleben!"
+  - Geh die Treppen hoch und du kommst zu einem See."
+  - "Oh, und richte Duke sch\xF6ne Gr\xFC\xDFe von mir aus!"
+  spanishLines:
+  - "\xA1Genial! Tal vez deber\xEDa abrir una tienda ahora."
+  - "Por cierto, puedes beber agua del lago. \xA1La necesitas para sobrevivir!"
+  - "Sube las escaleras y llegar\xE1s a un lago."
+  - "\xA1Ah, y saluda a Duke de mi parte!"
   autoProgressLines: 01000000y
   autoProgressDelay: 1.5
+  endDialogueLines: 
   typingSpeed: 0.05
   voiceSound: []
   voicePitch: 1
+  choices: []

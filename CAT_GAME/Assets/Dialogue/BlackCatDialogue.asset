@@ -19,8 +19,20 @@ MonoBehaviour:
   - "You're free to explore the area and meet the locals around here. But remember, nothing in life is truly free\u2014if you want to get by, you'll have to help others out in return. That's just how this world works."
   - Anyway, my birthday is coming up, and I would love a beautiful bouquet of blue daisy. If you go through that fence over there, you'll reach a meadow. Could you gather 10 flowers for me?
   - Come back to me once you have them all. I've got a nice surprise waiting for you!
+  germanLines:
+  - "Hallo du! Du siehst aus, als h\xE4ttest du dich verirrt."
+  - "Es steht dir frei, die Gegend zu erkunden und die Bewohner hier kennenzulernen. Aber denk dran: Nichts im Leben ist wirklich umsonst \u2013 wenn du hier zurechtkommen willst, musst du im Gegenzug auch anderen helfen. So l\xE4uft das nun mal in dieser Welt."
+  - "Wie auch immer, mein Geburtstag steht vor der T\xFCr und ich h\xE4tte wahnsinnig gerne einen sch\xF6nen Strau\xDF blauer G\xE4nsebl\xFCmchen. Wenn du dort dr\xFCben durch den Zaun gehst, kommst du zu einer Wiese. K\xF6nntest du 10 Blumen f\xFCr mich pfl\xFCcken?"
+  - "Komm zu mir zur\xFCck, sobald du sie alle hast. Es wartet eine tolle \xDCberraschung auf dich!"
+  spanishLines:
+  - "\xA1Hola, bienvenido a nuestro pueblo! Pareces un poco perdido."
+  - "Eres libre de explorar la zona y conocer a los lugare\xF1os. Pero recuerda, nada en la vida es realmente gratis: si quieres salir adelante, tendr\xE1s que ayudar a los dem\xE1s a cambio. As\xED es como funciona este mundo."
+  - "De todos modos, mi cumplea\xF1os se acerca y me encantar\xEDa tener un hermoso ramo de margaritas azules. Si cruzas esa valla de all\xED, llegar\xE1s a un prado. \xBFPodr\xEDas recoger 10 flores para m\xED?"
+  - "Vuelve a verme cuando las tengas todas. \xA1Tengo una bonita sorpresa esper\xE1ndote!"
   autoProgressLines: 01000000y
   autoProgressDelay: 1.5
+  endDialogueLines: 
   typingSpeed: 0.05
   voiceSound: []
   voicePitch: 1
+  choices: []

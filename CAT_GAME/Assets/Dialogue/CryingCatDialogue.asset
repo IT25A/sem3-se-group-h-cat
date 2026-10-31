@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbb109fa977984832b53154bd07d68f7, type: 3}
-  m_Name: NPCDialogue
+  m_Name: CryingCatDialogue
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Sad Cat
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: -3513057317577747854, guid: ff1d44ce870236b49b6a36f862130ca6, type: 3}
   dialogueLines:
   - Can you help? I have lost my key?
   - 'Element 1: Don''t be selfish give me a hand. At least you can help me in one of the choices.'
@@ -25,6 +25,28 @@ MonoBehaviour:
   - How many cats have you met in this journey?
   - Nope
   - Correct! Here is a hint...
+  germanLines:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  spanishLines:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   autoProgressLines: 0000000000y
   autoProgressDelay: 1.5
   endDialogueLines: 00000000000001000001y
@@ -36,19 +58,43 @@ MonoBehaviour:
     choices:
     - Yes
     - No
+    germanChoices:
+    - 
+    - 
+    spanishChoices:
+    - 
+    - 
     nextDialogueIndexes: 0300000001000000i
   - dialogueIndex: 2
     choices:
     - Find the house key
     - 'Make a fire '
     - 'Answer a tricky quiz '
+    germanChoices:
+    - 
+    - 
+    - 
+    spanishChoices:
+    - 
+    - 
+    - 
     nextDialogueIndexes: 050000000600000007000000i
   - dialogueIndex: 4
     choices:
     - Find the house key
     - Make a fire
     - Answer a tricky quiz
+    germanChoices:
+    - 
+    - 
+    - 
+    spanishChoices:
+    - 
+    - 
+    - 
     nextDialogueIndexes: 080000000800000009000000i
   - dialogueIndex: 0
     choices: []
+    germanChoices: []
+    spanishChoices: []
     nextDialogueIndexes: 

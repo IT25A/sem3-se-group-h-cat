@@ -4,7 +4,6 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Reflection;
 
-
 public class NPCTalk : MonoBehaviour, IInteractable
 {
     public NPCDialogue dialogueData;
@@ -12,11 +11,13 @@ public class NPCTalk : MonoBehaviour, IInteractable
     public TMP_Text dialogueText, nameText; 
     public Image portraitImage;
    
-
     private int dialogueIndex;
     private bool isTyping;
     private NPCPatrol patrolScript;
     public bool isDialogueActive;
+
+    // NEU: Speichert die Sätze der aktuell gewählten Sprache
+    private string[] activeLines; 
 
     public bool CanInteract()
     {
@@ -25,14 +26,13 @@ public class NPCTalk : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        //if no dialogue data or game is paused and dialogue is not active, return
         if (dialogueData == null){
-        return;
+            return;
         }
         if (isDialogueActive)
-            {
-                NextLine();
-            }
+        {
+            NextLine();
+        }
         else
         {
             StartDialogue();
@@ -56,24 +56,29 @@ public class NPCTalk : MonoBehaviour, IInteractable
         dialogueIndex = 0;
         nameText.SetText(dialogueData.npcName);
         portraitImage.sprite = dialogueData.npcPortrait;
-        dialoguePanel.SetActive(true);
-        //PauseController.SetPaused(true);
+        
+        // NEU: Sprache auslesen (0=EN, 1=DE, 2=ES)
+        int lang = PlayerPrefs.GetInt("Language", 1);
+        if (lang == 0) activeLines = dialogueData.dialogueLines;
+        else if (lang == 1) activeLines = dialogueData.germanLines;
+        else if (lang == 2) activeLines = dialogueData.spanishLines;
 
+        dialoguePanel.SetActive(true);
         StartCoroutine(TypeLine());
-    
     }
+
     public void NextLine()
     {
         if (isTyping)
         {
             StopAllCoroutines();
-            dialogueText.SetText(dialogueData.dialogueLines[dialogueIndex]);
+            // NEU: Nutzt activeLines
+            dialogueText.SetText(activeLines[dialogueIndex]);
             isTyping = false;
         }
-        else if (dialogueIndex + 1 < dialogueData.dialogueLines.Length)
+        else if (dialogueIndex + 1 < activeLines.Length) // NEU: Nutzt activeLines.Length
         {
             dialogueIndex++;
-            //If another line, type next line
             StartCoroutine(TypeLine());
         }
         else
@@ -81,17 +86,20 @@ public class NPCTalk : MonoBehaviour, IInteractable
             EndDialogue();
         }
     }
+
     IEnumerator TypeLine()
     {
         isTyping = true;
         dialogueText.SetText("");
 
-        foreach (char letter in dialogueData.dialogueLines[dialogueIndex])
+        // NEU: Nutzt activeLines zum Tippen
+        foreach (char letter in activeLines[dialogueIndex])
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(dialogueData.typingSpeed);
         }
         isTyping = false;
+        
         if (dialogueData.autoProgressLines.Length > dialogueIndex 
         && dialogueData.autoProgressLines[dialogueIndex])
         {
@@ -99,6 +107,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
             NextLine();
         }
     }
+
     public void EndDialogue()
     {
         StopAllCoroutines();
@@ -111,7 +120,5 @@ public class NPCTalk : MonoBehaviour, IInteractable
 
         dialogueText.SetText("");
         dialoguePanel.SetActive(false);
-        //PauseController.SetPaused(false);
     }
-
-}    
+}

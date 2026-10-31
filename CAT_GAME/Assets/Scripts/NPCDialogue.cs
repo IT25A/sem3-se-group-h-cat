@@ -8,7 +8,11 @@ public class NPCDialogue : ScriptableObject
 {
     public string npcName;
     public Sprite npcPortrait;
-    public string[] dialogueLines;
+
+    [Header("Dialog")]
+    public string[] dialogueLines;//englische Version
+    public string[] germanLines;
+    public string[] spanishLines;
     public bool [] autoProgressLines;
     public float autoProgressDelay = 1.5f;
     public bool [] endDialogueLines;
@@ -24,6 +28,9 @@ public class NPCDialogue : ScriptableObject
 public class DialogueChoice
 {
     public int dialogueIndex; //Dial choice where choices appear
+    [Header("Button Texte")]
     public string []choices;//Player response options
+    public string []germanChoices;
+    public string []spanishChoices;
     public int [] nextDialogueIndexes; //Where choices lead
 }

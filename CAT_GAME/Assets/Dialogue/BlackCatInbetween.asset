@@ -17,8 +17,14 @@ MonoBehaviour:
   dialogueLines:
   - I want all of the flowers for my birthday. Please keep looking!
   - 
+  germanLines:
+  - "Ich m\xF6chte viel Blumen f\xFCr meinen Geburtstag haben. Bitte such weiter!"
+  spanishLines:
+  - "Quiero todas las flores para mi cumplea\xF1os. \xA1Por favor, sigue buscando!"
   autoProgressLines: 01000000y
   autoProgressDelay: 1.5
+  endDialogueLines: 
   typingSpeed: 0.05
   voiceSound: []
   voicePitch: 1
+  choices: []

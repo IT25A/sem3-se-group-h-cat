@@ -17,8 +17,16 @@ MonoBehaviour:
   dialogueLines:
   - Let me guess...you were chasing after little stinky mouse right?
   - I saw it running around here. You might still catch it
+  germanLines:
+  - Lass mich raten... du warst hinter dieser kleinen Stinkemaus her, oder?
+  - Ich habe sie hier herumflitzen sehen. Vielleicht erwischst du sie noch!
+  spanishLines:
+  - "D\xE9jame adivinar... estabas persiguiendo a ese ratoncito apestoso, \xBFverdad?\""
+  - "Lo vi correteando por aqu\xED. \xA1Quiz\xE1s a\xFAn puedas atraparlo!\""
   autoProgressLines: 0100y
   autoProgressDelay: 1.5
+  endDialogueLines: 
   typingSpeed: 0.05
   voiceSound: []
   voicePitch: 1
+  choices: []
