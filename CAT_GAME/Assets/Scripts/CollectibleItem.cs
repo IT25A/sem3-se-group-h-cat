@@ -7,6 +7,15 @@ public class CollectibleItem : MonoBehaviour
     public string uniqueId;
     private bool hasBeenCollected = false;
 
+    public enum CollectibleType
+    {
+        Egg,
+        Flower,
+        Mouse
+    }
+
+    public CollectibleType collectibleType;
+
     private void Awake()
     {
         if (string.IsNullOrEmpty(uniqueId))
@@ -26,8 +35,19 @@ public class CollectibleItem : MonoBehaviour
     {
         if (!hasBeenCollected && collision.CompareTag("Player"))
         {
-            hasBeenCollected = true; 
-            TaskCollectibleState.RegisterEgg(uniqueId);
+            hasBeenCollected = true;
+            switch (collectibleType)
+            {
+                case CollectibleType.Egg:
+                    TaskCollectibleState.RegisterEgg(uniqueId);
+                    break;
+                case CollectibleType.Flower:
+                    TaskCollectibleState.RegisterFlower(uniqueId);
+                    break;
+                case CollectibleType.Mouse:
+                    TaskCollectibleState.RegisterMouse(uniqueId);
+                    break;
+            } 
 
             Destroy(gameObject);
         }

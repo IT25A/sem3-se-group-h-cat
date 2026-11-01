@@ -4,9 +4,11 @@ using UnityEngine;
 public static class TaskCollectibleState
 {
     public static int EggCount { get; private set; } = 0;
+    public static int FlowerCount { get; private set; } = 0;
+    public static int MouseCount { get; private set; } = 0;
     public static bool eggNotificationSent = false;
     public static bool flowerNotificationSent = false;
-    public static int FlowerCount { get; private set; } = 0;
+    public static bool mouseNotificationSent = false;
 
     // Stores unique IDs of collectibles picked up during the current task
     private static readonly HashSet<string> collectedIds = new HashSet<string>();
@@ -45,13 +47,24 @@ public static class TaskCollectibleState
         FlowerCount++;
     }
 
+    public static void RegisterMouse(string id)
+    {
+        if (!string.IsNullOrEmpty(id))
+        {
+            collectedIds.Add(id);
+        }
+        MouseCount++;
+    }
+
     // Call this when your task/event is completed!
     public static void ResetTaskCollectibles()
     {
         EggCount = 0;
         FlowerCount = 0;
+        MouseCount = 0;
         eggNotificationSent = false;
         flowerNotificationSent = false;
+        mouseNotificationSent = false;
         //collectedIds.Clear();
         Debug.Log("Task collectibles wurden zurückgesetzt.");
     }

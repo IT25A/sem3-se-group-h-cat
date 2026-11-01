@@ -1825,7 +1825,7 @@ GameObject:
   - component: {fileID: 816820101}
   - component: {fileID: 816820100}
   - component: {fileID: 816820099}
-  - component: {fileID: 816820103}
+  - component: {fileID: 816820104}
   m_Layer: 0
   m_Name: Rat
   m_TagString: Untagged
@@ -2044,7 +2044,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &816820103
+--- !u!114 &816820104
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2053,9 +2053,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 816820095}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1a3e1237ea10f242af5dbfee7803807, type: 3}
+  m_Script: {fileID: 11500000, guid: 7701c6311e218e74480d07dd1c24c528, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
+  m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  uniqueId: mouse_1
+  collectibleType: 2
 --- !u!1001 &881934720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2844,6 +2846,22 @@ PrefabInstance:
     - target: {fileID: 3521828368239102393, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376090839270291074, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+      propertyPath: questType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376090839270291074, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+      propertyPath: itemSprite
+      value: 
+      objectReference: {fileID: 6697221684379260361, guid: a8527a2897ea3204d886204dee940bbc, type: 3}
+    - target: {fileID: 4376090839270291074, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+      propertyPath: warningKey
+      value: received_mouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376090839270291074, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+      propertyPath: requiredAmount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5131806786318153560, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4092,6 +4110,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2034902f62b053489ec3e1882f1a019, type: 3}
+--- !u!1 &1544679406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1544679407}
+  - component: {fileID: 1544679408}
+  - component: {fileID: 1544679409}
+  m_Layer: 0
+  m_Name: Tasks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1544679407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544679406}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1544679408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544679406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 125b8a7fc2866a44eba458192b6639b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Task2Eggs
+  requiredAmount: 4
+  rewardAmount: 15
+--- !u!114 &1544679409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544679406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7109a78a2e99743a8d9ac66dd1316b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Task3Mouse
+  requiredAmount: 1
+  rewardAmount: 15
 --- !u!1001 &1630319021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7659,3 +7738,4 @@ SceneRoots:
   - {fileID: 931198428}
   - {fileID: 1500931688}
   - {fileID: 1272607556}
+  - {fileID: 1544679407}

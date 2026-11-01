@@ -21,6 +21,8 @@ public class QuestItemUI : MonoBehaviour
     [Header("Localization Keys")]
     public string tableName = "MenuText";
     public string warningKey = "received_flowers";
+
+    public bool f = false; 
     void Start()
     {
         // Bild zuweisen
@@ -40,12 +42,13 @@ public class QuestItemUI : MonoBehaviour
         }
 
         HideUI();
+    
     }
 
     void Update()
     {
         int currentCount = 0;
-        bool f = false;
+        f = false;
         switch (questType)
         {
             case QuestType.Task1:
@@ -63,7 +66,6 @@ public class QuestItemUI : MonoBehaviour
                 break;
             case QuestType.Task2:
                 currentCount = TaskCollectibleState.EggCount;
-                if (SceneData.TargetSpawnID == "Scene2") f = true;
                 if (currentCount >= requiredAmount && !TaskCollectibleState.eggNotificationSent)
                 {
                     if (NotificationManager.Instance != null)
@@ -76,11 +78,21 @@ public class QuestItemUI : MonoBehaviour
                 break;
 
             case QuestType.Task3:
-
+                currentCount = TaskCollectibleState.MouseCount;
+                if (currentCount >= requiredAmount && !TaskCollectibleState.mouseNotificationSent)
+                {
+                    if (NotificationManager.Instance != null)
+                    {
+                        NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
+                        Debug.Log("Notification für" + questType + " gesendet");
+                        TaskCollectibleState.mouseNotificationSent = true;
+                    }
+                }
                 break;
         }
 
         bool shouldShow = currentCount > 0 && !f;
+        Debug.Log($"shouldShow={shouldShow}");
 
         if (shouldShow)
         {
