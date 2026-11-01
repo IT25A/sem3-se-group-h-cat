@@ -16,7 +16,7 @@ MonoBehaviour:
   npcPortrait: {fileID: -3513057317577747854, guid: ff1d44ce870236b49b6a36f862130ca6, type: 3}
   dialogueLines:
   - Can you help? I have lost my key?
-  - 'Element 1: Don''t be selfish give me a hand. At least you can help me in one of the choices.'
+  - Don't be selfish give me a hand. At least you can help me in one of the choices.
   - Omg I'm so nervous. I'm so helpless in anyway. Which one could you do me a favor?
   - Great! I knew that you'd help me.
   - Omg I'm so nervous. I'm so helpless in anyway. Which one could you do me a favor?
@@ -26,30 +26,30 @@ MonoBehaviour:
   - Nope
   - Correct! Here is a hint...
   germanLines:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - "Kannst du helfen? Ich habe meinen Schl\xFCssel verloren?"
+  - Sei nicht egoistisch, hilf mir. Zumindest kannst du mir bei einer der Optionen helfen.
+  - "Oh mein Gott, ich bin so nerv\xF6s. Ich bin sowieso so hilflos. Welche davon k\xF6nntest du mir als Gefallen tun?"
+  - "Gro\xDFartig! Ich wusste, dass du mir helfen w\xFCrdest."
+  - "Oh mein Gott, ich bin so nerv\xF6s. Ich bin sowieso so hilflos. Welche davon k\xF6nntest du mir als Gefallen tun?"
+  - "Ein Vogel hat ihn mir gestohlen... bitte sieh dich um, wo er sein k\xF6nnte."
+  - "Sammle 10 H\xF6lzer, um ein Feuer zu machen, mir ist kalt, bitte beeil dich."
+  - Wie viele Katzen hast du auf dieser Reise getroffen?
+  - "n\xF6"
+  - Richtig! Hier ist ein Hinweis...
   spanishLines:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - "\xBFPuedes ayudar? \xBFHe perdido mi llave?"
+  - "No seas ego\xEDsta, \xE9chame una mano. Al menos puedes ayudarme en una de las opciones."
+  - "Dios m\xEDo, estoy muy nerviosa/o. De todos modos estoy muy indefensa/o. \xBFCu\xE1l podr\xEDas hacerme el favor?"
+  - "\xA1Genial! Sab\xEDa que me ayudar\xEDas."
+  - "Dios m\xEDo, estoy muy nerviosa/o. De todos modos estoy muy indefensa/o. \xBFCu\xE1l podr\xEDas hacerme el favor?"
+  - "Un p\xE1jaro me la ha robado... por favor busca por los alrededores d\xF3nde puede estar."
+  - "Recoge 10 maderas para hacer fuego, tengo fr\xEDo, por favor date prisa."
+  - "\xBFCu\xE1ntos gatos has conocido en este viaje?"
+  - nop
+  - "\xA1Correcto! Aqu\xED tienes una pista..."
   autoProgressLines: 0000000000y
   autoProgressDelay: 1.5
-  endDialogueLines: 00000000000001000001y
+  endDialogueLines: 00000000000101000001y
   typingSpeed: 0.05
   voiceSound: []
   voicePitch: 1
@@ -59,11 +59,11 @@ MonoBehaviour:
     - Yes
     - No
     germanChoices:
-    - 
-    - 
+    - Ja
+    - Nein
     spanishChoices:
-    - 
-    - 
+    - Si
+    - No
     nextDialogueIndexes: 0300000001000000i
   - dialogueIndex: 2
     choices:
@@ -71,13 +71,13 @@ MonoBehaviour:
     - 'Make a fire '
     - 'Answer a tricky quiz '
     germanChoices:
-    - 
-    - 
-    - 
+    - "Finde den Hausschl\xFCssel"
+    - Feuer machen
+    - eine Quizfrage antworten
     spanishChoices:
-    - 
-    - 
-    - 
+    - Find the house key
+    - 'Make a fire '
+    - 'Answer a tricky quiz '
     nextDialogueIndexes: 050000000600000007000000i
   - dialogueIndex: 4
     choices:
@@ -85,16 +85,11 @@ MonoBehaviour:
     - Make a fire
     - Answer a tricky quiz
     germanChoices:
-    - 
-    - 
-    - 
+    - "Finde den Hausschl\xFCssel "
+    - Feuer machen
+    - eine Quizfrage antworten
     spanishChoices:
-    - 
-    - 
-    - 
-    nextDialogueIndexes: 080000000800000009000000i
-  - dialogueIndex: 0
-    choices: []
-    germanChoices: []
-    spanishChoices: []
-    nextDialogueIndexes: 
+    - Find the house key
+    - Make a fire
+    - Answer a tricky quiz
+    nextDialogueIndexes: 050000000600000007000000i
