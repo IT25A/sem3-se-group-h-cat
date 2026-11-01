@@ -12,7 +12,7 @@ public class QuestDoor : MonoBehaviour
 
     private void Update()
     {
-        if (FlowerQuestManager.Instance != null && FlowerQuestManager.Instance.isQuestCompleted)
+        if (FlowerQuestManager.Instance != null && FlowerQuestManager.Instance.isQuestCompleted && SceneData.savedFood >= 10)
         {
             if (sceneTransition != null)
             {

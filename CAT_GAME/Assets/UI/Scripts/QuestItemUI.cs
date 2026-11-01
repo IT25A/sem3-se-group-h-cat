@@ -1,18 +1,28 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Threading.Tasks;
+using Unity.VectorGraphics;
 
 public class QuestItemUI : MonoBehaviour
 {
     [Header("UI Elemente")]
-    public CanvasGroup canvasGroup;     
-    public Image itemIconImage;       
-    public TextMeshProUGUI itemText;    
+    public CanvasGroup canvasGroup;
+    public Image itemIconImage;
+    public TextMeshProUGUI itemText;
 
     [Header("Gegenstands-Einstellungen")]
-    public Sprite itemSprite;           
-    public int requiredAmount = 10;     
+    public Sprite itemSprite;
+    public int requiredAmount = 10;
 
+    public enum QuestType { Task1, Task2, Task3 } //arten der task für switch 
+    public QuestType questType;
+
+    [Header("Localization Keys")]
+    public string tableName = "MenuText";
+    public string warningKey = "received_flowers";
+
+    public bool f = false; 
     void Start()
     {
         // Bild zuweisen
@@ -32,21 +42,62 @@ public class QuestItemUI : MonoBehaviour
         }
 
         HideUI();
+    
     }
 
     void Update()
     {
-        if (FlowerQuestManager.Instance == null) return;
+        int currentCount = 0;
+        f = false;
+        switch (questType)
+        {
+            case QuestType.Task1:
+                currentCount = FlowerQuestManager.Instance.currentFlowerCount;
+                f = FlowerQuestManager.Instance.finalDialogueFinished;
+                if (currentCount >= requiredAmount && !TaskCollectibleState.flowerNotificationSent)
+                {
+                    if (NotificationManager.Instance != null)
+                    {
+                        NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
+                        Debug.Log("Notification für" + questType + " gesendet");
+                        TaskCollectibleState.flowerNotificationSent = true;
+                    }
+                }
+                break;
+            case QuestType.Task2:
+                currentCount = TaskCollectibleState.EggCount;
+                if (currentCount >= requiredAmount && !TaskCollectibleState.eggNotificationSent)
+                {
+                    if (NotificationManager.Instance != null)
+                    {
+                        NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
+                        Debug.Log("Notification für" + questType + " gesendet");
+                        TaskCollectibleState.eggNotificationSent = true;
+                    }
+                }
+                break;
 
-        int currentCount = FlowerQuestManager.Instance.currentFlowerCount;
-        bool isFinalDialogueFinished = FlowerQuestManager.Instance.finalDialogueFinished;
+            case QuestType.Task3:
+                currentCount = TaskCollectibleState.MouseCount;
+                if (currentCount >= requiredAmount && !TaskCollectibleState.mouseNotificationSent)
+                {
+                    if (NotificationManager.Instance != null)
+                    {
+                        NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
+                        Debug.Log("Notification für" + questType + " gesendet");
+                        TaskCollectibleState.mouseNotificationSent = true;
+                    }
+                }
+                break;
+        }
 
-        bool shouldShow = currentCount > 0 && !isFinalDialogueFinished;
+        bool shouldShow = currentCount > 0 && !f;
+        Debug.Log($"shouldShow={shouldShow}");
 
         if (shouldShow)
         {
             ShowUI();
-            
+
             if (itemText != null)
             {
                 itemText.text = $"{currentCount}";
