@@ -15,13 +15,14 @@ public class QuestItemUI : MonoBehaviour
     public Sprite itemSprite;
     public int requiredAmount = 10;
 
-    public enum QuestType { Task1, Task2, Task3 }
+    public enum QuestType { Task1, Task2, Task3 } //arten der task für switch 
     public QuestType questType;
 
     [Header("Localization Keys")]
     public string tableName = "MenuText";
     public string warningKey = "received_flowers";
 
+    public bool f = false; 
     void Start()
     {
         // Bild zuweisen
@@ -41,40 +42,57 @@ public class QuestItemUI : MonoBehaviour
         }
 
         HideUI();
+    
     }
 
     void Update()
     {
         int currentCount = 0;
-        bool f = false;
+        f = false;
         switch (questType)
         {
             case QuestType.Task1:
-                if (FlowerQuestManager.Instance == null) return;
-
                 currentCount = FlowerQuestManager.Instance.currentFlowerCount;
                 f = FlowerQuestManager.Instance.finalDialogueFinished;
+                if (currentCount >= requiredAmount && !TaskCollectibleState.flowerNotificationSent)
+                {
+                    if (NotificationManager.Instance != null)
+                    {
+                        NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
+                        Debug.Log("Notification für" + questType + " gesendet");
+                        TaskCollectibleState.flowerNotificationSent = true;
+                    }
+                }
                 break;
             case QuestType.Task2:
                 currentCount = TaskCollectibleState.EggCount;
-                if (SceneData.TargetSpawnID == "Scene2") f = true;
+                if (currentCount >= requiredAmount && !TaskCollectibleState.eggNotificationSent)
+                {
+                    if (NotificationManager.Instance != null)
+                    {
+                        NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
+                        Debug.Log("Notification für" + questType + " gesendet");
+                        TaskCollectibleState.eggNotificationSent = true;
+                    }
+                }
                 break;
 
             case QuestType.Task3:
-
+                currentCount = TaskCollectibleState.MouseCount;
+                if (currentCount >= requiredAmount && !TaskCollectibleState.mouseNotificationSent)
+                {
+                    if (NotificationManager.Instance != null)
+                    {
+                        NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
+                        Debug.Log("Notification für" + questType + " gesendet");
+                        TaskCollectibleState.mouseNotificationSent = true;
+                    }
+                }
                 break;
         }
 
-        if (currentCount == requiredAmount)
-        {
-            if (NotificationManager.Instance != null)
-            {
-                NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
-                Debug.Log("Notification für" + questType + " gesendet");
-            }
-        }
-
         bool shouldShow = currentCount > 0 && !f;
+        Debug.Log($"shouldShow={shouldShow}");
 
         if (shouldShow)
         {

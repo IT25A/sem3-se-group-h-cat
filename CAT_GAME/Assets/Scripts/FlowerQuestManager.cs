@@ -66,10 +66,6 @@ public class FlowerQuestManager : MonoBehaviour
         isQuestCompleted = true;
 
         Debug.Log("Quest Completed: All specific flowers collected!");
-        if (NotificationManager.Instance != null)
-        {
-            NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
-            Debug.Log("[Quest] 10 Blumen erreicht - Notification gesendet!");
-        }
+        TaskCollectibleState.ResetTaskCollectibles();
     }
 }

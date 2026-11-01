@@ -99,6 +99,10 @@ MonoBehaviour:
     m_Key: received_eggs
     m_Metadata:
       m_Items: []
+  - m_Id: 8567438210527232
+    m_Key: received_mouse
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

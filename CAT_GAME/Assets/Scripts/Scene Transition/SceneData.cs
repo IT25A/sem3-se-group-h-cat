@@ -24,6 +24,7 @@ public static class SceneData
         TargetSpawnID = null;
         LastSpawnID = null;
         savedNotificationHistory.Clear();
+        TaskCollectibleState.ClearAllCollectedData();
     }
 }
 

@@ -102,6 +102,10 @@ MonoBehaviour:
     m_Localized: You collected all eggs!
     m_Metadata:
       m_Items: []
+  - m_Id: 8567438210527232
+    m_Localized: You collected the mouse!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
