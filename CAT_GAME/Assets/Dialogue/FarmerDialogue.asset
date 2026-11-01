@@ -21,8 +21,24 @@ MonoBehaviour:
   - Since you're already here, could you help me with something?
   - I need to get this basket of fresh eggs across the wooden bridge, but my back is cracking like a dry twig today. If I try to carry it, I'll turn the whole harvest into scrambled eggs!
   - Could you carry the basket over for me? Bring them across safely and maybe i will let you eat some chicken!
+  germanLines:
+  - "Autsch, mein armer R\xFCcken!"
+  - "Oh, hallo, kleine Katze. Wie hei\xDFt du?"
+  - "Simba? Was f\xFCr ein sch\xF6ner Name."
+  - "Da du schon mal hier bist, k\xF6nntest du mir bei etwas helfen?"
+  - "Ich muss diesen Korb mit frischen Eiern \xFCber die Holzbr\xFCcke bringen, aber mein R\xFCcken knackt heute wie ein trockener Zweig. Wenn ich versuche, ihn zu tragen, mache ich aus der ganzen Ernte noch R\xFChrei!"
+  - "K\xF6nntest du den Korb f\xFCr mich hin\xFCbertragen? Bring sie sicher r\xFCber, und vielleicht lasse ich dich etwas H\xFChnchen essen!"
+  spanishLines:
+  - "\xA1Ay, mi pobre espalda!"
+  - "Oh, hola, gatito. \xBFC\xF3mo te llamas?"
+  - "\xBFSimba? Qu\xE9 nombre tan bonito."
+  - "Ya que est\xE1s aqu\xED, \xBFpodr\xEDas ayudarme con algo?"
+  - "Necesito llevar esta cesta de huevos frescos al otro lado del puente de madera, pero hoy mi espalda cruje como una rama seca. \xA1Si intento llevarla, convertir\xE9 toda la cosecha en huevos revueltos!"
+  - "\xBFPodr\xEDas llevar la cesta por m\xED? \xA1P\xE1salos a salvo y tal vez te deje comer un poco de pollo!"
   autoProgressLines: 01010000y
   autoProgressDelay: 1.5
+  endDialogueLines: 
   typingSpeed: 0.05
   voiceSound: []
   voicePitch: 1
+  choices: []

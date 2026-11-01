@@ -19,8 +19,20 @@ MonoBehaviour:
   - I have been living in this village since ages. You don't look like you are from here.
   - We all survive on dry food, but it doesn't grow on trees.
   - Just earlier today, I helped someone with their grocery shopping, and I earned a nice bowl of food!
+  germanLines:
+  - Hallo, mein Name ist Mimo. Freut mich, dich kennenzulernen!
+  - "Ich lebe schon seit Ewigkeiten in diesem Dorf. Du siehst nicht so aus, als w\xE4rst du von hier."
+  - "Wir alle ern\xE4hren uns hier von Trockenfutter, aber das w\xE4chst ja leider nicht auf B\xE4umen."
+  - "Erst heute habe ich jemandem beim Einkaufen geholfen und mir damit eine leckere Sch\xFCssel Futter verdient!"
+  spanishLines:
+  - "Hola, me llamo Mimo. \xA1Un placer conocerte!"
+  - "Llevo viviendo en este pueblo desde hace much\xEDsimo tiempo. No pareces ser de por aqu\xED."
+  - "Todos sobrevivimos a base de comida seca, pero esa no crece en los \xE1rboles."
+  - "\xA1Justo hoy ayud\xE9 a alguien con sus compras y me gan\xE9 un buen taz\xF3n de comida!"
   autoProgressLines: 01010000y
   autoProgressDelay: 1.5
+  endDialogueLines: 
   typingSpeed: 0.05
   voiceSound: []
   voicePitch: 1
+  choices: []
