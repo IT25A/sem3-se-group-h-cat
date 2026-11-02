@@ -52,7 +52,7 @@ public class QuestItemUI : MonoBehaviour
         switch (questType)
         {
             case QuestType.Task1:
-                currentCount = FlowerQuestManager.Instance.currentFlowerCount;
+                currentCount = TaskCollectibleState.FlowerCount;
                 f = FlowerQuestManager.Instance.finalDialogueFinished;
                 if (currentCount >= requiredAmount && !TaskCollectibleState.flowerNotificationSent)
                 {
@@ -92,7 +92,6 @@ public class QuestItemUI : MonoBehaviour
         }
 
         bool shouldShow = currentCount > 0 && !f;
-        Debug.Log($"shouldShow={shouldShow}");
 
         if (shouldShow)
         {
