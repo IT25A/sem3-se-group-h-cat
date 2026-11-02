@@ -1,6 +1,7 @@
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NotificationHistoryUI : MonoBehaviour {
     [Header("UI Elemente")]
@@ -30,6 +31,7 @@ public class NotificationHistoryUI : MonoBehaviour {
         }
 
         var history = NotificationManager.Instance.notificationHistory;
+        var spriteHistory = NotificationManager.Instance.notificationSpriteHistory; 
 
         for (int i = history.Count - 1; i >= 0; i--) {
             GameObject newItem = Instantiate(notificationItemPrefab, contentParent);
@@ -39,6 +41,15 @@ public class NotificationHistoryUI : MonoBehaviour {
                 TextMeshProUGUI itemText = txtTransform.GetComponent<TextMeshProUGUI>();
                 if (itemText != null) {
                     itemText.text = history[i];
+                }
+            }
+
+            Transform imgTransform = newItem.transform.Find("Image"); 
+            if (imgTransform != null) {
+                Image itemImage = imgTransform.GetComponent<Image>();
+                if (itemImage != null && i < spriteHistory.Count) {
+                    itemImage.sprite = spriteHistory[i];
+                    itemImage.gameObject.SetActive(true);
                 }
             }
         }
