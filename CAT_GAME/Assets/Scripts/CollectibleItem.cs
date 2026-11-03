@@ -11,7 +11,9 @@ public class CollectibleItem : MonoBehaviour
     {
         Egg,
         Flower,
-        Mouse
+        Mouse,
+        Key,
+        SimbaNecklace
     }
 
     public CollectibleType collectibleType;
