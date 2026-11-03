@@ -57,6 +57,7 @@ public static class TaskCollectibleState
             collectedIds.Add(id);
         }
         MouseCount++;
+        
     }
 
     public static void RegisterKey(string id)

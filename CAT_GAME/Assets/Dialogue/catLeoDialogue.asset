@@ -22,9 +22,10 @@ MonoBehaviour:
   - What would you like to help with?
   - A bird stole it from me... please look around. Maybe it's stuck in a tree.
   - "Could you gather 10 pieces of wood so I can start a fire? Please hurry\u2014I'm already freezing."
-  - How many cats have you met in this journey?
-  - Wrong.
-  - Correct! Here is a hint...
+  - Cats sleep a lot, but how many hours does an adult cat really sleep?
+  - 'Correct! Here is a hint....Find your collar so we can help you find your owner! '
+  - Wrong
+  - 
   germanLines:
   - "K\xF6nntest du mir behilflich sein? Ich habe meinen Hausschl\xFCssel verloren."
   - "Sei nicht so egoistisch. K\xF6nntest du mir wenigstens einen anderen Gefallen tun?"
@@ -33,9 +34,10 @@ MonoBehaviour:
   - "Wobei m\xF6chtest du helfen?"
   - 'Ein Vogel hat ihn mir gestohlen... bitte sieh dich um. Vielleicht steckt er in einem Baum fest. '
   - "K\xF6nntest du 10 Holzst\xFCcke sammeln, damit ich ein Feuer machen kann? Beeil dich bitte, ich friere schon."
-  - Wie viele Katzen hast du auf dieser Reise kennengelernt?
+  - "Katzen schlafen viel, aber wie viele Stunden schl\xE4ft eine erwachsene Katze wirklich?"
+  - Richtig! Hier ist ein Hinweis....Finde dein Halsband, damit man dir weiterhelfen kann, deinen Besitzer zu finden.
   - Falsch.
-  - Richtig! Hier ist ein Hinweis...
+  - 
   spanishLines:
   - "\xBFPodr\xEDas echarme una mano? He perdido la llave de casa."
   - "No seas tan ego\xEDsta. \xBFPodr\xEDas al menos hacerme otro favor?"
@@ -44,12 +46,13 @@ MonoBehaviour:
   - "Dios m\xEDo, estoy muy nerviosa/o. De todos modos estoy muy indefensa/o. \xBFCu\xE1l podr\xEDas hacerme el favor?"
   - "Un p\xE1jaro me lo ha robado... por favor, echa un vistazo. Quiz\xE1 est\xE9 atrapado en un \xE1rbol."
   - "\xBFPodr\xEDas recoger 10 trozos de le\xF1a para que pueda encender un fuego? Date prisa, por favor, que ya tengo fr\xEDo."
-  - "\xBFCu\xE1ntos gatos has conocido en este viaje?"
+  - "Los gatos duermen mucho, pero \xBFcu\xE1ntas horas duerme realmente un gato adulto?"
+  - "\xA1Correcto! Aqu\xED tienes una pista...\xA1Encuentra tu collar para que podamos ayudarte!"
   - Incorrecto.
-  - "\xA1Correcto! Aqu\xED tienes una pista..."
+  - 
   autoProgressLines: 0000000000y
   autoProgressDelay: 1.5
-  endDialogueLines: 00000000000101000001y
+  endDialogueLines: 00000000000101000100y
   typingSpeed: 0.05
   voiceSound: []
   voicePitch: 1
@@ -93,3 +96,25 @@ MonoBehaviour:
     - Make a fire
     - Answer a tricky quiz
     nextDialogueIndexes: 050000000600000007000000i
+  - dialogueIndex: 7
+    choices:
+    - 6-8h
+    - 12-16h
+    - 18-20h
+    germanChoices:
+    - 6-8 Stunden
+    - 12-16 Stunden
+    - 18-20 Stunden
+    spanishChoices:
+    - 6-8 horas
+    - 12-16 horas
+    - 18-20 horas
+    nextDialogueIndexes: 090000000800000009000000i
+  - dialogueIndex: 9
+    choices:
+    - Try again
+    germanChoices:
+    - Versuche nochmals
+    spanishChoices:
+    - Intentar de nuevo
+    nextDialogueIndexes: 07000000i
