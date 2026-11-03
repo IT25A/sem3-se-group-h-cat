@@ -49,6 +49,11 @@ public class CollectibleItem : MonoBehaviour
                 case CollectibleType.Mouse:
                     TaskCollectibleState.RegisterMouse(uniqueId);
                     break;
+                case CollectibleType.Key:
+                    TaskCollectibleState.RegisterKey(uniqueId);
+                    break;
+    
+
             } 
 
             Destroy(gameObject);
