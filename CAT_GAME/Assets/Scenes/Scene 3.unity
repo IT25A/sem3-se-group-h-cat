@@ -1232,6 +1232,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8087077055130533850, guid: 36199b066e9c94662a0af076d73eac45, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 9183907661690666633, guid: 36199b066e9c94662a0af076d73eac45, type: 3}
       propertyPath: m_Name
       value: Panel 2
@@ -1440,7 +1444,7 @@ GameObject:
   - component: {fileID: 586707513}
   - component: {fileID: 586707514}
   m_Layer: 0
-  m_Name: CryingCat
+  m_Name: catKeyTask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1495,12 +1499,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3513057317577747854, guid: ff1d44ce870236b49b6a36f862130ca6, type: 3}
+  m_Sprite: {fileID: -1955034211, guid: 9bcb47500487a45b0af1ef47ef88c4b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.41, y: 0.45}
+  m_Size: {x: 0.24, y: 0.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1515,8 +1519,8 @@ Transform:
   m_GameObject: {fileID: 586707506}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.6665235, y: 2.312637, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 4.657, y: 2.281, z: 0}
+  m_LocalScale: {x: 1.6153, y: 1.4807, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1586,8 +1590,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.41, y: 0.45}
-    newSize: {x: 0.41, y: 0.45}
+    oldSize: {x: 0.24, y: 0.28}
+    newSize: {x: 0.24, y: 0.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1604,7 +1608,7 @@ Animator:
   m_GameObject: {fileID: 586707506}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c309b8e1a81643b48b5ac519160a6978, type: 2}
+  m_Controller: {fileID: 9100000, guid: bf54183667f30dd4998ad375b83f0ca9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4703,7 +4707,7 @@ Transform:
   m_GameObject: {fileID: 1485193589}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.88, y: 3.11, z: 0}
+  m_LocalPosition: {x: -7.61, y: 3.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5363,6 +5367,7 @@ GameObject:
   - component: {fileID: 1828974659}
   - component: {fileID: 1828974660}
   - component: {fileID: 1828974661}
+  - component: {fileID: 1828974662}
   m_Layer: 0
   m_Name: Key
   m_TagString: Key
@@ -5558,6 +5563,20 @@ MonoBehaviour:
   keyObject: {fileID: 1828974650}
   landingPoint: {fileID: 0}
   fallSpeed: 3
+--- !u!114 &1828974662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828974650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7701c6311e218e74480d07dd1c24c528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  uniqueId: 
+  collectibleType: 3
 --- !u!1 &1842401932
 GameObject:
   m_ObjectHideFlags: 0
