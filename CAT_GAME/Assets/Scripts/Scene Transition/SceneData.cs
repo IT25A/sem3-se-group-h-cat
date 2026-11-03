@@ -14,7 +14,8 @@ public static class SceneData
     public static int savedFood = 0; 
 
     public static bool isGameStarted = false;
-    public static List<string> savedNotificationHistory = new List<string>();
+    public static List<string> savedNotificationHistoryText = new List<string>();    public static List<string> savedNotificationHistoryKeys = new List<string>();
+    public static List<Sprite> savedNotificationHistorySprites = new List<Sprite>();
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void ResetOnStart() {
@@ -23,7 +24,8 @@ public static class SceneData
         savedFood = 0;
         TargetSpawnID = null;
         LastSpawnID = null;
-        savedNotificationHistory.Clear();
+        savedNotificationHistoryText.Clear();
+        savedNotificationHistorySprites.Clear();
         TaskCollectibleState.ClearAllCollectedData();
     }
 }

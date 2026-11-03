@@ -27,6 +27,7 @@ public class NotificationManager : MonoBehaviour
 
     [Header("Verlauf (History)")]
     public List<string> notificationHistory = new List<string>();
+
     public List<Sprite> notificationSpriteHistory = new List<Sprite>();
     public int maxHistoryCount = 20;
 
@@ -41,12 +42,27 @@ public class NotificationManager : MonoBehaviour
 
     private void Start()
     {
-        if (SceneData.savedNotificationHistory.Count > 0)
+        if (SceneData.savedNotificationHistoryText.Count > 0)
         {
-            notificationHistory = new List<string>(SceneData.savedNotificationHistory);
+            notificationHistory = new List<string>(SceneData.savedNotificationHistoryText);
+        }
+        if (SceneData.savedNotificationHistorySprites.Count > 0)
+        {
+            notificationSpriteHistory = new List<Sprite>(SceneData.savedNotificationHistorySprites);
         }
     }
 
+    public Sprite GetSpriteForKey(string entryKey)
+    {
+        if (entryKey.Contains("water") || entryKey.Contains("waterRefill")) return waterIcon;
+        if (entryKey.Contains("food") || entryKey.Contains("foodCount")) return foodIcon;
+        if (entryKey.Contains("waterLow") || entryKey.Contains("NotificationWaterEnding")) return lowWaterIcon;
+        if (entryKey.Contains("start") || entryKey.Contains("startMessage")) return startIcon;
+        if (entryKey.Contains("received_flowers")) return daisyFlowerIcon;
+        if (entryKey.Contains("received_eggs")) return eggs;
+        if (entryKey.Contains("received_mouse")) return mouseIcon;
+        return defaultIcon;
+    }
     public void ShowLocalizedNotification(string tableCollectionName, string entryKey, float duration = 5f)
     {
         StopAllCoroutines();
@@ -119,12 +135,15 @@ public class NotificationManager : MonoBehaviour
     {
         notificationHistory.Add(message);
         notificationSpriteHistory.Add(icon);
+
         if (notificationHistory.Count > maxHistoryCount)
         {
             notificationHistory.RemoveAt(0);
             notificationSpriteHistory.RemoveAt(0);
         }
-        SceneData.savedNotificationHistory = new List<string>(notificationHistory);
+
+        SceneData.savedNotificationHistoryText = new List<string>(notificationHistory);
+        SceneData.savedNotificationHistorySprites = new List<Sprite>(notificationSpriteHistory);
     }
 
     private IEnumerator FadeCanvasGroup(CanvasGroup cg, float start, float end, float time)
