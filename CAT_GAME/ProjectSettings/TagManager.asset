@@ -8,6 +8,7 @@ TagManager:
   - Flower
   - Egg
   - Key
+  - SimbaNecklace
   layers:
   - Default
   - TransparentFX

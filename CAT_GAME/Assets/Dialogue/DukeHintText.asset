@@ -15,8 +15,9 @@ MonoBehaviour:
   npcName: Duke
   npcPortrait: {fileID: -3898996263991517844, guid: 57c635fae58ff4c4990adeddbea8da6b, type: 3}
   dialogueLines:
-  - Let me guess...you were chasing after little stinky mouse right?
-  - I saw it running around here. You might still catch it
+  - Were you chasing a rat a little while ago?
+  - 'I''ve seen it running around here. Try catching it if you''re hungry. '
+  - This might be your last chance.
   germanLines:
   - Lass mich raten... du warst hinter dieser kleinen Stinkemaus her, oder?
   - Ich habe sie hier herumflitzen sehen. Vielleicht erwischst du sie noch!
