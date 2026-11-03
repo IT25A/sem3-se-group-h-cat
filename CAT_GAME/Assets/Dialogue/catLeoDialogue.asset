@@ -10,42 +10,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbb109fa977984832b53154bd07d68f7, type: 3}
-  m_Name: CryingCatDialogue
+  m_Name: catLeoDialogue
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
-  npcName: Sad Cat
-  npcPortrait: {fileID: -3513057317577747854, guid: ff1d44ce870236b49b6a36f862130ca6, type: 3}
+  npcName: Leo
+  npcPortrait: {fileID: 492630917, guid: 9bcb47500487a45b0af1ef47ef88c4b3, type: 3}
   dialogueLines:
-  - Can you help? I have lost my key?
-  - Don't be selfish give me a hand. At least you can help me in one of the choices.
-  - Omg I'm so nervous. I'm so helpless in anyway. Which one could you do me a favor?
+  - Could you help me? I recently lost my house key.
+  - Don't be so selfish... Can you at least help me with something else?
+  - What would you like to help with?
   - Great! I knew that you'd help me.
-  - Omg I'm so nervous. I'm so helpless in anyway. Which one could you do me a favor?
-  - A bird has stolen it from me.. please look around where it can be.
-  - Collect 10 woods to make a fire i'm cold pls be hurry.
+  - What would you like to help with?
+  - A bird stole it from me... please look around. Maybe it's stuck in a tree.
+  - "Could you gather 10 pieces of wood so I can start a fire? Please hurry\u2014I'm already freezing."
   - How many cats have you met in this journey?
-  - Nope
+  - Wrong.
   - Correct! Here is a hint...
   germanLines:
-  - "Kannst du helfen? Ich habe meinen Schl\xFCssel verloren?"
-  - Sei nicht egoistisch, hilf mir. Zumindest kannst du mir bei einer der Optionen helfen.
-  - "Oh mein Gott, ich bin so nerv\xF6s. Ich bin sowieso so hilflos. Welche davon k\xF6nntest du mir als Gefallen tun?"
-  - "Gro\xDFartig! Ich wusste, dass du mir helfen w\xFCrdest."
-  - "Oh mein Gott, ich bin so nerv\xF6s. Ich bin sowieso so hilflos. Welche davon k\xF6nntest du mir als Gefallen tun?"
-  - "Ein Vogel hat ihn mir gestohlen... bitte sieh dich um, wo er sein k\xF6nnte."
-  - "Sammle 10 H\xF6lzer, um ein Feuer zu machen, mir ist kalt, bitte beeil dich."
-  - Wie viele Katzen hast du auf dieser Reise getroffen?
-  - "n\xF6"
+  - "K\xF6nntest du mir behilflich sein? Ich habe meinen Hausschl\xFCssel verloren."
+  - "Sei nicht so egoistisch. K\xF6nntest du mir wenigstens einen anderen Gefallen tun?"
+  - "Wobei m\xF6chtest du helfen?"
+  - "Super! Ich hatte bereits das Gef\xFChl, dass du ein netter Bursche bist."
+  - "Wobei m\xF6chtest du helfen?"
+  - 'Ein Vogel hat ihn mir gestohlen... bitte sieh dich um. Vielleicht steckt er in einem Baum fest. '
+  - "K\xF6nntest du 10 Holzst\xFCcke sammeln, damit ich ein Feuer machen kann? Beeil dich bitte, ich friere schon."
+  - Wie viele Katzen hast du auf dieser Reise kennengelernt?
+  - Falsch.
   - Richtig! Hier ist ein Hinweis...
   spanishLines:
-  - "\xBFPuedes ayudar? \xBFHe perdido mi llave?"
-  - "No seas ego\xEDsta, \xE9chame una mano. Al menos puedes ayudarme en una de las opciones."
+  - "\xBFPodr\xEDas echarme una mano? He perdido la llave de casa."
+  - "No seas tan ego\xEDsta. \xBFPodr\xEDas al menos hacerme otro favor?"
+  - "\xBFEn qu\xE9 te gustar\xEDa echar una mano?"
+  - "\xA1Genial! Ya ten\xEDa la sensaci\xF3n de que eras un chico majo."
   - "Dios m\xEDo, estoy muy nerviosa/o. De todos modos estoy muy indefensa/o. \xBFCu\xE1l podr\xEDas hacerme el favor?"
-  - "\xA1Genial! Sab\xEDa que me ayudar\xEDas."
-  - "Dios m\xEDo, estoy muy nerviosa/o. De todos modos estoy muy indefensa/o. \xBFCu\xE1l podr\xEDas hacerme el favor?"
-  - "Un p\xE1jaro me la ha robado... por favor busca por los alrededores d\xF3nde puede estar."
-  - "Recoge 10 maderas para hacer fuego, tengo fr\xEDo, por favor date prisa."
+  - "Un p\xE1jaro me lo ha robado... por favor, echa un vistazo. Quiz\xE1 est\xE9 atrapado en un \xE1rbol."
+  - "\xBFPodr\xEDas recoger 10 trozos de le\xF1a para que pueda encender un fuego? Date prisa, por favor, que ya tengo fr\xEDo."
   - "\xBFCu\xE1ntos gatos has conocido en este viaje?"
-  - nop
+  - Incorrecto.
   - "\xA1Correcto! Aqu\xED tienes una pista..."
   autoProgressLines: 0000000000y
   autoProgressDelay: 1.5
