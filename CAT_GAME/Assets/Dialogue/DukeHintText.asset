@@ -21,9 +21,11 @@ MonoBehaviour:
   germanLines:
   - Lass mich raten... du warst hinter dieser kleinen Stinkemaus her, oder?
   - Ich habe sie hier herumflitzen sehen. Vielleicht erwischst du sie noch!
+  - "Das k\xF6nnte deine letzte Chance sein."
   spanishLines:
   - "D\xE9jame adivinar... estabas persiguiendo a ese ratoncito apestoso, \xBFverdad?\""
   - "Lo vi correteando por aqu\xED. \xA1Quiz\xE1s a\xFAn puedas atraparlo!\""
+  - "Puede que esta sea tu \xFAltima oportunidad.s"
   autoProgressLines: 0100y
   autoProgressDelay: 1.5
   endDialogueLines: 

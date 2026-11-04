@@ -15,11 +15,11 @@ MonoBehaviour:
   npcName: Leo
   npcPortrait: {fileID: 492630917, guid: 9bcb47500487a45b0af1ef47ef88c4b3, type: 3}
   dialogueLines:
-  - No mouse no talk no food
+  - That mouse is annoying me, but I don't feel like moving.
   germanLines:
-  - "Keine Maus, kein Gespr\xE4ch, kein Futter"
+  - Diese Maus nervt mich, aber ich habe keine Lust, mich zu bewegen.
   spanishLines:
-  - "Sin rat\xF3n, no hay charla ni comida."
+  - "Ese rat\xF3n me est\xE1 molestando, pero no me apetece moverme."
   autoProgressLines: 
   autoProgressDelay: 1.5
   endDialogueLines: 
