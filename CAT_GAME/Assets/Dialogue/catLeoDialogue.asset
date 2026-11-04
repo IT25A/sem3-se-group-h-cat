@@ -23,8 +23,9 @@ MonoBehaviour:
   - A bird stole it from me... please look around. Maybe it's stuck in a tree.
   - "Could you gather 10 pieces of wood so I can start a fire? Please hurry\u2014I'm already freezing."
   - Cats sleep a lot, but how many hours does an adult cat really sleep?
-  - 'Correct! Here is a hint....Find your collar so we can help you find your owner! '
+  - 'Correct! Hmm... it looks like you used to have a collar. Maybe you lost it around here. This way, we can help you find your owner! '
   - Wrong
+  - 
   - 
   germanLines:
   - "K\xF6nntest du mir behilflich sein? Ich habe meinen Hausschl\xFCssel verloren."
@@ -35,7 +36,7 @@ MonoBehaviour:
   - 'Ein Vogel hat ihn mir gestohlen... bitte sieh dich um. Vielleicht steckt er in einem Baum fest. '
   - "K\xF6nntest du 10 Holzst\xFCcke sammeln, damit ich ein Feuer machen kann? Beeil dich bitte, ich friere schon."
   - "Katzen schlafen viel, aber wie viele Stunden schl\xE4ft eine erwachsene Katze wirklich?"
-  - Richtig! Hier ist ein Hinweis....Finde dein Halsband, damit man dir weiterhelfen kann, deinen Besitzer zu finden.
+  - "Richtig! Hmm\u2026 es sieht so aus, als h\xE4ttest du fr\xFCher ein Halsband gehabt. Vielleicht hast du es hier irgendwo verloren. So k\xF6nnen wir dir helfen, deinen Besitzer zu finden!"
   - Falsch.
   - 
   spanishLines:
@@ -47,7 +48,7 @@ MonoBehaviour:
   - "Un p\xE1jaro me lo ha robado... por favor, echa un vistazo. Quiz\xE1 est\xE9 atrapado en un \xE1rbol."
   - "\xBFPodr\xEDas recoger 10 trozos de le\xF1a para que pueda encender un fuego? Date prisa, por favor, que ya tengo fr\xEDo."
   - "Los gatos duermen mucho, pero \xBFcu\xE1ntas horas duerme realmente un gato adulto?"
-  - "\xA1Correcto! Aqu\xED tienes una pista...\xA1Encuentra tu collar para que podamos ayudarte!"
+  - "\xA1Correcto! "
   - Incorrecto.
   - 
   autoProgressLines: 0000000000y
@@ -59,14 +60,14 @@ MonoBehaviour:
   choices:
   - dialogueIndex: 0
     choices:
-    - Yes
-    - No
+    - Sure!
+    - Not now.
     germanChoices:
-    - Ja
-    - Nein
+    - Klar!
+    - Jetzt nicht.
     spanishChoices:
-    - Si
-    - No
+    - "\xA1Claro!"
+    - Ahora no.
     nextDialogueIndexes: 0300000001000000i
   - dialogueIndex: 2
     choices:
