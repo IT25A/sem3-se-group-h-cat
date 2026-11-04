@@ -1,0 +1,4801 @@
+fileFormatVersion: 2
+guid: ea1fa3722cdf0334c97542233974212c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2026334582315897720
+    second: Australian_Shepherd_64x64_FREE_0
+  - first:
+      213: 3497120587458402752
+    second: Australian_Shepherd_64x64_FREE_1
+  - first:
+      213: -4415142650221932646
+    second: Australian_Shepherd_64x64_FREE_2
+  - first:
+      213: -8774484546777763028
+    second: Australian_Shepherd_64x64_FREE_3
+  - first:
+      213: 4988630300162585635
+    second: Australian_Shepherd_64x64_FREE_4
+  - first:
+      213: 6265017661222754165
+    second: Australian_Shepherd_64x64_FREE_5
+  - first:
+      213: 8871749920264162919
+    second: Australian_Shepherd_64x64_FREE_6
+  - first:
+      213: 8804337185753604035
+    second: Australian_Shepherd_64x64_FREE_7
+  - first:
+      213: -2039861004087712155
+    second: Australian_Shepherd_64x64_FREE_8
+  - first:
+      213: 5738658376104237223
+    second: Australian_Shepherd_64x64_FREE_9
+  - first:
+      213: -1742292913656073818
+    second: Australian_Shepherd_64x64_FREE_10
+  - first:
+      213: 145433892901907956
+    second: Australian_Shepherd_64x64_FREE_11
+  - first:
+      213: 184230598088735436
+    second: Australian_Shepherd_64x64_FREE_12
+  - first:
+      213: 6375278896733066678
+    second: Australian_Shepherd_64x64_FREE_13
+  - first:
+      213: 3403300571631111053
+    second: Australian_Shepherd_64x64_FREE_14
+  - first:
+      213: -8790410058045560875
+    second: Australian_Shepherd_64x64_FREE_15
+  - first:
+      213: 8380606685924225803
+    second: Australian_Shepherd_64x64_FREE_16
+  - first:
+      213: -5444900864513495455
+    second: Australian_Shepherd_64x64_FREE_17
+  - first:
+      213: 8090180408476154665
+    second: Australian_Shepherd_64x64_FREE_18
+  - first:
+      213: -8338807387801789148
+    second: Australian_Shepherd_64x64_FREE_19
+  - first:
+      213: 6166976489352272073
+    second: Australian_Shepherd_64x64_FREE_20
+  - first:
+      213: -1596125892246702625
+    second: Australian_Shepherd_64x64_FREE_21
+  - first:
+      213: -5809987636005103032
+    second: Australian_Shepherd_64x64_FREE_22
+  - first:
+      213: -757378547401384832
+    second: Australian_Shepherd_64x64_FREE_23
+  - first:
+      213: -2490016715882338550
+    second: Australian_Shepherd_64x64_FREE_24
+  - first:
+      213: -9174522749819481013
+    second: Australian_Shepherd_64x64_FREE_25
+  - first:
+      213: 1212386043375708361
+    second: Australian_Shepherd_64x64_FREE_26
+  - first:
+      213: -6618842936685632021
+    second: Australian_Shepherd_64x64_FREE_27
+  - first:
+      213: 8196501920493972032
+    second: Australian_Shepherd_64x64_FREE_28
+  - first:
+      213: 7142653212664551642
+    second: Australian_Shepherd_64x64_FREE_29
+  - first:
+      213: -263928153877204082
+    second: Australian_Shepherd_64x64_FREE_30
+  - first:
+      213: -9028613034273218755
+    second: Australian_Shepherd_64x64_FREE_31
+  - first:
+      213: 917379491514324908
+    second: Australian_Shepherd_64x64_FREE_32
+  - first:
+      213: 7872469327449542913
+    second: Australian_Shepherd_64x64_FREE_33
+  - first:
+      213: -706389800572631666
+    second: Australian_Shepherd_64x64_FREE_34
+  - first:
+      213: -4776016825658067094
+    second: Australian_Shepherd_64x64_FREE_35
+  - first:
+      213: -8540309377375469697
+    second: Australian_Shepherd_64x64_FREE_36
+  - first:
+      213: -4647458328258394796
+    second: Australian_Shepherd_64x64_FREE_37
+  - first:
+      213: 8326732847666210428
+    second: Australian_Shepherd_64x64_FREE_38
+  - first:
+      213: 7336907283605480188
+    second: Australian_Shepherd_64x64_FREE_39
+  - first:
+      213: -3466820487595701402
+    second: Australian_Shepherd_64x64_FREE_40
+  - first:
+      213: 6591230062831107189
+    second: Australian_Shepherd_64x64_FREE_41
+  - first:
+      213: -8549802319889046234
+    second: Australian_Shepherd_64x64_FREE_42
+  - first:
+      213: -1775071426021712955
+    second: Australian_Shepherd_64x64_FREE_43
+  - first:
+      213: -1211983847622760115
+    second: Australian_Shepherd_64x64_FREE_44
+  - first:
+      213: -1232739388263985545
+    second: Australian_Shepherd_64x64_FREE_45
+  - first:
+      213: -3605063944755015142
+    second: Australian_Shepherd_64x64_FREE_46
+  - first:
+      213: -6418484577446651919
+    second: Australian_Shepherd_64x64_FREE_47
+  - first:
+      213: -7501107245507643165
+    second: Australian_Shepherd_64x64_FREE_48
+  - first:
+      213: 5790106702414516962
+    second: Australian_Shepherd_64x64_FREE_49
+  - first:
+      213: -1197809254944305311
+    second: Australian_Shepherd_64x64_FREE_50
+  - first:
+      213: -7785174652549412101
+    second: Australian_Shepherd_64x64_FREE_51
+  - first:
+      213: 16060054303200665
+    second: Australian_Shepherd_64x64_FREE_52
+  - first:
+      213: -4974020959320348122
+    second: Australian_Shepherd_64x64_FREE_53
+  - first:
+      213: -4077326483266453262
+    second: Australian_Shepherd_64x64_FREE_54
+  - first:
+      213: 4218763316600738699
+    second: Australian_Shepherd_64x64_FREE_55
+  - first:
+      213: -7002857371585523114
+    second: Australian_Shepherd_64x64_FREE_56
+  - first:
+      213: 7093700142043431409
+    second: Australian_Shepherd_64x64_FREE_57
+  - first:
+      213: 4528556155321672526
+    second: Australian_Shepherd_64x64_FREE_58
+  - first:
+      213: -7421268140619474186
+    second: Australian_Shepherd_64x64_FREE_59
+  - first:
+      213: 5061194702675538374
+    second: Australian_Shepherd_64x64_FREE_60
+  - first:
+      213: -976422021721637679
+    second: Australian_Shepherd_64x64_FREE_61
+  - first:
+      213: -3404928208171469266
+    second: Australian_Shepherd_64x64_FREE_62
+  - first:
+      213: -7648327095582751459
+    second: Australian_Shepherd_64x64_FREE_63
+  - first:
+      213: -7236784138060116086
+    second: Australian_Shepherd_64x64_FREE_64
+  - first:
+      213: -6072983003754869440
+    second: Australian_Shepherd_64x64_FREE_65
+  - first:
+      213: 9038299970220356447
+    second: Australian_Shepherd_64x64_FREE_66
+  - first:
+      213: 647234361902669900
+    second: Australian_Shepherd_64x64_FREE_67
+  - first:
+      213: -7588300226758936244
+    second: Australian_Shepherd_64x64_FREE_68
+  - first:
+      213: 531571277023678079
+    second: Australian_Shepherd_64x64_FREE_69
+  - first:
+      213: -2186274716662022255
+    second: Australian_Shepherd_64x64_FREE_70
+  - first:
+      213: -6800039525238743371
+    second: Australian_Shepherd_64x64_FREE_71
+  - first:
+      213: 151774703914746911
+    second: Australian_Shepherd_64x64_FREE_72
+  - first:
+      213: -8806347185604990918
+    second: Australian_Shepherd_64x64_FREE_73
+  - first:
+      213: -3447715582190733833
+    second: Australian_Shepherd_64x64_FREE_74
+  - first:
+      213: -1028460540494904641
+    second: Australian_Shepherd_64x64_FREE_75
+  - first:
+      213: 7837763303132743781
+    second: Australian_Shepherd_64x64_FREE_76
+  - first:
+      213: 8615594874568314371
+    second: Australian_Shepherd_64x64_FREE_77
+  - first:
+      213: 6272463465810697986
+    second: Australian_Shepherd_64x64_FREE_78
+  - first:
+      213: 8076665938098713190
+    second: Australian_Shepherd_64x64_FREE_79
+  - first:
+      213: 6373481857501407968
+    second: Australian_Shepherd_64x64_FREE_80
+  - first:
+      213: 5704778060286956997
+    second: Australian_Shepherd_64x64_FREE_81
+  - first:
+      213: 1778562257181260545
+    second: Australian_Shepherd_64x64_FREE_82
+  - first:
+      213: 7178288900603105089
+    second: Australian_Shepherd_64x64_FREE_83
+  - first:
+      213: -563361605322559409
+    second: Australian_Shepherd_64x64_FREE_84
+  - first:
+      213: -3568363860379442951
+    second: Australian_Shepherd_64x64_FREE_85
+  - first:
+      213: -7872945080942383276
+    second: Australian_Shepherd_64x64_FREE_86
+  - first:
+      213: 2830408022021563325
+    second: Australian_Shepherd_64x64_FREE_87
+  - first:
+      213: -8724312087923998018
+    second: Australian_Shepherd_64x64_FREE_88
+  - first:
+      213: 8074177023885177444
+    second: Australian_Shepherd_64x64_FREE_89
+  - first:
+      213: 1032651026280039974
+    second: Australian_Shepherd_64x64_FREE_90
+  - first:
+      213: 6203731299318533659
+    second: Australian_Shepherd_64x64_FREE_91
+  - first:
+      213: 451100334147410994
+    second: Australian_Shepherd_64x64_FREE_92
+  - first:
+      213: 4000510129573149429
+    second: Australian_Shepherd_64x64_FREE_93
+  - first:
+      213: -5703472337510008140
+    second: Australian_Shepherd_64x64_FREE_94
+  - first:
+      213: 5854864435299739445
+    second: Australian_Shepherd_64x64_FREE_95
+  - first:
+      213: 6597954246586796985
+    second: Australian_Shepherd_64x64_FREE_96
+  - first:
+      213: 6092520926701774530
+    second: Australian_Shepherd_64x64_FREE_97
+  - first:
+      213: 5261534307834013909
+    second: Australian_Shepherd_64x64_FREE_98
+  - first:
+      213: 4082465371405018152
+    second: Australian_Shepherd_64x64_FREE_99
+  - first:
+      213: -2796753991992642710
+    second: Australian_Shepherd_64x64_FREE_100
+  - first:
+      213: -732080348250344120
+    second: Australian_Shepherd_64x64_FREE_101
+  - first:
+      213: 189820228486795607
+    second: Australian_Shepherd_64x64_FREE_102
+  - first:
+      213: 2739756085967861655
+    second: Australian_Shepherd_64x64_FREE_103
+  - first:
+      213: -3159885716474727154
+    second: Australian_Shepherd_64x64_FREE_104
+  - first:
+      213: 7447687510500298803
+    second: Australian_Shepherd_64x64_FREE_105
+  - first:
+      213: -4171904052722058110
+    second: Australian_Shepherd_64x64_FREE_106
+  - first:
+      213: 2110470958515449541
+    second: Australian_Shepherd_64x64_FREE_107
+  - first:
+      213: -6183466860865065325
+    second: Australian_Shepherd_64x64_FREE_108
+  - first:
+      213: -6742108141200973567
+    second: Australian_Shepherd_64x64_FREE_109
+  - first:
+      213: -7036529193960223726
+    second: Australian_Shepherd_64x64_FREE_110
+  - first:
+      213: -4824174052360930464
+    second: Australian_Shepherd_64x64_FREE_111
+  - first:
+      213: 3553615921984906798
+    second: Australian_Shepherd_64x64_FREE_112
+  - first:
+      213: -2117720221705172102
+    second: Australian_Shepherd_64x64_FREE_113
+  - first:
+      213: -5530466882174912216
+    second: Australian_Shepherd_64x64_FREE_114
+  - first:
+      213: -4106599679538604464
+    second: Australian_Shepherd_64x64_FREE_115
+  - first:
+      213: 8389183716601878705
+    second: Australian_Shepherd_64x64_FREE_116
+  - first:
+      213: 7658476402037967839
+    second: Australian_Shepherd_64x64_FREE_117
+  - first:
+      213: -6142379326218067732
+    second: Australian_Shepherd_64x64_FREE_118
+  - first:
+      213: -6280205734131408847
+    second: Australian_Shepherd_64x64_FREE_119
+  - first:
+      213: 3273557685135682178
+    second: Australian_Shepherd_64x64_FREE_120
+  - first:
+      213: -4819492787863619624
+    second: Australian_Shepherd_64x64_FREE_121
+  - first:
+      213: 4004463914669361187
+    second: Australian_Shepherd_64x64_FREE_122
+  - first:
+      213: 151623371622055248
+    second: Australian_Shepherd_64x64_FREE_123
+  - first:
+      213: -390716445292590611
+    second: Australian_Shepherd_64x64_FREE_124
+  - first:
+      213: 8614818987494169730
+    second: Australian_Shepherd_64x64_FREE_125
+  - first:
+      213: 2535846435985653219
+    second: Australian_Shepherd_64x64_FREE_126
+  - first:
+      213: 2513193448160855062
+    second: Australian_Shepherd_64x64_FREE_127
+  - first:
+      213: 2277346022602305841
+    second: Australian_Shepherd_64x64_FREE_128
+  - first:
+      213: -2344379460617315825
+    second: Australian_Shepherd_64x64_FREE_129
+  - first:
+      213: -4664537366680334985
+    second: Australian_Shepherd_64x64_FREE_130
+  - first:
+      213: 4769359954026827109
+    second: Australian_Shepherd_64x64_FREE_131
+  - first:
+      213: -460892448008679575
+    second: Australian_Shepherd_64x64_FREE_132
+  - first:
+      213: 5175018380260547772
+    second: Australian_Shepherd_64x64_FREE_133
+  - first:
+      213: -6396225996803257700
+    second: Australian_Shepherd_64x64_FREE_134
+  - first:
+      213: -3249732407986941886
+    second: Australian_Shepherd_64x64_FREE_135
+  - first:
+      213: -2896207981697547057
+    second: Australian_Shepherd_64x64_FREE_136
+  - first:
+      213: -1417097762132835726
+    second: Australian_Shepherd_64x64_FREE_137
+  - first:
+      213: 5979202217315997672
+    second: Australian_Shepherd_64x64_FREE_138
+  - first:
+      213: 3963711384133155884
+    second: Australian_Shepherd_64x64_FREE_139
+  - first:
+      213: -3434034134253870030
+    second: Australian_Shepherd_64x64_FREE_140
+  - first:
+      213: -123345662684418395
+    second: Australian_Shepherd_64x64_FREE_141
+  - first:
+      213: 2436776614904709184
+    second: Australian_Shepherd_64x64_FREE_142
+  - first:
+      213: 7035911313053438969
+    second: Australian_Shepherd_64x64_FREE_143
+  - first:
+      213: 4067087253211316717
+    second: Australian_Shepherd_64x64_FREE_144
+  - first:
+      213: -6167224003389537730
+    second: Australian_Shepherd_64x64_FREE_145
+  - first:
+      213: -4476755014527662931
+    second: Australian_Shepherd_64x64_FREE_146
+  - first:
+      213: -2212675690150311980
+    second: Australian_Shepherd_64x64_FREE_147
+  - first:
+      213: -7594499316235003817
+    second: Australian_Shepherd_64x64_FREE_148
+  - first:
+      213: -6216548540542297890
+    second: Australian_Shepherd_64x64_FREE_149
+  - first:
+      213: -5071566980003026879
+    second: Australian_Shepherd_64x64_FREE_150
+  - first:
+      213: -6542049971016905602
+    second: Australian_Shepherd_64x64_FREE_151
+  - first:
+      213: 7207681350381470805
+    second: Australian_Shepherd_64x64_FREE_152
+  - first:
+      213: -3981630396441496144
+    second: Australian_Shepherd_64x64_FREE_153
+  - first:
+      213: 6794104126013760337
+    second: Australian_Shepherd_64x64_FREE_154
+  - first:
+      213: 1015684129648205444
+    second: Australian_Shepherd_64x64_FREE_155
+  - first:
+      213: 2851423563031188983
+    second: Australian_Shepherd_64x64_FREE_156
+  - first:
+      213: 6725807688077137066
+    second: Australian_Shepherd_64x64_FREE_157
+  - first:
+      213: 4691933184945185695
+    second: Australian_Shepherd_64x64_FREE_158
+  - first:
+      213: -7672769372455244108
+    second: Australian_Shepherd_64x64_FREE_159
+  - first:
+      213: 1405533180556294591
+    second: Australian_Shepherd_64x64_FREE_160
+  - first:
+      213: 2460020976062450407
+    second: Australian_Shepherd_64x64_FREE_161
+  - first:
+      213: -2321101678588281268
+    second: Australian_Shepherd_64x64_FREE_162
+  - first:
+      213: 2204860822139219794
+    second: Australian_Shepherd_64x64_FREE_163
+  - first:
+      213: 6209780775936600648
+    second: Australian_Shepherd_64x64_FREE_164
+  - first:
+      213: 3997622653572612008
+    second: Australian_Shepherd_64x64_FREE_165
+  - first:
+      213: 7863148847286627625
+    second: Australian_Shepherd_64x64_FREE_166
+  - first:
+      213: 7882883076574166167
+    second: Australian_Shepherd_64x64_FREE_167
+  - first:
+      213: 1128885504206632181
+    second: Australian_Shepherd_64x64_FREE_168
+  - first:
+      213: 4276135371772907621
+    second: Australian_Shepherd_64x64_FREE_169
+  - first:
+      213: -3342639694446215663
+    second: Australian_Shepherd_64x64_FREE_170
+  - first:
+      213: 7466143991365922253
+    second: Australian_Shepherd_64x64_FREE_171
+  - first:
+      213: -1687629466994806860
+    second: Australian_Shepherd_64x64_FREE_172
+  - first:
+      213: -5634348236117190794
+    second: Australian_Shepherd_64x64_FREE_173
+  - first:
+      213: 2775629770559443238
+    second: Australian_Shepherd_64x64_FREE_174
+  - first:
+      213: 8712996832123027832
+    second: Australian_Shepherd_64x64_FREE_175
+  - first:
+      213: 6960442102026416491
+    second: Australian_Shepherd_64x64_FREE_176
+  - first:
+      213: 7043626293019940223
+    second: Australian_Shepherd_64x64_FREE_177
+  - first:
+      213: -2052836256583520712
+    second: Australian_Shepherd_64x64_FREE_178
+  - first:
+      213: 2895746602438270473
+    second: Australian_Shepherd_64x64_FREE_179
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 2558
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 873570f019cfe1c10800000000000000
+      internalID: 2026334582315897720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 2556
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c9d92055a4488030800000000000000
+      internalID: 3497120587458402752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_2
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 2555
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9f48dce6234ab2c0800000000000000
+      internalID: -4415142650221932646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_3
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 2555
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c23382e3bc4ca3680800000000000000
+      internalID: -8774484546777763028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_4
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 2557
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 324f0fcb3dc2b3540800000000000000
+      internalID: 4988630300162585635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_5
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 2491
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5771bb09e50d1f650800000000000000
+      internalID: 6265017661222754165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_6
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 2486
+        width: 24
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76e02754c89ce1b70800000000000000
+      internalID: 8871749920264162919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_7
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 2495
+        width: 44
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cf1b97e50a4f2a70800000000000000
+      internalID: 8804337185753604035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_8
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 2495
+        width: 44
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5662e247935f0b3e0800000000000000
+      internalID: -2039861004087712155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_9
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 2427
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a8530b636fc3af40800000000000000
+      internalID: 5738658376104237223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_10
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 2427
+        width: 45
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a179da73d122d7e0800000000000000
+      internalID: -1742292913656073818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_11
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 2427
+        width: 45
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fd68b4ea5fa40200800000000000000
+      internalID: 145433892901907956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_12
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 2427
+        width: 45
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cca36dbb0c48e8200800000000000000
+      internalID: 184230598088735436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_13
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 2427
+        width: 48
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b591dff06a897850800000000000000
+      internalID: 6375278896733066678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_14
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 2427
+        width: 47
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8bc4f3a6d3fa3f20800000000000000
+      internalID: 3403300571631111053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_15
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 2363
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d76c2430a0320680800000000000000
+      internalID: -8790410058045560875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_16
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 2363
+        width: 45
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b03f6c4e065ed4470800000000000000
+      internalID: 8380606685924225803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_17
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 2363
+        width: 44
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16ea4751383df64b0800000000000000
+      internalID: -5444900864513495455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_18
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 2363
+        width: 45
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92bbb08c738164070800000000000000
+      internalID: 8090180408476154665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_19
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 2363
+        width: 48
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42ddba79cda964c80800000000000000
+      internalID: -8338807387801789148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_20
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 2363
+        width: 48
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c8170a6170859550800000000000000
+      internalID: 6166976489352272073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_21
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 2299
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd5f4d725fb69d9e0800000000000000
+      internalID: -1596125892246702625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_22
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 2297
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84a11861707ce5fa0800000000000000
+      internalID: -5809987636005103032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_23
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 2299
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08c93a159304d75f0800000000000000
+      internalID: -757378547401384832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_24
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 2299
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a076c055dfea17dd0800000000000000
+      internalID: -2490016715882338550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_25
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 2297
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b441541fa2c8da080800000000000000
+      internalID: -9174522749819481013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_26
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 2299
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c8ec06dea243d010800000000000000
+      internalID: 1212386043375708361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_27
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 2229
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be5efbeca652524a0800000000000000
+      internalID: -6618842936685632021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_28
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 2229
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04aa9dbd113dfb170800000000000000
+      internalID: 8196501920493972032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_29
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 2229
+        width: 25
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad85ca6e04dcf1360800000000000000
+      internalID: 7142653212664551642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_30
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 2229
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e83bced0eb6565cf0800000000000000
+      internalID: -263928153877204082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_31
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 2229
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3fdeade74ce3b280800000000000000
+      internalID: -9028613034273218755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_32
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 2229
+        width: 25
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca790fb79cf2bbc00800000000000000
+      internalID: 917379491514324908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_33
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 2175
+        width: 45
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 101d9c7a421a04d60800000000000000
+      internalID: 7872469327449542913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_34
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 2175
+        width: 46
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e85c8ef08366236f0800000000000000
+      internalID: -706389800572631666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_35
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 2175
+        width: 43
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a67bc51600e28bdb0800000000000000
+      internalID: -4776016825658067094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_36
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 2175
+        width: 43
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7ff899aed9ba7980800000000000000
+      internalID: -8540309377375469697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_37
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 2175
+        width: 46
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4554ab31649e08fb0800000000000000
+      internalID: -4647458328258394796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_38
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 2175
+        width: 44
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c76a8b4786f7e8370800000000000000
+      internalID: 8326732847666210428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_39
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 2111
+        width: 44
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2e7454d4ee1d560800000000000000
+      internalID: 7336907283605480188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_40
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 2111
+        width: 46
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66bcfc0722163efc0800000000000000
+      internalID: -3466820487595701402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_41
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 2111
+        width: 43
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57c7ceff1d0c87b50800000000000000
+      internalID: 6591230062831107189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_42
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 2111
+        width: 43
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 625e33fb610095980800000000000000
+      internalID: -8549802319889046234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_43
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 2111
+        width: 46
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cb970951fdad57e0800000000000000
+      internalID: -1775071426021712955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_44
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 2111
+        width: 45
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d492fe8ac1b2e2fe0800000000000000
+      internalID: -1211983847622760115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_45
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 2049
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77e84e5ce0e64eee0800000000000000
+      internalID: -1232739388263985545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_46
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 2048
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a121f44517d38fdc0800000000000000
+      internalID: -3605063944755015142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_47
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 2048
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f718fc8846fce6a0800000000000000
+      internalID: -6418484577446651919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_48
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 2041
+        width: 25
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e87869e3b6b6e790800000000000000
+      internalID: -7501107245507643165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_49
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1975
+        width: 25
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e296095e579a5050800000000000000
+      internalID: 5790106702414516962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_50
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1970
+        width: 24
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16f8e5234d6806fe0800000000000000
+      internalID: -1197809254944305311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_51
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1974
+        width: 25
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfaca60b6e085f390800000000000000
+      internalID: -7785174652549412101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_52
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1978
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 995d0d7c88e093000800000000000000
+      internalID: 16060054303200665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_53
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1919
+        width: 47
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62aec5e7a4ab8fab0800000000000000
+      internalID: -4974020959320348122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_54
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1919
+        width: 52
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f04c938a2d6a67c0800000000000000
+      internalID: -4077326483266453262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_55
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 1925
+        width: 55
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b839f6d62ee0c8a30800000000000000
+      internalID: 4218763316600738699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_56
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1919
+        width: 46
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6525be1c25ad0de90800000000000000
+      internalID: -7002857371585523114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_57
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1855
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f103a5f1b2e17260800000000000000
+      internalID: 7093700142043431409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_58
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1855
+        width: 52
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e436b5774d9a8de30800000000000000
+      internalID: 4528556155321672526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_59
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 1862
+        width: 56
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fad37712fb520990800000000000000
+      internalID: -7421268140619474186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_60
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1855
+        width: 45
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c1701844c9fc3640800000000000000
+      internalID: 5061194702675538374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_61
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1787
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dcb964385d0372f0800000000000000
+      internalID: -976422021721637679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_62
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1785
+        width: 24
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e267b32b5d34fb0d0800000000000000
+      internalID: -3404928208171469266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_63
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1785
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d158bc5770fabd590800000000000000
+      internalID: -7648327095582751459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_64
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1785
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8fceb62b27c19b90800000000000000
+      internalID: -7236784138060116086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_65
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1718
+        width: 25
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04dc436522e68bba0800000000000000
+      internalID: -6072983003754869440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_66
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1718
+        width: 24
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f53786a9fed7e6d70800000000000000
+      internalID: 9038299970220356447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_67
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1718
+        width: 25
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c40a2a319307bf800800000000000000
+      internalID: 647234361902669900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_68
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1718
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c497407f521f0b690800000000000000
+      internalID: -7588300226758936244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_69
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1663
+        width: 45
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7e0cc39245806700800000000000000
+      internalID: 531571277023678079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_70
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 1663
+        width: 46
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19f31f38abac8a1e0800000000000000
+      internalID: -2186274716662022255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_71
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1663
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5be5787741861a1a0800000000000000
+      internalID: -6800039525238743371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_72
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1663
+        width: 46
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f148ab00a463b1200800000000000000
+      internalID: 151774703914746911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_73
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1599
+        width: 44
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a38e04984e199c580800000000000000
+      internalID: -8806347185604990918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_74
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1599
+        width: 46
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f531fcd1f04720d0800000000000000
+      internalID: -3447715582190733833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_75
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1599
+        width: 41
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb28b42669c2ab1f0800000000000000
+      internalID: -1028460540494904641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_76
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1599
+        width: 45
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 568c1dca23455cc60800000000000000
+      internalID: 7837763303132743781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_77
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1532
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30e025b14edb09770800000000000000
+      internalID: 8615594874568314371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_78
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1531
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20f134a0a444c0750800000000000000
+      internalID: 6272463465810697986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_79
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1531
+        width: 26
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 662fed1f0e4161070800000000000000
+      internalID: 8076665938098713190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_80
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 1531
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eaa4c23bf7237850800000000000000
+      internalID: 6373481857501407968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_81
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 1531
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c598ddab617b2f40800000000000000
+      internalID: 5704778060286956997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_82
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 1532
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10bb43e13f8bea810800000000000000
+      internalID: 1778562257181260545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_83
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1468
+        width: 28
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14fc39f09b76e9360800000000000000
+      internalID: 7178288900603105089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_84
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1467
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f40b7a2da998e28f0800000000000000
+      internalID: -563361605322559409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_85
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1467
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f0edb899ff9a7ec0800000000000000
+      internalID: -3568363860379442951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_86
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1467
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45f254a592eadb290800000000000000
+      internalID: -7872945080942383276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_87
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1467
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db3e2029911a74720800000000000000
+      internalID: 2830408022021563325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_88
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1468
+        width: 28
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb2c4a121640de680800000000000000
+      internalID: -8724312087923998018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_89
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1406
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 462fb42793d3d0070800000000000000
+      internalID: 8074177023885177444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_90
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1406
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6264d5e13a6b45e00800000000000000
+      internalID: 1032651026280039974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_91
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1406
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1e8ad97fb4181650800000000000000
+      internalID: 6203731299318533659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_92
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1406
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23c9ae62d51a24600800000000000000
+      internalID: 451100334147410994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_93
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 1406
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fa3f8964caa48730800000000000000
+      internalID: 4000510129573149429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_94
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1342
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4baf278902239d0b0800000000000000
+      internalID: -5703472337510008140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_95
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1342
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 537eb1afe28a04150800000000000000
+      internalID: 5854864435299739445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_96
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1342
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bb06180e64a09b50800000000000000
+      internalID: 6597954246586796985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_97
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1275
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c661b6d08bfc8450800000000000000
+      internalID: 6092520926701774530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_98
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1275
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d82aff7399b40940800000000000000
+      internalID: 5261534307834013909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_99
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1275
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 824ed6e10a4d7a830800000000000000
+      internalID: 4082465371405018152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_100
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1214
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a637f17ef0fef29d0800000000000000
+      internalID: -2796753991992642710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_101
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1211
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8457e7f4dc027d5f0800000000000000
+      internalID: -732080348250344120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_102
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1150
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 751932afd7062a200800000000000000
+      internalID: 189820228486795607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_103
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1150
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7973453f4a1950620800000000000000
+      internalID: 2739756085967861655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_104
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1150
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0571b2cea4d524d0800000000000000
+      internalID: -3159885716474727154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_105
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1084
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 330db7dc4508b5760800000000000000
+      internalID: 7447687510500298803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_106
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1084
+        width: 24
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c3d742e5b6a16c0800000000000000
+      internalID: -4171904052722058110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_107
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1084
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ce671fa726e94d10800000000000000
+      internalID: 2110470958515449541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_108
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1019
+        width: 44
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39eecb5c6a9ef2aa0800000000000000
+      internalID: -6183466860865065325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_109
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1019
+        width: 46
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1016276ed583f62a0800000000000000
+      internalID: -6742108141200973567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_110
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 955
+        width: 44
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21cc55eaaf9395e90800000000000000
+      internalID: -7036529193960223726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_111
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 955
+        width: 46
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06bbe5a42471d0db0800000000000000
+      internalID: -4824174052360930464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_112
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 891
+        width: 48
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e26251a6adaf05130800000000000000
+      internalID: 3553615921984906798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_113
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 891
+        width: 48
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7b0a93bda85c92e0800000000000000
+      internalID: -2117720221705172102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_114
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 826
+        width: 48
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 829f6ed1ca5df33b0800000000000000
+      internalID: -5530466882174912216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_115
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 826
+        width: 48
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0565e52695d6207c0800000000000000
+      internalID: -4106599679538604464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_116
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 767
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b8db87742e5c6470800000000000000
+      internalID: 8389183716601878705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_117
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 767
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdb4f2816bf584a60800000000000000
+      internalID: 7658476402037967839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_118
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 767
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce0a119eb82e1caa0800000000000000
+      internalID: -6142379326218067732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_119
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 767
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 130e9b4a82a38d8a0800000000000000
+      internalID: -6280205734131408847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_120
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 767
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28a234ede530e6d20800000000000000
+      internalID: 3273557685135682178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_121
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 767
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d7f4dd18d8bd1db0800000000000000
+      internalID: -4819492787863619624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_122
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 700
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 328ccbdb6b6b29730800000000000000
+      internalID: 4004463914669361187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_123
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 700
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05dfd2537acaa1200800000000000000
+      internalID: 151623371622055248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_124
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 700
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de98e6e8675e39af0800000000000000
+      internalID: -390716445292590611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_125
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 700
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c51e1d93cfd8770800000000000000
+      internalID: 8614818987494169730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_126
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 700
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ed7dd5e5e2213320800000000000000
+      internalID: 2535846435985653219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_127
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 700
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61487792028a0e220800000000000000
+      internalID: 2513193448160855062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_128
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 635
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 131fbd34422ca9f10800000000000000
+      internalID: 2277346022602305841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_129
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 635
+        width: 38
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0ade273d47177fd0800000000000000
+      internalID: -2344379460617315825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_130
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 635
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77d8b719afb344fb0800000000000000
+      internalID: -4664537366680334985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_131
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 635
+        width: 37
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56d0eb9eb9b203240800000000000000
+      internalID: 4769359954026827109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_132
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 635
+        width: 38
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96f48cca2c49a99f0800000000000000
+      internalID: -460892448008679575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_133
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 635
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbc1c856ccb51d740800000000000000
+      internalID: 5175018380260547772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_134
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 570
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a4c65385a0c37a0800000000000000
+      internalID: -6396225996803257700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_135
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 570
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2401ddeb791a6e2d0800000000000000
+      internalID: -3249732407986941886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_136
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 570
+        width: 37
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc444477f2a9ec7d0800000000000000
+      internalID: -2896207981697547057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_137
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 570
+        width: 37
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 272421ce715755ce0800000000000000
+      internalID: -1417097762132835726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_138
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 570
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e7195bccb46af250800000000000000
+      internalID: 5979202217315997672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_139
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 570
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2cbd63d08ee10730800000000000000
+      internalID: 3963711384133155884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_140
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 507
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2346b31362cd750d0800000000000000
+      internalID: -3434034134253870030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_141
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 507
+        width: 24
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ae2c17f5c9c94ef0800000000000000
+      internalID: -123345662684418395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_142
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 507
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 040cf50bb6b21d120800000000000000
+      internalID: 2436776614904709184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_143
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 507
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f3d3b5bf0494a160800000000000000
+      internalID: 7035911313053438969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_144
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 507
+        width: 24
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de10e26fe42317830800000000000000
+      internalID: 4067087253211316717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_145
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 507
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3244bbb17e996aa0800000000000000
+      internalID: -6167224003389537730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_146
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 438
+        width: 25
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da441ac780f5fd1c0800000000000000
+      internalID: -4476755014527662931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_147
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 438
+        width: 24
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d7c27dde2ffa41e0800000000000000
+      internalID: -2212675690150311980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_148
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 438
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7589dd8fb1bea9690800000000000000
+      internalID: -7594499316235003817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_149
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 438
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed8d0000a026ab9a0800000000000000
+      internalID: -6216548540542297890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_150
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 438
+        width: 24
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 148a156b3bc2e99b0800000000000000
+      internalID: -5071566980003026879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_151
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 438
+        width: 25
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7cceae6638f535a0800000000000000
+      internalID: -6542049971016905602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_152
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 382
+        width: 45
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55402bf0004d60460800000000000000
+      internalID: 7207681350381470805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_153
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 382
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b5f43100486eb8c0800000000000000
+      internalID: -3981630396441496144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_154
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 382
+        width: 46
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 153e016b4b1894e50800000000000000
+      internalID: 6794104126013760337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_155
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 382
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48edea7a55f681e00800000000000000
+      internalID: 1015684129648205444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_156
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 382
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f517a28f9a429720800000000000000
+      internalID: 2851423563031188983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_157
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 382
+        width: 44
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa4dd6b157ed65d50800000000000000
+      internalID: 6725807688077137066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_158
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 318
+        width: 44
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f93668e6f581d1140800000000000000
+      internalID: 4691933184945185695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_159
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 318
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4beee4768e8d48590800000000000000
+      internalID: -7672769372455244108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_160
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 318
+        width: 46
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb9351b1bf4718310800000000000000
+      internalID: 1405533180556294591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_161
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 318
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ea46324b00c32220800000000000000
+      internalID: 2460020976062450407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_162
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 318
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4ebe20325ac9cfd0800000000000000
+      internalID: -2321101678588281268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_163
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 318
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25fa8c26c3d399e10800000000000000
+      internalID: 2204860822139219794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_164
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 260
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84a20c207b29d2650800000000000000
+      internalID: 6209780775936600648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_165
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 256
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8afff348f986a7730800000000000000
+      internalID: 3997622653572612008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_166
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 253
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92daa8247348f1d60800000000000000
+      internalID: 7863148847286627625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_167
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 250
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79c34219460a56d60800000000000000
+      internalID: 7882883076574166167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_168
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 183
+        width: 25
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f4f25e826b9aaf00800000000000000
+      internalID: 1128885504206632181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_169
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 178
+        width: 24
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 560d106f672e75b30800000000000000
+      internalID: 4276135371772907621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_170
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 182
+        width: 25
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11eb96078ee8c91d0800000000000000
+      internalID: -3342639694446215663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_171
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 185
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcd684f17621d9760800000000000000
+      internalID: 7466143991365922253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_172
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 127
+        width: 47
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bfea43f0f55498e0800000000000000
+      internalID: -1687629466994806860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_173
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 127
+        width: 47
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 677d26d9126cec1b0800000000000000
+      internalID: -5634348236117190794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_174
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 134
+        width: 55
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 621d1360294058620800000000000000
+      internalID: 2775629770559443238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_175
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 127
+        width: 46
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8710cc39478cae870800000000000000
+      internalID: 8712996832123027832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_176
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 64
+        width: 45
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6135fab635789060800000000000000
+      internalID: 6960442102026416491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_177
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 64
+        width: 47
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f751e067bccffb160800000000000000
+      internalID: 7043626293019940223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_178
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 70
+        width: 56
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83eeb401d4cd283e0800000000000000
+      internalID: -2052836256583520712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Australian_Shepherd_64x64_FREE_179
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 64
+        width: 45
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90e90ed4132cf2820800000000000000
+      internalID: 2895746602438270473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8037b3faa51081440b364a4a3d87c82c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Australian_Shepherd_64x64_FREE_0: 2026334582315897720
+      Australian_Shepherd_64x64_FREE_1: 3497120587458402752
+      Australian_Shepherd_64x64_FREE_10: -1742292913656073818
+      Australian_Shepherd_64x64_FREE_100: -2796753991992642710
+      Australian_Shepherd_64x64_FREE_101: -732080348250344120
+      Australian_Shepherd_64x64_FREE_102: 189820228486795607
+      Australian_Shepherd_64x64_FREE_103: 2739756085967861655
+      Australian_Shepherd_64x64_FREE_104: -3159885716474727154
+      Australian_Shepherd_64x64_FREE_105: 7447687510500298803
+      Australian_Shepherd_64x64_FREE_106: -4171904052722058110
+      Australian_Shepherd_64x64_FREE_107: 2110470958515449541
+      Australian_Shepherd_64x64_FREE_108: -6183466860865065325
+      Australian_Shepherd_64x64_FREE_109: -6742108141200973567
+      Australian_Shepherd_64x64_FREE_11: 145433892901907956
+      Australian_Shepherd_64x64_FREE_110: -7036529193960223726
+      Australian_Shepherd_64x64_FREE_111: -4824174052360930464
+      Australian_Shepherd_64x64_FREE_112: 3553615921984906798
+      Australian_Shepherd_64x64_FREE_113: -2117720221705172102
+      Australian_Shepherd_64x64_FREE_114: -5530466882174912216
+      Australian_Shepherd_64x64_FREE_115: -4106599679538604464
+      Australian_Shepherd_64x64_FREE_116: 8389183716601878705
+      Australian_Shepherd_64x64_FREE_117: 7658476402037967839
+      Australian_Shepherd_64x64_FREE_118: -6142379326218067732
+      Australian_Shepherd_64x64_FREE_119: -6280205734131408847
+      Australian_Shepherd_64x64_FREE_12: 184230598088735436
+      Australian_Shepherd_64x64_FREE_120: 3273557685135682178
+      Australian_Shepherd_64x64_FREE_121: -4819492787863619624
+      Australian_Shepherd_64x64_FREE_122: 4004463914669361187
+      Australian_Shepherd_64x64_FREE_123: 151623371622055248
+      Australian_Shepherd_64x64_FREE_124: -390716445292590611
+      Australian_Shepherd_64x64_FREE_125: 8614818987494169730
+      Australian_Shepherd_64x64_FREE_126: 2535846435985653219
+      Australian_Shepherd_64x64_FREE_127: 2513193448160855062
+      Australian_Shepherd_64x64_FREE_128: 2277346022602305841
+      Australian_Shepherd_64x64_FREE_129: -2344379460617315825
+      Australian_Shepherd_64x64_FREE_13: 6375278896733066678
+      Australian_Shepherd_64x64_FREE_130: -4664537366680334985
+      Australian_Shepherd_64x64_FREE_131: 4769359954026827109
+      Australian_Shepherd_64x64_FREE_132: -460892448008679575
+      Australian_Shepherd_64x64_FREE_133: 5175018380260547772
+      Australian_Shepherd_64x64_FREE_134: -6396225996803257700
+      Australian_Shepherd_64x64_FREE_135: -3249732407986941886
+      Australian_Shepherd_64x64_FREE_136: -2896207981697547057
+      Australian_Shepherd_64x64_FREE_137: -1417097762132835726
+      Australian_Shepherd_64x64_FREE_138: 5979202217315997672
+      Australian_Shepherd_64x64_FREE_139: 3963711384133155884
+      Australian_Shepherd_64x64_FREE_14: 3403300571631111053
+      Australian_Shepherd_64x64_FREE_140: -3434034134253870030
+      Australian_Shepherd_64x64_FREE_141: -123345662684418395
+      Australian_Shepherd_64x64_FREE_142: 2436776614904709184
+      Australian_Shepherd_64x64_FREE_143: 7035911313053438969
+      Australian_Shepherd_64x64_FREE_144: 4067087253211316717
+      Australian_Shepherd_64x64_FREE_145: -6167224003389537730
+      Australian_Shepherd_64x64_FREE_146: -4476755014527662931
+      Australian_Shepherd_64x64_FREE_147: -2212675690150311980
+      Australian_Shepherd_64x64_FREE_148: -7594499316235003817
+      Australian_Shepherd_64x64_FREE_149: -6216548540542297890
+      Australian_Shepherd_64x64_FREE_15: -8790410058045560875
+      Australian_Shepherd_64x64_FREE_150: -5071566980003026879
+      Australian_Shepherd_64x64_FREE_151: -6542049971016905602
+      Australian_Shepherd_64x64_FREE_152: 7207681350381470805
+      Australian_Shepherd_64x64_FREE_153: -3981630396441496144
+      Australian_Shepherd_64x64_FREE_154: 6794104126013760337
+      Australian_Shepherd_64x64_FREE_155: 1015684129648205444
+      Australian_Shepherd_64x64_FREE_156: 2851423563031188983
+      Australian_Shepherd_64x64_FREE_157: 6725807688077137066
+      Australian_Shepherd_64x64_FREE_158: 4691933184945185695
+      Australian_Shepherd_64x64_FREE_159: -7672769372455244108
+      Australian_Shepherd_64x64_FREE_16: 8380606685924225803
+      Australian_Shepherd_64x64_FREE_160: 1405533180556294591
+      Australian_Shepherd_64x64_FREE_161: 2460020976062450407
+      Australian_Shepherd_64x64_FREE_162: -2321101678588281268
+      Australian_Shepherd_64x64_FREE_163: 2204860822139219794
+      Australian_Shepherd_64x64_FREE_164: 6209780775936600648
+      Australian_Shepherd_64x64_FREE_165: 3997622653572612008
+      Australian_Shepherd_64x64_FREE_166: 7863148847286627625
+      Australian_Shepherd_64x64_FREE_167: 7882883076574166167
+      Australian_Shepherd_64x64_FREE_168: 1128885504206632181
+      Australian_Shepherd_64x64_FREE_169: 4276135371772907621
+      Australian_Shepherd_64x64_FREE_17: -5444900864513495455
+      Australian_Shepherd_64x64_FREE_170: -3342639694446215663
+      Australian_Shepherd_64x64_FREE_171: 7466143991365922253
+      Australian_Shepherd_64x64_FREE_172: -1687629466994806860
+      Australian_Shepherd_64x64_FREE_173: -5634348236117190794
+      Australian_Shepherd_64x64_FREE_174: 2775629770559443238
+      Australian_Shepherd_64x64_FREE_175: 8712996832123027832
+      Australian_Shepherd_64x64_FREE_176: 6960442102026416491
+      Australian_Shepherd_64x64_FREE_177: 7043626293019940223
+      Australian_Shepherd_64x64_FREE_178: -2052836256583520712
+      Australian_Shepherd_64x64_FREE_179: 2895746602438270473
+      Australian_Shepherd_64x64_FREE_18: 8090180408476154665
+      Australian_Shepherd_64x64_FREE_19: -8338807387801789148
+      Australian_Shepherd_64x64_FREE_2: -4415142650221932646
+      Australian_Shepherd_64x64_FREE_20: 6166976489352272073
+      Australian_Shepherd_64x64_FREE_21: -1596125892246702625
+      Australian_Shepherd_64x64_FREE_22: -5809987636005103032
+      Australian_Shepherd_64x64_FREE_23: -757378547401384832
+      Australian_Shepherd_64x64_FREE_24: -2490016715882338550
+      Australian_Shepherd_64x64_FREE_25: -9174522749819481013
+      Australian_Shepherd_64x64_FREE_26: 1212386043375708361
+      Australian_Shepherd_64x64_FREE_27: -6618842936685632021
+      Australian_Shepherd_64x64_FREE_28: 8196501920493972032
+      Australian_Shepherd_64x64_FREE_29: 7142653212664551642
+      Australian_Shepherd_64x64_FREE_3: -8774484546777763028
+      Australian_Shepherd_64x64_FREE_30: -263928153877204082
+      Australian_Shepherd_64x64_FREE_31: -9028613034273218755
+      Australian_Shepherd_64x64_FREE_32: 917379491514324908
+      Australian_Shepherd_64x64_FREE_33: 7872469327449542913
+      Australian_Shepherd_64x64_FREE_34: -706389800572631666
+      Australian_Shepherd_64x64_FREE_35: -4776016825658067094
+      Australian_Shepherd_64x64_FREE_36: -8540309377375469697
+      Australian_Shepherd_64x64_FREE_37: -4647458328258394796
+      Australian_Shepherd_64x64_FREE_38: 8326732847666210428
+      Australian_Shepherd_64x64_FREE_39: 7336907283605480188
+      Australian_Shepherd_64x64_FREE_4: 4988630300162585635
+      Australian_Shepherd_64x64_FREE_40: -3466820487595701402
+      Australian_Shepherd_64x64_FREE_41: 6591230062831107189
+      Australian_Shepherd_64x64_FREE_42: -8549802319889046234
+      Australian_Shepherd_64x64_FREE_43: -1775071426021712955
+      Australian_Shepherd_64x64_FREE_44: -1211983847622760115
+      Australian_Shepherd_64x64_FREE_45: -1232739388263985545
+      Australian_Shepherd_64x64_FREE_46: -3605063944755015142
+      Australian_Shepherd_64x64_FREE_47: -6418484577446651919
+      Australian_Shepherd_64x64_FREE_48: -7501107245507643165
+      Australian_Shepherd_64x64_FREE_49: 5790106702414516962
+      Australian_Shepherd_64x64_FREE_5: 6265017661222754165
+      Australian_Shepherd_64x64_FREE_50: -1197809254944305311
+      Australian_Shepherd_64x64_FREE_51: -7785174652549412101
+      Australian_Shepherd_64x64_FREE_52: 16060054303200665
+      Australian_Shepherd_64x64_FREE_53: -4974020959320348122
+      Australian_Shepherd_64x64_FREE_54: -4077326483266453262
+      Australian_Shepherd_64x64_FREE_55: 4218763316600738699
+      Australian_Shepherd_64x64_FREE_56: -7002857371585523114
+      Australian_Shepherd_64x64_FREE_57: 7093700142043431409
+      Australian_Shepherd_64x64_FREE_58: 4528556155321672526
+      Australian_Shepherd_64x64_FREE_59: -7421268140619474186
+      Australian_Shepherd_64x64_FREE_6: 8871749920264162919
+      Australian_Shepherd_64x64_FREE_60: 5061194702675538374
+      Australian_Shepherd_64x64_FREE_61: -976422021721637679
+      Australian_Shepherd_64x64_FREE_62: -3404928208171469266
+      Australian_Shepherd_64x64_FREE_63: -7648327095582751459
+      Australian_Shepherd_64x64_FREE_64: -7236784138060116086
+      Australian_Shepherd_64x64_FREE_65: -6072983003754869440
+      Australian_Shepherd_64x64_FREE_66: 9038299970220356447
+      Australian_Shepherd_64x64_FREE_67: 647234361902669900
+      Australian_Shepherd_64x64_FREE_68: -7588300226758936244
+      Australian_Shepherd_64x64_FREE_69: 531571277023678079
+      Australian_Shepherd_64x64_FREE_7: 8804337185753604035
+      Australian_Shepherd_64x64_FREE_70: -2186274716662022255
+      Australian_Shepherd_64x64_FREE_71: -6800039525238743371
+      Australian_Shepherd_64x64_FREE_72: 151774703914746911
+      Australian_Shepherd_64x64_FREE_73: -8806347185604990918
+      Australian_Shepherd_64x64_FREE_74: -3447715582190733833
+      Australian_Shepherd_64x64_FREE_75: -1028460540494904641
+      Australian_Shepherd_64x64_FREE_76: 7837763303132743781
+      Australian_Shepherd_64x64_FREE_77: 8615594874568314371
+      Australian_Shepherd_64x64_FREE_78: 6272463465810697986
+      Australian_Shepherd_64x64_FREE_79: 8076665938098713190
+      Australian_Shepherd_64x64_FREE_8: -2039861004087712155
+      Australian_Shepherd_64x64_FREE_80: 6373481857501407968
+      Australian_Shepherd_64x64_FREE_81: 5704778060286956997
+      Australian_Shepherd_64x64_FREE_82: 1778562257181260545
+      Australian_Shepherd_64x64_FREE_83: 7178288900603105089
+      Australian_Shepherd_64x64_FREE_84: -563361605322559409
+      Australian_Shepherd_64x64_FREE_85: -3568363860379442951
+      Australian_Shepherd_64x64_FREE_86: -7872945080942383276
+      Australian_Shepherd_64x64_FREE_87: 2830408022021563325
+      Australian_Shepherd_64x64_FREE_88: -8724312087923998018
+      Australian_Shepherd_64x64_FREE_89: 8074177023885177444
+      Australian_Shepherd_64x64_FREE_9: 5738658376104237223
+      Australian_Shepherd_64x64_FREE_90: 1032651026280039974
+      Australian_Shepherd_64x64_FREE_91: 6203731299318533659
+      Australian_Shepherd_64x64_FREE_92: 451100334147410994
+      Australian_Shepherd_64x64_FREE_93: 4000510129573149429
+      Australian_Shepherd_64x64_FREE_94: -5703472337510008140
+      Australian_Shepherd_64x64_FREE_95: 5854864435299739445
+      Australian_Shepherd_64x64_FREE_96: 6597954246586796985
+      Australian_Shepherd_64x64_FREE_97: 6092520926701774530
+      Australian_Shepherd_64x64_FREE_98: 5261534307834013909
+      Australian_Shepherd_64x64_FREE_99: 4082465371405018152
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

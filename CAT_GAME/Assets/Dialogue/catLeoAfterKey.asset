@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb109fa977984832b53154bd07d68f7, type: 3}
+  m_Name: catLeoAfterKey
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Leo
+  npcPortrait: {fileID: 811902726, guid: 9bcb47500487a45b0af1ef47ef88c4b3, type: 3}
+  dialogueLines:
+  - Great! I can finally go home.
+  - 'Oh, you are lost and looking for your owner? '
+  - Hmm... it looks like you used to have a collar. Maybe you lost it around here. This way, we can help you find your owner!
+  germanLines:
+  - Super! Endlich kann ich nach Hause gehen.
+  - Ach, du hast dich verlaufen und suchst deinen Besitzer?
+  - "Hmm\u2026 es sieht so aus, als h\xE4ttest du fr\xFCher ein Halsband gehabt. Vielleicht hast du es hier irgendwo verloren. So k\xF6nnen wir dir helfen, deinen Besitzer zu finden!"
+  spanishLines:
+  - "\xA1Genial! Por fin puedo irme a casa."
+  - "\xBFAh, te has perdido y est\xE1s buscando a tu due\xF1o?"
+  - "Mmm\u2026 parece que antes llevabas un collar. Quiz\xE1 lo hayas perdido por aqu\xED. \xA1As\xED podremos ayudarte a encontrar a tu due\xF1o!"
+  autoProgressLines: 
+  autoProgressDelay: 1.5
+  endDialogueLines: 01y
+  typingSpeed: 0.05
+  voiceSound: []
+  voicePitch: 1
+  choices: []

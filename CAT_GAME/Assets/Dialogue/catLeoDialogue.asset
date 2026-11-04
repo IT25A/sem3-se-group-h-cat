@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb109fa977984832b53154bd07d68f7, type: 3}
+  m_Name: catLeoDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Leo
+  npcPortrait: {fileID: 492630917, guid: 9bcb47500487a45b0af1ef47ef88c4b3, type: 3}
+  dialogueLines:
+  - Could you help me? I recently lost my house key.
+  - Don't be so selfish... Can you at least help me with something else?
+  - What would you like to help with?
+  - Great! I knew that you'd help me.
+  - What would you like to help with?
+  - A bird stole it from me... please look around. Maybe it's stuck in a tree.
+  - "Could you gather 10 pieces of wood so I can start a fire? Please hurry\u2014I'm already freezing."
+  - Cats sleep a lot, but how many hours does an adult cat really sleep?
+  - 'Correct! Hmm... it looks like you used to have a collar. Maybe you lost it around here. This way, we can help you find your owner! '
+  - Wrong
+  - 
+  - 
+  germanLines:
+  - "K\xF6nntest du mir behilflich sein? Ich habe meinen Hausschl\xFCssel verloren."
+  - "Sei nicht so egoistisch. K\xF6nntest du mir wenigstens einen anderen Gefallen tun?"
+  - "Wobei m\xF6chtest du helfen?"
+  - "Super! Ich hatte bereits das Gef\xFChl, dass du ein netter Bursche bist."
+  - "Wobei m\xF6chtest du helfen?"
+  - 'Ein Vogel hat ihn mir gestohlen... bitte sieh dich um. Vielleicht steckt er in einem Baum fest. '
+  - "K\xF6nntest du 10 Holzst\xFCcke sammeln, damit ich ein Feuer machen kann? Beeil dich bitte, ich friere schon."
+  - "Katzen schlafen viel, aber wie viele Stunden schl\xE4ft eine erwachsene Katze wirklich?"
+  - "Richtig! Hmm\u2026 es sieht so aus, als h\xE4ttest du fr\xFCher ein Halsband gehabt. Vielleicht hast du es hier irgendwo verloren. So k\xF6nnen wir dir helfen, deinen Besitzer zu finden!"
+  - Falsch.
+  - 
+  spanishLines:
+  - "\xBFPodr\xEDas echarme una mano? He perdido la llave de casa."
+  - "No seas tan ego\xEDsta. \xBFPodr\xEDas al menos hacerme otro favor?"
+  - "\xBFEn qu\xE9 te gustar\xEDa echar una mano?"
+  - "\xA1Genial! Ya ten\xEDa la sensaci\xF3n de que eras un chico majo."
+  - "Dios m\xEDo, estoy muy nerviosa/o. De todos modos estoy muy indefensa/o. \xBFCu\xE1l podr\xEDas hacerme el favor?"
+  - "Un p\xE1jaro me lo ha robado... por favor, echa un vistazo. Quiz\xE1 est\xE9 atrapado en un \xE1rbol."
+  - "\xBFPodr\xEDas recoger 10 trozos de le\xF1a para que pueda encender un fuego? Date prisa, por favor, que ya tengo fr\xEDo."
+  - "Los gatos duermen mucho, pero \xBFcu\xE1ntas horas duerme realmente un gato adulto?"
+  - "\xA1Correcto! "
+  - Incorrecto.
+  - 
+  autoProgressLines: 0000000000y
+  autoProgressDelay: 1.5
+  endDialogueLines: 00000000000101000100y
+  typingSpeed: 0.05
+  voiceSound: []
+  voicePitch: 1
+  choices:
+  - dialogueIndex: 0
+    choices:
+    - Sure!
+    - Not now.
+    germanChoices:
+    - Klar!
+    - Jetzt nicht.
+    spanishChoices:
+    - "\xA1Claro!"
+    - Ahora no.
+    nextDialogueIndexes: 0300000001000000i
+  - dialogueIndex: 2
+    choices:
+    - Find the house key
+    - 'Make a fire '
+    - 'Answer a tricky quiz '
+    germanChoices:
+    - "Finde den Hausschl\xFCssel"
+    - Feuer machen
+    - eine Quizfrage antworten
+    spanishChoices:
+    - Find the house key
+    - 'Make a fire '
+    - 'Answer a tricky quiz '
+    nextDialogueIndexes: 050000000600000007000000i
+  - dialogueIndex: 4
+    choices:
+    - Find the house key
+    - Make a fire
+    - Answer a tricky quiz
+    germanChoices:
+    - "Finde den Hausschl\xFCssel "
+    - Feuer machen
+    - eine Quizfrage antworten
+    spanishChoices:
+    - Find the house key
+    - Make a fire
+    - Answer a tricky quiz
+    nextDialogueIndexes: 050000000600000007000000i
+  - dialogueIndex: 7
+    choices:
+    - 6-8h
+    - 12-16h
+    - 18-20h
+    germanChoices:
+    - 6-8 Stunden
+    - 12-16 Stunden
+    - 18-20 Stunden
+    spanishChoices:
+    - 6-8 horas
+    - 12-16 horas
+    - 18-20 horas
+    nextDialogueIndexes: 090000000800000009000000i
+  - dialogueIndex: 9
+    choices:
+    - Try again
+    germanChoices:
+    - Versuche nochmals
+    spanishChoices:
+    - Intentar de nuevo
+    nextDialogueIndexes: 07000000i

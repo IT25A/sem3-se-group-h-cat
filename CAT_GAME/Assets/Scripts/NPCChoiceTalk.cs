@@ -8,6 +8,19 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
 {
     [Header("Dialog Daten")]
     public NPCDialogue dialogueData;
+    public NPCDialogue AfterMouse;
+    public NPCDialogue KeepGoingDialogue;
+    
+    public NPCDialogue AfterKey;
+    
+    [Tooltip("Auf welchen Satz-Index (Next Dialogue Index) springt der Button 'Schlüssel finden'?")]
+    public int keyQuestStartIndex = 3;
+private bool keyQuestActive = false; // Merkt sich, ob "Schlüssel finden" gewählt wurde
+
+    [Header ("Condition")]
+    public int mouseCount = 1;
+    public int keyCount = 1;
+
 
     [Header("UI Elemente (Panel 2)")]
     public GameObject dialoguePanel;
@@ -27,7 +40,7 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
     private bool isWaitingForChoice = false;
 
     private string[] activeLines;
-
+    private bool hasStartedQuest = false;
     void Start()
     {
         if (dialoguePanel != null)
@@ -36,7 +49,7 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
         }
         HideAllChoices();
     }
-
+    //e drücken stoppt die Animation des Typing
     public void Interact()
     {
         if (dialogueData == null) return;
@@ -45,10 +58,18 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
         {
             StartDialogue();
         }
-        else if (!isTyping && !isWaitingForChoice)
+        else if (isTyping)
+        {
+            StopAllCoroutines();
+            dialogueText.text = activeLines[dialogueIndex];
+            isTyping = false;
+            CheckAndShowChoices();
+        }
+        else if (!isWaitingForChoice)
         {
             NextLine();
         }
+        
     }
 
     public bool CanInteract()
@@ -57,10 +78,36 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
     }
 
     public void StartDialogue()
-    {
+    {   
+        // 1. Wenn die Schlüssel-Quest aktiv ist UND der Schlüssel gefunden wurde -> AfterKey
+        if (keyQuestActive && TaskCollectibleState.KeyCount >= keyCount && AfterKey != null)
+        {
+            dialogueData = AfterKey;
+        }
+        // 2. Wenn die Schlüssel-Quest aktiv ist, aber der Schlüssel noch FEHLT -> KeepGoingDialogue
+        else if (keyQuestActive && KeepGoingDialogue != null)
+        {
+            dialogueData = KeepGoingDialogue;
+        }
+        // 3. Wenn die Maus gefangen wurde -> AfterMouse
+        else if (TaskCollectibleState.MouseCount >= mouseCount && AfterMouse != null)
+        {
+            dialogueData = AfterMouse;
+            hasStartedQuest = true;
+        }
+        // 4. Fallback: Normaler Before-Mouse-Dialog bleibt unangetastet
+
         isDialogueActive = true;
         dialogueIndex = 0;
         isWaitingForChoice = false;
+
+        // Sicherheitsprüfung
+        if (dialogueData == null)
+        {
+            Debug.LogError("Kein DialogueData zugewiesen oder gefunden!");
+            isDialogueActive = false;
+            return;
+        }
 
         if (nameText != null) nameText.text = dialogueData.npcName;
         if (portraitImage != null && dialogueData.npcPortrait != null)
@@ -78,7 +125,6 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
         dialoguePanel.SetActive(true);
         StartCoroutine(TypeLine());
     }
-
     private void LoadLanguageLines()
     {
         int lang = PlayerPrefs.GetInt("Language", 0);
@@ -187,6 +233,13 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
         isWaitingForChoice = false;
         HideAllChoices();
 
+        // Wenn der Spieler im AfterMouse-Dialog auf den "Schlüssel finden"-Button klickt:
+        if (dialogueData == AfterMouse && nextIndex == keyQuestStartIndex)
+        {
+            keyQuestActive = true;
+            Debug.Log("Schlüssel-Quest wurde gestartet!");
+        }
+
         if (activeLines == null || nextIndex < 0 || nextIndex >= activeLines.Length)
         {
             EndDialogue();
@@ -206,9 +259,11 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
         spawnedButtons.Clear();
     }
 
-    private void EndDialogue()
-    {
+    public void EndDialogue()
+    {   
+        StopAllCoroutines();
         isDialogueActive = false;
+        isTyping = false;
         isWaitingForChoice = false;
         if (dialoguePanel != null) dialoguePanel.SetActive(false);
         HideAllChoices();
