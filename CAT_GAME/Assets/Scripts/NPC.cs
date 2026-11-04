@@ -22,6 +22,7 @@ public class NPCPatrol : MonoBehaviour
         if (isInteracting)
         {
             if (rb != null) rb.linearVelocity = Vector2.zero;
+            animator.SetBool("isWalking", false); // Wichtig: Animation stoppen beim Reden
             return;
         }
 
@@ -32,16 +33,19 @@ public class NPCPatrol : MonoBehaviour
         Transform target = waypoints[currentPointIndex];
         Vector2 direction = (target.position - transform.position).normalized;
 
-        // 2. NPC bewegen (verhindert das Durchrutschen durch Wände)
+        // 2. NPC bewegen
         rb.linearVelocity = direction * moveSpeed;
 
-        // 3. Ausrichtung der Katze (links/rechts)
+        // 3. Ausrichtung der Katze (Links/Rechts spiegeln bleibt)
         if (direction.x < 0) spriteRenderer.flipX = true;
         else if (direction.x > 0) spriteRenderer.flipX = false;
 
+        // 4. Richtungswerte an den Animator senden
+        animator.SetFloat("MoveX", direction.x);
+        animator.SetFloat("MoveY", direction.y);
         animator.SetBool("isWalking", true);
 
-        // 4. Prüfen, ob der Punkt erreicht wurde (auf 0.2 Units genau)
+        // 5. Prüfen, ob der Punkt erreicht wurde
         if (Vector2.Distance(transform.position, target.position) < 0.1f)
         {
             currentPointIndex++; // Nächster Punkt
