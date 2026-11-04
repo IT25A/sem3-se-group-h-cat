@@ -11572,7 +11572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4455885529870345847
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13827,7 +13827,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4784375437855323739}
   m_HandleRect: {fileID: 5774077001958031507}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 6
   m_OnValueChanged:

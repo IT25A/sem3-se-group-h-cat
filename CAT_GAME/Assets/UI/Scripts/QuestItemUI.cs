@@ -22,7 +22,7 @@ public class QuestItemUI : MonoBehaviour
     public string tableName = "MenuText";
     public string warningKey = "received_flowers";
 
-    public bool f = false; 
+    public bool f = false;
     void Start()
     {
         // Bild zuweisen
@@ -42,7 +42,7 @@ public class QuestItemUI : MonoBehaviour
         }
 
         HideUI();
-    
+
     }
 
     void Update()
@@ -53,7 +53,14 @@ public class QuestItemUI : MonoBehaviour
         {
             case QuestType.Task1:
                 currentCount = TaskCollectibleState.FlowerCount;
-                f = FlowerQuestManager.Instance.finalDialogueFinished;
+                if (FlowerQuestManager.Instance != null)
+                {
+                    f = FlowerQuestManager.Instance.finalDialogueFinished;
+                }
+                else
+                {
+                    f = false;
+                }
                 if (currentCount >= requiredAmount && !TaskCollectibleState.flowerNotificationSent)
                 {
                     if (NotificationManager.Instance != null)
