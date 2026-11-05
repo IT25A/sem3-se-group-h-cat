@@ -1455,6 +1455,7 @@ GameObject:
   - component: {fileID: 586707509}
   - component: {fileID: 586707513}
   - component: {fileID: 586707514}
+  - component: {fileID: 586707515}
   m_Layer: 0
   m_Name: catLeo
   m_TagString: Untagged
@@ -1670,6 +1671,20 @@ MonoBehaviour:
   portraitImage: {fileID: 361842379}
   choiceButtonPrefab: {fileID: 7535968328117454825, guid: 17e0c22e4e70f4790b53e0c4e737d9a2, type: 3}
   choiceContainer: {fileID: 361842378}
+--- !u!114 &586707515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586707506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab7aac9cbea19947801b1e4333504f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Task4Key
+  reward: 15
+  requiredAmount: 1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -5575,6 +5590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Task4Key
   reward: 15
+  requiredAmount: 1
 --- !u!1001 &1630319021
 PrefabInstance:
   m_ObjectHideFlags: 0
