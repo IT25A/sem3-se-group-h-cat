@@ -33,10 +33,28 @@ public class MenuManager : MonoBehaviour {
 
         string currentSceneName = SceneManager.GetActiveScene().name;
 
-        if (!SceneData.isGameStarted) menuMusic.Play();
+        if (!SceneData.isGameStarted) 
+        {
+            if (menuMusic != null) menuMusic.Play();
+        }
+        else
+        {
+            GameObject sceneMusicObj = GameObject.Find("Music");
+            if (sceneMusicObj != null)
+            {
+                AudioSource sceneAudio =
+                sceneMusicObj.GetComponent<AudioSource>();
+                if (sceneAudio != null && !sceneAudio.isPlaying)
+                {
+                    sceneAudio.Play();
+                }
+            }
+        }
 
         if (SceneData.isGameStarted) {
             SetGameState(GameState.Playing);
+
+            
 
             if (startPanel != null) startPanel.SetActive(false);
             if (settingsPanel != null) settingsPanel.SetActive(false);
