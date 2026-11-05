@@ -10,9 +10,7 @@ public class FlowerQuestCheck : MonoBehaviour
 
     [Header("Reward")]
     public int reward = 10;
-    private bool RewardGiven = false;
     private NPCTalk npcTalk;
-    private bool Taskgiven = false; // Gedächtnis der Katze
     private bool dialogueActive = false;
 
     void Start()
@@ -29,10 +27,8 @@ public class FlowerQuestCheck : MonoBehaviour
         if (dialogueActive && !npcTalk.isDialogueActive)
         {
             // Wenn Simba gerade den allerersten Text liest, merkt sich das Skript
-            if (npcTalk.dialogueData == finalDialog && !RewardGiven)
+            if (npcTalk.dialogueData == finalDialog && SceneData.flowerQuestCompleted == false)
             {
-                RewardGiven = true;
-
                 if (FlowerQuestManager.Instance != null)
                 {
                     FlowerQuestManager.Instance.finalDialogueFinished = true;
@@ -43,6 +39,7 @@ public class FlowerQuestCheck : MonoBehaviour
                 {
                     FoodManager.Instance.AddFood(reward);
                     Debug.Log($"[Quest] {reward} Food hinzugefügt!");
+                    SceneData.flowerQuestCompleted = true;
                 }
             }
         }

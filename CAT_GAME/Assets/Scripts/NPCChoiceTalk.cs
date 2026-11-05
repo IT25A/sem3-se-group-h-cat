@@ -15,7 +15,7 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
     
     [Tooltip("Auf welchen Satz-Index (Next Dialogue Index) springt der Button 'Schlüssel finden'?")]
     public int keyQuestStartIndex = 3;
-private bool keyQuestActive = false; // Merkt sich, ob "Schlüssel finden" gewählt wurde
+    private bool keyQuestActive = false; // Merkt sich, ob "Schlüssel finden" gewählt wurde
 
     [Header ("Condition")]
     public int mouseCount = 1;
@@ -80,7 +80,7 @@ private bool keyQuestActive = false; // Merkt sich, ob "Schlüssel finden" gewä
     public void StartDialogue()
     {   
         // 1. Wenn die Schlüssel-Quest aktiv ist UND der Schlüssel gefunden wurde -> AfterKey
-        if (keyQuestActive && TaskCollectibleState.KeyCount >= keyCount && AfterKey != null)
+        if (keyQuestActive && (TaskCollectibleState.KeyCount >= keyCount || SceneData.savedKeyCount >= keyCount) && AfterKey != null)
         {
             dialogueData = AfterKey;
         }
@@ -90,7 +90,7 @@ private bool keyQuestActive = false; // Merkt sich, ob "Schlüssel finden" gewä
             dialogueData = KeepGoingDialogue;
         }
         // 3. Wenn die Maus gefangen wurde -> AfterMouse
-        else if (TaskCollectibleState.MouseCount >= mouseCount && AfterMouse != null)
+        else if (SceneData.savedMouseCount >= mouseCount && AfterMouse != null)
         {
             dialogueData = AfterMouse;
             hasStartedQuest = true;
@@ -267,5 +267,9 @@ private bool keyQuestActive = false; // Merkt sich, ob "Schlüssel finden" gewä
         isWaitingForChoice = false;
         if (dialoguePanel != null) dialoguePanel.SetActive(false);
         HideAllChoices();
+    }
+    public bool IsTalking()
+    {
+        return isDialogueActive;
     }
 }

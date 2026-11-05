@@ -26,7 +26,7 @@ public class Task3Mouse : MonoBehaviour
         {
             FoodManager.Instance.AddFood(rewardAmount);
         }
-        
-        //TaskCollectibleState.ResetTaskCollectibles();
+        SceneData.savedMouseCount = TaskCollectibleState.MouseCount;
+        TaskCollectibleState.ResetTaskCollectibles();
     }
 }

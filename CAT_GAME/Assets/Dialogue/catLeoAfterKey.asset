@@ -28,7 +28,7 @@ MonoBehaviour:
   - "Mmm\u2026 parece que antes llevabas un collar. Quiz\xE1 lo hayas perdido por aqu\xED. \xA1As\xED podremos ayudarte a encontrar a tu due\xF1o!"
   autoProgressLines: 
   autoProgressDelay: 1.5
-  endDialogueLines: 01y
+  endDialogueLines: 000001y
   typingSpeed: 0.05
   voiceSound: []
   voicePitch: 1

@@ -66,6 +66,5 @@ public class FlowerQuestManager : MonoBehaviour
         isQuestCompleted = true;
 
         Debug.Log("Quest Completed: All specific flowers collected!");
-        TaskCollectibleState.ResetTaskCollectibles();
     }
 }

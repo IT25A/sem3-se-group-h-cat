@@ -5,26 +5,30 @@ public static class SceneData
 {
     // Stores the target spawn point ID for the destination scene
     public static string TargetSpawnID;
-
     // Stores the ID of the last spawn point/door the player used
     public static string LastSpawnID;
-
     public static float savedWater = -1f;
-
     public static int savedFood = 0; 
-
+    public static int savedMouseCount = 0;
+    public static int savedKeyCount = 0;
+    public static bool flowerQuestCompleted = false;
     public static bool isGameStarted = false;
-    public static List<string> savedNotificationHistory = new List<string>();
+    public static List<string> savedNotificationHistoryText = new List<string>();    public static List<string> savedNotificationHistoryKeys = new List<string>();
+    public static List<Sprite> savedNotificationHistorySprites = new List<Sprite>();
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void ResetOnStart() {
         isGameStarted = false;
         savedWater = -1f;
         savedFood = 0;
+        savedMouseCount = 0;
+        savedKeyCount = 0;
         TargetSpawnID = null;
         LastSpawnID = null;
-        savedNotificationHistory.Clear();
+        savedNotificationHistoryText.Clear();
+        savedNotificationHistorySprites.Clear();
         TaskCollectibleState.ClearAllCollectedData();
+        flowerQuestCompleted = false;
     }
 }
 
