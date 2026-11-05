@@ -110,6 +110,10 @@ MonoBehaviour:
     m_Localized: You collected the key!
     m_Metadata:
       m_Items: []
+  - m_Id: 10177380575113216
+    m_Localized: '- Finding Home -'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

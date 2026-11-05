@@ -24,7 +24,7 @@ public class MenuManager : MonoBehaviour {
     public GameObject notifyHistory; 
 
     [Header("Settings")]
-    public string gameSceneName = "Scene 1 - Phase 1"; //hier GameScene name ändern
+    public string gameSceneName = "Scene 1"; //hier GameScene name ändern
 
     [Header("LocalizationKeys")]
     public string tableName = "UI_TextTable";
