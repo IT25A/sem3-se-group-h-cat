@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement; 
 
@@ -7,6 +8,7 @@ public class MenuManager : MonoBehaviour {
 
     public enum GameState { MainMenu, Playing, Paused, GameOver }
     public static GameState currentState;
+    public AudioSource menuMusic;
 
     [Header("Panels")]
     public GameObject startPanel;
@@ -30,6 +32,8 @@ public class MenuManager : MonoBehaviour {
     private void Start() {
 
         string currentSceneName = SceneManager.GetActiveScene().name;
+
+        if (!SceneData.isGameStarted) menuMusic.Play();
 
         if (SceneData.isGameStarted) {
             SetGameState(GameState.Playing);
@@ -87,6 +91,7 @@ public class MenuManager : MonoBehaviour {
 
         SceneData.isGameStarted = true; 
         
+        menuMusic.Stop();
         startPanel.SetActive(false);
         settingsPanel.SetActive(false);
         inGameSettings.SetActive(false);
