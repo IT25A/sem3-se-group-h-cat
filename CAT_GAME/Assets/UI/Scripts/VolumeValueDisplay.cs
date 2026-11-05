@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Audio;
 
 public class VolumeValueDisplay : MonoBehaviour
 {
     [Header("Music-Settings")]
+    public AudioMixer audioMixer;
     public Slider sliderMusic;
     public TMP_Text valueTextMusic;
     public string musicKey = "MusicVolume";
@@ -41,16 +43,34 @@ public class VolumeValueDisplay : MonoBehaviour
         }
     }
 
+    private void SetMixerVolume(string exposedParam, float sliderValue)
+    {
+        if (audioMixer == null) return;
+
+        // Convert 0–100 to 0.0001–1.0 (avoids log10 of 0)
+        float linear = Mathf.Clamp(sliderValue / 100f, 0.0001f, 1f);
+
+        // Convert to Decibels (-80 dB to 0 dB)
+        float dB = Mathf.Log10(linear) * 20f;
+
+        if (sliderValue <= 0f)
+            dB = -80f; // Complete silence at 0
+
+        audioMixer.SetFloat(exposedParam, dB);
+    }    
+
     private void OnMusicSliderChanged(float newValue) {
         PlayerPrefs.SetFloat(musicKey, newValue);
         PlayerPrefs.Save();
         UpdateMusicText(newValue);
+        SetMixerVolume("MusicVolume", newValue);    
     }
 
     private void OnSoundSliderChanged(float newValue) {
         PlayerPrefs.SetFloat(soundKey, newValue);
         PlayerPrefs.Save();
         UpdateSoundText(newValue);
+        SetMixerVolume("SoundVolume", newValue);
     }
 
     private void UpdateMusicText(float value) {
