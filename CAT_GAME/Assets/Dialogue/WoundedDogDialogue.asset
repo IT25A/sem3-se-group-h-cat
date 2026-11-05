@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb109fa977984832b53154bd07d68f7, type: 3}
+  m_Name: WoundedDogDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Luna
+  npcPortrait: {fileID: 2026334582315897720, guid: ea1fa3722cdf0334c97542233974212c, type: 3}
+  dialogueLines:
+  - I'm bleeding. Please bring me to a doctor called Cami
+  germanLines:
+  - "Ich blute. Bitte bring mich zu einer \xC4rztin namens Cami."
+  spanishLines:
+  - "Estoy sangrando. Por favor, ll\xE9vame con un doctor llamado Cami."
+  autoProgressLines: 
+  autoProgressDelay: 1.5
+  endDialogueLines: 
+  typingSpeed: 0.05
+  voiceSound: []
+  voicePitch: 1
+  choices: []
