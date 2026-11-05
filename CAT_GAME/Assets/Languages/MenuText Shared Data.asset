@@ -103,6 +103,10 @@ MonoBehaviour:
     m_Key: received_mouse
     m_Metadata:
       m_Items: []
+  - m_Id: 9992215806636032
+    m_Key: received_key
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

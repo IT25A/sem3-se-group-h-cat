@@ -52,7 +52,9 @@ public class CollectibleItem : MonoBehaviour
                 case CollectibleType.Key:
                     TaskCollectibleState.RegisterKey(uniqueId);
                     break;
-    
+                case CollectibleType.SimbaNecklace:
+                    TaskCollectibleState.RegisterSimbaNecklace(uniqueId);
+                    break;
 
             } 
 

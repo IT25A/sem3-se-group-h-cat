@@ -23,6 +23,9 @@ public class NotificationManager : MonoBehaviour
     public Sprite daisyFlowerIcon;
     public Sprite eggs;
     public Sprite mouseIcon;
+    public Sprite keyIcon;
+
+    public Sprite simbaNecklaceIcon;
     public Sprite defaultIcon;
 
     [Header("Verlauf (History)")]
@@ -61,6 +64,8 @@ public class NotificationManager : MonoBehaviour
         if (entryKey.Contains("received_flowers")) return daisyFlowerIcon;
         if (entryKey.Contains("received_eggs")) return eggs;
         if (entryKey.Contains("received_mouse")) return mouseIcon;
+        if (entryKey.Contains("received_key")) return keyIcon;
+        if (entryKey.Contains("received_simba_necklace")) return simbaNecklaceIcon;
         return defaultIcon;
     }
     public void ShowLocalizedNotification(string tableCollectionName, string entryKey, float duration = 5f)
@@ -116,6 +121,14 @@ public class NotificationManager : MonoBehaviour
             else if (entryKey.Contains("received_mouse"))
             {
                 notificationIcon.sprite = mouseIcon;
+            }
+            else if (entryKey.Contains("received_key"))
+            {
+                notificationIcon.sprite = keyIcon;
+            }
+            else if (entryKey.Contains("received_simba_necklace"))
+            {
+                notificationIcon.sprite = simbaNecklaceIcon;
             }
             else
             {

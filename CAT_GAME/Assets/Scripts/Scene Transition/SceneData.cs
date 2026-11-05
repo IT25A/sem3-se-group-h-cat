@@ -12,7 +12,7 @@ public static class SceneData
     public static float savedWater = -1f;
 
     public static int savedFood = 0; 
-
+    public static int savedMouseCount = 0;
     public static bool isGameStarted = false;
     public static List<string> savedNotificationHistoryText = new List<string>();    public static List<string> savedNotificationHistoryKeys = new List<string>();
     public static List<Sprite> savedNotificationHistorySprites = new List<Sprite>();
@@ -22,6 +22,7 @@ public static class SceneData
         isGameStarted = false;
         savedWater = -1f;
         savedFood = 0;
+        savedMouseCount = 0;
         TargetSpawnID = null;
         LastSpawnID = null;
         savedNotificationHistoryText.Clear();

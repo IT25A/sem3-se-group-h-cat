@@ -90,7 +90,7 @@ private bool keyQuestActive = false; // Merkt sich, ob "Schlüssel finden" gewä
             dialogueData = KeepGoingDialogue;
         }
         // 3. Wenn die Maus gefangen wurde -> AfterMouse
-        else if (TaskCollectibleState.MouseCount >= mouseCount && AfterMouse != null)
+        else if (SceneData.savedMouseCount >= mouseCount && AfterMouse != null)
         {
             dialogueData = AfterMouse;
             hasStartedQuest = true;
@@ -267,5 +267,9 @@ private bool keyQuestActive = false; // Merkt sich, ob "Schlüssel finden" gewä
         isWaitingForChoice = false;
         if (dialoguePanel != null) dialoguePanel.SetActive(false);
         HideAllChoices();
+    }
+    public bool IsTalking()
+    {
+        return isDialogueActive;
     }
 }

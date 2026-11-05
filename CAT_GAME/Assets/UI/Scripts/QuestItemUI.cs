@@ -15,7 +15,7 @@ public class QuestItemUI : MonoBehaviour
     public Sprite itemSprite;
     public int requiredAmount = 10;
 
-    public enum QuestType { Task1, Task2, Task3 } //arten der task für switch 
+    public enum QuestType { Task1, Task2, Task3, Task4, Task5 } //arten der task für switch 
     public QuestType questType;
 
     [Header("Localization Keys")]
@@ -93,6 +93,32 @@ public class QuestItemUI : MonoBehaviour
                         NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
                         Debug.Log("Notification für" + questType + " gesendet");
                         TaskCollectibleState.mouseNotificationSent = true;
+                    }
+                }
+                break;
+
+            case QuestType.Task4:
+                currentCount = TaskCollectibleState.KeyCount;
+                if (currentCount >= requiredAmount && !TaskCollectibleState.keyNotificationSent)
+                {
+                    if (NotificationManager.Instance != null)
+                    {
+                        NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
+                        Debug.Log("Notification für" + questType + " gesendet");
+                        TaskCollectibleState.keyNotificationSent = true;
+                    }
+                }
+                break;
+
+            case QuestType.Task5:
+                currentCount = TaskCollectibleState.SimbaNecklaceCount;
+                if (currentCount >= requiredAmount && !TaskCollectibleState.simbaNecklaceNotificationSent)
+                {
+                    if (NotificationManager.Instance != null)
+                    {
+                        NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
+                        Debug.Log("Notification für" + questType + " gesendet");
+                        TaskCollectibleState.simbaNecklaceNotificationSent = true;
                     }
                 }
                 break;

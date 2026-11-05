@@ -12,6 +12,7 @@ public static class TaskCollectibleState
     public static bool flowerNotificationSent = false;
     public static bool mouseNotificationSent = false;
     public static bool simbaNecklaceNotificationSent = false;
+    public static bool keyNotificationSent = false;
 
     // Stores unique IDs of collectibles picked up during the current task
     private static readonly HashSet<string> collectedIds = new HashSet<string>();
@@ -84,10 +85,12 @@ public static class TaskCollectibleState
         FlowerCount = 0;
         MouseCount = 0;
         SimbaNecklaceCount = 0;
+        KeyCount = 0;
         eggNotificationSent = false;
         flowerNotificationSent = false;
         mouseNotificationSent = false;
         simbaNecklaceNotificationSent = false;
+        keyNotificationSent = false;
         //collectedIds.Clear();
         Debug.Log("Task collectibles wurden zurückgesetzt.");
     }
