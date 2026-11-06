@@ -183,8 +183,27 @@ public class MenuManager : MonoBehaviour
         creditsPanel.SetActive(false);
     }
 
+<<<<<<< HEAD
+    public void QuitToMainMenu() {
+        SceneData.isGameStarted = false;
+
+        if (menuMusic != null) menuMusic.Play();
+
+        GameObject sceneMusicObj = GameObject.Find("Music");
+        if (sceneMusicObj != null)
+        {
+            AudioSource sceneAudio = 
+            sceneMusicObj.GetComponent<AudioSource>();
+            if (sceneAudio != null)
+            {
+                sceneAudio.Stop();
+            }
+        }
+        
+=======
     public void QuitToMainMenu()
     {
+>>>>>>> 27e57492596a0674f8794226b30bc53c91a030d2
         SetGameState(GameState.MainMenu);
 
         WaterManager waterManager = FindAnyObjectByType<WaterManager>();
