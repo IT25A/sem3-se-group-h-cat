@@ -183,7 +183,6 @@ public class MenuManager : MonoBehaviour
         creditsPanel.SetActive(false);
     }
 
-<<<<<<< HEAD
     public void QuitToMainMenu() {
         SceneData.isGameStarted = false;
 
@@ -200,10 +199,6 @@ public class MenuManager : MonoBehaviour
             }
         }
         
-=======
-    public void QuitToMainMenu()
-    {
->>>>>>> 27e57492596a0674f8794226b30bc53c91a030d2
         SetGameState(GameState.MainMenu);
 
         WaterManager waterManager = FindAnyObjectByType<WaterManager>();
