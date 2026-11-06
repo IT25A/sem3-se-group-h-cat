@@ -4183,6 +4183,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6949622402661544363, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+      propertyPath: menuMusic
+      value: 
+      objectReference: {fileID: 542171278}
     - target: {fileID: 8884652153628847292, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

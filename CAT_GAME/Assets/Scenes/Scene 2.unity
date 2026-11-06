@@ -462,9 +462,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 6595445968831153431, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6844626637132494065, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949622402661544363, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+      propertyPath: menuMusic
+      value: 
+      objectReference: {fileID: 970267932}
+    - target: {fileID: 6949622402661544363, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+      propertyPath: gameSceneName
+      value: Scene 2
       objectReference: {fileID: 0}
     - target: {fileID: 7431655705759474001, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
       propertyPath: m_IsActive
