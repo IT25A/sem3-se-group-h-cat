@@ -186,19 +186,30 @@ public class MenuManager : MonoBehaviour
     public void QuitToMainMenu() {
         SceneData.isGameStarted = false;
 
-        if (menuMusic != null) menuMusic.Play();
+        // Destroy the persistent player so Scene 1 spawns its default player
+        PersistentPlayer player = FindAnyObjectByType<PersistentPlayer>();
+        if (player != null)
+        {
+            Destroy(player.gameObject);
+        }
+        
+        SceneManager.LoadScene(gameSceneName);
+
+        SceneManager.LoadScene("Scene 1");
 
         GameObject sceneMusicObj = GameObject.Find("Music");
         if (sceneMusicObj != null)
         {
             AudioSource sceneAudio = 
             sceneMusicObj.GetComponent<AudioSource>();
-            if (sceneAudio != null)
+            if (sceneAudio != null && sceneAudio != menuMusic)
             {
                 sceneAudio.Stop();
             }
         }
         
+        if (menuMusic != null) menuMusic.Play();
+
         SetGameState(GameState.MainMenu);
 
         WaterManager waterManager = FindAnyObjectByType<WaterManager>();
