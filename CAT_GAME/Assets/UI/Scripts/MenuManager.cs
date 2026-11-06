@@ -167,6 +167,21 @@ public class MenuManager : MonoBehaviour {
     }
 
     public void QuitToMainMenu() {
+        SceneData.isGameStarted = false;
+
+        if (menuMusic != null) menuMusic.Play();
+
+        GameObject sceneMusicObj = GameObject.Find("Music");
+        if (sceneMusicObj != null)
+        {
+            AudioSource sceneAudio = 
+            sceneMusicObj.GetComponent<AudioSource>();
+            if (sceneAudio != null)
+            {
+                sceneAudio.Stop();
+            }
+        }
+        
         SetGameState(GameState.MainMenu);
     
         WaterManager waterManager = FindAnyObjectByType<WaterManager>();
