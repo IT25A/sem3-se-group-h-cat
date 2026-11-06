@@ -34,8 +34,6 @@ public class MenuManager : MonoBehaviour
     private void Start()
     {
 
-        SceneData.isGameStarted = false;
-
         string currentSceneName = SceneManager.GetActiveScene().name;
 
         if (!SceneData.isGameStarted)
