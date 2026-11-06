@@ -54,8 +54,6 @@ public class MenuManager : MonoBehaviour {
         if (SceneData.isGameStarted) {
             SetGameState(GameState.Playing);
 
-            
-
             if (startPanel != null) startPanel.SetActive(false);
             if (settingsPanel != null) settingsPanel.SetActive(false);
             if (inGameSettings != null) inGameSettings.SetActive(false);
