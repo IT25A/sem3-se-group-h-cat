@@ -15,11 +15,16 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
     
     [Tooltip("Auf welchen Satz-Index (Next Dialogue Index) springt der Button 'Schlüssel finden'?")]
     public int keyQuestStartIndex = 3;
+    [Tooltip("Auf welchen Satz-Index (Next Dialogue Index) springt der Button 'Feuer machen'?")]
+    public int fireQuestStartIndex = 5;
+
     private bool keyQuestActive = false; // Merkt sich, ob "Schlüssel finden" gewählt wurde
+    private bool fireQuestActive = false;// Merkt sich, ob "Feuer machen" gewählt wurde
 
     [Header ("Condition")]
     public int mouseCount = 1;
     public int keyCount = 1;
+    public int WoodCount = 10;
 
 
     [Header("UI Elemente (Panel 2)")]
@@ -228,16 +233,25 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
         }
     }
 
-    public void MakeChoice(int nextIndex)
+   public void MakeChoice(int nextIndex)
     {
         isWaitingForChoice = false;
         HideAllChoices();
 
-        // Wenn der Spieler im AfterMouse-Dialog auf den "Schlüssel finden"-Button klickt:
-        if (dialogueData == AfterMouse && nextIndex == keyQuestStartIndex)
+        // Prüfen, welche der 3 Aufgaben im AfterMouse-Dialog gewählt wurde:
+        if (dialogueData == AfterMouse)
         {
-            keyQuestActive = true;
-            Debug.Log("Schlüssel-Quest wurde gestartet!");
+            if (nextIndex == keyQuestStartIndex)
+            {
+                keyQuestActive = true;
+                Debug.Log("Auswahl: Schlüssel finden gestartet!");
+            }
+            else if (nextIndex == fireQuestStartIndex)
+            {
+                fireQuestActive = true;
+                Debug.Log("Auswahl: Feuer machen gestartet!");
+            }
+           
         }
 
         if (activeLines == null || nextIndex < 0 || nextIndex >= activeLines.Length)
