@@ -1,10 +1,12 @@
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement; 
+using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
-public class MenuManager : MonoBehaviour {
+public class MenuManager : MonoBehaviour
+{
 
-    public static bool autoStartGame = false; 
+    public static bool autoStartGame = false;
 
     public enum GameState { MainMenu, Playing, Paused, GameOver }
     public static GameState currentState;
@@ -13,15 +15,15 @@ public class MenuManager : MonoBehaviour {
     [Header("Panels")]
     public GameObject startPanel;
     public GameObject settingsPanel;
-    public GameObject inGamePanel; 
-    public GameObject inGameSettings; 
-    public GameObject pausePanel; 
-    public GameObject endPanel; 
-    public GameObject notifyPanel; 
-    public GameObject gameOver; 
+    public GameObject inGamePanel;
+    public GameObject inGameSettings;
+    public GameObject pausePanel;
+    public GameObject endPanel;
+    public GameObject notifyPanel;
+    public GameObject gameOver;
 
-    public GameObject creditsPanel; 
-    public GameObject notifyHistory; 
+    public GameObject creditsPanel;
+    public GameObject notifyHistory;
 
     [Header("Settings")]
     public string gameSceneName = "Scene 1"; //hier GameScene name ändern
@@ -29,11 +31,12 @@ public class MenuManager : MonoBehaviour {
     [Header("LocalizationKeys")]
     public string tableName = "UI_TextTable";
     public string sM = "startMessage";
-    private void Start() {
+    private void Start()
+    {
 
         string currentSceneName = SceneManager.GetActiveScene().name;
 
-        if (!SceneData.isGameStarted) 
+        if (!SceneData.isGameStarted)
         {
             if (menuMusic != null) menuMusic.Play();
         }
@@ -42,19 +45,21 @@ public class MenuManager : MonoBehaviour {
             GameObject sceneMusicObj = GameObject.Find("Music");
             if (sceneMusicObj != null)
             {
-                AudioSource sceneAudio =
-                sceneMusicObj.GetComponent<AudioSource>();
+                AudioSource sceneAudio = sceneMusicObj.GetComponent<AudioSource>();
                 if (sceneAudio != null && !sceneAudio.isPlaying)
                 {
                     sceneAudio.Play();
                 }
             }
+            else
+            {
+                Debug.LogWarning("Kein GameObject namens 'Music' in dieser Szene gefunden.");
+            }
         }
 
-        if (SceneData.isGameStarted) {
+        if (SceneData.isGameStarted)
+        {
             SetGameState(GameState.Playing);
-
-            
 
             if (startPanel != null) startPanel.SetActive(false);
             if (settingsPanel != null) settingsPanel.SetActive(false);
@@ -67,26 +72,33 @@ public class MenuManager : MonoBehaviour {
             Time.timeScale = 1f;
 
             WaterManager waterManager = FindAnyObjectByType<WaterManager>();
-            if (waterManager != null) {
+            if (waterManager != null)
+            {
                 waterManager.isGameOver = false;
-                waterManager.isGameStarted = true; 
+                waterManager.isGameStarted = true;
                 waterManager.StartWaterDecrease();
             }
         }
-        else  {
+        else
+        {
             SetGameState(GameState.MainMenu);
-            if (autoStartGame) {
+            if (autoStartGame)
+            {
                 StartGame();
-                autoStartGame = false; 
-            } else {
-                ShowStartPanel(); 
+                autoStartGame = false;
+            }
+            else
+            {
+                ShowStartPanel();
             }
         }
     }
-    public void SetGameState(GameState newState) {
+    public void SetGameState(GameState newState)
+    {
         currentState = newState;
 
-        switch (currentState) {
+        switch (currentState)
+        {
             case GameState.MainMenu:
                 Time.timeScale = 1f;
                 break;
@@ -104,18 +116,18 @@ public class MenuManager : MonoBehaviour {
                 break;
         }
     }
-    public void StartGame() {
+    public void StartGame()
+    {
         Debug.Log("Start Game");
 
-        SceneData.isGameStarted = true; 
-        
+        SceneData.isGameStarted = true;
+
         menuMusic.Stop();
 
         GameObject sceneMusicObj = GameObject.Find("Music");
         if (sceneMusicObj != null)
         {
-            AudioSource sceneAudio = 
-            sceneMusicObj.GetComponent<AudioSource>();
+            AudioSource sceneAudio = sceneMusicObj.GetComponent<AudioSource>();
             if (sceneAudio != null)
             {
                 sceneAudio.Play();
@@ -128,100 +140,140 @@ public class MenuManager : MonoBehaviour {
         pausePanel.SetActive(false);
         endPanel.SetActive(false);
         creditsPanel.SetActive(false);
-        
+
         inGamePanel.SetActive(true);
-        if (NotificationManager.Instance != null) {
+        if (NotificationManager.Instance != null)
+        {
             NotificationManager.Instance.ShowLocalizedNotification(tableName, sM);
         }
         Time.timeScale = 1;
 
         WaterManager waterManager = FindAnyObjectByType<WaterManager>();
-        if (waterManager != null) {
+        if (waterManager != null)
+        {
             waterManager.isGameOver = false;
             waterManager.isGameStarted = false;
 
             waterManager.RefillWater(100f);
-            SceneData.savedWater = 100f; 
+            SceneData.savedWater = 100f;
             waterManager.StartWaterDecrease();
         }
         SetGameState(GameState.Playing);
     }
 
-    public void OpenSettings() {
+    public void OpenSettings()
+    {
         startPanel.SetActive(false);
         settingsPanel.SetActive(true);
     }
 
-    public void OpenCredits() {
+    public void OpenCredits()
+    {
         startPanel.SetActive(false);
         creditsPanel.SetActive(true);
     }
 
-    public void ShowStartPanel() {
+    public void ShowStartPanel()
+    {
         startPanel.SetActive(true);
         settingsPanel.SetActive(false);
         pausePanel.SetActive(false);
         inGamePanel.SetActive(false);
-        endPanel.SetActive(false); 
+        endPanel.SetActive(false);
         creditsPanel.SetActive(false);
     }
 
     public void QuitToMainMenu() {
+        SceneData.isGameStarted = false;
+
+        // Destroy the persistent player so Scene 1 spawns its default player
+        PersistentPlayer player = FindAnyObjectByType<PersistentPlayer>();
+        if (player != null)
+        {
+            Destroy(player.gameObject);
+        }
+        
+        SceneManager.LoadScene(gameSceneName);
+
+        SceneManager.LoadScene("Scene 1");
+
+        GameObject sceneMusicObj = GameObject.Find("Music");
+        if (sceneMusicObj != null)
+        {
+            AudioSource sceneAudio = 
+            sceneMusicObj.GetComponent<AudioSource>();
+            if (sceneAudio != null && sceneAudio != menuMusic)
+            {
+                sceneAudio.Stop();
+            }
+        }
+        
+        if (menuMusic != null) menuMusic.Play();
+
         SetGameState(GameState.MainMenu);
-    
+
         WaterManager waterManager = FindAnyObjectByType<WaterManager>();
-        if (waterManager != null) {
+        if (waterManager != null)
+        {
             waterManager.isGameOver = false;
             waterManager.isGameStarted = false;
         }
 
-        if(gameOver != null) gameOver.SetActive(false);
-        if(pausePanel != null) pausePanel.SetActive(false);
+        if (gameOver != null) gameOver.SetActive(false);
+        if (pausePanel != null) pausePanel.SetActive(false);
         ShowStartPanel();
     }
 
-    public void PauseMenu() {
+    public void PauseMenu()
+    {
         pausePanel.SetActive(true);
         inGameSettings.SetActive(false);
         SetGameState(GameState.Paused);
     }
 
-    public void NotificationHistory() {
+    public void NotificationHistory()
+    {
         NotificationHistoryUI nhUI = FindAnyObjectByType<NotificationHistoryUI>();
         bool newState = !notifyHistory.activeSelf;
         notifyHistory.SetActive(newState);
 
-        if (newState) {
+        if (newState)
+        {
             nhUI.UpdateHistoryDisplay();
         }
     }
 
-    public void ContinueGame() {
+    public void ContinueGame()
+    {
         pausePanel.SetActive(false);
         SetGameState(GameState.Playing);
     }
 
-    public void OpenInGameSettings() {
+    public void OpenInGameSettings()
+    {
         inGameSettings.SetActive(true);
         pausePanel.SetActive(false);
     }
 
-    public void RestartGame() {
-        autoStartGame = true; 
+    public void RestartGame()
+    {
+        autoStartGame = true;
         SetGameState(GameState.Playing);
-        gameOver.SetActive(false); 
-        SceneData.savedWater = 100f; 
+        gameOver.SetActive(false);
+        SceneData.savedWater = 100f;
         //Scene activeScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(gameSceneName);
-        
+
     }
 
-    public void FinishGame() {
+    public void FinishGame()
+    {
         SetGameState(GameState.GameOver);
         endPanel.SetActive(true);
     }
 
-    public void CloseNotify() {
-        notifyPanel.SetActive(false); 
+    public void CloseNotify()
+    {
+        notifyPanel.SetActive(false);
     }
 }
