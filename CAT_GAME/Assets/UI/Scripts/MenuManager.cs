@@ -122,7 +122,7 @@ public class MenuManager : MonoBehaviour
 
         SceneData.isGameStarted = true;
 
-        menuMusic.Stop();
+        if (menuMusic != null) menuMusic.Stop();
 
         GameObject sceneMusicObj = GameObject.Find("Music");
         if (sceneMusicObj != null)
