@@ -8,6 +8,9 @@ public class ShadowFollower : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
+    public bool isFollowing = false;
+    public float stopDistance = 1.2f;
+    public void StartFollowing() => isFollowing = true;
 
     [Header("Verzögerung")]
     [Tooltip("Wie viele Positionen soll der NPC abwarten, bevor er losläuft?")]
@@ -20,6 +23,17 @@ public class ShadowFollower : MonoBehaviour
     void Start()
     {
         if (rb == null) rb = GetComponent<Rigidbody2D>();
+
+        Collider2D myCollider = GetComponent<Collider2D>();
+        if (myCollider != null && playerTarget != null)
+        {
+            Collider2D playerCollider = playerTarget.GetComponent<Collider2D>();
+
+            if (playerCollider != null)
+            {
+                Physics2D.IgnoreCollision(myCollider, playerCollider, true);
+            }
+        }
     }
 
     void FixedUpdate()
