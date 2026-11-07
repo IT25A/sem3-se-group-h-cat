@@ -49,6 +49,7 @@ public class Task4Key : MonoBehaviour
                 }
             }
             SceneData.savedKeyCount = TaskCollectibleState.KeyCount;
+            SceneData.isQuizFireWoodKeyCompleted = true;
             TaskCollectibleState.ResetTaskCollectibles();
         }
     }

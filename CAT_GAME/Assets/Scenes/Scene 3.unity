@@ -898,6 +898,9 @@ MonoBehaviour:
   nameText: {fileID: 80777105}
   portraitImage: {fileID: 1901158653}
   isDialogueActive: 0
+  onDialogueEnded:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &230967854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1622,6 +1625,7 @@ GameObject:
   - component: {fileID: 586707513}
   - component: {fileID: 586707514}
   - component: {fileID: 586707515}
+  - component: {fileID: 586707516}
   m_Layer: 0
   m_Name: catLeo
   m_TagString: Untagged
@@ -1856,6 +1860,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Task4Key
   reward: 15
   requiredAmount: 1
+--- !u!114 &586707516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586707506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4765121adea1b0449874b0ce7b59aac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Task5Quiz
+  reward: 20
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -5033,6 +5050,7 @@ GameObject:
   - component: {fileID: 1249460396}
   - component: {fileID: 1249460395}
   - component: {fileID: 1249460394}
+  - component: {fileID: 1249460397}
   m_Layer: 0
   m_Name: SceneTransitiontoScene4
   m_TagString: Untagged
@@ -5117,6 +5135,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1249460397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249460392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac3277d167cad1439f0bc340cd2b47e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestDoorScene3
 --- !u!1 &1272607553
 GameObject:
   m_ObjectHideFlags: 0
