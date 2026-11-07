@@ -15,6 +15,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
     private bool isTyping;
     private NPCPatrol patrolScript;
     public bool isDialogueActive;
+    public UnityEngine.Events.UnityEvent onDialogueEnded;
 
     // NEU: Speichert die Sätze der aktuell gewählten Sprache
     private string[] activeLines; 
@@ -120,5 +121,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
 
         dialogueText.SetText("");
         dialoguePanel.SetActive(false);
+
+        onDialogueEnded?.Invoke();
     }
 }
