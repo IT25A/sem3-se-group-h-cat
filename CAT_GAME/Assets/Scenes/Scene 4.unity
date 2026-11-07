@@ -2889,9 +2889,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c1d37a495c4a34680936f36a8e811c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneTransition
-  targetSceneName: Scene 4
-  targetSpawnID: Scene 4
-  returnID: Scene 3
+  targetSceneName: Scene 3
+  targetSpawnID: Scene 3
+  returnID: Scene 4
   isLocked: 0
 --- !u!4 &850929394
 Transform:
@@ -6709,11 +6709,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3042703038440092805, guid: a2034902f62b053489ec3e1882f1a019, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.97
+      value: -4.46
       objectReference: {fileID: 0}
     - target: {fileID: 3042703038440092805, guid: a2034902f62b053489ec3e1882f1a019, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.05
+      value: 2.22
       objectReference: {fileID: 0}
     - target: {fileID: 3042703038440092805, guid: a2034902f62b053489ec3e1882f1a019, type: 3}
       propertyPath: m_LocalPosition.z
