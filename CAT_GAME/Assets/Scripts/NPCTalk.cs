@@ -46,6 +46,8 @@ public class NPCTalk : MonoBehaviour, IInteractable
 
     public void StartDialogue()
     {
+        if (SceneData.mouseCatched) return; 
+        
         isDialogueActive = true;
 
         if (patrolScript != null)
