@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb109fa977984832b53154bd07d68f7, type: 3}
+  m_Name: DoctorDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Cami Doctor
+  npcPortrait: {fileID: -4413097364827057358, guid: 2b4b36f3a5c524e479db2a47cd679213, type: 3}
+  dialogueLines:
+  - "Hey, look at what you have there\u2014a collar!"
+  - Where is your owner? Why are you wandering around here all alone?
+  - Seems like you're lost. I can help you by reading what's written on your collar...
+  - ...but in return, you have to find a remedy for me in the forest first!
+  germanLines:
+  - "Hey, sieh mal einer an, was du da hast \u2013 ein Halsband!"
+  - "Wo ist denn deine Besitzerin? Warum l\xE4ufst du hier so ganz alleine herum?"
+  - "Es sieht ganz so aus, als h\xE4ttest du dich verlaufen. Ich kann dir helfen und lesen, was auf deinem Halsband steht..."
+  - ...aber als Gegenleistung musst du mir zuerst ein Heilmittel im Wald finden!
+  spanishLines:
+  - "\xA1Oye, mira lo que tienes ah\xED: un collar!"
+  - "\xBFD\xF3nde est\xE1 tu due\xF1a? \xBFPor qu\xE9 andas por aqu\xED completamente solo?"
+  - Parece que te has perdido. Puedo ayudarte leyendo lo que dice en tu collar...
+  - "...\xA1pero a cambio tienes que encontrar primero un remedio para m\xED en el bosque!"
+  autoProgressLines: 0100y
+  autoProgressDelay: 1.5
+  endDialogueLines: 
+  typingSpeed: 0.05
+  voiceSound: []
+  voicePitch: 1
+  choices: []

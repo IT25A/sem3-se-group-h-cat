@@ -24,7 +24,7 @@ public class MenuManager : MonoBehaviour {
     public GameObject notifyHistory; 
 
     [Header("Settings")]
-    public string gameSceneName = "Scene 1 - Phase 1"; //hier GameScene name ändern
+    public string gameSceneName = "Scene 1"; //hier GameScene name ändern
 
     [Header("LocalizationKeys")]
     public string tableName = "UI_TextTable";
@@ -33,10 +33,28 @@ public class MenuManager : MonoBehaviour {
 
         string currentSceneName = SceneManager.GetActiveScene().name;
 
-        if (!SceneData.isGameStarted) menuMusic.Play();
+        if (!SceneData.isGameStarted) 
+        {
+            if (menuMusic != null) menuMusic.Play();
+        }
+        else
+        {
+            GameObject sceneMusicObj = GameObject.Find("Music");
+            if (sceneMusicObj != null)
+            {
+                AudioSource sceneAudio =
+                sceneMusicObj.GetComponent<AudioSource>();
+                if (sceneAudio != null && !sceneAudio.isPlaying)
+                {
+                    sceneAudio.Play();
+                }
+            }
+        }
 
         if (SceneData.isGameStarted) {
             SetGameState(GameState.Playing);
+
+            
 
             if (startPanel != null) startPanel.SetActive(false);
             if (settingsPanel != null) settingsPanel.SetActive(false);
@@ -92,6 +110,18 @@ public class MenuManager : MonoBehaviour {
         SceneData.isGameStarted = true; 
         
         menuMusic.Stop();
+
+        GameObject sceneMusicObj = GameObject.Find("Music");
+        if (sceneMusicObj != null)
+        {
+            AudioSource sceneAudio = 
+            sceneMusicObj.GetComponent<AudioSource>();
+            if (sceneAudio != null)
+            {
+                sceneAudio.Play();
+            }
+        }
+
         startPanel.SetActive(false);
         settingsPanel.SetActive(false);
         inGameSettings.SetActive(false);
