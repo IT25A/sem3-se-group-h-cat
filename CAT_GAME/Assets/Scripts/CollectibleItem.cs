@@ -1,64 +1,77 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class CollectibleItem : MonoBehaviour
 {
-    [Tooltip("Leave empty to auto-generate from scene name and position")]
-    public string uniqueId;
-    private bool hasBeenCollected = false;
-
     public enum CollectibleType
     {
         Egg,
         Flower,
         Mouse,
         Key,
-        SimbaNecklace
+        SimbaNecklace,
+        Wood
     }
 
-    public CollectibleType collectibleType;
+    [Header("Collectible Settings")]
+    public CollectibleType type;
+
+    [Tooltip("Unique ID for saving/tracking state")]
+    public string uniqueId;
 
     private void Awake()
     {
         if (string.IsNullOrEmpty(uniqueId))
         {
-            // Auto-generates an ID based on scene and position
-            uniqueId = $"{SceneManager.GetActiveScene().name}_{transform.position.x:F2}_{transform.position.y:F2}";
-        }
-
-        // If already collected during this task, destroy immediately on scene load
-        if (TaskCollectibleState.IsCollected(uniqueId))
-        {
-            Destroy(gameObject);
+            uniqueId = System.Guid.NewGuid().ToString();
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Start()
     {
-        if (!hasBeenCollected && collision.CompareTag("Player"))
+        if (TaskCollectibleState.IsCollected(uniqueId))
         {
-            hasBeenCollected = true;
-            switch (collectibleType)
-            {
-                case CollectibleType.Egg:
-                    TaskCollectibleState.RegisterEgg(uniqueId);
-                    break;
-                case CollectibleType.Flower:
-                    TaskCollectibleState.RegisterFlower(uniqueId);
-                    break;
-                case CollectibleType.Mouse:
-                    TaskCollectibleState.RegisterMouse(uniqueId);
-                    break;
-                case CollectibleType.Key:
-                    TaskCollectibleState.RegisterKey(uniqueId);
-                    break;
-                case CollectibleType.SimbaNecklace:
-                    TaskCollectibleState.RegisterSimbaNecklace(uniqueId);
-                    break;
-
-            } 
-
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            // Restricted collection logic specifically for Wood
+            if (type == CollectibleType.Wood && !FireCampTask.isTaskActive)
+            {
+                return;
+            }
+
+            Collect();
+        }
+    }
+
+    private void Collect()
+    {
+        switch (type)
+        {
+            case CollectibleType.Egg:
+                TaskCollectibleState.RegisterEgg(uniqueId);
+                break;
+            case CollectibleType.Flower:
+                TaskCollectibleState.RegisterFlower(uniqueId);
+                break;
+            case CollectibleType.Mouse:
+                TaskCollectibleState.RegisterMouse(uniqueId);
+                break;
+            case CollectibleType.Key:
+                TaskCollectibleState.RegisterKey(uniqueId);
+                break;
+            case CollectibleType.SimbaNecklace:
+                TaskCollectibleState.RegisterSimbaNecklace(uniqueId);
+                break;
+            case CollectibleType.Wood:
+                TaskCollectibleState.RegisterWood(uniqueId);
+                break;
+        }
+
+        gameObject.SetActive(false);
     }
 }
