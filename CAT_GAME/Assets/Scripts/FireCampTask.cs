@@ -9,20 +9,19 @@ public class FireCampTask : MonoBehaviour
     [Header("Visual Elements")]
     public GameObject campfireVisual;
 
-    // Global state checked by CollectibleItem.cs
+    // Global state checked exclusively by CollectibleItem.cs for Wood type
     public static bool isTaskActive = false;
 
     private bool rewardGiven = false;
     private bool wasInDialogue = false;
     private NPCChoiceTalk npcTalk;
 
-    void Awake()
+    private void Awake()
     {
-        // Fuerza a que la misión inicie cerrada al entrar a Play Mode
         isTaskActive = false;
     }
 
-    void Start()
+    private void Start()
     {
         npcTalk = GetComponent<NPCChoiceTalk>();
         if (npcTalk == null)
@@ -36,36 +35,29 @@ public class FireCampTask : MonoBehaviour
         }
     }
 
-    void Update()
+    // Called specifically from NPCChoiceTalk when selecting the wood quest choice
+    public static void ActivateFireQuest()
     {
-        if (npcTalk == null || rewardGiven) return;
+        isTaskActive = true;
+        Debug.Log("[FireCampTask] Campfire quest activated!");
+    }
+
+    private void Update()
+    {
+        if (npcTalk == null || rewardGiven || !isTaskActive) return;
 
         if (npcTalk.IsTalking())
         {
-            wasInDialogue = true;
+            // Only flag for check if currently talking through the mouse/campfire dialogue branch
+            if (npcTalk.dialogueData == npcTalk.AfterMouse)
+            {
+                wasInDialogue = true;
+            }
         }
         else if (wasInDialogue)
         {
             wasInDialogue = false;
 
-            // Paso 1: Si la misión aún NO está activa, revisamos si aceptó
-            if (!isTaskActive)
-            {
-                // AQUÍ VALIDAMOS LA OPCIÓN: 
-                // Si el método de tu compañero te da el índice de la elección (ej: npcTalk.GetLastChoice() == 0)
-                // O si simplemente al cerrar el diálogo quieres verificar si dio "Sí":
-                // (Si tu NPCChoiceTalk usa otra función para saber si aceptó, cámbiala en este if).
-
-                // Si quieres que se active solo si eligió la opción de aceptar la misión:
-                // if (npcTalk.GetChosenOption() == 0) // <--- Descomenta si tu compañero tiene este método
-
-                // Por mientras, activamos el flag:
-                isTaskActive = true;
-                Debug.Log("[FireCampTask] Task activated: Simba can now pick up wood.");
-                return;
-            }
-
-            // Paso 2: Si ya estaba activa, revisamos si completó la madera
             if (TaskCollectibleState.WoodCount >= requiredWood)
             {
                 rewardGiven = true;
@@ -78,7 +70,7 @@ public class FireCampTask : MonoBehaviour
                 if (FoodManager.Instance != null)
                 {
                     FoodManager.Instance.AddFood(reward);
-                    Debug.Log($"[FireCampTask] Campfire lit! Added {reward} points.");
+                    Debug.Log($"[FireCampTask] Campfire lit! Added {reward} food successfully!");
                 }
                 else
                 {
@@ -89,7 +81,7 @@ public class FireCampTask : MonoBehaviour
             }
             else
             {
-                Debug.Log($"[FireCampTask] In progress: {TaskCollectibleState.WoodCount}/{requiredWood} wood collected.");
+                Debug.Log($"[FireCampTask] Not enough wood: {TaskCollectibleState.WoodCount}/{requiredWood}");
             }
         }
     }
