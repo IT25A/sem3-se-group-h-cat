@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: cbb181ec9212e964b9396ff076174cc7
+guid: fd3a4e68117cce745bca3315dc9bf072
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5656498946804971740
-    second: Campfire36(1)_0
-  - first:
-      213: 8192797062909339376
-    second: Campfire36(1)_1
-  - first:
-      213: 5246158375292792235
-    second: Campfire36(1)_2
-  - first:
-      213: 1313227264985375484
-    second: Campfire36(1)_3
+      213: -3959933921621949899
+    second: fire place NEW_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -111,34 +102,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Campfire36(1)_0
+      name: fire place NEW_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 1
-        width: 22
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cd87eac92dbef7e40800000000000000
-      internalID: 5656498946804971740
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Campfire36(1)_1
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 1
-        width: 23
+        x: 1
+        y: 0
+        width: 30
         height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -148,52 +117,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f6239b7589a2b170800000000000000
-      internalID: 8192797062909339376
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Campfire36(1)_2
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 1
-        width: 25
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bad64ca3f391ec840800000000000000
-      internalID: 5246158375292792235
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Campfire36(1)_3
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 1
-        width: 23
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cf2afce5d35893210800000000000000
-      internalID: 1313227264985375484
+      spriteID: 53244b3341d7b09c0800000000000000
+      internalID: -3959933921621949899
       vertices: []
       indices: 
       edges: []
@@ -212,10 +137,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Campfire36(1)_0: 5656498946804971740
-      Campfire36(1)_1: 8192797062909339376
-      Campfire36(1)_2: 5246158375292792235
-      Campfire36(1)_3: 1313227264985375484
+      fire place NEW_0: -3959933921621949899
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -8,11 +8,14 @@ public static class TaskCollectibleState
     public static int MouseCount { get; private set; } = 0;
     public static int KeyCount { get; private set; } = 0;
     public static int SimbaNecklaceCount { get; private set; } = 0;
+    public static int WoodCount { get; private set; } = 0;
+
     public static bool eggNotificationSent = false;
     public static bool flowerNotificationSent = false;
     public static bool mouseNotificationSent = false;
     public static bool simbaNecklaceNotificationSent = false;
     public static bool keyNotificationSent = false;
+    public static bool woodNotificationSent = false;
 
     // Stores unique IDs of collectibles picked up during the current task
     private static readonly HashSet<string> collectedIds = new HashSet<string>();
@@ -38,7 +41,6 @@ public static class TaskCollectibleState
                 collectedIds.Add(id);
                 EggCount++;
             }
-            
         }
     }
 
@@ -58,7 +60,6 @@ public static class TaskCollectibleState
             collectedIds.Add(id);
         }
         MouseCount++;
-        
     }
 
     public static void RegisterKey(string id)
@@ -78,6 +79,16 @@ public static class TaskCollectibleState
         }
         SimbaNecklaceCount++;
     }
+
+    public static void RegisterWood(string id)
+    {
+        if (!string.IsNullOrEmpty(id))
+        {
+            collectedIds.Add(id);
+        }
+        WoodCount++;
+    }
+
     // Call this when your task/event is completed!
     public static void ResetTaskCollectibles()
     {
@@ -86,11 +97,15 @@ public static class TaskCollectibleState
         MouseCount = 0;
         SimbaNecklaceCount = 0;
         KeyCount = 0;
+        WoodCount = 0;
+
         eggNotificationSent = false;
         flowerNotificationSent = false;
         mouseNotificationSent = false;
         simbaNecklaceNotificationSent = false;
         keyNotificationSent = false;
+        woodNotificationSent = false;
+
         //collectedIds.Clear();
         Debug.Log("Task collectibles wurden zurückgesetzt.");
     }
