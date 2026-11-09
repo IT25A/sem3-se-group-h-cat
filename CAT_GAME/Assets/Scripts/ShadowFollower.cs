@@ -9,13 +9,13 @@ public class ShadowFollower : MonoBehaviour
     public Animator animator;
     public SpriteRenderer spriteRenderer;
     public bool isFollowing = false;
-    public float stopDistance = 1.2f;
+    public float stopDistance = 0.5f;
     public void StartFollowing() => isFollowing = true;
 
     [Header("Verzögerung")]
     [Tooltip("Wie viele Positionen soll der NPC abwarten, bevor er losläuft?")]
     public int delayFrames = 25; 
-    public float moveSpeed = 2f; // Sollte exakt der Speed deines Spielers sein
+    public float moveSpeed = 5f; // Sollte exakt der Speed deines Spielers sein
 
     // Die Liste, die die alten Positionen des Spielers speichert
     private Queue<Vector2> positionHistory = new Queue<Vector2>();
