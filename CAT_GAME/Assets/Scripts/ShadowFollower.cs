@@ -51,11 +51,19 @@ public class ShadowFollower : MonoBehaviour
 
             // 4. Bewege den NPC zu dieser Position
             Vector2 currentPos = transform.position;
-            Vector2 direction = (targetPosition - currentPos).normalized;
-            rb.linearVelocity = direction * moveSpeed;
+            float distance = Vector2.Distance(currentPos, playerTarget.position);
 
-            // 5. Animator und Blickrichtung updaten (wie beim Spieler)
-            UpdateAnimation(direction);
+            if (distance > stopDistance)
+            {
+                Vector2 direction = (targetPosition - currentPos).normalized;
+                rb.linearVelocity = direction * moveSpeed;
+                UpdateAnimation(direction);
+            }
+            else
+            {
+                rb.linearVelocity = Vector2.zero;
+                animator.SetBool("isWalking", false);
+            }
         }
         else
         {
