@@ -43,6 +43,8 @@ public class NPCTalk : MonoBehaviour, IInteractable
     void Start()
     {
         patrolScript = GetComponent<NPCPatrol>();
+        TaskCollectibleState.ResetTaskCollectibles();
+
     }
 
     public void StartDialogue()

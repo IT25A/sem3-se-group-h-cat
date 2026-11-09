@@ -14,6 +14,8 @@ public static class SceneData
     public static int savedKeyCount = 0;
     public static bool flowerQuestCompleted = false;
     public static bool isGameStarted = false;
+
+    public static bool isQuizFireWoodKeyCompleted = false;
     public static List<string> savedNotificationHistoryText = new List<string>();    public static List<string> savedNotificationHistoryKeys = new List<string>();
     public static List<Sprite> savedNotificationHistorySprites = new List<Sprite>();
 
@@ -25,6 +27,7 @@ public static class SceneData
         savedMouseCount = 0;
         mouseCatched = false;
         savedKeyCount = 0;
+        isQuizFireWoodKeyCompleted = false;
         TargetSpawnID = null;
         LastSpawnID = null;
         savedNotificationHistoryText.Clear();

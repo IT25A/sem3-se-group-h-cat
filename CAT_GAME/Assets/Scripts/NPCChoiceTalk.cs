@@ -93,8 +93,15 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
 
     public void StartDialogue()
     {   
+
+        if (SceneData.isQuizFireWoodKeyCompleted && AfterKey != null)
+        {
+            dialogueData = AfterKey;
+            dialogueIndex = 0;
+        }
+        
         // 1. Wenn Schlüssel gefunden -> AfterKey Dialog
-        if (keyQuestActive && (TaskCollectibleState.KeyCount >= keyCount || SceneData.savedKeyCount >= keyCount) && AfterKey != null)
+        else if (keyQuestActive && (TaskCollectibleState.KeyCount >= keyCount || SceneData.savedKeyCount >= keyCount) && AfterKey != null)
         {
             dialogueData = AfterKey;
             dialogueIndex = 0;
@@ -338,5 +345,9 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
     public bool IsTalking()
     {
         return isDialogueActive;
+    }
+    public int GetCurrentIndex()
+    {
+        return dialogueIndex;
     }
 }
