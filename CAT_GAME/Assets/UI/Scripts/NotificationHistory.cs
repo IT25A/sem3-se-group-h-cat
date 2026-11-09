@@ -16,17 +16,6 @@ public class NotificationHistoryUI : MonoBehaviour
             historyPanel.SetActive(false);
     }
 
-    public void NotificationHistory()
-    {
-
-        if (historyPanel != null)
-        {
-            bool newState = !historyPanel.activeSelf;
-            historyPanel.SetActive(newState);
-        }
-        UpdateHistoryDisplay();
-    }
-
     public void UpdateHistoryDisplay()
     {
         if (contentParent == null || notificationItemPrefab == null || NotificationManager.Instance == null) return;

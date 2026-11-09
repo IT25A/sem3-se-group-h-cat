@@ -25,6 +25,9 @@ public class MenuManager : MonoBehaviour
     public GameObject creditsPanel;
     public GameObject notifyHistory;
 
+    public GameObject openButton;    
+    public GameObject closeButton;
+
     [Header("Settings")]
     public string gameSceneName = "Scene 1"; //hier GameScene name ändern
 
@@ -183,7 +186,8 @@ public class MenuManager : MonoBehaviour
         creditsPanel.SetActive(false);
     }
 
-    public void QuitToMainMenu() {
+    public void QuitToMainMenu()
+    {
         SceneData.isGameStarted = false;
 
         // Destroy the persistent player so Scene 1 spawns its default player
@@ -192,7 +196,7 @@ public class MenuManager : MonoBehaviour
         {
             Destroy(player.gameObject);
         }
-        
+
         SceneManager.LoadScene(gameSceneName);
 
         SceneManager.LoadScene("Scene 1");
@@ -200,14 +204,14 @@ public class MenuManager : MonoBehaviour
         GameObject sceneMusicObj = GameObject.Find("Music");
         if (sceneMusicObj != null)
         {
-            AudioSource sceneAudio = 
+            AudioSource sceneAudio =
             sceneMusicObj.GetComponent<AudioSource>();
             if (sceneAudio != null && sceneAudio != menuMusic)
             {
                 sceneAudio.Stop();
             }
         }
-        
+
         if (menuMusic != null) menuMusic.Play();
 
         SetGameState(GameState.MainMenu);
@@ -231,15 +235,46 @@ public class MenuManager : MonoBehaviour
         SetGameState(GameState.Paused);
     }
 
-    public void NotificationHistory()
+    public void NotificationHistoryOpen()
     {
         NotificationHistoryUI nhUI = FindAnyObjectByType<NotificationHistoryUI>();
-        bool newState = !notifyHistory.activeSelf;
-        notifyHistory.SetActive(newState);
 
-        if (newState)
+        if (notifyHistory != null)
+        {
+            notifyHistory.SetActive(true);
+        }
+
+        if (openButton != null)
+        {
+            openButton.SetActive(false);
+        }
+        if (closeButton != null)
+        {
+            closeButton.SetActive(true);
+        }
+
+        if (nhUI != null)
         {
             nhUI.UpdateHistoryDisplay();
+        }
+    }
+
+    public void NotificationHistoryClose()
+    {
+        NotificationHistoryUI nhUI = FindAnyObjectByType<NotificationHistoryUI>();
+
+        if (notifyHistory != null)
+        {
+            notifyHistory.SetActive(false);
+        }
+
+        if (openButton != null)
+        {
+            openButton.SetActive(true);
+        }
+        if (closeButton != null)
+        {
+            closeButton.SetActive(false);
         }
     }
 

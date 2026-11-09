@@ -18,11 +18,18 @@ public class SceneTransition : MonoBehaviour
     // but QuestDoor can still modify it safely.
     [HideInInspector] public bool isLocked = false;
 
+    public bool isOneWay = false; 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             // If the door is locked by a quest, stop execution
+            if (isOneWay)
+            {
+                return;
+            }
+
             if (isLocked)
             {
                 return;
@@ -42,6 +49,7 @@ public class SceneTransition : MonoBehaviour
                 SceneData.TargetSpawnID = SceneData.LastSpawnID;
             }
 
+            isLocked = true; 
             SceneManager.LoadScene(targetSceneName);
         }
     }
