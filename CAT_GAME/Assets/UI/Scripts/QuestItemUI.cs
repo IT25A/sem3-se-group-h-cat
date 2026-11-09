@@ -15,7 +15,7 @@ public class QuestItemUI : MonoBehaviour
     public Sprite itemSprite;
     public int requiredAmount = 10;
 
-    public enum QuestType { Task1, Task2, Task3, Task4, Task5 } //arten der task für switch 
+    public enum QuestType { Task1, Task2, Task3, Task4, Task5, Task6} //arten der task für switch 
     public QuestType questType;
 
     [Header("Localization Keys")]
@@ -52,13 +52,14 @@ public class QuestItemUI : MonoBehaviour
         switch (questType)
         {
             case QuestType.Task1:
-                currentCount = TaskCollectibleState.FlowerCount;
                 if (FlowerQuestManager.Instance != null)
                 {
+                    currentCount = FlowerQuestManager.Instance.currentFlowerCount;
                     f = FlowerQuestManager.Instance.finalDialogueFinished;
                 }
                 else
                 {
+                    currentCount = TaskCollectibleState.FlowerCount;
                     f = false;
                 }
                 if (currentCount >= requiredAmount && !TaskCollectibleState.flowerNotificationSent)
@@ -119,6 +120,19 @@ public class QuestItemUI : MonoBehaviour
                         NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
                         Debug.Log("Notification für" + questType + " gesendet");
                         TaskCollectibleState.simbaNecklaceNotificationSent = true;
+                    }
+                }
+                break;
+
+            case QuestType.Task6:
+                currentCount = TaskCollectibleState.WoodCount;
+                if (currentCount >= requiredAmount && !TaskCollectibleState.woodNotificationSent)
+                {
+                    if (NotificationManager.Instance != null)
+                    {
+                        NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
+                        Debug.Log("Notification für" + questType + " gesendet");
+                        TaskCollectibleState.woodNotificationSent = true;
                     }
                 }
                 break;

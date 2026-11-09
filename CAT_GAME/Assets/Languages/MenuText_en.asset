@@ -114,6 +114,14 @@ MonoBehaviour:
     m_Localized: '- Finding Home -'
     m_Metadata:
       m_Items: []
+  - m_Id: 11530392715423744
+    m_Localized: You find your collar!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11530525309956096
+    m_Localized: You collected all the wood!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

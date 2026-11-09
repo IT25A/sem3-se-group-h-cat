@@ -111,6 +111,14 @@ MonoBehaviour:
     m_Key: "mainSubTitle\t"
     m_Metadata:
       m_Items: []
+  - m_Id: 11530392715423744
+    m_Key: "received_collar\t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11530525309956096
+    m_Key: received_wood
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
