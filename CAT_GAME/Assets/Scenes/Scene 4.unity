@@ -631,6 +631,7 @@ MonoBehaviour:
   dialogueText: {fileID: 2095051040}
   nameText: {fileID: 41011986}
   portraitImage: {fileID: 279964693}
+  interactOnlyOnce: 0
   isDialogueActive: 0
   onDialogueEnded:
     m_PersistentCalls:
@@ -2615,10 +2616,23 @@ MonoBehaviour:
   dialogueText: {fileID: 2095051040}
   nameText: {fileID: 41011986}
   portraitImage: {fileID: 279964693}
+  interactOnlyOnce: 1
   isDialogueActive: 0
   onDialogueEnded:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 700506398}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!210 &700506400
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -2693,7 +2707,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0}
+  m_Offset: {x: 0, y: -0.000000007450581}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2703,7 +2717,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.44, y: 0.35}
+  m_Size: {x: 0.44, y: 0.35000002}
   m_EdgeRadius: 0
 --- !u!212 &700506404
 SpriteRenderer:
@@ -2822,6 +2836,9 @@ MonoBehaviour:
   stopDistance: 1.2
   delayFrames: 25
   moveSpeed: 3
+  doctorTarget: {fileID: 0}
+  doctorOffset: {x: -1.2, y: 0}
+  hasStayedAtDoctor: 0
 --- !u!1 &760242658
 GameObject:
   m_ObjectHideFlags: 0
