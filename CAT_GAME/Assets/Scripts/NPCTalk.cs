@@ -9,10 +9,20 @@ public class NPCTalk : MonoBehaviour, IInteractable
 {
     public static NPCTalk activeTalker;
 
+    [Header("Standard Dialog (Mit Hund, vor Halsband)")]
     public NPCDialogue dialogueData;
     public GameObject dialoguePanel;
     public TMP_Text dialogueText, nameText; 
     public Image portraitImage;
+
+    // NEU: Bedingungen für Hund & Halsband
+    [Header("Doctor / Quest Conditions (Optional)")]
+    public ShadowFollower requiredFollower; 
+    [Tooltip("Dialog, wenn Simba OHNE den Hund zum Arzt kommt")]
+    public NPCDialogue noDogDialogue; 
+    [Tooltip("Dialog, wenn Simba den Hund gebracht hat UND das Halsband hat")]
+    public NPCDialogue afterItemDialogue;
+    public string requiredCollectibleId = "SimbaNecklace";
     
     [Header("Single Interaction")]
     public bool interactOnlyOnce = false;
@@ -24,8 +34,8 @@ public class NPCTalk : MonoBehaviour, IInteractable
     public bool isDialogueActive;
     public UnityEngine.Events.UnityEvent onDialogueEnded;
 
-    // NEU: Speichert die Sätze der aktuell gewählten Sprache
     private string[] activeLines; 
+    private NPCDialogue currentDialogue; // Merkt sich den aktuell gewählten Dialog
 
     public bool CanInteract()
     {
@@ -66,7 +76,28 @@ public class NPCTalk : MonoBehaviour, IInteractable
 
     public void StartDialogue()
     {
-        if (SceneData.mouseCatched) return; 
+        if (SceneData.mouseCatched && SceneManager.GetActiveScene().name == "Scene 3") return; 
+
+        // Standardmäßig den normalen Dialog nehmen
+        currentDialogue = dialogueData;
+
+        // 1. Prüfen, ob ein Hund verlangt wird, aber NOCH NICHT dabei ist:
+        if (requiredFollower != null && !requiredFollower.isFollowing && !requiredFollower.hasStayedAtDoctor)
+        {
+            if (noDogDialogue != null)
+            {
+                currentDialogue = noDogDialogue;
+            }
+            else
+            {
+                return; // Falls kein Ohne-Hund-Dialog zugewiesen ist, nichts tun
+            }
+        }
+        // 2. Wenn der Hund dabei ist (oder schon abgegeben wurde) UND das Halsband eingesammelt ist:
+        else if (afterItemDialogue != null && TaskCollectibleState.IsCollected(requiredCollectibleId))
+        {
+            currentDialogue = afterItemDialogue;
+        }
         
         activeTalker = this;
         isDialogueActive = true;
@@ -77,14 +108,18 @@ public class NPCTalk : MonoBehaviour, IInteractable
         }
 
         dialogueIndex = 0;
-        nameText.SetText(dialogueData.npcName);
-        portraitImage.sprite = dialogueData.npcPortrait;
+        nameText.SetText(currentDialogue.npcName);
+        portraitImage.sprite = currentDialogue.npcPortrait;
         
-        // NEU: Sprache auslesen (0=EN, 1=DE, 2=ES)
         int lang = PlayerPrefs.GetInt("Language", 0);
-        if (lang == 0) activeLines = dialogueData.dialogueLines;
-        else if (lang == 1) activeLines = dialogueData.germanLines;
-        else if (lang == 2) activeLines = dialogueData.spanishLines;
+        if (lang == 0) activeLines = currentDialogue.dialogueLines;
+        else if (lang == 1) activeLines = currentDialogue.germanLines;
+        else if (lang == 2) activeLines = currentDialogue.spanishLines;
+
+        if (activeLines == null || activeLines.Length == 0)
+        {
+            activeLines = currentDialogue.dialogueLines;
+        }
 
         dialoguePanel.SetActive(true);
         StartCoroutine(TypeLine());
@@ -95,11 +130,10 @@ public class NPCTalk : MonoBehaviour, IInteractable
         if (isTyping)
         {
             StopAllCoroutines();
-            // NEU: Nutzt activeLines
             dialogueText.SetText(activeLines[dialogueIndex]);
             isTyping = false;
         }
-        else if (dialogueIndex + 1 < activeLines.Length) // NEU: Nutzt activeLines.Length
+        else if (dialogueIndex + 1 < activeLines.Length)
         {
             dialogueIndex++;
             StartCoroutine(TypeLine());
@@ -115,18 +149,18 @@ public class NPCTalk : MonoBehaviour, IInteractable
         isTyping = true;
         dialogueText.SetText("");
 
-        // NEU: Nutzt activeLines zum Tippen
         foreach (char letter in activeLines[dialogueIndex])
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(dialogueData.typingSpeed);
+            yield return new WaitForSeconds(currentDialogue.typingSpeed);
         }
         isTyping = false;
         
-        if (dialogueData.autoProgressLines.Length > dialogueIndex 
-        && dialogueData.autoProgressLines[dialogueIndex])
+        if (currentDialogue.autoProgressLines != null && 
+            currentDialogue.autoProgressLines.Length > dialogueIndex && 
+            currentDialogue.autoProgressLines[dialogueIndex])
         {
-            yield return new WaitForSeconds(dialogueData.autoProgressDelay);
+            yield return new WaitForSeconds(currentDialogue.autoProgressDelay);
             NextLine();
         }
     }

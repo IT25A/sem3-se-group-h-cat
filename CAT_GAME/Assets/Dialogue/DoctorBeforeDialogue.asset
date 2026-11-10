@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb109fa977984832b53154bd07d68f7, type: 3}
+  m_Name: DoctorBeforeDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Dr. Cami
+  npcPortrait: {fileID: -4413097364827057358, guid: 2b4b36f3a5c524e479db2a47cd679213, type: 3}
+  dialogueLines:
+  - Thank you for bringing this helpless patient to me. I will take loving care of him and heal him.
+  - You don't look familiar to me... I would love to help you find your owners, but how can I help if you have nothing with you that shows where you belong?
+  germanLines:
+  - "Danke, dass du diesen hilflosen Patienten zu mir gebracht hast. Ich werde mich liebevoll um ihn k\xFCmmern und ihn heilen."
+  - "Du kommst mir allerdings fremd vor... Ich w\xFCrde dir gern helfen, deine Besitzer zu finden, aber wie soll ich das tun, wenn du nichts bei dir tr\xE4gst?"
+  spanishLines:
+  - "Gracias por traerme a este paciente indefenso. Lo cuidar\xE9 con mucho cari\xF1o y lo curar\xE9."
+  - "No me resultas familiar... Me encantar\xEDa ayudarte a encontrar a tus due\xF1os, pero \xBFc\xF3mo puedo ayudarte si no llevas nada contigo?"
+  autoProgressLines: 0100y
+  autoProgressDelay: 1.5
+  endDialogueLines: 
+  typingSpeed: 0.05
+  voiceSound: []
+  voicePitch: 1
+  choices: []
