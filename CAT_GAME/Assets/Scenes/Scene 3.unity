@@ -1992,6 +1992,7 @@ GameObject:
   - component: {fileID: 586707514}
   - component: {fileID: 586707515}
   - component: {fileID: 586707516}
+  - component: {fileID: 586707517}
   m_Layer: 0
   m_Name: catLeo
   m_TagString: Untagged
@@ -2241,6 +2242,20 @@ MonoBehaviour:
   reward: 10
   requiredWood: 10
   campfireVisual: {fileID: 262588737}
+--- !u!114 &586707517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586707506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4765121adea1b0449874b0ce7b59aac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Task5Quiz
+  reward: 20
+  playerWonQuiz: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -5715,7 +5730,6 @@ MonoBehaviour:
   targetSpawnID: Scene4
   returnID: Scene3
   isLocked: 0
-  isOneWay: 0
 --- !u!4 &1249460396
 Transform:
   m_ObjectHideFlags: 0
