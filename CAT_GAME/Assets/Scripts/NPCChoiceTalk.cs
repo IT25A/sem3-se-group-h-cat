@@ -11,7 +11,7 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
     public NPCDialogue AfterMouse;
     public NPCDialogue KeepGoingDialogue;
     public NPCDialogue AfterKey;
-    
+
     [Header("Exakte Indizes aus deinem catLeoDialogue Screenshot")]
     public int keyQuestStartIndex = 5;      // Element 5: "A bird stole it..."
     public int fireQuestStartIndex = 6;     // Element 6: "Could you gather 10 pieces of wood..."
@@ -92,14 +92,14 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
     }
 
     public void StartDialogue()
-    {   
+    {
 
         if (SceneData.isQuizFireWoodKeyCompleted && AfterKey != null)
         {
             dialogueData = AfterKey;
             dialogueIndex = 0;
         }
-        
+
         // 1. Wenn Schlüssel gefunden -> AfterKey Dialog
         else if (keyQuestActive && (TaskCollectibleState.KeyCount >= keyCount || SceneData.savedKeyCount >= keyCount) && AfterKey != null)
         {
@@ -194,8 +194,8 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
 
             // Wenn Element 5 (Vogel/Schlüssel), Element 6 (Holz) oder Element 8 (Richtige Antwort) zu Ende gelesen wurde:
             // Dialog sauber schließen, damit er NICHT in den nächsten Satz weiterläuft!
-            if (dialogueIndex == keyQuestStartIndex || 
-                dialogueIndex == fireQuestStartIndex || 
+            if (dialogueIndex == keyQuestStartIndex ||
+                dialogueIndex == fireQuestStartIndex ||
                 dialogueIndex == quizCorrectAnswerIndex)
             {
                 EndDialogue();
@@ -306,6 +306,8 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
             else if (nextIndex == quizCorrectAnswerIndex) // 8
             {
                 quizSolved = true;
+                Task5Quiz quizTask = GetComponent<Task5Quiz>();
+                if (quizTask != null) quizTask.playerWonQuiz = true;
             }
             else if (nextIndex == quizWrongAnswerIndex) // 9
             {
@@ -333,7 +335,7 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
     }
 
     public void EndDialogue()
-    {   
+    {
         StopAllCoroutines();
         isDialogueActive = false;
         isTyping = false;

@@ -1124,7 +1124,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -8231,6 +8231,7 @@ MonoBehaviour:
   dialogueText: {fileID: 30437750}
   nameText: {fileID: 30437751}
   portraitImage: {fileID: 30437752}
+  interactOnlyOnce: 0
   isDialogueActive: 0
   onDialogueEnded:
     m_PersistentCalls:
@@ -11409,7 +11410,6 @@ MonoBehaviour:
   targetSpawnID: Scene3
   returnID: Scene2
   isLocked: 0
-  isOneWay: 0
 --- !u!4 &2102643662
 Transform:
   m_ObjectHideFlags: 0
