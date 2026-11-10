@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine.UI;
 using System.Collections;
 using System.Reflection;
+using UnityEngine.SceneManagement;
 
 public class NPCTalk : MonoBehaviour, IInteractable
 {
@@ -43,8 +44,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
     void Start()
     {
         patrolScript = GetComponent<NPCPatrol>();
-        TaskCollectibleState.ResetTaskCollectibles();
-
+        if (SceneManager.GetActiveScene().name == "Scene 2") TaskCollectibleState.ResetTaskCollectibles();
     }
 
     public void StartDialogue()

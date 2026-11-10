@@ -161,6 +161,8 @@ public class MenuManager : MonoBehaviour
             SceneData.savedWater = 100f;
             waterManager.StartWaterDecrease();
         }
+        SceneData.savedFood = 0;
+        TaskCollectibleState.ResetTaskCollectibles();
         SetGameState(GameState.Playing);
     }
 
@@ -297,8 +299,8 @@ public class MenuManager : MonoBehaviour
         gameOver.SetActive(false);
         SceneData.savedWater = 100f;
         //Scene activeScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(gameSceneName);
-
+        SceneManager.LoadScene("Scene 1");
+        StartGame();
     }
 
     public void FinishGame()

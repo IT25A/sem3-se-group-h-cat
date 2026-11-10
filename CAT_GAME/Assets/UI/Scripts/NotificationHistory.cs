@@ -32,7 +32,6 @@ public class NotificationHistoryUI : MonoBehaviour
         {
             GameObject newItem = Instantiate(notificationItemPrefab, contentParent);
 
-            // 1. Text zuweisen
             Transform txtTransform = newItem.transform.Find("notificationTxt");
             if (txtTransform != null)
             {
