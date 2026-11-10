@@ -1625,35 +1625,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313073275513671354, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: field of view
-      value: 40
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 3313073275513671354, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: far clip plane
-      value: 5000
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3313073275513671354, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: near clip plane
-      value: 0.1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3313073275513671354, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: orthographic size
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7575023706846161090, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.2026205
+      value: 4.0991163
       objectReference: {fileID: 0}
     - target: {fileID: 7575023706846161090, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.45387986
+      value: 2.3038797
       objectReference: {fileID: 0}
     - target: {fileID: 8414980027500515728, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.2026205
+      value: 4.0991163
       objectReference: {fileID: 0}
     - target: {fileID: 8414980027500515728, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.45387986
+      value: 2.3038797
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5540,51 +5540,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244005534}
   m_CullTransparentMesh: 1
---- !u!1 &1249329734
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1249329736}
-  - component: {fileID: 1249329735}
-  m_Layer: 0
-  m_Name: SpawnPointTask4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1249329735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249329734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e86649fe23257e4086e5fa6e3d2fcd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpawnPoint
-  spawnID: Scene 3
---- !u!4 &1249329736
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249329734}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.92, y: 0.34, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1249460392
 GameObject:
   m_ObjectHideFlags: 0
@@ -5596,6 +5551,7 @@ GameObject:
   - component: {fileID: 1249460396}
   - component: {fileID: 1249460395}
   - component: {fileID: 1249460394}
+  - component: {fileID: 1249460397}
   m_Layer: 0
   m_Name: SceneTransitiontoScene4
   m_TagString: Untagged
@@ -5665,7 +5621,6 @@ MonoBehaviour:
   targetSpawnID: Scene4
   returnID: Scene3
   isLocked: 0
-  isOneWay: 0
 --- !u!4 &1249460396
 Transform:
   m_ObjectHideFlags: 0
@@ -5675,12 +5630,25 @@ Transform:
   m_GameObject: {fileID: 1249460392}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.03, y: -0.22, z: 0}
+  m_LocalPosition: {x: 8.9, y: -0.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1249460397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249460392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac3277d167cad1439f0bc340cd2b47e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestDoorScene3
+  requiredFood: 25
 --- !u!1 &1298394757
 GameObject:
   m_ObjectHideFlags: 0
@@ -10940,6 +10908,5 @@ SceneRoots:
   - {fileID: 1939416887}
   - {fileID: 542171279}
   - {fileID: 1249460396}
-  - {fileID: 1249329736}
   - {fileID: 2094913278}
   - {fileID: 262588736}
