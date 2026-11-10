@@ -988,7 +988,8 @@ MonoBehaviour:
   eggs: {fileID: 21300254, guid: 2700e06d970d112489ff23cfb58c3f78, type: 3}
   mouseIcon: {fileID: 8724158537186327207, guid: a8527a2897ea3204d886204dee940bbc, type: 3}
   keyIcon: {fileID: 1923592003837382580, guid: 40a0b6832b7e15847bdebb289f4d4934, type: 3}
-  simbaNecklaceIcon: {fileID: 0}
+  woodIcon: {fileID: -4915742613643882729, guid: d8232cb382808f04a9bb14319ab78608, type: 3}
+  simbaNecklaceIcon: {fileID: 7630114722247343781, guid: 45d024a440e0fb34ea450f0e45dd5d99, type: 3}
   defaultIcon: {fileID: 850381291693308957, guid: 8c40db533097b1d4397b9a1eb17d388c, type: 3}
   notificationHistory: []
   notificationSpriteHistory: []
@@ -6557,7 +6558,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3818372412328335481}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7eb56e208c22f924ba04548837571942, type: 3}
   m_Name: 
