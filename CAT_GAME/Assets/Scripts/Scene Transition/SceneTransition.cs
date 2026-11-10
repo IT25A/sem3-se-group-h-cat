@@ -17,18 +17,11 @@ public class SceneTransition : MonoBehaviour
     // We make it private so normal doors never touch it, 
     // but QuestDoor can still modify it safely.
     [HideInInspector] public bool isLocked = false;
-
-    public bool isOneWay = false; 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             // If the door is locked by a quest, stop execution
-            if (isOneWay)
-            {
-                return;
-            }
 
             if (isLocked)
             {

@@ -18,12 +18,17 @@ public class CollectibleItem : MonoBehaviour
     [Tooltip("Unique ID for saving/tracking state")]
     public string uniqueId;
 
+    private Collider2D eggCollider;
+
     private void Awake()
     {
         if (string.IsNullOrEmpty(uniqueId))
         {
             uniqueId = System.Guid.NewGuid().ToString();
         }
+
+        eggCollider = GetComponent<Collider2D>();
+
     }
 
     private void Start()
@@ -31,6 +36,19 @@ public class CollectibleItem : MonoBehaviour
         if (TaskCollectibleState.IsCollected(uniqueId))
         {
             gameObject.SetActive(false);
+        }
+        if (type == CollectibleType.Egg)
+        {
+            eggCollider.isTrigger = NPCTalk.isEggTaskstarted;
+        }
+    }
+
+    private void Update()
+    {
+        // Sobald der Farmer-Dialog startet, schaltet das Skript den Trigger für die Eier live frei
+        if (type == CollectibleType.Egg && !eggCollider.isTrigger)
+        {
+            eggCollider.isTrigger = NPCTalk.isEggTaskstarted;
         }
     }
 
@@ -42,6 +60,15 @@ public class CollectibleItem : MonoBehaviour
             if (type == CollectibleType.Wood && !FireCampTask.isTaskActive)
             {
                 return;
+            }
+            // restricted collection logic specifically for Egg
+            if (type == CollectibleType.Egg)
+            {
+                if (!NPCTalk.isEggTaskstarted)
+                {
+                    Debug.Log("Erst mit Farmer talken");
+                    return;
+                }
             }
 
             Collect();
