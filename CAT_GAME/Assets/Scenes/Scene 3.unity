@@ -1045,6 +1045,7 @@ MonoBehaviour:
   dialogueText: {fileID: 325084527}
   nameText: {fileID: 80777105}
   portraitImage: {fileID: 1901158653}
+  interactOnlyOnce: 0
   isDialogueActive: 0
   onDialogueEnded:
     m_PersistentCalls:
@@ -1942,6 +1943,7 @@ GameObject:
   - component: {fileID: 586707514}
   - component: {fileID: 586707515}
   - component: {fileID: 586707516}
+  - component: {fileID: 586707517}
   m_Layer: 0
   m_Name: catLeo
   m_TagString: Untagged
@@ -2191,6 +2193,20 @@ MonoBehaviour:
   reward: 10
   requiredWood: 10
   campfireVisual: {fileID: 262588737}
+--- !u!114 &586707517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586707506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4765121adea1b0449874b0ce7b59aac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Task5Quiz
+  reward: 20
+  playerWonQuiz: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -6647,6 +6663,7 @@ GameObject:
   - component: {fileID: 1544679408}
   - component: {fileID: 1544679409}
   - component: {fileID: 1544679410}
+  - component: {fileID: 1544679411}
   m_Layer: 0
   m_Name: Tasks
   m_TagString: Untagged
@@ -6711,6 +6728,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Task4Key
   reward: 15
   requiredAmount: 1
+--- !u!114 &1544679411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544679406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4765121adea1b0449874b0ce7b59aac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Task5Quiz
+  reward: 20
+  playerWonQuiz: 0
 --- !u!1001 &1630319021
 PrefabInstance:
   m_ObjectHideFlags: 0

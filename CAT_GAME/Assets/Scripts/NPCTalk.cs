@@ -24,6 +24,9 @@ public class NPCTalk : MonoBehaviour, IInteractable
     public bool isDialogueActive;
     public UnityEngine.Events.UnityEvent onDialogueEnded;
 
+    [Header("Egg-Task")]
+    public static bool isEggTaskstarted = false;
+
     // NEU: Speichert die Sätze der aktuell gewählten Sprache
     private string[] activeLines; 
 
@@ -58,9 +61,15 @@ public class NPCTalk : MonoBehaviour, IInteractable
         }
     }
 
+    void Awake()
+    {
+        isEggTaskstarted = false; // Reset the egg task state when the game starts
+    }
+
     void Start()
     {
         patrolScript = GetComponent<NPCPatrol>();
+        isEggTaskstarted = false; // Reset the egg task state when the game starts
         if (SceneManager.GetActiveScene().name == "Scene 2") TaskCollectibleState.ResetTaskCollectibles();
     }
 
@@ -70,6 +79,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
         
         activeTalker = this;
         isDialogueActive = true;
+        isEggTaskstarted = true;
 
         if (patrolScript != null)
         {
