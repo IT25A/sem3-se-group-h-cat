@@ -24,7 +24,7 @@ public class NotificationManager : MonoBehaviour
     public Sprite eggs;
     public Sprite mouseIcon;
     public Sprite keyIcon;
-
+    public Sprite woodIcon;
     public Sprite simbaNecklaceIcon;
     public Sprite defaultIcon;
 
@@ -65,6 +65,7 @@ public class NotificationManager : MonoBehaviour
         if (entryKey.Contains("received_eggs")) return eggs;
         if (entryKey.Contains("received_mouse")) return mouseIcon;
         if (entryKey.Contains("received_key")) return keyIcon;
+        if (entryKey.Contains("received_wood")) return woodIcon;
         if (entryKey.Contains("received_simba_necklace")) return simbaNecklaceIcon;
         return defaultIcon;
     }
@@ -129,6 +130,10 @@ public class NotificationManager : MonoBehaviour
             else if (entryKey.Contains("received_simba_necklace"))
             {
                 notificationIcon.sprite = simbaNecklaceIcon;
+            }
+            else if (entryKey.Contains("received_wood"))
+            {
+                notificationIcon.sprite = woodIcon;
             }
             else
             {
