@@ -11108,7 +11108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc52a51e2ee8ba4d86e2aa10b100fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VolumeValueDisplay
-  audioMixer: {fileID: 0}
+  audioMixer: {fileID: 24100000, guid: 2fa2e97f989ca2a4fae7a745e7956807, type: 2}
   sliderMusic: {fileID: 1420011162355324123}
   valueTextMusic: {fileID: 1990121839002332746}
   musicKey: MusicVolume
