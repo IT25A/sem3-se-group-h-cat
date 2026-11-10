@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb109fa977984832b53154bd07d68f7, type: 3}
   m_Name: DoctorDialogue
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
-  npcName: Cami Doctor
+  npcName: Dr. Cami
   npcPortrait: {fileID: -4413097364827057358, guid: 2b4b36f3a5c524e479db2a47cd679213, type: 3}
   dialogueLines:
   - "Hey, look at what you have there\u2014a collar!"

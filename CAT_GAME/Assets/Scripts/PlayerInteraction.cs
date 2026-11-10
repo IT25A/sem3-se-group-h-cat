@@ -14,6 +14,13 @@ public class PlayerInteraction : MonoBehaviour
         {
             Debug.Log("E-Taste wurde gedrückt");
 
+            // Priorität 1: Wenn bereits ein Dialog läuft, schalte diesen weiter
+            if (NPCTalk.activeTalker != null && NPCTalk.activeTalker.isDialogueActive)
+            {
+                NPCTalk.activeTalker.Interact();
+                return;
+            }
+
             Collider2D[] hitObjects = Physics2D.OverlapCircleAll(transform.position, interactionRadius);
 
             if (hitObjects.Length > 0)
@@ -26,7 +33,7 @@ public class PlayerInteraction : MonoBehaviour
                     if (hit.gameObject != this.gameObject) // Ignoriere den Spieler
                     {
                         IInteractable target = hit.GetComponent<IInteractable>();
-                        if (target != null)
+                        if (target != null && target.CanInteract())
                         {
                             target.Interact();
                             interacted = true;

@@ -7,10 +7,16 @@ using UnityEngine.SceneManagement;
 
 public class NPCTalk : MonoBehaviour, IInteractable
 {
+    public static NPCTalk activeTalker;
+
     public NPCDialogue dialogueData;
     public GameObject dialoguePanel;
     public TMP_Text dialogueText, nameText; 
     public Image portraitImage;
+    
+    [Header("Single Interaction")]
+    public bool interactOnlyOnce = false;
+    private bool hasCompletedDialogue = false;
    
     private int dialogueIndex;
     private bool isTyping;
@@ -23,20 +29,31 @@ public class NPCTalk : MonoBehaviour, IInteractable
 
     public bool CanInteract()
     {
+        if (interactOnlyOnce && hasCompletedDialogue)
+        {
+            return false;
+        }
         return !isDialogueActive;
     }
 
     public void Interact()
     {
-        if (dialogueData == null){
+        if (dialogueData == null)
+        {
             return;
         }
+
         if (isDialogueActive)
         {
             NextLine();
         }
         else
         {
+            if (interactOnlyOnce && hasCompletedDialogue)
+            {
+                return;
+            }
+
             StartDialogue();
         }
     }
@@ -51,6 +68,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
     {
         if (SceneData.mouseCatched) return; 
         
+        activeTalker = this;
         isDialogueActive = true;
 
         if (patrolScript != null)
@@ -116,7 +134,12 @@ public class NPCTalk : MonoBehaviour, IInteractable
     public void EndDialogue()
     {
         StopAllCoroutines();
+        if (activeTalker == this)
+        {
+            activeTalker = null;
+        }
         isDialogueActive = false;
+        hasCompletedDialogue = true;
 
         if (patrolScript != null)
         {
