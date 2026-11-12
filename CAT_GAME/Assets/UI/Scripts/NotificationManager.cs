@@ -66,7 +66,7 @@ public class NotificationManager : MonoBehaviour
         if (entryKey.Contains("received_mouse")) return mouseIcon;
         if (entryKey.Contains("received_key")) return keyIcon;
         if (entryKey.Contains("received_wood")) return woodIcon;
-        if (entryKey.Contains("received_simba_necklace")) return simbaNecklaceIcon;
+        if (entryKey.Contains("received_collar")) return simbaNecklaceIcon;
         return defaultIcon;
     }
     public void ShowLocalizedNotification(string tableCollectionName, string entryKey, float duration = 5f)
@@ -127,7 +127,7 @@ public class NotificationManager : MonoBehaviour
             {
                 notificationIcon.sprite = keyIcon;
             }
-            else if (entryKey.Contains("received_simba_necklace"))
+            else if (entryKey.Contains("received_collar"))
             {
                 notificationIcon.sprite = simbaNecklaceIcon;
             }

@@ -12,22 +12,22 @@ public class NPCTalk : MonoBehaviour, IInteractable
     [Header("Standard Dialog (Mit Hund, vor Halsband)")]
     public NPCDialogue dialogueData;
     public GameObject dialoguePanel;
-    public TMP_Text dialogueText, nameText; 
+    public TMP_Text dialogueText, nameText;
     public Image portraitImage;
 
     // NEU: Bedingungen für Hund & Halsband
     [Header("Doctor / Quest Conditions (Optional)")]
-    public ShadowFollower requiredFollower; 
+    public ShadowFollower requiredFollower;
     [Tooltip("Dialog, wenn Simba OHNE den Hund zum Arzt kommt")]
-    public NPCDialogue noDogDialogue; 
+    public NPCDialogue noDogDialogue;
     [Tooltip("Dialog, wenn Simba den Hund gebracht hat UND das Halsband hat")]
     public NPCDialogue afterItemDialogue;
     public string requiredCollectibleId = "SimbaNecklace";
-    
+
     [Header("Single Interaction")]
     public bool interactOnlyOnce = false;
     private bool hasCompletedDialogue = false;
-   
+
     private int dialogueIndex;
     private bool isTyping;
     private NPCPatrol patrolScript;
@@ -37,8 +37,11 @@ public class NPCTalk : MonoBehaviour, IInteractable
     [Header("Egg-Task")]
     public static bool isEggTaskstarted = false;
 
+    [Header("Collar-Task")]
+    public static bool isCollarTaskstarted = false;
+
     // NEU: Speichert die Sätze der aktuell gewählten Sprache
-    private string[] activeLines; 
+    private string[] activeLines;
     private NPCDialogue currentDialogue; // Merkt sich den aktuell gewählten Dialog
 
     public bool CanInteract()
@@ -80,7 +83,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
     void Start()
     {
         patrolScript = GetComponent<NPCPatrol>();
-        isEggTaskstarted = false; // Reset the egg task state when the game starts
+        isCollarTaskstarted = false; // Reset the collar task state when the game starts
         if (SceneManager.GetActiveScene().name == "Scene 2") TaskCollectibleState.ResetTaskCollectibles();
     }
 
@@ -108,10 +111,11 @@ public class NPCTalk : MonoBehaviour, IInteractable
         {
             currentDialogue = afterItemDialogue;
         }
-        
+
         activeTalker = this;
         isDialogueActive = true;
         isEggTaskstarted = true;
+
 
         if (patrolScript != null)
         {
@@ -121,7 +125,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
         dialogueIndex = 0;
         nameText.SetText(currentDialogue.npcName);
         portraitImage.sprite = currentDialogue.npcPortrait;
-        
+
         int lang = PlayerPrefs.GetInt("Language", 0);
         if (lang == 0) activeLines = currentDialogue.dialogueLines;
         else if (lang == 1) activeLines = currentDialogue.germanLines;
@@ -166,9 +170,9 @@ public class NPCTalk : MonoBehaviour, IInteractable
             yield return new WaitForSeconds(currentDialogue.typingSpeed);
         }
         isTyping = false;
-        
-        if (currentDialogue.autoProgressLines != null && 
-            currentDialogue.autoProgressLines.Length > dialogueIndex && 
+
+        if (currentDialogue.autoProgressLines != null &&
+            currentDialogue.autoProgressLines.Length > dialogueIndex &&
             currentDialogue.autoProgressLines[dialogueIndex])
         {
             yield return new WaitForSeconds(currentDialogue.autoProgressDelay);
@@ -191,9 +195,25 @@ public class NPCTalk : MonoBehaviour, IInteractable
             patrolScript.isInteracting = false;
         }
 
+        if (requiredFollower != null && currentDialogue == dialogueData)
+        {
+            requiredFollower.hasStayedAtDoctor = true;
+            requiredFollower.isFollowing = false;
+            isCollarTaskstarted = true;
+        }
+
         dialogueText.SetText("");
         dialoguePanel.SetActive(false);
 
         onDialogueEnded?.Invoke();
+    }
+
+    public bool IsTalking()
+    {
+        return isDialogueActive;
+    }
+    public bool IsPlayingAfterItemDialogue()
+    {
+        return isDialogueActive && currentDialogue != null && currentDialogue == afterItemDialogue;
     }
 }
