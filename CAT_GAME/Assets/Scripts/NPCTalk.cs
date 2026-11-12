@@ -115,7 +115,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
         activeTalker = this;
         isDialogueActive = true;
         isEggTaskstarted = true;
-        
+
 
         if (patrolScript != null)
         {
@@ -199,12 +199,17 @@ public class NPCTalk : MonoBehaviour, IInteractable
         {
             requiredFollower.hasStayedAtDoctor = true;
             requiredFollower.isFollowing = false;
-            isCollarTaskstarted = true; 
+            isCollarTaskstarted = true;
         }
 
         dialogueText.SetText("");
         dialoguePanel.SetActive(false);
 
         onDialogueEnded?.Invoke();
+    }
+
+    public bool IsTalking()
+    {
+        return isDialogueActive;
     }
 }

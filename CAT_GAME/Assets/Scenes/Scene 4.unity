@@ -542,6 +542,8 @@ GameObject:
   - component: {fileID: 192185729}
   - component: {fileID: 192185728}
   - component: {fileID: 192185727}
+  - component: {fileID: 192185735}
+  - component: {fileID: 192185736}
   m_Layer: 6
   m_Name: Doctor
   m_TagString: Untagged
@@ -778,6 +780,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &192185735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192185726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ccb0e7578ca1df46ad942b2f117eaaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Task7InjuriedDog
+  reward: 15
+--- !u!114 &192185736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192185726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6ec04012f3a1d4e8e315f97510c3f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Task8collar
+  reward: 10
 --- !u!1 &228288765
 GameObject:
   m_ObjectHideFlags: 0
