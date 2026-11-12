@@ -93,21 +93,25 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
 
     public void StartDialogue()
     {
-
         if (SceneData.isQuizFireWoodKeyCompleted && AfterKey != null)
         {
             dialogueData = AfterKey;
             dialogueIndex = 0;
         }
-
+        // Wenn die Holz-Quest aktiv ist und genug Holz gesammelt wurde -> Zeige AfterKey (Hinweis)
+        else if (fireQuestActive && (TaskCollectibleState.WoodCount >= WoodCount || SceneData.savedWoodCount >= WoodCount) && AfterKey != null)
+        {
+            dialogueData = AfterKey;
+            dialogueIndex = 0;
+        }
         // 1. Wenn Schlüssel gefunden -> AfterKey Dialog
         else if (keyQuestActive && (TaskCollectibleState.KeyCount >= keyCount || SceneData.savedKeyCount >= keyCount) && AfterKey != null)
         {
             dialogueData = AfterKey;
             dialogueIndex = 0;
         }
-        // 2. Wenn Schlüssel-Quest aktiv, aber Schlüssel fehlt -> KeepGoingDialogue
-        else if (keyQuestActive && KeepGoingDialogue != null)
+        // 2. Wenn Schlüssel-Quest oder Holz-Quest aktiv, aber Gegenstände fehlen -> KeepGoingDialogue
+        else if ((keyQuestActive || fireQuestActive) && KeepGoingDialogue != null)
         {
             dialogueData = KeepGoingDialogue;
             dialogueIndex = 0;
@@ -348,6 +352,7 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
     {
         return isDialogueActive;
     }
+
     public int GetCurrentIndex()
     {
         return dialogueIndex;

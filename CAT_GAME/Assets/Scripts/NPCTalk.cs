@@ -86,7 +86,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
 
     public void StartDialogue()
     {
-        if (SceneData.mouseCatched && SceneManager.GetActiveScene().name == "Scene 3") return; 
+        //if (SceneData.mouseCatched && SceneManager.GetActiveScene().name == "Scene 3") return; 
 
         // Standardmäßig den normalen Dialog nehmen
         currentDialogue = dialogueData;
