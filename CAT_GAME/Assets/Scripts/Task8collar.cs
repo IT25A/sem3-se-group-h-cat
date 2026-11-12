@@ -5,6 +5,7 @@ public class Task8collar : MonoBehaviour
     [Header("Reward")]
     public int reward = 10;
     private bool rewardGiven = false;
+    private bool wasInDialogue = false;
     private NPCTalk npcTalk;
 
     void Start()
@@ -20,10 +21,14 @@ public class Task8collar : MonoBehaviour
     {
         if (npcTalk == null || rewardGiven) return;
 
-        if (npcTalk.afterItemDialogue != null && !npcTalk.IsTalking() && TaskCollectibleState.SimbaNecklaceCount >= 1)
+        if (npcTalk.IsPlayingAfterItemDialogue())
         {
+            wasInDialogue = true;
+        }
+        else if (!npcTalk.IsTalking() && wasInDialogue)
+        {
+            Debug.Log("[Task8collar] Finaler Arzt-Dialog geschlossen - Belohnung wird vergeben!");
             GiveRewardAndNotification();
-            TaskCollectibleState.simbaNecklaceNotificationSent = true; // Set the notification flag to true after giving the reward
         }
     }
 
@@ -41,6 +46,7 @@ public class Task8collar : MonoBehaviour
             Debug.LogError("[Task8collar] FoodManager.Instance ist NULL!");
         }
 
+        TaskCollectibleState.simbaNecklaceNotificationSent = true; // Set the notification flag to true after giving the reward
         TaskCollectibleState.ResetTaskCollectibles(); // Reset the collectible state after giving the reward
     }
 }

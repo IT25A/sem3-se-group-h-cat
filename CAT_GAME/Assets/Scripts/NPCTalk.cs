@@ -212,4 +212,8 @@ public class NPCTalk : MonoBehaviour, IInteractable
     {
         return isDialogueActive;
     }
+    public bool IsPlayingAfterItemDialogue()
+    {
+        return isDialogueActive && currentDialogue != null && currentDialogue == afterItemDialogue;
+    }
 }
