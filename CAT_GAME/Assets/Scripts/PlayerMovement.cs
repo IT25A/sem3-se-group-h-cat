@@ -3,14 +3,25 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-	[Header("Einstellungen")]
+	[Header("Settings")]
 	public float moveSpeed = 5f;
 
-	[Header("Referenzen")]
+	[Header("References")]
 	public Rigidbody2D rb;
+
+	public bool canControl = true; // Flag, um die Kontrolle zu sperren
+
+	public Transform autoWalkTarget; // Zielposition für das automatische Gehen
+
+	public float stopDistance = 1.5f; // Abstand, bei dem das automatische Gehen stoppt
+
+	[Header("Events")]
+	public UnityEngine.Events.UnityEvent onReachedTarget;
+	private bool hasReachedTarget = false;
 
 	private Vector2 movement;
 
+	
 	void Start()
 	{
 		if (rb == null) rb = GetComponent<Rigidbody2D>();
@@ -19,15 +30,41 @@ public class PlayerMovement : MonoBehaviour
 	// Wird vom Input System gesendet
 	void OnMove(InputValue value)
 	{
+		if (!canControl)
+		{
+			movement = Vector2.zero; // Setze die Bewegung auf null, wenn die Kontrolle gesperrt ist
+			return; // Beende die Methode, um die Bewegung zu ignorieren
+		}
+
 		movement = value.Get<Vector2>();
 	}
 
 	private void FixedUpdate()
 	{
-		if (rb != null)
+		if (rb == null) return;
+
+		if (canControl)
 		{
-			// velocity überlässt der Physik-Engine die volle Kontrolle
+			hasReachedTarget = false;
 			rb.linearVelocity = movement * moveSpeed;
+		}
+		else if (autoWalkTarget != null)
+		{
+			float xDistance = autoWalkTarget.position.x - transform.position.x;
+
+			if (xDistance > stopDistance)
+			{
+				rb.linearVelocity = new Vector2(moveSpeed, 0f);
+			}
+			else
+			{
+				rb.linearVelocity = Vector2.zero;
+				if (!hasReachedTarget)
+				{
+					hasReachedTarget = true;
+					onReachedTarget?.Invoke();
+				}
+			}
 		}
 	}
 }
