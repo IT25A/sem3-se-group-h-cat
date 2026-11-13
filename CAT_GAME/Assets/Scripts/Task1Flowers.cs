@@ -7,13 +7,13 @@ public class QuestFlower : MonoBehaviour
 
     private void Awake()
     {
-        // Erzeugt eine eindeutige ID anhand von Szenenname und Weltposition
+        // Generates a unique ID based on the scene name and world position
         flowerID = gameObject.scene.name + "_" + transform.position.x + "_" + transform.position.y;
     }
 
     private void Start()
     {
-        // Zerstört die Blume beim Szenenstart sofort, falls sie bereits gesammelt wurde
+        // Immediately destroys the flower on scene start if it has already been collected
         if (FlowerQuestManager.Instance != null && FlowerQuestManager.Instance.IsFlowerCollected(flowerID))
         {
             Destroy(gameObject);

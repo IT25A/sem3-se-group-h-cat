@@ -1,6 +1,6 @@
 using UnityEngine;
 
-// Wechselt automatisch in die nächste Szene, sobald die erforderliche Menge an Trockenfutter erreicht ist
+// Automatically switches to the next scene once the required amount of dry food is reached
 public class NextLevelManager:MonoBehaviour {
 
     [Header("Scenes")]

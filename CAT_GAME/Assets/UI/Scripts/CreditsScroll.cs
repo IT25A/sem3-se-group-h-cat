@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-// Bewegt den Credits-Text kontinuierlich nach oben und setzt ihn ab der Zielhöhe wieder auf die Startposition zurück
+// Continuously moves the credits text upward and resets it to the start position upon reaching the target height
 public class CreditsScroll : MonoBehaviour {
     public RectTransform creditsTextRect; 
     public float scrollSpeed = 50f;       

@@ -15,7 +15,7 @@ public class FadeInButtonAfterTime : MonoBehaviour
     void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
-        // Button zu Beginn unsichtbar machen und Klicks blockieren, bis das Einblenden abgeschlossen ist
+        // Hide the button initially and block clicks until the fade-in is complete
         canvasGroup.alpha = 0f;
         canvasGroup.blocksRaycasts = false;
     }

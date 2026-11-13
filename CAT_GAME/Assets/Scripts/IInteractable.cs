@@ -1,4 +1,4 @@
-// Schnittstelle für alle Objekte, mit denen der Spieler per Interaktionstaste interagieren kann
+// Interface for all objects the player can interact with using the interaction key
 public interface IInteractable
 {
     public void Interact();

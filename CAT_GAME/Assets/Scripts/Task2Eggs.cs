@@ -1,6 +1,6 @@
 using UnityEngine;
 
-// Prüft beim Start, ob genügend Eier gesammelt wurden, vergibt die Futter-Belohnung und setzt den Sammelstatus zurück
+// Checks on start whether enough eggs have been collected, grants the food reward, and resets the collection state
 public class Task2Eggs : MonoBehaviour
 {
     public int requiredAmount = 10;

@@ -89,7 +89,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
     {
         currentDialogue = dialogueData;
 
-        // 1. Wenn der verletzte Hund erforderlich ist, den Spieler aber noch nicht begleitet hat:
+        // 1. If the injured dog is required, but has not followed the player yet:
         if (requiredFollower != null && !requiredFollower.isFollowing && !requiredFollower.hasStayedAtDoctor)
         {
             if (noDogDialogue != null)
@@ -101,7 +101,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
                 return;
             }
         }
-        // 2. Wenn der Hund bereits beim Arzt ist und das Halsband gefunden wurde:
+        // 2. If the dog is already at the doctor and the collar has been found:
         else if (afterItemDialogue != null && TaskCollectibleState.IsCollected(requiredCollectibleId))
         {
             currentDialogue = afterItemDialogue;
@@ -190,7 +190,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
             patrolScript.isInteracting = false;
         }
 
-        // Nach dem ersten Gespräch mit Hund bleibt dieser beim Arzt und die Halsband-Suche wird freigeschaltet
+        // After the first conversation with the dog, the dog stays with the doctor and the collar quest is unlocked
         if (requiredFollower != null && currentDialogue == dialogueData)
         {
             requiredFollower.hasStayedAtDoctor = true;

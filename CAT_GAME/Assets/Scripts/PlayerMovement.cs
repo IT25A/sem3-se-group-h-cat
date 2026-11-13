@@ -9,11 +9,11 @@ public class PlayerMovement : MonoBehaviour
 	[Header("References")]
 	public Rigidbody2D rb;
 
-	public bool canControl = true; // Flag, um die Kontrolle zu sperren
+	public bool canControl = true; // Flag to lock player control
 
-	public Transform autoWalkTarget; // Zielposition für das automatische Gehen
+	public Transform autoWalkTarget; // Target position for automatic walking
 
-	public float stopDistance = 1.5f; // Abstand, bei dem das automatische Gehen stoppt
+	public float stopDistance = 1.5f; // Distance at which automatic walking stops
 
 	[Header("Events")]
 	public UnityEngine.Events.UnityEvent onReachedTarget;
@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
 		if (rb == null) rb = GetComponent<Rigidbody2D>();
 	}
 
-	// Wird vom Input System gesendet
+	// Sent by the Input System
 	void OnMove(InputValue value)
 	{
 		if (!canControl)
@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
 			hasReachedTarget = false;
 			rb.linearVelocity = movement * moveSpeed;
 		}
-		// Wenn die manuelle Steuerung deaktiviert ist, bewegt sich der Spieler automatisch zum Zielpunkt (z. B. für Zwischensequenzen)
+		// When manual control is disabled, the player automatically walks toward the target point (e.g., for cutscenes)
 		else if (autoWalkTarget != null)
 		{
 			float xDistance = autoWalkTarget.position.x - transform.position.x;

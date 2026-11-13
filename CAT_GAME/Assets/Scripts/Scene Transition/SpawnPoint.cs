@@ -1,6 +1,6 @@
 using UnityEngine;
 
-// Markiert einen benannten Spawn-Punkt in der Szene und platziert den Spieler beim Laden dort, falls die ID übereinstimmt
+// Marks a named spawn point in the scene and places the player there on load if the ID matches
 public class SpawnPoint : MonoBehaviour
 {
     [Tooltip("Unique identifier for this spawn point (e.g., 'House_Entrance', 'Forest_Exit')")]

@@ -17,12 +17,12 @@ public class FlowerQuestManager : MonoBehaviour
     public string tableName = "MenuText";
     public string warningKey = "received_flowers";
 
-    // Speichert die eindeutigen IDs bereits gesammelter Blumen über Szenenwechsel hinweg
+    // Stores the unique IDs of already collected flowers across scene transitions
     private HashSet<string> collectedFlowerIDs = new HashSet<string>();
 
     private void Awake()
     {
-        // Singleton-Muster: Instanz szenenübergreifend behalten und Duplikate zerstören
+        // Singleton pattern: persist instance across scenes and destroy duplicates
         if (Instance == null)
         {
             Instance = this;
@@ -38,7 +38,7 @@ public class FlowerQuestManager : MonoBehaviour
     {
         if (isQuestCompleted) return;
 
-        // Verhindert, dass dieselbe Blume mehrfach gezählt wird
+        // Prevents the same flower from being counted multiple times
         if (!collectedFlowerIDs.Contains(flowerID))
         {
             collectedFlowerIDs.Add(flowerID);

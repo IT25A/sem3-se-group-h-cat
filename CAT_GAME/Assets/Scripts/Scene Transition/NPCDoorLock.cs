@@ -16,7 +16,7 @@ public class NPCDoorLock : MonoBehaviour
     {
         sceneTransition = GetComponent<SceneTransition>();
 
-        // Tür beim Start standardmäßig sperren
+        // Lock the door by default on start
         if (sceneTransition != null)
         {
             sceneTransition.isLocked = true;
@@ -29,7 +29,7 @@ public class NPCDoorLock : MonoBehaviour
 
         if (targetNPC != null && sceneTransition != null)
         {
-            // Liest 'isDialogueActive' per Reflection aus NPCTalk, um den Gesprächsstatus zu überwachen
+            // Reads 'isDialogueActive' via reflection from NPCTalk to monitor the conversation state
             Component npcTalkComponent = targetNPC.GetComponent("NPCTalk");
             if (npcTalkComponent != null)
             {
@@ -42,7 +42,7 @@ public class NPCDoorLock : MonoBehaviour
                     {
                         wasDialogueActive = true;
                     }
-                    // Sobald der zuvor aktive Dialog beendet wurde, wird die Tür dauerhaft entsperrt
+                    // Permanently unlock the door as soon as the previously active dialogue has ended
                     else if (wasDialogueActive && !isDialogueActive)
                     {
                         hasSpokenToNPC = true;

@@ -4,7 +4,7 @@ public class VanishOnTouch : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Zerstört dieses Objekt, sobald der Spieler den Trigger berührt
+        // Destroys this object as soon as the player touches the trigger
         if (collision.CompareTag("Player"))
         {
             Destroy(gameObject);

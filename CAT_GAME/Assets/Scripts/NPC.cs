@@ -8,7 +8,7 @@ public class NPCPatrol : MonoBehaviour
     public Animator animator;
     public bool isInteracting = false;
 
-    // Array für beliebig viele Wegpunkte
+    // Array for any number of waypoints
     public Transform[] waypoints;
     private int currentPointIndex = 0;
 
@@ -19,7 +19,7 @@ public class NPCPatrol : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Während eines Dialogs Bewegung und Laufanimation pausieren
+        // Pause movement and walking animation during dialogue
         if (isInteracting)
         {
             if (rb != null) rb.linearVelocity = Vector2.zero;
@@ -41,7 +41,7 @@ public class NPCPatrol : MonoBehaviour
         animator.SetFloat("MoveY", direction.y);
         animator.SetBool("isWalking", true);
 
-        // Bei Erreichen des aktuellen Wegpunkts zyklisch zum nächsten wechseln
+        // Cycle to the next waypoint upon reaching the current one
         if (Vector2.Distance(transform.position, target.position) < 0.1f)
         {
             currentPointIndex++;

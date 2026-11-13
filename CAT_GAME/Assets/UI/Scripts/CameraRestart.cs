@@ -1,7 +1,7 @@
 using UnityEngine;
 using Unity.Cinemachine; 
 
-// Weist der Cinemachine-Kamera beim Start automatisch das Spieler-Objekt als Verfolgungsziel zu
+// Automatically assigns the player object as the follow target for the Cinemachine camera on start
 public class CameraSetup : MonoBehaviour {
     void Start() {
         CinemachineCamera vcam = GetComponent<CinemachineCamera>();

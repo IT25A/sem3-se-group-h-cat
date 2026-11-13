@@ -22,7 +22,7 @@ public class ShadowFollower : MonoBehaviour, IInteractable
     public Vector2 doctorOffset = new Vector2(-1.2f, 0f);
     public bool hasStayedAtDoctor = false;
 
-    // Puffer für vergangene Spielerpositionen, um dem Spieler zeitverzögert auf demselben Pfad zu folgen
+    // Buffer of past player positions to follow the player along the same path with a delay
     private Queue<Vector2> positionHistory = new Queue<Vector2>();
 
     void Start()
@@ -33,7 +33,7 @@ public class ShadowFollower : MonoBehaviour, IInteractable
             npcTalk.onDialogueEnded.AddListener(StartFollowing);
         }
 
-        // Arzt-NPC automatisch in der Szene suchen, falls er nicht im Inspector zugewiesen wurde
+        // Automatically find the Doctor NPC in the scene if not assigned in the Inspector
         if (doctorTarget == null)
         {
             NPCTalk[] allNpcs = FindObjectsByType<NPCTalk>(FindObjectsSortMode.None);
@@ -58,7 +58,7 @@ public class ShadowFollower : MonoBehaviour, IInteractable
 
         if (rb == null) rb = GetComponent<Rigidbody2D>();
 
-        // Physische Kollision zwischen Spieler und Begleiter deaktivieren, damit der Begleiter den Spieler nicht blockiert
+        // Disable physical collision between the player and the follower so the follower does not block the player
         Collider2D myCollider = GetComponent<Collider2D>();
         if (myCollider != null && playerTarget != null)
         {
@@ -88,7 +88,7 @@ public class ShadowFollower : MonoBehaviour, IInteractable
         return !isFollowing && !hasStayedAtDoctor;
     }
 
-    // Platziert den Begleiter dauerhaft neben dem Arzt und beendet die Verfolgung
+    // Permanently places the follower next to the doctor and stops following
     public void StayAtDoctorPosition()
     {
         if (hasStayedAtDoctor || !isFollowing) return;
@@ -127,7 +127,7 @@ public class ShadowFollower : MonoBehaviour, IInteractable
 
         positionHistory.Enqueue(playerTarget.position);
             
-        // Erst loslaufen, sobald genügend Positionen im Verzögerungspuffer gespeichert sind
+        // Only start moving once enough positions have been stored in the delay buffer
         if (positionHistory.Count > delayFrames )
         {
             Vector2 targetPosition = positionHistory.Dequeue();
