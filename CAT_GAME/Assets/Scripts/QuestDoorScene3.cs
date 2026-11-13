@@ -14,15 +14,16 @@ public class QuestDoorScene3 : MonoBehaviour
 
     void Update()
     {
+        // Übergang erst freigeben, wenn die erforderliche Futtermenge erreicht wurde
         if (sceneTransition != null)
         {
             if ( SceneData.savedFood >= requiredFood)
             {
-                sceneTransition.isLocked = false; // Tor öffnen
+                sceneTransition.isLocked = false;
             }
             else
             {
-                sceneTransition.isLocked = true;  // Tor schließen
+                sceneTransition.isLocked = true;
             }
         }
     }

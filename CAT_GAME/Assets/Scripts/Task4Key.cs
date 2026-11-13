@@ -22,6 +22,7 @@ public class Task4Key : MonoBehaviour
     {
         if (npcTalk == null || rewardGiven) return;
 
+        // Merken, sobald der Abschlussdialog (AfterKey) aktiv ist, und Belohnung erst nach Schließen des Dialogs vergeben
         if (npcTalk.IsTalking())
         {
             if (npcTalk.dialogueData == npcTalk.AfterKey)

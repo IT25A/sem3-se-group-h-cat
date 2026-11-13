@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Bewegt den Menü-Hintergrund gleichmäßig zwischen zufälligen Zielpunkten innerhalb des festgelegten Bereichs
 public class MenuBackCamera : MonoBehaviour {
     private RectTransform rectTransform;
     public float moveSpeed = 30f; 

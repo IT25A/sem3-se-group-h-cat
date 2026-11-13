@@ -1,20 +1,18 @@
 using UnityEngine;
 
-/// Marker component to identify a spawn location within a scene.
+// Markiert einen benannten Spawn-Punkt in der Szene und platziert den Spieler beim Laden dort, falls die ID übereinstimmt
 public class SpawnPoint : MonoBehaviour
 {
-    [Tooltip("Unique identifier for this spawn point (e.g., 'House_Entrance', 'Forest_Exit')")]
+    [Tooltip("Eindeutige Kennung für diesen Spawn-Punkt (z. B. 'House_Entrance', 'Forest_Exit')")]
     public string spawnID;
 
     private void Start()
     {
-        // Check if this spawn point matches the target ID stored globally
         if (!string.IsNullOrEmpty(SceneData.TargetSpawnID) && SceneData.TargetSpawnID == spawnID)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             if (player != null)
             {
-                // Move the player to this spawn point's position
                 player.transform.position = transform.position;
             }
         }
@@ -22,7 +20,6 @@ public class SpawnPoint : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        // Draws a green wire sphere in Unity's Scene view to easily visualize the spawn location
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, 0.5f);
     }

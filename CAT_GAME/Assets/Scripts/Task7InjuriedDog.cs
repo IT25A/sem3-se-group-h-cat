@@ -20,6 +20,7 @@ public class Task7InjuriedDog : MonoBehaviour
     {
         if (npcTalk == null || rewardGiven) return;
 
+        // Belohnung vergeben, sobald der verletzte Hund beim Arzt abgegeben und das Gespräch beendet wurde
         if (npcTalk.requiredFollower.hasStayedAtDoctor && !npcTalk.IsTalking())
         {
             GiveRewardAndNotification();

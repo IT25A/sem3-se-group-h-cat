@@ -10,7 +10,7 @@ public class NPCDialogue : ScriptableObject
     public Sprite npcPortrait;
 
     [Header("Dialog")]
-    public string[] dialogueLines;//englische Version
+    public string[] dialogueLines; // Englische Standardzeilen
     public string[] germanLines;
     public string[] spanishLines;
     public bool [] autoProgressLines;
@@ -27,10 +27,10 @@ public class NPCDialogue : ScriptableObject
 
 public class DialogueChoice
 {
-    public int dialogueIndex; //Dial choice where choices appear
+    public int dialogueIndex; // Index der Dialogzeile, bei der diese Auswahlmöglichkeiten erscheinen
     [Header("Button Texte")]
-    public string []choices;//Player response options
+    public string []choices; // Englische Antwortoptionen
     public string []germanChoices;
     public string []spanishChoices;
-    public int [] nextDialogueIndexes; //Where choices lead
+    public int [] nextDialogueIndexes; // Ziel-Dialogindizes für die jeweilige Antwortauswahl
 }

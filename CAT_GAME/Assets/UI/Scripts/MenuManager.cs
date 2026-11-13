@@ -29,7 +29,7 @@ public class MenuManager : MonoBehaviour
     public GameObject closeButton;
 
     [Header("Settings")]
-    public string gameSceneName = "Scene 1"; //hier GameScene name ändern
+    public string gameSceneName = "Scene 1";
 
     [Header("LocalizationKeys")]
     public string tableName = "UI_TextTable";
@@ -39,6 +39,7 @@ public class MenuManager : MonoBehaviour
 
         string currentSceneName = SceneManager.GetActiveScene().name;
 
+        // Je nach Spielstatus entweder die Hauptmenü-Musik oder die Hintergrundmusik der Szene starten
         if (!SceneData.isGameStarted)
         {
             if (menuMusic != null) menuMusic.Play();
@@ -60,6 +61,7 @@ public class MenuManager : MonoBehaviour
             }
         }
 
+        // Wenn das Spiel bereits läuft (z. B. nach einem Szenenwechsel), direkt das In-Game-UI aktivieren
         if (SceneData.isGameStarted)
         {
             SetGameState(GameState.Playing);
@@ -192,7 +194,7 @@ public class MenuManager : MonoBehaviour
     {
         SceneData.isGameStarted = false;
 
-        // Destroy the persistent player so Scene 1 spawns its default player
+        // Persistenten Spieler entfernen, damit beim Neuladen der Startszene wieder der Standard-Spieler erzeugt wird
         PersistentPlayer player = FindAnyObjectByType<PersistentPlayer>();
         if (player != null)
         {
@@ -298,7 +300,6 @@ public class MenuManager : MonoBehaviour
         SetGameState(GameState.Playing);
         gameOver.SetActive(false);
         SceneData.savedWater = 100f;
-        //Scene activeScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene("Scene 1");
         StartGame();
     }
@@ -309,15 +310,11 @@ public class MenuManager : MonoBehaviour
         endPanel.SetActive(true);
     }
 
+    // Setzt den Spielstatus nach dem Endbildschirm zurück und lädt die Startszene mit aktivem Hauptmenü
     public void ReturnToMainMenuFromEnd()
     {
-        // 1. Spielstatus auf "nicht gestartet" setzen, damit das Startmenü erscheint
         SceneData.isGameStarted = false;
-
-        // 2. Zeit wieder auf Normalgeschwindigkeit setzen (falls sie eingefroren war)
         Time.timeScale = 1f;
-
-        // 3. Zurück zu Scene 1 wechseln (du kannst gameSceneName oder direkt "Scene 1" nutzen)
         SceneManager.LoadScene(gameSceneName);
     }
 

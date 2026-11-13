@@ -16,6 +16,7 @@ public class NotificationHistoryUI : MonoBehaviour
             historyPanel.SetActive(false);
     }
 
+    // Baut die Liste bisheriger Benachrichtigungen in umgekehrter Reihenfolge (neueste zuerst) neu auf
     public void UpdateHistoryDisplay()
     {
         if (contentParent == null || notificationItemPrefab == null || NotificationManager.Instance == null) return;

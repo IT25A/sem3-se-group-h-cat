@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class CollectibleItem : MonoBehaviour
 {
@@ -15,7 +15,7 @@ public class CollectibleItem : MonoBehaviour
     [Header("Collectible Settings")]
     public CollectibleType type;
 
-    [Tooltip("Unique ID for saving/tracking state")]
+    [Tooltip("Eindeutige ID zum Speichern des Sammelstatus über Szenenwechsel hinweg")]
     public string uniqueId;
 
     private Collider2D eggCollider;
@@ -23,6 +23,7 @@ public class CollectibleItem : MonoBehaviour
 
     private void Awake()
     {
+        // Fallback-ID generieren, falls im Inspector keine vergeben wurde
         if (string.IsNullOrEmpty(uniqueId))
         {
             uniqueId = System.Guid.NewGuid().ToString();
@@ -35,6 +36,7 @@ public class CollectibleItem : MonoBehaviour
 
     private void Start()
     {
+        // Bereits eingesammelte Gegenstände beim Laden der Szene ausblenden
         if (TaskCollectibleState.IsCollected(uniqueId))
         {
             gameObject.SetActive(false);
@@ -51,7 +53,7 @@ public class CollectibleItem : MonoBehaviour
 
     private void Update()
     {
-        // Sobald der Farmer-Dialog startet, schaltet das Skript den Trigger für die Eier live frei
+        // Schaltet den Trigger für Eier und Halsband erst frei, sobald die jeweilige Quest im Dialog gestartet wurde
         if (type == CollectibleType.Egg && !eggCollider.isTrigger)
         {
             eggCollider.isTrigger = NPCTalk.isEggTaskstarted;
@@ -67,12 +69,11 @@ public class CollectibleItem : MonoBehaviour
         Debug.Log($"Player entered trigger for {type} collectible with ID: {uniqueId}");
         if (other.CompareTag("Player"))
         {
-            // Restricted collection logic specifically for Wood
+            // Holz, Eier und Halsband dürfen erst nach Start der zugehörigen Quest eingesammelt werden
             if (type == CollectibleType.Wood && !FireCampTask.isTaskActive)
             {
                 return;
             }
-            // restricted collection logic specifically for Egg
             if (type == CollectibleType.Egg)
             {
                 if (!NPCTalk.isEggTaskstarted)

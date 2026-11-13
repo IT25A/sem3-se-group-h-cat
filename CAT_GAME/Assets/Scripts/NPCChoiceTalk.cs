@@ -13,11 +13,11 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
     public NPCDialogue AfterKey;
 
     [Header("Exakte Indizes aus deinem catLeoDialogue Screenshot")]
-    public int keyQuestStartIndex = 5;      // Element 5: "A bird stole it..."
-    public int fireQuestStartIndex = 6;     // Element 6: "Could you gather 10 pieces of wood..."
-    public int quizQuestionIndex = 7;       // Element 7: "Cats sleep a lot..."
-    public int quizCorrectAnswerIndex = 8;  // Element 8: "Correct! Hmm..."
-    public int quizWrongAnswerIndex = 9;    // Element 9: "Wrong / Falsch."
+    public int keyQuestStartIndex = 5;      // Dialogzeile für den Start der Schlüssel-Quest
+    public int fireQuestStartIndex = 6;     // Dialogzeile für den Start der Feuerholz-Quest
+    public int quizQuestionIndex = 7;       // Dialogzeile der Quizfrage
+    public int quizCorrectAnswerIndex = 8;  // Dialogzeile bei richtiger Quizantwort
+    public int quizWrongAnswerIndex = 9;    // Dialogzeile bei falscher Quizantwort
 
     private bool keyQuestActive = false;
     private bool fireQuestActive = false;
@@ -51,7 +51,7 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
 
     void Start()
     {
-        // Überschreibt eventuelle alte Werte im Inspector automatisch mit deinen echten Zeilen aus dem Screenshot:
+        // Stellt sicher, dass die festen Dialog-Indizes nicht durch veraltete Inspector-Werte überschrieben werden
         keyQuestStartIndex = 5;
         fireQuestStartIndex = 6;
         quizQuestionIndex = 7;
@@ -293,27 +293,28 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
         isWaitingForChoice = false;
         HideAllChoices();
 
+        // Abhängig vom gewählten Dialogpfad die entsprechende Quest oder den Quiz-Status aktivieren
         if (dialogueData == AfterMouse)
         {
-            if (nextIndex == keyQuestStartIndex) // 5
+            if (nextIndex == keyQuestStartIndex)
             {
                 keyQuestActive = true;
             }
-            else if (nextIndex == fireQuestStartIndex) // 6
+            else if (nextIndex == fireQuestStartIndex)
             {
                 fireQuestActive = true;
             }
-            else if (nextIndex == quizQuestionIndex) // 7
+            else if (nextIndex == quizQuestionIndex)
             {
                 quizActive = true;
             }
-            else if (nextIndex == quizCorrectAnswerIndex) // 8
+            else if (nextIndex == quizCorrectAnswerIndex)
             {
                 quizSolved = true;
                 Task5Quiz quizTask = GetComponent<Task5Quiz>();
                 if (quizTask != null) quizTask.playerWonQuiz = true;
             }
-            else if (nextIndex == quizWrongAnswerIndex) // 9
+            else if (nextIndex == quizWrongAnswerIndex)
             {
                 quizActive = true;
             }

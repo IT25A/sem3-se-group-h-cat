@@ -23,14 +23,14 @@ public class PlayerInteraction : MonoBehaviour
 
             Collider2D[] hitObjects = Physics2D.OverlapCircleAll(transform.position, interactionRadius);
 
+            // Das erste gültige interagierbare Objekt im Umkreis (außer dem Spieler selbst) auslösen
             if (hitObjects.Length > 0)
             {
                 bool interacted = false;
 
-                // Wir durchsuchen alle getroffenen Collider nach einem IInteractable
                 foreach (var hit in hitObjects)
                 {
-                    if (hit.gameObject != this.gameObject) // Ignoriere den Spieler
+                    if (hit.gameObject != this.gameObject)
                     {
                         IInteractable target = hit.GetComponent<IInteractable>();
                         if (target != null && target.CanInteract())
@@ -38,7 +38,7 @@ public class PlayerInteraction : MonoBehaviour
                             target.Interact();
                             interacted = true;
                             Debug.Log("DIAGNOSE: Interaktion mit " + hit.gameObject.name + " erfolgreich ausgelöst!");
-                            break; // Sobald ein Ziel gefunden wurde, abbrechen
+                            break;
                         }
                     }
                 }
