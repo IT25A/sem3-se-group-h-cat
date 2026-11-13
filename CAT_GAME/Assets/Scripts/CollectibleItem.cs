@@ -9,7 +9,8 @@ public class CollectibleItem : MonoBehaviour
         Mouse,
         Key,
         SimbaNecklace,
-        Wood
+        Wood,
+        HealingPlant
     }
 
     [Header("Collectible Settings")]
@@ -69,6 +70,9 @@ public class CollectibleItem : MonoBehaviour
                 break;
             case CollectibleType.Wood:
                 TaskCollectibleState.RegisterWood(uniqueId);
+                break;
+            case CollectibleType.HealingPlant:
+                TaskCollectibleState.RegisterHealingPlant(uniqueId);
                 break;
         }
 

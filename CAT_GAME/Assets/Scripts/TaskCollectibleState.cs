@@ -9,6 +9,7 @@ public static class TaskCollectibleState
     public static int KeyCount { get; private set; } = 0;
     public static int SimbaNecklaceCount { get; private set; } = 0;
     public static int WoodCount { get; private set; } = 0;
+    public static int HealingPlant { get; private set; } = 0;
 
     public static bool eggNotificationSent = false;
     public static bool flowerNotificationSent = false;
@@ -81,6 +82,14 @@ public static class TaskCollectibleState
     }
 
     public static void RegisterWood(string id)
+    {
+        if (!string.IsNullOrEmpty(id))
+        {
+            collectedIds.Add(id);
+        }
+        WoodCount++;
+    }
+    public static void RegisterHealingPlant(string id)
     {
         if (!string.IsNullOrEmpty(id))
         {
