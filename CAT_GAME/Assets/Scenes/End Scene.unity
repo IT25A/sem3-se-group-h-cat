@@ -2481,13 +2481,14 @@ EdgeCollider2D:
   - {x: -13.065481, y: -3.2504864}
   - {x: -8.474922, y: -3.1446042}
   - {x: -5.2489896, y: -3.0701976}
-  - {x: -2.9484055, y: -2.0823236}
-  - {x: -2.0329022, y: -2.1482267}
-  - {x: -1.5690094, y: -2.0766654}
-  - {x: -1.163092, y: -1.7600635}
-  - {x: -0.50271237, y: -1.1248688}
-  - {x: 1.6586666, y: -0.23776835}
-  - {x: 4.086012, y: -0.10597506}
+  - {x: -2.9824352, y: -2.235457}
+  - {x: -2.3391688, y: -2.2027113}
+  - {x: -1.9102618, y: -2.0881355}
+  - {x: -1.3716661, y: -1.837298}
+  - {x: -0.8977651, y: -1.3970906}
+  - {x: -0.4686833, y: -1.2780024}
+  - {x: 2.0690827, y: -0.08617994}
+  - {x: 4.1148205, y: -0.14265198}
   - {x: 4.2021794, y: 0.76516986}
   - {x: 10.679765, y: 0.7964225}
   m_AdjacentStartPoint: {x: 0, y: 0}
@@ -4002,7 +4003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7575023706846161090, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.806859
+      value: -7.808078
       objectReference: {fileID: 0}
     - target: {fileID: 7575023706846161090, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4014,7 +4015,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414980027500515728, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.806859
+      value: -7.808078
       objectReference: {fileID: 0}
     - target: {fileID: 8414980027500515728, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: m_LocalPosition.y
