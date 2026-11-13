@@ -9,7 +9,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
 {
     public static NPCTalk activeTalker;
 
-    [Header("Standard Dialog (Mit Hund, vor Halsband)")]
+    [Header("Default Dialogue (With Dog, Before Collar)")]
     public NPCDialogue dialogueData;
     public GameObject dialoguePanel;
     public TMP_Text dialogueText, nameText;
@@ -17,9 +17,9 @@ public class NPCTalk : MonoBehaviour, IInteractable
 
     [Header("Doctor / Quest Conditions (Optional)")]
     public ShadowFollower requiredFollower;
-    [Tooltip("Dialog, wenn Simba OHNE den Hund zum Arzt kommt")]
+    [Tooltip("Dialogue when Simba visits the doctor WITHOUT the dog")]
     public NPCDialogue noDogDialogue;
-    [Tooltip("Dialog, wenn Simba den Hund gebracht hat UND das Halsband hat")]
+    [Tooltip("Dialogue when Simba has brought the dog AND collected the collar")]
     public NPCDialogue afterItemDialogue;
     public string requiredCollectibleId = "SimbaNecklace";
 

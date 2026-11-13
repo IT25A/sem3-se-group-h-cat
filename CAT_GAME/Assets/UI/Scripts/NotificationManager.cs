@@ -9,7 +9,7 @@ public class NotificationManager : MonoBehaviour
 {
     public static NotificationManager Instance;
 
-    [Header("UI Elemente")]
+    [Header("UI Elements")]
     public GameObject notificationPanel;
     public TextMeshProUGUI messageText;
     public CanvasGroup canvasGroup;
@@ -28,7 +28,7 @@ public class NotificationManager : MonoBehaviour
     public Sprite simbaNecklaceIcon;
     public Sprite defaultIcon;
 
-    [Header("Verlauf (History)")]
+    [Header("History")]
     public List<string> notificationHistory = new List<string>();
 
     public List<Sprite> notificationSpriteHistory = new List<Sprite>();

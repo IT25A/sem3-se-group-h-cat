@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-	[Header("Referenzen")]
+	[Header("References")]
 	public Animator animator;
 	public SpriteRenderer spriteRenderer;
 	public Rigidbody2D rb;

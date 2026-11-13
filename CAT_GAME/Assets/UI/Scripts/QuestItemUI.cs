@@ -6,12 +6,12 @@ using Unity.VectorGraphics;
 
 public class QuestItemUI : MonoBehaviour
 {
-    [Header("UI Elemente")]
+    [Header("UI Elements")]
     public CanvasGroup canvasGroup;
     public Image itemIconImage;
     public TextMeshProUGUI itemText;
 
-    [Header("Gegenstands-Einstellungen")]
+    [Header("Item Settings")]
     public Sprite itemSprite;
     public int requiredAmount = 10;
 

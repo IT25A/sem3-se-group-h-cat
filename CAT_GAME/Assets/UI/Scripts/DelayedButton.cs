@@ -6,10 +6,10 @@ public class FadeInButtonAfterTime : MonoBehaviour
 {
     private CanvasGroup canvasGroup;
 
-    [Tooltip("Wartezeit in Sekunden, bis der Button eingeblendet wird")]
+    [Tooltip("Delay in seconds before the button fades in")]
     public float delayTime = 15f;
 
-    [Tooltip("Dauer des Einblendens")]
+    [Tooltip("Fade-in duration")]
     public float fadeDuration = 1f;
 
     void Awake()

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class NotificationHistoryUI : MonoBehaviour
 {
-    [Header("UI Elemente")]
+    [Header("UI Elements")]
     public GameObject historyPanel;
     public Transform contentParent;
     public GameObject notificationItemPrefab;

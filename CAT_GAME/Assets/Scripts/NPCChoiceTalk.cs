@@ -6,13 +6,13 @@ using System.Collections.Generic;
 
 public class NPCChoiceTalk : MonoBehaviour, IInteractable
 {
-    [Header("Dialog Daten")]
+    [Header("Dialogue Data")]
     public NPCDialogue dialogueData;
     public NPCDialogue AfterMouse;
     public NPCDialogue KeepGoingDialogue;
     public NPCDialogue AfterKey;
 
-    [Header("Exakte Indizes aus deinem catLeoDialogue Screenshot")]
+    [Header("Exact Indices from catLeoDialogue Screenshot")]
     public int keyQuestStartIndex = 5;      // Dialogzeile für den Start der Schlüssel-Quest
     public int fireQuestStartIndex = 6;     // Dialogzeile für den Start der Feuerholz-Quest
     public int quizQuestionIndex = 7;       // Dialogzeile der Quizfrage
@@ -29,13 +29,13 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
     public int keyCount = 1;
     public int WoodCount = 10;
 
-    [Header("UI Elemente (Panel 2)")]
+    [Header("UI Elements (Panel 2)")]
     public GameObject dialoguePanel;
     public TMP_Text nameText;
     public TMP_Text dialogueText;
     public Image portraitImage;
 
-    [Header("Choice Buttons (dynamisch)")]
+    [Header("Choice Buttons (Dynamic)")]
     public Button choiceButtonPrefab;
     public Transform choiceContainer;
 

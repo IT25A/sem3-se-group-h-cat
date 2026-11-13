@@ -15,7 +15,7 @@ public class CollectibleItem : MonoBehaviour
     [Header("Collectible Settings")]
     public CollectibleType type;
 
-    [Tooltip("Eindeutige ID zum Speichern des Sammelstatus über Szenenwechsel hinweg")]
+    [Tooltip("Unique ID to persist collection state across scene transitions")]
     public string uniqueId;
 
     private Collider2D eggCollider;

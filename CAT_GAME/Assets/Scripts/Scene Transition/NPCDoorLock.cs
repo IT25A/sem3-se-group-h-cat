@@ -5,7 +5,7 @@ using System.Reflection;
 public class NPCDoorLock : MonoBehaviour
 {
     [Header("Lock Configuration")]
-    [Tooltip("NPC-GameObject, mit dem der Spieler sprechen muss, um diese Tür zu entsperren")]
+    [Tooltip("NPC GameObject the player must talk to in order to unlock this door")]
     public GameObject targetNPC;
 
     private SceneTransition sceneTransition;

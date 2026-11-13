@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ShadowFollower : MonoBehaviour, IInteractable
 {
-    [Header("Referenzen")]
+    [Header("References")]
     public Transform playerTarget;
     public Rigidbody2D rb;
     public Animator animator;
@@ -11,14 +11,14 @@ public class ShadowFollower : MonoBehaviour, IInteractable
     public bool isFollowing = false;
     public float stopDistance = 0.5f;
 
-    [Header("Verzögerung")]
-    [Tooltip("Wie viele Positionen soll der NPC abwarten, bevor er losläuft?")]
+    [Header("Delay")]
+    [Tooltip("How many recorded positions should the NPC wait before starting to move?")]
     public int delayFrames = 25; 
     public float moveSpeed = 5f;
 
     [Header("Doctor Stay Settings")]
     public Transform doctorTarget;
-    [Tooltip("Positionsversatz relativ zum Arzt, wenn der Hund dort abgesetzt wird (z. B. -1.2 für links, +1.2 für rechts)")]
+    [Tooltip("Position offset relative to the doctor when the dog stays there (e.g., -1.2 for left, +1.2 for right)")]
     public Vector2 doctorOffset = new Vector2(-1.2f, 0f);
     public bool hasStayedAtDoctor = false;
 

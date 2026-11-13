@@ -3,10 +3,10 @@ using System.Collections;
 
 public class AutoDialogueScene3 : MonoBehaviour
 {
-    [Header("Einstellungen")]
+    [Header("Settings")]
     public NPCTalk targetDialogue;
     public float delay = 0.5f;
-    [Tooltip("Wie lange soll jede Zeile nach dem Fertigtippen stehen bleiben, bevor die nächste kommt / geschlossen wird?")]
+    [Tooltip("How long each line stays visible after finishing typing before advancing or closing.")]
     public float pauseBetweenLines = 1.0f; 
 
     void Start()

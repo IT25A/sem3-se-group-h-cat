@@ -7,11 +7,11 @@ public class SceneTransition : MonoBehaviour
     public string targetSceneName;
 
     [InspectorName("Spawn ID in New Scene")]
-    [Tooltip("Ziel-SpawnPoint-ID in der neuen Szene. Falls leer, wird der letzte Rückkehrpunkt verwendet.")]
+    [Tooltip("Target SpawnPoint ID in the new scene. If empty, the last return point will be used.")]
     public string targetSpawnID;
 
     [InspectorName("ID for returning")]
-    [Tooltip("Eindeutige ID dieses Übergangs, damit die Zielszene den Rückkehrpunkt kennt.")]
+    [Tooltip("Unique ID of this transition so the target scene knows the return point.")]
     public string returnID;
 
     // Wird von Tür-Sperrskripten (z. B. QuestDoor, NPCDoorLock) gesteuert, um den Szenenwechsel zu blockieren

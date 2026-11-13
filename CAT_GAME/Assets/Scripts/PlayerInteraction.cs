@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    [Header("Einstellungen")]
+    [Header("Settings")]
     public float interactionRadius = 1.0f;
     public LayerMask interactableLayer; 
 

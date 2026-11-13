@@ -4,7 +4,7 @@ public class QuestDoorScene2 : MonoBehaviour
 {
     private SceneTransition sceneTransition;
 
-    [Header("Bedingung")]
+    [Header("Condition")]
     public int requiredEggs = 4;
     public int requiredFood = 25;
 

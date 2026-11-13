@@ -9,7 +9,7 @@ public class NPCDialogue : ScriptableObject
     public string npcName;
     public Sprite npcPortrait;
 
-    [Header("Dialog")]
+    [Header("Dialogue")]
     public string[] dialogueLines; // Englische Standardzeilen
     public string[] germanLines;
     public string[] spanishLines;
@@ -28,7 +28,7 @@ public class NPCDialogue : ScriptableObject
 public class DialogueChoice
 {
     public int dialogueIndex; // Index der Dialogzeile, bei der diese Auswahlmöglichkeiten erscheinen
-    [Header("Button Texte")]
+    [Header("Button Texts")]
     public string []choices; // Englische Antwortoptionen
     public string []germanChoices;
     public string []spanishChoices;

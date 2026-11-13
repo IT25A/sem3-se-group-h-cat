@@ -3,7 +3,7 @@ using TMPro;
 
 public class FlowerUI : MonoBehaviour
 {
-    [Header("UI Elemente")]
+    [Header("UI Elements")]
     public GameObject flowerPanel;     
     public TextMeshProUGUI flowerText; 
 
