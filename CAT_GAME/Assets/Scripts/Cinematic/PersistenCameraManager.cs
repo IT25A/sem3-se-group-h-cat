@@ -1,6 +1,6 @@
 using UnityEngine;
 
-// Hält die Kamera-Instanz über Szenenwechsel hinweg persistent und verhindert Duplikate (Singleton)
+// Keeps the camera instance persistent across scene transitions and prevents duplicates (Singleton)
 public class PersistentCameraManager : MonoBehaviour
 {
     private static PersistentCameraManager instance;

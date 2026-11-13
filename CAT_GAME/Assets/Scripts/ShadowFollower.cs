@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ShadowFollower : MonoBehaviour, IInteractable
 {
-    [Header("Referenzen")]
+    [Header("References")]
     public Transform playerTarget;
     public Rigidbody2D rb;
     public Animator animator;
@@ -11,18 +11,18 @@ public class ShadowFollower : MonoBehaviour, IInteractable
     public bool isFollowing = false;
     public float stopDistance = 0.5f;
 
-    [Header("Verzögerung")]
-    [Tooltip("Wie viele Positionen soll der NPC abwarten, bevor er losläuft?")]
+    [Header("Delay")]
+    [Tooltip("How many recorded positions should the NPC wait before starting to move?")]
     public int delayFrames = 25; 
     public float moveSpeed = 5f;
 
     [Header("Doctor Stay Settings")]
     public Transform doctorTarget;
-    [Tooltip("Positionsversatz relativ zum Arzt, wenn der Hund dort abgesetzt wird (z. B. -1.2 für links, +1.2 für rechts)")]
+    [Tooltip("Position offset relative to the doctor when the dog stays there (e.g., -1.2 for left, +1.2 for right)")]
     public Vector2 doctorOffset = new Vector2(-1.2f, 0f);
     public bool hasStayedAtDoctor = false;
 
-    // Puffer für vergangene Spielerpositionen, um dem Spieler zeitverzögert auf demselben Pfad zu folgen
+    // Buffer of past player positions to follow the player along the same path with a delay
     private Queue<Vector2> positionHistory = new Queue<Vector2>();
 
     void Start()
@@ -33,7 +33,7 @@ public class ShadowFollower : MonoBehaviour, IInteractable
             npcTalk.onDialogueEnded.AddListener(StartFollowing);
         }
 
-        // Arzt-NPC automatisch in der Szene suchen, falls er nicht im Inspector zugewiesen wurde
+        // Automatically find the Doctor NPC in the scene if not assigned in the Inspector
         if (doctorTarget == null)
         {
             NPCTalk[] allNpcs = FindObjectsByType<NPCTalk>(FindObjectsSortMode.None);
@@ -58,7 +58,7 @@ public class ShadowFollower : MonoBehaviour, IInteractable
 
         if (rb == null) rb = GetComponent<Rigidbody2D>();
 
-        // Physische Kollision zwischen Spieler und Begleiter deaktivieren, damit der Begleiter den Spieler nicht blockiert
+        // Disable physical collision between the player and the follower so the follower does not block the player
         Collider2D myCollider = GetComponent<Collider2D>();
         if (myCollider != null && playerTarget != null)
         {
@@ -88,7 +88,7 @@ public class ShadowFollower : MonoBehaviour, IInteractable
         return !isFollowing && !hasStayedAtDoctor;
     }
 
-    // Platziert den Begleiter dauerhaft neben dem Arzt und beendet die Verfolgung
+    // Permanently places the follower next to the doctor and stops following
     public void StayAtDoctorPosition()
     {
         if (hasStayedAtDoctor || !isFollowing) return;
@@ -127,7 +127,7 @@ public class ShadowFollower : MonoBehaviour, IInteractable
 
         positionHistory.Enqueue(playerTarget.position);
             
-        // Erst loslaufen, sobald genügend Positionen im Verzögerungspuffer gespeichert sind
+        // Only start moving once enough positions have been stored in the delay buffer
         if (positionHistory.Count > delayFrames )
         {
             Vector2 targetPosition = positionHistory.Dequeue();

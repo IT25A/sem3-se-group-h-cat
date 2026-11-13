@@ -1,7 +1,7 @@
 using UnityEngine;
 using Unity.Cinemachine; 
 
-// Weist der Cinemachine-Kamera beim Szenenstart automatisch den Spieler als Ziel zu
+// Automatically assigns the player as the target for the Cinemachine camera on scene start
 public class CamerasSetup : MonoBehaviour {
     void Start() {
         CinemachineCamera cam = GetComponent<CinemachineCamera>();

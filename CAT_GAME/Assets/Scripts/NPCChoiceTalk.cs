@@ -6,18 +6,18 @@ using System.Collections.Generic;
 
 public class NPCChoiceTalk : MonoBehaviour, IInteractable
 {
-    [Header("Dialog Daten")]
+    [Header("Dialogue Data")]
     public NPCDialogue dialogueData;
     public NPCDialogue AfterMouse;
     public NPCDialogue KeepGoingDialogue;
     public NPCDialogue AfterKey;
 
-    [Header("Exakte Indizes aus deinem catLeoDialogue Screenshot")]
-    public int keyQuestStartIndex = 5;      // Dialogzeile für den Start der Schlüssel-Quest
-    public int fireQuestStartIndex = 6;     // Dialogzeile für den Start der Feuerholz-Quest
-    public int quizQuestionIndex = 7;       // Dialogzeile der Quizfrage
-    public int quizCorrectAnswerIndex = 8;  // Dialogzeile bei richtiger Quizantwort
-    public int quizWrongAnswerIndex = 9;    // Dialogzeile bei falscher Quizantwort
+    [Header("Exact Indices from catLeoDialogue Screenshot")]
+    public int keyQuestStartIndex = 5;      // Dialogue line index for starting the key quest
+    public int fireQuestStartIndex = 6;     // Dialogue line index for starting the firewood quest
+    public int quizQuestionIndex = 7;       // Dialogue line index of the quiz question
+    public int quizCorrectAnswerIndex = 8;  // Dialogue line index for a correct quiz answer
+    public int quizWrongAnswerIndex = 9;    // Dialogue line index for a wrong quiz answer
 
     private bool keyQuestActive = false;
     private bool fireQuestActive = false;
@@ -29,13 +29,13 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
     public int keyCount = 1;
     public int WoodCount = 10;
 
-    [Header("UI Elemente (Panel 2)")]
+    [Header("UI Elements (Panel 2)")]
     public GameObject dialoguePanel;
     public TMP_Text nameText;
     public TMP_Text dialogueText;
     public Image portraitImage;
 
-    [Header("Choice Buttons (dynamisch)")]
+    [Header("Choice Buttons (Dynamic)")]
     public Button choiceButtonPrefab;
     public Transform choiceContainer;
 
@@ -51,7 +51,7 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
 
     void Start()
     {
-        // Stellt sicher, dass die festen Dialog-Indizes nicht durch veraltete Inspector-Werte überschrieben werden
+        // Ensures fixed dialogue indices are not overwritten by outdated Inspector values
         keyQuestStartIndex = 5;
         fireQuestStartIndex = 6;
         quizQuestionIndex = 7;
@@ -98,36 +98,36 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
             dialogueData = AfterKey;
             dialogueIndex = 0;
         }
-        // Wenn die Holz-Quest aktiv ist und genug Holz gesammelt wurde -> Zeige AfterKey (Hinweis)
+        // If the wood quest is active and enough wood has been collected -> show AfterKey (hint)
         else if (fireQuestActive && (TaskCollectibleState.WoodCount >= WoodCount || SceneData.savedWoodCount >= WoodCount) && AfterKey != null)
         {
             dialogueData = AfterKey;
             dialogueIndex = 0;
         }
-        // 1. Wenn Schlüssel gefunden -> AfterKey Dialog
+        // 1. If the key has been found -> AfterKey dialogue
         else if (keyQuestActive && (TaskCollectibleState.KeyCount >= keyCount || SceneData.savedKeyCount >= keyCount) && AfterKey != null)
         {
             dialogueData = AfterKey;
             dialogueIndex = 0;
         }
-        // 2. Wenn Schlüssel-Quest oder Holz-Quest aktiv, aber Gegenstände fehlen -> KeepGoingDialogue
+        // 2. If key quest or wood quest is active, but items are still missing -> KeepGoingDialogue
         else if ((keyQuestActive || fireQuestActive) && KeepGoingDialogue != null)
         {
             dialogueData = KeepGoingDialogue;
             dialogueIndex = 0;
         }
-        // 3. Wenn die Maus gefangen wurde -> AfterMouse (catLeoDialogue)
+        // 3. If the mouse has been caught -> AfterMouse (catLeoDialogue)
         else if ((TaskCollectibleState.MouseCount >= mouseCount || SceneData.savedMouseCount >= mouseCount) && AfterMouse != null)
         {
             dialogueData = AfterMouse;
             hasStartedQuest = true;
 
-            // Falls das Quiz schon richtig beantwortet wurde, zeige direkt Element 8 ("Correct!...")
+            // If the quiz has already been answered correctly, directly show element 8 ("Correct!...")
             if (quizSolved)
             {
                 dialogueIndex = quizCorrectAnswerIndex;
             }
-            // Falls der Spieler im Quiz war (und falsch lag oder rausgegangen ist), starte direkt wieder bei Element 7 (Quizfrage)!
+            // If the player was in the quiz (and answered wrong or exited), restart directly at element 7 (quiz question)
             else if (quizActive)
             {
                 dialogueIndex = quizQuestionIndex;
@@ -187,8 +187,8 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
     {
         if (dialogueData == AfterMouse)
         {
-            // Wenn "Wrong / Falsch." (Element 9) angezeigt wird und der Spieler E drückt:
-            // Springe sofort wieder zurück zur Quizfrage (Element 7) inkl. Antwort-Buttons!
+            // When "Wrong / Falsch." (element 9) is displayed and the player presses E:
+            // Immediately jump back to the quiz question (element 7) including answer buttons
             if (dialogueIndex == quizWrongAnswerIndex)
             {
                 dialogueIndex = quizQuestionIndex;
@@ -196,8 +196,8 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
                 return;
             }
 
-            // Wenn Element 5 (Vogel/Schlüssel), Element 6 (Holz) oder Element 8 (Richtige Antwort) zu Ende gelesen wurde:
-            // Dialog sauber schließen, damit er NICHT in den nächsten Satz weiterläuft!
+            // When element 5 (bird/key), element 6 (wood), or element 8 (correct answer) has been read:
+            // Cleanly close the dialogue so it does NOT continue into the next line
             if (dialogueIndex == keyQuestStartIndex ||
                 dialogueIndex == fireQuestStartIndex ||
                 dialogueIndex == quizCorrectAnswerIndex)
@@ -207,7 +207,7 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
             }
         }
 
-        // Standard-Prüfung auf EndDialogueLines
+        // Standard check for EndDialogueLines
         if (dialogueData.endDialogueLines != null &&
             dialogueIndex < dialogueData.endDialogueLines.Length &&
             dialogueData.endDialogueLines[dialogueIndex])
@@ -293,7 +293,7 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
         isWaitingForChoice = false;
         HideAllChoices();
 
-        // Abhängig vom gewählten Dialogpfad die entsprechende Quest oder den Quiz-Status aktivieren
+        // Activate the corresponding quest or quiz state depending on the selected dialogue path
         if (dialogueData == AfterMouse)
         {
             if (nextIndex == keyQuestStartIndex)

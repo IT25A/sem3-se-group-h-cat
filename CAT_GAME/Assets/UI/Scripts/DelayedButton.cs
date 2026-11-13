@@ -6,16 +6,16 @@ public class FadeInButtonAfterTime : MonoBehaviour
 {
     private CanvasGroup canvasGroup;
 
-    [Tooltip("Wartezeit in Sekunden, bis der Button eingeblendet wird")]
+    [Tooltip("Delay in seconds before the button fades in")]
     public float delayTime = 15f;
 
-    [Tooltip("Dauer des Einblendens")]
+    [Tooltip("Fade-in duration")]
     public float fadeDuration = 1f;
 
     void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
-        // Button zu Beginn unsichtbar machen und Klicks blockieren, bis das Einblenden abgeschlossen ist
+        // Hide the button initially and block clicks until the fade-in is complete
         canvasGroup.alpha = 0f;
         canvasGroup.blocksRaycasts = false;
     }

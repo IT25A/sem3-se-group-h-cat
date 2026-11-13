@@ -1,17 +1,17 @@
 using UnityEngine;
 using System.Collections;
 
-// Blendet ein UI-Element nach einer einstellbaren Verzögerung sanft über die CanvasGroup ein
+// Smoothly fades in a UI element via CanvasGroup after a configurable delay
 [RequireComponent(typeof(CanvasGroup))]
 public class UIFadeIn : MonoBehaviour
 {
     private CanvasGroup canvasGroup;
     
-    [Header("Einstellungen")]
-    [Tooltip("Wartezeit in Sekunden vor dem Einblenden")]
+    [Header("Settings")]
+    [Tooltip("Delay in seconds before fading in")]
     public float startDelay = 10.0f;
     
-    [Tooltip("Dauer des Einblendens in Sekunden")]
+    [Tooltip("Fade-in duration in seconds")]
     public float fadeDuration = 3.0f;
 
     void Awake()

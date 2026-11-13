@@ -39,7 +39,7 @@ public class MenuManager : MonoBehaviour
 
         string currentSceneName = SceneManager.GetActiveScene().name;
 
-        // Je nach Spielstatus entweder die Hauptmenü-Musik oder die Hintergrundmusik der Szene starten
+        // Depending on the game state, play either the main menu music or the scene's background music
         if (!SceneData.isGameStarted)
         {
             if (menuMusic != null) menuMusic.Play();
@@ -61,7 +61,7 @@ public class MenuManager : MonoBehaviour
             }
         }
 
-        // Wenn das Spiel bereits läuft (z. B. nach einem Szenenwechsel), direkt das In-Game-UI aktivieren
+        // If the game is already running (e.g., after a scene transition), directly activate the in-game UI
         if (SceneData.isGameStarted)
         {
             SetGameState(GameState.Playing);
@@ -194,7 +194,7 @@ public class MenuManager : MonoBehaviour
     {
         SceneData.isGameStarted = false;
 
-        // Persistenten Spieler entfernen, damit beim Neuladen der Startszene wieder der Standard-Spieler erzeugt wird
+        // Destroy the persistent player so the default player is spawned again when reloading the starting scene
         PersistentPlayer player = FindAnyObjectByType<PersistentPlayer>();
         if (player != null)
         {
@@ -310,7 +310,7 @@ public class MenuManager : MonoBehaviour
         endPanel.SetActive(true);
     }
 
-    // Setzt den Spielstatus nach dem Endbildschirm zurück und lädt die Startszene mit aktivem Hauptmenü
+    // Resets the game state after the end screen and loads the starting scene with the main menu active
     public void ReturnToMainMenuFromEnd()
     {
         SceneData.isGameStarted = false;

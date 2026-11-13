@@ -23,7 +23,7 @@ public class Task5Quiz : MonoBehaviour
     {
         if (npcTalk == null || rewardGiven) return;
 
-        // Belohnung erst auszahlen, nachdem das Quiz gelöst und das Dialogfenster geschlossen wurde
+        // Only grant the reward after the quiz has been solved and the dialogue window is closed
         if (playerWonQuiz && !npcTalk.IsTalking())
         {
             GiveRewardAndNotification();

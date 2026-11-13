@@ -9,7 +9,7 @@ public class NotificationManager : MonoBehaviour
 {
     public static NotificationManager Instance;
 
-    [Header("UI Elemente")]
+    [Header("UI Elements")]
     public GameObject notificationPanel;
     public TextMeshProUGUI messageText;
     public CanvasGroup canvasGroup;
@@ -28,7 +28,7 @@ public class NotificationManager : MonoBehaviour
     public Sprite simbaNecklaceIcon;
     public Sprite defaultIcon;
 
-    [Header("Verlauf (History)")]
+    [Header("History")]
     public List<string> notificationHistory = new List<string>();
 
     public List<Sprite> notificationSpriteHistory = new List<Sprite>();
@@ -75,7 +75,7 @@ public class NotificationManager : MonoBehaviour
         StartCoroutine(DisplayLocalizedRoutine(tableCollectionName, entryKey, duration));
     }
 
-    // Lädt den lokalisierten Text asynchron über den Schlüssel, weist das passende Icon zu und blendet die Meldung ein
+    // Asynchronously loads the localized text by key, assigns the matching icon, and fades in the notification
     private IEnumerator DisplayLocalizedRoutine(string tableCollectionName, string entryKey, float duration)
     {
         yield return LocalizationSettings.InitializationOperation;

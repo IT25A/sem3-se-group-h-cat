@@ -9,7 +9,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
 {
     public static NPCTalk activeTalker;
 
-    [Header("Standard Dialog (Mit Hund, vor Halsband)")]
+    [Header("Default Dialogue (With Dog, Before Collar)")]
     public NPCDialogue dialogueData;
     public GameObject dialoguePanel;
     public TMP_Text dialogueText, nameText;
@@ -17,9 +17,9 @@ public class NPCTalk : MonoBehaviour, IInteractable
 
     [Header("Doctor / Quest Conditions (Optional)")]
     public ShadowFollower requiredFollower;
-    [Tooltip("Dialog, wenn Simba OHNE den Hund zum Arzt kommt")]
+    [Tooltip("Dialogue when Simba visits the doctor WITHOUT the dog")]
     public NPCDialogue noDogDialogue;
-    [Tooltip("Dialog, wenn Simba den Hund gebracht hat UND das Halsband hat")]
+    [Tooltip("Dialogue when Simba has brought the dog AND collected the collar")]
     public NPCDialogue afterItemDialogue;
     public string requiredCollectibleId = "SimbaNecklace";
 
@@ -89,7 +89,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
     {
         currentDialogue = dialogueData;
 
-        // 1. Wenn der verletzte Hund erforderlich ist, den Spieler aber noch nicht begleitet hat:
+        // 1. If the injured dog is required, but has not followed the player yet:
         if (requiredFollower != null && !requiredFollower.isFollowing && !requiredFollower.hasStayedAtDoctor)
         {
             if (noDogDialogue != null)
@@ -101,7 +101,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
                 return;
             }
         }
-        // 2. Wenn der Hund bereits beim Arzt ist und das Halsband gefunden wurde:
+        // 2. If the dog is already at the doctor and the collar has been found:
         else if (afterItemDialogue != null && TaskCollectibleState.IsCollected(requiredCollectibleId))
         {
             currentDialogue = afterItemDialogue;
@@ -190,7 +190,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
             patrolScript.isInteracting = false;
         }
 
-        // Nach dem ersten Gespräch mit Hund bleibt dieser beim Arzt und die Halsband-Suche wird freigeschaltet
+        // After the first conversation with the dog, the dog stays with the doctor and the collar quest is unlocked
         if (requiredFollower != null && currentDialogue == dialogueData)
         {
             requiredFollower.hasStayedAtDoctor = true;

@@ -1,7 +1,7 @@
 using UnityEngine;
 using Unity.Cinemachine;
 
-// Verbindet die Cinemachine-Kamera beim Start und nach jedem Szenenwechsel automatisch mit dem Spieler
+// Automatically binds the Cinemachine camera to the player on start and after each scene transition
 public class CinemachineAutoRebinder : MonoBehaviour
 {
     private CinemachineCamera vcam;

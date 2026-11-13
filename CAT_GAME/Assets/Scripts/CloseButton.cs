@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CloseButton : MonoBehaviour
 {
-    // Beendet alle aktuell geöffneten NPC-Dialoge in der Szene
+    // Ends all currently active NPC dialogues in the scene
     public void Close()
     {
         NPCTalk[] npcs = FindObjectsByType<NPCTalk>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);

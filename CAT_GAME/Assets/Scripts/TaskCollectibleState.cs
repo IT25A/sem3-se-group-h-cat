@@ -17,10 +17,10 @@ public static class TaskCollectibleState
     public static bool keyNotificationSent = false;
     public static bool woodNotificationSent = false;
 
-    // Speichert die eindeutigen IDs aller bereits eingesammelten Gegenstände
+    // Stores the unique IDs of all already collected items
     private static readonly HashSet<string> collectedIds = new HashSet<string>();
 
-    // Setzt die Zähler beim Starten des Play-Modus im Unity-Editor sauber zurück
+    // Cleanly resets counters when entering Play Mode in the Unity Editor
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     private static void Init()
     {
@@ -89,7 +89,7 @@ public static class TaskCollectibleState
         WoodCount++;
     }
 
-    // Setzt alle Zähler und Benachrichtigungs-Flags nach Abschluss einer Quest zurück
+    // Resets all counters and notification flags after completing a quest
     public static void ResetTaskCollectibles()
     {
         EggCount = 0;
