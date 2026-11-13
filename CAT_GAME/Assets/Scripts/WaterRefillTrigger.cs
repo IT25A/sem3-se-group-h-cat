@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+// Ermöglicht das Auffüllen des Wasservorrats per Taste E, solange sich der Spieler in der Trigger-Zone befindet
 public class WaterRefillTrigger : MonoBehaviour {
     [Header("Refill Settings")]
     public float refillAmount = 50f;

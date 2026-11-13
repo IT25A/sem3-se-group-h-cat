@@ -38,6 +38,7 @@ public class WaterManager : MonoBehaviour {
     }
 
     private void Update() {
+        // Wasserverbrauch nur berechnen, solange das Spiel aktiv läuft
         if (isGameOver || !isGameStarted || MenuManager.currentState != MenuManager.GameState.Playing) return;
 
         if (SceneData.savedWater > 0) {
@@ -48,6 +49,7 @@ public class WaterManager : MonoBehaviour {
                 waterSlider.value = SceneData.savedWater;
             }
 
+            // Einmalige Warnmeldung anzeigen, sobald der Wasserstand unter den Schwellenwert fällt
             if (SceneData.savedWater <= warningThreshold && !hasWarned) {
                 hasWarned = true;
                 if (NotificationManager.Instance != null) {

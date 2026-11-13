@@ -1,12 +1,12 @@
 using UnityEngine;
 
+// Hält die Kamera-Instanz über Szenenwechsel hinweg persistent und verhindert Duplikate (Singleton)
 public class PersistentCameraManager : MonoBehaviour
 {
     private static PersistentCameraManager instance;
 
     void Awake()
     {
-        // Prevent duplicate camera instances when returning to the initial scene
         if (instance != null && instance != this)
         {
             Destroy(gameObject);
@@ -14,8 +14,6 @@ public class PersistentCameraManager : MonoBehaviour
         }
 
         instance = this;
-
-        // Keep this GameObject (along with its Camera and Cinemachine setup) alive across scene transitions
         DontDestroyOnLoad(gameObject);
     }
 }

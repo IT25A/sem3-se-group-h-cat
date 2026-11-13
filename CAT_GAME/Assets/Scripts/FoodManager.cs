@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
 
+// Verwaltet den globalen Futterbestand, die UI-Anzeige und Benachrichtigungen beim Erhalt von Futter
 public class FoodManager : MonoBehaviour {
 
     public static FoodManager Instance { get; private set; }
@@ -30,6 +31,7 @@ public class FoodManager : MonoBehaviour {
         SceneData.savedFood += amount;
         UpdateFoodUI();
 
+        // Spezielle Benachrichtigung bei 100 Futter, ansonsten Standard-Meldung anzeigen
         if (NotificationManager.Instance != null) {
             if (SceneData.savedFood == 100) {
                 NotificationManager.Instance.ShowLocalizedNotification(tableName, hundredfoodKey);

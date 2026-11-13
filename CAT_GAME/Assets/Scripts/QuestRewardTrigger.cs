@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+// Ermöglicht dem Spieler, innerhalb einer Trigger-Zone per Taste E eine Futter-Belohnung abzuholen
 public class QuestRewardTrigger : MonoBehaviour {
     [Header("Reward Settings")]
     public int foodReward = 5; 

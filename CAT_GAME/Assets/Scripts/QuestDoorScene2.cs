@@ -15,15 +15,16 @@ public class QuestDoorScene2 : MonoBehaviour
 
     void Update()
     {
+        // Übergang in die nächste Szene freigeben, sobald genügend Eier oder Futter vorhanden sind
         if (sceneTransition != null)
         {
             if (TaskCollectibleState.EggCount >= requiredEggs || SceneData.savedFood >= requiredFood)
             {
-                sceneTransition.isLocked = false; // Tor öffnen
+                sceneTransition.isLocked = false;
             }
             else
             {
-                sceneTransition.isLocked = true;  // Tor schließen
+                sceneTransition.isLocked = true;
             }
         }
     }

@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Erfasst eingesammelte Eier und Blumen per Trigger-Kollision und registriert sie im globalen Quest-Status
 public class PlayerCollector : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)

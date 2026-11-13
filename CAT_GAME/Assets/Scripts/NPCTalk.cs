@@ -15,7 +15,6 @@ public class NPCTalk : MonoBehaviour, IInteractable
     public TMP_Text dialogueText, nameText;
     public Image portraitImage;
 
-    // NEU: Bedingungen für Hund & Halsband
     [Header("Doctor / Quest Conditions (Optional)")]
     public ShadowFollower requiredFollower;
     [Tooltip("Dialog, wenn Simba OHNE den Hund zum Arzt kommt")]
@@ -40,9 +39,8 @@ public class NPCTalk : MonoBehaviour, IInteractable
     [Header("Collar-Task")]
     public static bool isCollarTaskstarted = false;
 
-    // NEU: Speichert die Sätze der aktuell gewählten Sprache
     private string[] activeLines;
-    private NPCDialogue currentDialogue; // Merkt sich den aktuell gewählten Dialog
+    private NPCDialogue currentDialogue;
 
     public bool CanInteract()
     {
@@ -77,24 +75,21 @@ public class NPCTalk : MonoBehaviour, IInteractable
 
     void Awake()
     {
-        isEggTaskstarted = false; // Reset the egg task state when the game starts
+        isEggTaskstarted = false;
     }
 
     void Start()
     {
         patrolScript = GetComponent<NPCPatrol>();
-        isCollarTaskstarted = false; // Reset the collar task state when the game starts
+        isCollarTaskstarted = false;
         if (SceneManager.GetActiveScene().name == "Scene 2") TaskCollectibleState.ResetTaskCollectibles();
     }
 
     public void StartDialogue()
     {
-        //if (SceneData.mouseCatched && SceneManager.GetActiveScene().name == "Scene 3") return; 
-
-        // Standardmäßig den normalen Dialog nehmen
         currentDialogue = dialogueData;
 
-        // 1. Prüfen, ob ein Hund verlangt wird, aber NOCH NICHT dabei ist:
+        // 1. Wenn der verletzte Hund erforderlich ist, den Spieler aber noch nicht begleitet hat:
         if (requiredFollower != null && !requiredFollower.isFollowing && !requiredFollower.hasStayedAtDoctor)
         {
             if (noDogDialogue != null)
@@ -103,10 +98,10 @@ public class NPCTalk : MonoBehaviour, IInteractable
             }
             else
             {
-                return; // Falls kein Ohne-Hund-Dialog zugewiesen ist, nichts tun
+                return;
             }
         }
-        // 2. Wenn der Hund dabei ist (oder schon abgegeben wurde) UND das Halsband eingesammelt ist:
+        // 2. Wenn der Hund bereits beim Arzt ist und das Halsband gefunden wurde:
         else if (afterItemDialogue != null && TaskCollectibleState.IsCollected(requiredCollectibleId))
         {
             currentDialogue = afterItemDialogue;
@@ -195,6 +190,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
             patrolScript.isInteracting = false;
         }
 
+        // Nach dem ersten Gespräch mit Hund bleibt dieser beim Arzt und die Halsband-Suche wird freigeschaltet
         if (requiredFollower != null && currentDialogue == dialogueData)
         {
             requiredFollower.hasStayedAtDoctor = true;

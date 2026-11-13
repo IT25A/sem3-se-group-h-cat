@@ -32,8 +32,8 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if (!canControl)
 		{
-			movement = Vector2.zero; // Setze die Bewegung auf null, wenn die Kontrolle gesperrt ist
-			return; // Beende die Methode, um die Bewegung zu ignorieren
+			movement = Vector2.zero;
+			return;
 		}
 
 		movement = value.Get<Vector2>();
@@ -48,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
 			hasReachedTarget = false;
 			rb.linearVelocity = movement * moveSpeed;
 		}
+		// Wenn die manuelle Steuerung deaktiviert ist, bewegt sich der Spieler automatisch zum Zielpunkt (z. B. für Zwischensequenzen)
 		else if (autoWalkTarget != null)
 		{
 			float xDistance = autoWalkTarget.position.x - transform.position.x;

@@ -12,18 +12,19 @@ public class QuestDoor : MonoBehaviour
 
     private void Update()
     {
+        // Tür erst freigeben, wenn die Blumen-Quest abgeschlossen ist und mindestens 10 Futter gesammelt wurden
         if (FlowerQuestManager.Instance != null && FlowerQuestManager.Instance.isQuestCompleted && SceneData.savedFood >= 10)
         {
             if (sceneTransition != null)
             {
-                sceneTransition.isLocked = false; // Unlocked!
+                sceneTransition.isLocked = false;
             }
         }
         else
         {
             if (sceneTransition != null)
             {
-                sceneTransition.isLocked = true; // Locked!
+                sceneTransition.isLocked = true;
             }
         }
     }

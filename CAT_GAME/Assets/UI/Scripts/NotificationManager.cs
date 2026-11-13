@@ -75,6 +75,7 @@ public class NotificationManager : MonoBehaviour
         StartCoroutine(DisplayLocalizedRoutine(tableCollectionName, entryKey, duration));
     }
 
+    // Lädt den lokalisierten Text asynchron über den Schlüssel, weist das passende Icon zu und blendet die Meldung ein
     private IEnumerator DisplayLocalizedRoutine(string tableCollectionName, string entryKey, float duration)
     {
         yield return LocalizationSettings.InitializationOperation;

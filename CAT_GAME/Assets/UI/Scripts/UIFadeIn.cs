@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
+// Blendet ein UI-Element nach einer einstellbaren Verzögerung sanft über die CanvasGroup ein
 [RequireComponent(typeof(CanvasGroup))]
 public class UIFadeIn : MonoBehaviour
 {
@@ -16,7 +17,6 @@ public class UIFadeIn : MonoBehaviour
     void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
-        // Setzt das Panel beim Start unsichtbar
         canvasGroup.alpha = 0f;
     }
 
@@ -32,12 +32,10 @@ public class UIFadeIn : MonoBehaviour
 
     private IEnumerator FadeRoutine()
     {
-        // 1. 5 Sekunden warten
         yield return new WaitForSeconds(startDelay);
 
         float elapsedTime = 0f;
 
-        // 2. Sanft einblenden
         while (elapsedTime < fadeDuration)
         {
             elapsedTime += Time.deltaTime;

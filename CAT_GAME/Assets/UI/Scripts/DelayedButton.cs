@@ -15,7 +15,7 @@ public class FadeInButtonAfterTime : MonoBehaviour
     void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
-        // Zu Beginn komplett unsichtbar und klicksperre aktiv
+        // Button zu Beginn unsichtbar machen und Klicks blockieren, bis das Einblenden abgeschlossen ist
         canvasGroup.alpha = 0f;
         canvasGroup.blocksRaycasts = false;
     }
@@ -27,12 +27,10 @@ public class FadeInButtonAfterTime : MonoBehaviour
 
     private IEnumerator ShowButtonRoutine()
     {
-        // 1. Die gewünschte Zeit warten (z.B. 15 Sekunden)
         yield return new WaitForSeconds(delayTime);
 
         float elapsedTime = 0f;
 
-        // 2. Sanft einblenden
         while (elapsedTime < fadeDuration)
         {
             elapsedTime += Time.deltaTime;
@@ -41,7 +39,6 @@ public class FadeInButtonAfterTime : MonoBehaviour
         }
 
         canvasGroup.alpha = 1f;
-        // 3. Klicks wieder erlauben, wenn er sichtbar ist
         canvasGroup.blocksRaycasts = true;
     }
 }

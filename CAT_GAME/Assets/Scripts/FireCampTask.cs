@@ -42,7 +42,7 @@ public class FireCampTask : MonoBehaviour
     {
         if (npcTalk == null || rewardGiven) return;
 
-        // 1. Activate the quest if the wood choice is selected
+        // Quest aktivieren, sobald der Spieler im Dialog die Feuerholz-Option wählt
         if (!isTaskActive && npcTalk.IsTalking())
         {
             if (npcTalk.dialogueData == npcTalk.AfterMouse && npcTalk.GetCurrentIndex() == npcTalk.fireQuestStartIndex)
@@ -51,7 +51,7 @@ public class FireCampTask : MonoBehaviour
             }
         }
 
-        // 2. If the quest is active, continuously check if we have the wood and are viewing the AfterKey dialogue
+        // Wenn genug Holz gesammelt wurde und der Abschlussdialog läuft, Lagerfeuer entzünden und Belohnung vergeben
         if (isTaskActive && !rewardGiven)
         {
             if (npcTalk.dialogueData == npcTalk.AfterKey)

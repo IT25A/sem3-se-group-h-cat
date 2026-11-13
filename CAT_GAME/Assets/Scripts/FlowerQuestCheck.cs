@@ -4,9 +4,9 @@ using UnityEngine;
 public class FlowerQuestCheck : MonoBehaviour
 {
 
-    public NPCDialogue startDialog;       // 1. "Sammle 10 Blumen!"
-    public NPCDialogue inbetweenDialog; // 2. "Du hast erst x Blumen..."
-    public NPCDialogue finalDialog;      // 3. "Klasse, geh zur Treppe!"
+    public NPCDialogue startDialog;     // Startdialog: Auftrag zum Sammeln von 10 Blumen
+    public NPCDialogue inbetweenDialog; // Zwischendialog: Noch nicht genug Blumen gesammelt
+    public NPCDialogue finalDialog;     // Abschlussdialog: Alle 10 Blumen wurden gesammelt
 
     [Header("Reward")]
     public int reward = 10;
@@ -16,17 +16,14 @@ public class FlowerQuestCheck : MonoBehaviour
     void Start()
     {
         npcTalk = GetComponent<NPCTalk>();
-
-        // Ganz am Anfang legen wir den 1. Dialog ein
         npcTalk.dialogueData = startDialog;
     }
 
     void Update()
     {
-        // SICHERHEITS-CHECK: Wird gerade gesprochen?
+        // Erkennt den Moment, in dem der Abschlussdialog beendet wird, um einmalig die Belohnung zu vergeben
         if (dialogueActive && !npcTalk.isDialogueActive)
         {
-            // Wenn Simba gerade den allerersten Text liest, merkt sich das Skript
             if (npcTalk.dialogueData == finalDialog && SceneData.flowerQuestCompleted == false)
             {
                 if (FlowerQuestManager.Instance != null)
@@ -34,7 +31,6 @@ public class FlowerQuestCheck : MonoBehaviour
                     FlowerQuestManager.Instance.finalDialogueFinished = true;
                 }
 
-                // Wir brechen hier ab, damit der Text nicht mitten im Sprechen ausgetauscht wird
                 if (FoodManager.Instance != null)
                 {
                     FoodManager.Instance.AddFood(reward);
@@ -52,7 +48,7 @@ public class FlowerQuestCheck : MonoBehaviour
 
         }
 
-        // Wenn das Fenster GESCHLOSSEN ist, bereiten wir den Text für das nächste Ansprechen vor:
+        // Dialogdaten nur bei geschlossenem Dialogfenster aktualisieren, um Textwechsel während des Gesprächs zu verhindern
         if (npcTalk.isDialogueActive)
         {
             return;

@@ -20,17 +20,16 @@ public class PlayerAnimation : MonoBehaviour
 
 		Vector2 velocity = rb.linearVelocity;
 
-		// Ausrichtung der Katze
+		// Sprite je nach horizontaler Bewegungsrichtung spiegeln und Laufanimation steuern
 		if (velocity.x < -0.01f)
 		{
-			spriteRenderer.flipX = true; // Nach links
+			spriteRenderer.flipX = true;
 		}
 		else if (velocity.x > 0.01f)
 		{
-			spriteRenderer.flipX = false; // Nach rechts
+			spriteRenderer.flipX = false;
 		}
 
-		// Geht die Katze gerade? (Prüft, ob überhaupt Bewegung stattfindet)
 		bool isMoving = velocity.sqrMagnitude > 0.01f;
 		animator.SetBool("isWalking", isMoving);
 	}

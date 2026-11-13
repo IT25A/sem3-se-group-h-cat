@@ -22,6 +22,7 @@ public class FlowerUI : MonoBehaviour
         int count = FlowerQuestManager.Instance.currentFlowerCount;
         bool isCompleted = FlowerQuestManager.Instance.finalDialogueFinished;
 
+        // Blumen-UI nur anzeigen, solange mindestens eine Blume gesammelt wurde und der Abschlussdialog noch aussteht
         if (count > 0 && !isCompleted)
         {
             if (flowerPanel != null && !flowerPanel.activeSelf)
