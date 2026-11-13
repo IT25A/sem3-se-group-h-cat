@@ -119,6 +119,14 @@ MonoBehaviour:
     m_Key: received_wood
     m_Metadata:
       m_Items: []
+  - m_Id: 12880685780725760
+    m_Key: endText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12880797391155200
+    m_Key: endtyText
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

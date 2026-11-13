@@ -25,7 +25,7 @@ public class MenuManager : MonoBehaviour
     public GameObject creditsPanel;
     public GameObject notifyHistory;
 
-    public GameObject openButton;    
+    public GameObject openButton;
     public GameObject closeButton;
 
     [Header("Settings")]
@@ -307,6 +307,18 @@ public class MenuManager : MonoBehaviour
     {
         SetGameState(GameState.GameOver);
         endPanel.SetActive(true);
+    }
+
+    public void ReturnToMainMenuFromEnd()
+    {
+        // 1. Spielstatus auf "nicht gestartet" setzen, damit das Startmenü erscheint
+        SceneData.isGameStarted = false;
+
+        // 2. Zeit wieder auf Normalgeschwindigkeit setzen (falls sie eingefroren war)
+        Time.timeScale = 1f;
+
+        // 3. Zurück zu Scene 1 wechseln (du kannst gameSceneName oder direkt "Scene 1" nutzen)
+        SceneManager.LoadScene(gameSceneName);
     }
 
     public void CloseNotify()
