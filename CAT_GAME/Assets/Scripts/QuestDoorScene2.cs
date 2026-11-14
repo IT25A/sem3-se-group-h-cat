@@ -4,7 +4,7 @@ public class QuestDoorScene2 : MonoBehaviour
 {
     private SceneTransition sceneTransition;
 
-    [Header("Bedingung")]
+    [Header("Condition")]
     public int requiredEggs = 4;
     public int requiredFood = 25;
 
@@ -15,7 +15,7 @@ public class QuestDoorScene2 : MonoBehaviour
 
     void Update()
     {
-        // Übergang in die nächste Szene freigeben, sobald genügend Eier oder Futter vorhanden sind
+        // Unlock the transition to the next scene once enough eggs or food have been collected
         if (sceneTransition != null)
         {
             if (TaskCollectibleState.EggCount >= requiredEggs || SceneData.savedFood >= requiredFood)

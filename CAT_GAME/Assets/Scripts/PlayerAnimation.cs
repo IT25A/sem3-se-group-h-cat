@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-	[Header("Referenzen")]
+	[Header("References")]
 	public Animator animator;
 	public SpriteRenderer spriteRenderer;
 	public Rigidbody2D rb;
@@ -20,7 +20,7 @@ public class PlayerAnimation : MonoBehaviour
 
 		Vector2 velocity = rb.linearVelocity;
 
-		// Sprite je nach horizontaler Bewegungsrichtung spiegeln und Laufanimation steuern
+		// Flip sprite based on horizontal movement direction and control walking animation
 		if (velocity.x < -0.01f)
 		{
 			spriteRenderer.flipX = true;

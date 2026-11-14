@@ -27,7 +27,7 @@ public class CameraZoomOut : MonoBehaviour
         if (playerMovement == null)
             playerMovement = FindFirstObjectByType<PlayerMovement>();
 
-        // Kamera-Zoom automatisch starten, sobald der Spieler seinen Zielpunkt erreicht hat
+        // Automatically start the camera zoom once the player has reached the target point
         if (playerMovement != null)
         {
             playerMovement.onReachedTarget.AddListener(TriggerZoom);
@@ -51,7 +51,7 @@ public class CameraZoomOut : MonoBehaviour
         }
     }
 
-    // Interpoliert die orthografische Kameragröße weich über die festgelegte Dauer
+    // Smoothly interpolates the orthographic camera size over the specified duration
     private IEnumerator ZoomRoutine()
     {
         isZooming = true;

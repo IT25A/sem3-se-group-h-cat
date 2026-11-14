@@ -4,9 +4,9 @@ using UnityEngine;
 public class FlowerQuestCheck : MonoBehaviour
 {
 
-    public NPCDialogue startDialog;     // Startdialog: Auftrag zum Sammeln von 10 Blumen
-    public NPCDialogue inbetweenDialog; // Zwischendialog: Noch nicht genug Blumen gesammelt
-    public NPCDialogue finalDialog;     // Abschlussdialog: Alle 10 Blumen wurden gesammelt
+    public NPCDialogue startDialog;     // Initial dialogue: task to collect 10 flowers
+    public NPCDialogue inbetweenDialog; // Intermediate dialogue: not enough flowers collected yet
+    public NPCDialogue finalDialog;     // Final dialogue: all 10 flowers have been collected
 
     [Header("Reward")]
     public int reward = 10;
@@ -21,7 +21,7 @@ public class FlowerQuestCheck : MonoBehaviour
 
     void Update()
     {
-        // Erkennt den Moment, in dem der Abschlussdialog beendet wird, um einmalig die Belohnung zu vergeben
+        // Detects when the final dialogue finishes in order to grant the reward once
         if (dialogueActive && !npcTalk.isDialogueActive)
         {
             if (npcTalk.dialogueData == finalDialog && SceneData.flowerQuestCompleted == false)
@@ -48,7 +48,7 @@ public class FlowerQuestCheck : MonoBehaviour
 
         }
 
-        // Dialogdaten nur bei geschlossenem Dialogfenster aktualisieren, um Textwechsel während des Gesprächs zu verhindern
+        // Only update dialogue data when the dialogue window is closed to prevent switching text mid-conversation
         if (npcTalk.isDialogueActive)
         {
             return;

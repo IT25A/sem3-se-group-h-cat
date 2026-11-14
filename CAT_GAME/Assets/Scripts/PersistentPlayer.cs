@@ -1,6 +1,6 @@
 using UnityEngine;
 
-// Hält das Spieler-Objekt über Szenenwechsel hinweg persistent und verhindert Duplikate (Singleton)
+// Keeps the player object persistent across scene transitions and prevents duplicates (Singleton)
 public class PersistentPlayer : MonoBehaviour
 {
     private static PersistentPlayer instance;

@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-// Versetzt den persistenten Spieler nach dem Laden einer Szene an den passenden SpawnPoint
+// Moves the persistent player to the matching SpawnPoint after loading a scene
 public class SpawnPointManager : MonoBehaviour
 {
     private void Start()
@@ -10,7 +10,7 @@ public class SpawnPointManager : MonoBehaviour
     }
     private IEnumerator MovePlayerToSpawnPointRoutine()
     {
-        // Einen Frame warten, damit alle Szenen-Komponenten vollständig initialisiert sind
+        // Wait one frame so all scene components are fully initialized
         yield return null;
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");

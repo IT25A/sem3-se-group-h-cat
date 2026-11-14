@@ -3,10 +3,10 @@ using System.Collections;
 
 public class AutoDialogueScene3 : MonoBehaviour
 {
-    [Header("Einstellungen")]
+    [Header("Settings")]
     public NPCTalk targetDialogue;
     public float delay = 0.5f;
-    [Tooltip("Wie lange soll jede Zeile nach dem Fertigtippen stehen bleiben, bevor die nächste kommt / geschlossen wird?")]
+    [Tooltip("How long each line stays visible after finishing typing before advancing or closing.")]
     public float pauseBetweenLines = 1.0f; 
 
     void Start()
@@ -24,7 +24,7 @@ public class AutoDialogueScene3 : MonoBehaviour
 
         if (targetDialogue.dialogueData != null)
         {
-            // Sprachabhängige Zeilen laden, um die Tippdauer pro Zeile exakt zu berechnen
+            // Load language-specific lines to accurately calculate typing duration per line
             int lang = PlayerPrefs.GetInt("Language", 0);
             string[] lines = targetDialogue.dialogueData.dialogueLines;
             
@@ -37,7 +37,7 @@ public class AutoDialogueScene3 : MonoBehaviour
             {
                 for (int i = 0; i < lines.Length; i++)
                 {
-                    // Tippdauer aus Zeichenanzahl und Tippgeschwindigkeit berechnen (+ 0.1s Puffer)
+                    // Calculate typing duration from character count and typing speed (+ 0.1s buffer)
                     float typingDuration = (lines[i].Length * targetDialogue.dialogueData.typingSpeed) + 0.1f;
                     yield return new WaitForSeconds(typingDuration + pauseBetweenLines);
 

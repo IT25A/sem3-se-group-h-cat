@@ -16,7 +16,7 @@ public class Task3Mouse : MonoBehaviour
             StartCoroutine(WaitAndGiveFoodAfterMouseNotification());
         }
     }
-    // Wartet nach der Maus-Benachrichtigung kurz ab, damit sich die Futter-Benachrichtigung nicht überschneidet
+    // Waits briefly after the mouse notification so the food notification does not overlap
     IEnumerator WaitAndGiveFoodAfterMouseNotification()
     {
         rewardGiven = true;

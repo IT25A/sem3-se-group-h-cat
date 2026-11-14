@@ -1,6 +1,6 @@
 using UnityEngine;
 
-// Lässt bei einmaliger Interaktion mit dem Baum den versteckten Schlüssel zum Zielpunkt herunterfallen
+// Drops the hidden key to the landing point upon a single interaction with the tree
 public class TreeKeyDrop : MonoBehaviour, IInteractable
 {
     public GameObject keyObject;

@@ -6,16 +6,16 @@ using Unity.VectorGraphics;
 
 public class QuestItemUI : MonoBehaviour
 {
-    [Header("UI Elemente")]
+    [Header("UI Elements")]
     public CanvasGroup canvasGroup;
     public Image itemIconImage;
     public TextMeshProUGUI itemText;
 
-    [Header("Gegenstands-Einstellungen")]
+    [Header("Item Settings")]
     public Sprite itemSprite;
     public int requiredAmount = 10;
 
-    // Zuordnung des UI-Elements zur jeweiligen Sammel-Quest
+    // Maps this UI element to its corresponding collection quest
     public enum QuestType { Task1, Task2, Task3, Task4, Task5, Task6}
     public QuestType questType;
 
@@ -48,7 +48,7 @@ public class QuestItemUI : MonoBehaviour
     {
         int currentCount = 0;
         f = false;
-        // Aktuellen Sammelstand der gewählten Quest abfragen und bei Erreichen des Ziels einmalig eine Benachrichtigung senden
+        // Check current collection progress of the selected quest and send a notification once when the target amount is reached
         switch (questType)
         {
             case QuestType.Task1:

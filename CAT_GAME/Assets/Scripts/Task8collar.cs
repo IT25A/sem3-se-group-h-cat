@@ -21,7 +21,7 @@ public class Task8collar : MonoBehaviour
     {
         if (npcTalk == null || rewardGiven) return;
 
-        // Warten, bis der Abschlussdialog nach Abgabe des Halsbands beendet wurde, bevor die Belohnung vergeben wird
+        // Wait until the completion dialogue after returning the collar has finished before granting the reward
         if (npcTalk.IsPlayingAfterItemDialogue())
         {
             wasInDialogue = true;
@@ -47,7 +47,7 @@ public class Task8collar : MonoBehaviour
             Debug.LogError("[Task8collar] FoodManager.Instance ist NULL!");
         }
 
-        // Nach Erhalt der Belohnung die Halsband-Benachrichtigung sperren und den Sammelstatus zurücksetzen
+        // Lock the collar notification and reset the collection state after receiving the reward
         TaskCollectibleState.simbaNecklaceNotificationSent = true;
         TaskCollectibleState.ResetTaskCollectibles();
     }
