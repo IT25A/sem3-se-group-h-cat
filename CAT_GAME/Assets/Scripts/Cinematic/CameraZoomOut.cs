@@ -10,6 +10,7 @@ public class CameraZoomOut : MonoBehaviour
     public CinemachineCamera cinemachineCamera;
     public Camera normalCamera;
     public PlayerMovement playerMovement;
+    public UnityEngine.Events.UnityEvent onZoomCompleted;
 
     private bool isZooming = false;
 
@@ -72,6 +73,7 @@ public class CameraZoomOut : MonoBehaviour
         }
 
         SetSize(targetOrthographicSize);
+        onZoomCompleted?.Invoke();
     }
 
     private float GetCurrentSize()

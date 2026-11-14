@@ -182,12 +182,12 @@ public class MenuManager : MonoBehaviour
 
     public void ShowStartPanel()
     {
-        startPanel.SetActive(true);
-        settingsPanel.SetActive(false);
-        pausePanel.SetActive(false);
-        inGamePanel.SetActive(false);
-        endPanel.SetActive(false);
-        creditsPanel.SetActive(false);
+       if (startPanel != null) startPanel.SetActive(true);
+       if (settingsPanel != null) settingsPanel.SetActive(false);
+       if (pausePanel != null) pausePanel.SetActive(false);
+       if (inGamePanel != null) inGamePanel.SetActive(false);
+       if (endPanel != null) endPanel.SetActive(false);
+       if (creditsPanel != null) creditsPanel.SetActive(false);
     }
 
     public void QuitToMainMenu()
