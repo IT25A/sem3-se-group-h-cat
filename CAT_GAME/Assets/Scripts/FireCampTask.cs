@@ -9,8 +9,11 @@ public class FireCampTask : MonoBehaviour
     [Header("Visual Elements")]
     public GameObject campfireVisual;
 
+    // Global state checked exclusively by CollectibleItem.cs for Wood type
     public static bool isTaskActive = false;
+
     private bool rewardGiven = false;
+    private bool wasInDialogue = false;
     private NPCChoiceTalk npcTalk;
 
     private void Awake()
@@ -32,6 +35,7 @@ public class FireCampTask : MonoBehaviour
         }
     }
 
+    // Called automatically or externally when activating the quest
     public static void ActivateFireQuest()
     {
         isTaskActive = true;
@@ -42,7 +46,7 @@ public class FireCampTask : MonoBehaviour
     {
         if (npcTalk == null || rewardGiven) return;
 
-        // Activate quest as soon as the player selects the firewood option in dialogue
+        // 1. External Detection: Automatically activate wood picking when reaching the wood choice line
         if (!isTaskActive && npcTalk.IsTalking())
         {
             if (npcTalk.dialogueData == npcTalk.AfterMouse && npcTalk.GetCurrentIndex() == npcTalk.fireQuestStartIndex)
@@ -51,39 +55,46 @@ public class FireCampTask : MonoBehaviour
             }
         }
 
-        // When enough wood has been collected and the completion dialogue is playing, light the campfire and grant the reward
-        if (isTaskActive && !rewardGiven)
+        // 2. Completion Check: Detect when dialogue finishes after collecting all wood
+        if (isTaskActive)
         {
-            if (npcTalk.dialogueData == npcTalk.AfterKey)
+            if (npcTalk.IsTalking())
             {
-                if (TaskCollectibleState.WoodCount >= requiredWood || SceneData.savedWoodCount >= requiredWood)
+                if (npcTalk.dialogueData == npcTalk.AfterMouse)
                 {
-                    GiveRewardAndLightFire();
+                    wasInDialogue = true;
+                }
+            }
+            else if (wasInDialogue)
+            {
+                wasInDialogue = false;
+
+                if (TaskCollectibleState.WoodCount >= requiredWood)
+                {
+                    rewardGiven = true;
+
+                    if (campfireVisual != null)
+                    {
+                        campfireVisual.SetActive(true);
+                    }
+
+                    if (FoodManager.Instance != null)
+                    {
+                        FoodManager.Instance.AddFood(reward);
+                        Debug.Log($"[FireCampTask] Campfire lit! Added {reward} food successfully!");
+                    }
+                    else
+                    {
+                        Debug.LogError("[FireCampTask] FoodManager.Instance is NULL!");
+                    }
+
+                    TaskCollectibleState.ResetTaskCollectibles();
+                }
+                else
+                {
+                    Debug.Log($"[FireCampTask] Not enough wood: {TaskCollectibleState.WoodCount}/{requiredWood}");
                 }
             }
         }
-    }
-
-    private void GiveRewardAndLightFire()
-    {
-        rewardGiven = true;
-
-        if (campfireVisual != null)
-        {
-            campfireVisual.SetActive(true);
-            Debug.Log("[FireCampTask] Campfire lit successfully!");
-        }
-
-        if (FoodManager.Instance != null)
-        {
-            FoodManager.Instance.AddFood(reward);
-            Debug.Log($"[FireCampTask] Food added: {reward}");
-        }
-        else
-        {
-            Debug.LogError("[FireCampTask] FoodManager.Instance is NULL!");
-        }
-
-        SceneData.isQuizFireWoodKeyCompleted = true;
     }
 }

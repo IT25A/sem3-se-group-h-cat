@@ -72,36 +72,36 @@ MonoBehaviour:
   - dialogueIndex: 2
     choices:
     - Find the house key
-    - Gathering wood to build a fire
-    - Answer a quiz question
+    - 'Make a fire '
+    - 'Answer a tricky quiz '
     germanChoices:
-    - "Hausschl\xFCssel finden"
-    - Holz sammeln, um ein Feuer zu machen
-    - Eine Quizfrage beantworten
+    - "Finde den Hausschl\xFCssel"
+    - Feuer machen
+    - eine Quizfrage antworten
     spanishChoices:
-    - Encuentra la llave de casa
-    - "Recoger le\xF1a para hacer una hoguera"
-    - Responde a una pregunta del cuestionario
+    - Find the house key
+    - 'Make a fire '
+    - 'Answer a tricky quiz '
     nextDialogueIndexes: 050000000600000007000000i
   - dialogueIndex: 4
     choices:
     - Find the house key
-    - Gathering wood to build a fire
-    - Answer a quiz question
+    - Make a fire
+    - Answer a tricky quiz
     germanChoices:
-    - "Hausschl\xFCssel finden"
-    - Holz sammeln, um ein Feuer zu machen
-    - Eine Quizfrage beantworten
+    - "Finde den Hausschl\xFCssel "
+    - Feuer machen
+    - eine Quizfrage antworten
     spanishChoices:
-    - Encuentra la llave de casa
-    - "Recoger le\xF1a para hacer una hoguera"
-    - Responde a una pregunta del cuestionario
+    - Find the house key
+    - Make a fire
+    - Answer a tricky quiz
     nextDialogueIndexes: 050000000600000007000000i
   - dialogueIndex: 7
     choices:
-    - 6-8 hours
-    - 12-16 hours
-    - 18-20 hours
+    - 6-8h
+    - 12-16h
+    - 18-20h
     germanChoices:
     - 6-8 Stunden
     - 12-16 Stunden
@@ -113,9 +113,9 @@ MonoBehaviour:
     nextDialogueIndexes: 090000000800000009000000i
   - dialogueIndex: 9
     choices:
-    - Unfortunately, that's wrong. Try again.
+    - Try again
     germanChoices:
-    - Leider ist das falsch. Versuche es noch einmal.
+    - Versuche nochmals
     spanishChoices:
-    - "Por desgracia, eso es incorrecto. Int\xE9ntalo de nuevo."
+    - Intentar de nuevo
     nextDialogueIndexes: 07000000i

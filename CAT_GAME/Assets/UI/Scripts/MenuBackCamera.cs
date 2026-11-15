@@ -1,6 +1,5 @@
 using UnityEngine;
 
-// Smoothly moves the menu background between random target points within the defined bounds
 public class MenuBackCamera : MonoBehaviour {
     private RectTransform rectTransform;
     public float moveSpeed = 30f; 

@@ -4,7 +4,7 @@ public class QuestDoorScene2 : MonoBehaviour
 {
     private SceneTransition sceneTransition;
 
-    [Header("Condition")]
+    [Header("Bedingung")]
     public int requiredEggs = 4;
     public int requiredFood = 25;
 
@@ -15,16 +15,15 @@ public class QuestDoorScene2 : MonoBehaviour
 
     void Update()
     {
-        // Unlock the transition to the next scene once enough eggs or food have been collected
         if (sceneTransition != null)
         {
             if (TaskCollectibleState.EggCount >= requiredEggs || SceneData.savedFood >= requiredFood)
             {
-                sceneTransition.isLocked = false;
+                sceneTransition.isLocked = false; // Tor öffnen
             }
             else
             {
-                sceneTransition.isLocked = true;
+                sceneTransition.isLocked = true;  // Tor schließen
             }
         }
     }

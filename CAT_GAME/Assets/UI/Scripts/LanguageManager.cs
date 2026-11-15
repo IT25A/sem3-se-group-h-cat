@@ -10,7 +10,6 @@ public class LanguageManager : MonoBehaviour {
         }
     }
 
-    // Waits for the Unity Localization system to initialize and then switches the active locale
     private IEnumerator SetLocale(int localeID) {
         isChangingLanguage = true;
         yield return LocalizationSettings.InitializationOperation;

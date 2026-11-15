@@ -8,7 +8,7 @@ public class NPCPatrol : MonoBehaviour
     public Animator animator;
     public bool isInteracting = false;
 
-    // Array for any number of waypoints
+    // Array für beliebig viele Wegpunkte
     public Transform[] waypoints;
     private int currentPointIndex = 0;
 
@@ -19,35 +19,39 @@ public class NPCPatrol : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Pause movement and walking animation during dialogue
         if (isInteracting)
         {
             if (rb != null) rb.linearVelocity = Vector2.zero;
-            animator.SetBool("isWalking", false);
+            animator.SetBool("isWalking", false); // Wichtig: Animation stoppen beim Reden
             return;
         }
 
+        // Abbruch, falls keine Punkte im Inspector zugewiesen wurden
         if (waypoints.Length == 0) return;
 
+        // 1. Richtung zum aktuellen Zielpunkt berechnen
         Transform target = waypoints[currentPointIndex];
         Vector2 direction = (target.position - transform.position).normalized;
 
+        // 2. NPC bewegen
         rb.linearVelocity = direction * moveSpeed;
 
+        // 3. Ausrichtung der Katze (Links/Rechts spiegeln bleibt)
         if (direction.x < 0) spriteRenderer.flipX = true;
         else if (direction.x > 0) spriteRenderer.flipX = false;
 
+        // 4. Richtungswerte an den Animator senden
         animator.SetFloat("MoveX", direction.x);
         animator.SetFloat("MoveY", direction.y);
         animator.SetBool("isWalking", true);
 
-        // Cycle to the next waypoint upon reaching the current one
+        // 5. Prüfen, ob der Punkt erreicht wurde
         if (Vector2.Distance(transform.position, target.position) < 0.1f)
         {
-            currentPointIndex++;
+            currentPointIndex++; // Nächster Punkt
             if (currentPointIndex >= waypoints.Length)
             {
-                currentPointIndex = 0;
+                currentPointIndex = 0; // Wieder von vorne anfangen
             }
         }
     }

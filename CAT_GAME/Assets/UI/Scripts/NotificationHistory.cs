@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class NotificationHistoryUI : MonoBehaviour
 {
-    [Header("UI Elements")]
+    [Header("UI Elemente")]
     public GameObject historyPanel;
     public Transform contentParent;
     public GameObject notificationItemPrefab;
@@ -16,7 +16,6 @@ public class NotificationHistoryUI : MonoBehaviour
             historyPanel.SetActive(false);
     }
 
-    // Rebuilds the list of past notifications in reverse order (newest first)
     public void UpdateHistoryDisplay()
     {
         if (contentParent == null || notificationItemPrefab == null || NotificationManager.Instance == null) return;
@@ -33,6 +32,7 @@ public class NotificationHistoryUI : MonoBehaviour
         {
             GameObject newItem = Instantiate(notificationItemPrefab, contentParent);
 
+            // 1. Text zuweisen
             Transform txtTransform = newItem.transform.Find("notificationTxt");
             if (txtTransform != null)
             {

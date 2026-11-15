@@ -12,19 +12,18 @@ public class QuestDoor : MonoBehaviour
 
     private void Update()
     {
-        // Only unlock the door once the flower quest is completed and at least 10 food has been collected
         if (FlowerQuestManager.Instance != null && FlowerQuestManager.Instance.isQuestCompleted && SceneData.savedFood >= 10)
         {
             if (sceneTransition != null)
             {
-                sceneTransition.isLocked = false;
+                sceneTransition.isLocked = false; // Unlocked!
             }
         }
         else
         {
             if (sceneTransition != null)
             {
-                sceneTransition.isLocked = true;
+                sceneTransition.isLocked = true; // Locked!
             }
         }
     }
