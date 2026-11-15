@@ -17,6 +17,7 @@ public static class TaskCollectibleState
     public static bool simbaNecklaceNotificationSent = false;
     public static bool keyNotificationSent = false;
     public static bool woodNotificationSent = false;
+    public static bool healingPlantNotificationSent = false;
 
     // Stores unique IDs of collectibles picked up during the current task
     private static readonly HashSet<string> collectedIds = new HashSet<string>();
@@ -95,7 +96,7 @@ public static class TaskCollectibleState
         {
             collectedIds.Add(id);
         }
-        WoodCount++;
+        HealingPlant++;
     }
 
     // Call this when your task/event is completed!
@@ -107,6 +108,7 @@ public static class TaskCollectibleState
         SimbaNecklaceCount = 0;
         KeyCount = 0;
         WoodCount = 0;
+        HealingPlant = 0;
 
         eggNotificationSent = false;
         flowerNotificationSent = false;
