@@ -6,6 +6,8 @@ using System.Collections;
 public class UIFadeIn : MonoBehaviour
 {
     private CanvasGroup canvasGroup;
+    private CameraZoomOut cameraZoomOut;
+    private bool hasStartedFade = false;
     
     [Header("Settings")]
     [Tooltip("Delay in seconds before fading in")]
@@ -22,17 +24,40 @@ public class UIFadeIn : MonoBehaviour
 
     void Start()
     {
-        StartFadeIn();
+        cameraZoomOut = FindFirstObjectByType<CameraZoomOut>();
+
+        // If a CameraZoomOut exists in the scene, automatically wait for the zoom to finish
+        if (cameraZoomOut != null)
+        {
+            cameraZoomOut.onZoomCompleted.AddListener(StartFadeIn);
+        }
+        else
+        {
+            StartFadeIn();
+        }
+    }
+
+    void OnDestroy()
+    {
+        if (cameraZoomOut != null)
+        {
+            cameraZoomOut.onZoomCompleted.RemoveListener(StartFadeIn);
+        }
     }
 
     public void StartFadeIn()
     {
-        StartCoroutine(FadeRoutine());
+        if (hasStartedFade) return;
+        hasStartedFade = true;
+
+        float delay = (cameraZoomOut != null) ? 0f : startDelay;
+        StartCoroutine(FadeRoutine(delay));
     }
 
-    private IEnumerator FadeRoutine()
+    private IEnumerator FadeRoutine(float delay)
     {
-        yield return new WaitForSeconds(startDelay);
+        if (delay > 0f)
+            yield return new WaitForSeconds(delay);
 
         float elapsedTime = 0f;
 
