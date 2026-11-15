@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Drops the hidden key to the landing point upon a single interaction with the tree
 public class TreeKeyDrop : MonoBehaviour, IInteractable
 {
     public GameObject keyObject;
