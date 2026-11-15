@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb109fa977984832b53154bd07d68f7, type: 3}
+  m_Name: DoctorAfterDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Dr.Cami
+  npcPortrait: {fileID: -6728080766138149565, guid: 2b4b36f3a5c524e479db2a47cd679213, type: 3}
+  dialogueLines:
+  - "Look what we have here\u2014the medicinal plant I can use to heal so many patients! Well then, let me read your collar..."
+  - Your owner is Lana? Oh, Lana lives right near me! Take the stairs up behind my house, she is waiting for you!
+  germanLines:
+  - "Guck mal, was wir hier haben \u2013 die Heilpflanze, mit der ich viele Patienten heilen kann! Na, dann lese ich mal dein Halsband..."
+  - "Deine Besitzerin hei\xDFt Lana? Ach, Lana wohnt direkt bei mir in der N\xE4he! Nimm die Treppe hinter meinem Haus nach oben, sie wartet schon auf dich!  Spanisch (Spanish Lines)  Element 0: \xA1Mira lo que tenemos aqu\xED, la planta medicinal con la que puedo curar a muchos pacientes! Bueno, ahora d\xE9jame leer tu collar...  Element 1: \xBFTu due\xF1a es Lana? \xA1Oh, Lana vive muy cerca de aqu\xED! Sube por las escaleras detr\xE1s de mi casa, \xA1ella te est\xE1 esperando!  Variante 2: Alles in einer einzigen Zeile  Englisch: Look what we have here\u2014the medicinal plant I can use to heal so many patients! Well then, let me read your collar... Your owner is Lana? Oh, Lana lives right near me! Take the stairs up behind my house, she is waiting for you!  Deutsch: Guck mal, was wir hier haben \u2013 die Heilpflanze, mit der ich viele Patienten heilen kann! Na, dann lese ich mal dein Halsband... Deine Besitzerin hei\xDFt Lana? Ach, Lana wohnt direkt bei mir in der N\xE4he! Nimm die Treppe hinter meinem Haus nach oben, sie wartet auf dich!  Spanisch: \xA1Mira lo que tenemos aqu\xED, la planta medicinal con la que puedo curar a muchos pacientes! Bueno, d\xE9jame leer tu collar... \xBFTu due\xF1a es Lana? \xA1Oh, Lana vive muy cerca de aqu\xED! Sube por las escaleras detr\xE1s de mi casa, \xA1ella te est\xE1 esperando!"
+  spanishLines:
+  - "\xA1Mira lo que tenemos aqu\xED, la planta medicinal con la que puedo curar a muchos pacientes! Bueno, ahora d\xE9jame leer tu collar.."
+  - "\xBFTu due\xF1a es Lana? \xA1Oh, Lana vive muy cerca de aqu\xED! Sube por las escaleras detr\xE1s de mi casa, \xA1ella te est\xE1 esperando!"
+  autoProgressLines: 
+  autoProgressDelay: 1.5
+  endDialogueLines: 
+  typingSpeed: 0.05
+  voiceSound: []
+  voicePitch: 1
+  choices: []
