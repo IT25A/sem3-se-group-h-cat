@@ -3297,6 +3297,7 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 1419393174}
   - {fileID: 254478345}
+  - {fileID: 1012351499}
   minSpawnDelay: 2
   maxSpawnDelay: 5
 --- !u!4 &808182836
@@ -3314,6 +3315,7 @@ Transform:
   m_Children:
   - {fileID: 1419393174}
   - {fileID: 254478345}
+  - {fileID: 1012351499}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &903323073
@@ -3483,8 +3485,8 @@ Transform:
   m_GameObject: {fileID: 925273986}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.02, y: 1.64, z: 0}
-  m_LocalScale: {x: 3.4519613, y: 7.6255746, z: 1}
+  m_LocalPosition: {x: 2.8417, y: 1.691, z: 0}
+  m_LocalScale: {x: 3.8086507, y: 7.5237346, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1343970365}
@@ -4270,6 +4272,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3683216295565664807, guid: 9bec2560bab442a4cbe502d50a96fa29, type: 3}
   m_PrefabInstance: {fileID: 1012044594}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1012351498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1012351499}
+  m_Layer: 0
+  m_Name: fish_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1012351499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012351498}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.25, y: -3.39, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 808182836}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1032942268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5205,7 +5238,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -7384,11 +7417,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3042703038440092805, guid: a2034902f62b053489ec3e1882f1a019, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.77
+      value: 12.84
       objectReference: {fileID: 0}
     - target: {fileID: 3042703038440092805, guid: a2034902f62b053489ec3e1882f1a019, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.38
+      value: 1.72
       objectReference: {fileID: 0}
     - target: {fileID: 3042703038440092805, guid: a2034902f62b053489ec3e1882f1a019, type: 3}
       propertyPath: m_LocalPosition.z
