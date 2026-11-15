@@ -134,6 +134,10 @@ MonoBehaviour:
     m_Localized: "\xA1Ya has encontrado tu collar!"
     m_Metadata:
       m_Items: []
+  - m_Id: 13717435176480768
+    m_Localized: Reiniciar
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

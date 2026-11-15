@@ -127,6 +127,10 @@ MonoBehaviour:
     m_Key: endtyText
     m_Metadata:
       m_Items: []
+  - m_Id: 13717435176480768
+    m_Key: restartBtn
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
