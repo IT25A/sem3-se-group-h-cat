@@ -4,7 +4,7 @@ public class QuestDoorScene3 : MonoBehaviour
 {
     private SceneTransition sceneTransition;
 
-    [Header("Bedingung")]
+    [Header("Condition")]
     public int requiredFood = 50;
 
     void Awake()
@@ -14,15 +14,16 @@ public class QuestDoorScene3 : MonoBehaviour
 
     void Update()
     {
+        // Only unlock the transition once the required amount of food has been reached
         if (sceneTransition != null)
         {
             if ( SceneData.savedFood >= requiredFood)
             {
-                sceneTransition.isLocked = false; // Tor öffnen
+                sceneTransition.isLocked = false;
             }
             else
             {
-                sceneTransition.isLocked = true;  // Tor schließen
+                sceneTransition.isLocked = true;
             }
         }
     }

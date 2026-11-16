@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+// Allows the player to claim a food reward by pressing E inside a trigger zone
 public class QuestRewardTrigger : MonoBehaviour {
     [Header("Reward Settings")]
     public int foodReward = 5; 

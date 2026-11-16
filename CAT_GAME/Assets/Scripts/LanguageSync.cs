@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class LanguageSync : MonoBehaviour
 {
-    // 0 = Englisch, 1 = Deutsch, 2 = Spanisch
+    // Permanently saves the selected dialogue language (0 = English, 1 = German, 2 = Spanish)
     public void SetDialogueLanguage(int langID)
     {
         PlayerPrefs.SetInt("Language", langID);
-        PlayerPrefs.Save(); // Speichert es sofort fest auf der Festplatte
+        PlayerPrefs.Save();
     }
 }

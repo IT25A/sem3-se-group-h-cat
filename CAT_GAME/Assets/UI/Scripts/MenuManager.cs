@@ -25,11 +25,11 @@ public class MenuManager : MonoBehaviour
     public GameObject creditsPanel;
     public GameObject notifyHistory;
 
-    public GameObject openButton;    
+    public GameObject openButton;
     public GameObject closeButton;
 
     [Header("Settings")]
-    public string gameSceneName = "Scene 1"; //hier GameScene name ändern
+    public string gameSceneName = "Scene 1";
 
     [Header("LocalizationKeys")]
     public string tableName = "UI_TextTable";
@@ -39,6 +39,7 @@ public class MenuManager : MonoBehaviour
 
         string currentSceneName = SceneManager.GetActiveScene().name;
 
+        // Depending on the game state, play either the main menu music or the scene's background music
         if (!SceneData.isGameStarted)
         {
             if (menuMusic != null) menuMusic.Play();
@@ -60,6 +61,7 @@ public class MenuManager : MonoBehaviour
             }
         }
 
+        // If the game is already running (e.g., after a scene transition), directly activate the in-game UI
         if (SceneData.isGameStarted)
         {
             SetGameState(GameState.Playing);
@@ -161,6 +163,8 @@ public class MenuManager : MonoBehaviour
             SceneData.savedWater = 100f;
             waterManager.StartWaterDecrease();
         }
+        SceneData.savedFood = 0;
+        TaskCollectibleState.ResetTaskCollectibles();
         SetGameState(GameState.Playing);
     }
 
@@ -178,19 +182,19 @@ public class MenuManager : MonoBehaviour
 
     public void ShowStartPanel()
     {
-        startPanel.SetActive(true);
-        settingsPanel.SetActive(false);
-        pausePanel.SetActive(false);
-        inGamePanel.SetActive(false);
-        endPanel.SetActive(false);
-        creditsPanel.SetActive(false);
+       if (startPanel != null) startPanel.SetActive(true);
+       if (settingsPanel != null) settingsPanel.SetActive(false);
+       if (pausePanel != null) pausePanel.SetActive(false);
+       if (inGamePanel != null) inGamePanel.SetActive(false);
+       if (endPanel != null) endPanel.SetActive(false);
+       if (creditsPanel != null) creditsPanel.SetActive(false);
     }
 
     public void QuitToMainMenu()
     {
         SceneData.isGameStarted = false;
 
-        // Destroy the persistent player so Scene 1 spawns its default player
+        // Destroy the persistent player so the default player is spawned again when reloading the starting scene
         PersistentPlayer player = FindAnyObjectByType<PersistentPlayer>();
         if (player != null)
         {
@@ -296,15 +300,22 @@ public class MenuManager : MonoBehaviour
         SetGameState(GameState.Playing);
         gameOver.SetActive(false);
         SceneData.savedWater = 100f;
-        //Scene activeScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(gameSceneName);
-
+        SceneManager.LoadScene("Scene 1");
+        StartGame();
     }
 
     public void FinishGame()
     {
         SetGameState(GameState.GameOver);
         endPanel.SetActive(true);
+    }
+
+    // Resets the game state after the end screen and loads the starting scene with the main menu active
+    public void ReturnToMainMenuFromEnd()
+    {
+        SceneData.isGameStarted = false;
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(gameSceneName);
     }
 
     public void CloseNotify()

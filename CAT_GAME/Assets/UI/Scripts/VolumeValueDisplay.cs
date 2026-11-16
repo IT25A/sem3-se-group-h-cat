@@ -47,14 +47,12 @@ public class VolumeValueDisplay : MonoBehaviour
     {
         if (audioMixer == null) return;
 
-        // Convert 0–100 to 0.0001–1.0 (avoids log10 of 0)
+        // Clamp percentage (0-100) to 0.0001-1.0 to avoid log10(0) and convert to decibels (-80 dB to 0 dB)
         float linear = Mathf.Clamp(sliderValue / 100f, 0.0001f, 1f);
-
-        // Convert to Decibels (-80 dB to 0 dB)
         float dB = Mathf.Log10(linear) * 20f;
 
         if (sliderValue <= 0f)
-            dB = -80f; // Complete silence at 0
+            dB = -80f; // Complete silence at 0%
 
         audioMixer.SetFloat(exposedParam, dB);
     }    
