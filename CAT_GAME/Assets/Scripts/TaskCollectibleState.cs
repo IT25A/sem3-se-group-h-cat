@@ -17,6 +17,9 @@ public static class TaskCollectibleState
     public static bool keyNotificationSent = false;
     public static bool woodNotificationSent = false;
 
+    // True once Leo's key task has been selected; the tree only drops the key after this
+    public static bool keyQuestStarted = false;
+
     // Stores the unique IDs of all already collected items
     private static readonly HashSet<string> collectedIds = new HashSet<string>();
 
@@ -24,6 +27,7 @@ public static class TaskCollectibleState
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     private static void Init()
     {
+        keyQuestStarted = false;
         ResetTaskCollectibles();
     }
 
