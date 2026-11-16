@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 
 public static class TaskCollectibleState
@@ -18,10 +18,10 @@ public static class TaskCollectibleState
     public static bool keyNotificationSent = false;
     public static bool woodNotificationSent = false;
 
-    // Stores unique IDs of collectibles picked up during the current task
+    // Stores the unique IDs of all already collected items
     private static readonly HashSet<string> collectedIds = new HashSet<string>();
 
-    // Ensures clean state when entering Play Mode in the Unity Editor
+    // Cleanly resets counters when entering Play Mode in the Unity Editor
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     private static void Init()
     {
@@ -98,7 +98,7 @@ public static class TaskCollectibleState
         WoodCount++;
     }
 
-    // Call this when your task/event is completed!
+    // Resets all counters and notification flags after completing a quest
     public static void ResetTaskCollectibles()
     {
         EggCount = 0;
@@ -115,7 +115,6 @@ public static class TaskCollectibleState
         keyNotificationSent = false;
         woodNotificationSent = false;
 
-        //collectedIds.Clear();
         Debug.Log("Task collectibles wurden zurückgesetzt.");
     }
 

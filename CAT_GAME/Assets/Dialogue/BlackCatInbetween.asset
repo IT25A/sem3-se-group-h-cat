@@ -15,11 +15,11 @@ MonoBehaviour:
   npcName: Luna
   npcPortrait: {fileID: 1249528229709072894, guid: 73cbac8e7f0394358b49d788852c3611, type: 3}
   dialogueLines:
-  - "Ich m\xF6chte alle Blumen zu meinem Geburtstag haben. Bitte such weiter!"
+  - Those certainly aren't all the blue daisies. Please keep looking!
   germanLines:
-  - "Ich m\xF6chte viel Blumen f\xFCr meinen Geburtstag haben. Bitte such weiter!"
+  - "Das sind sicher nicht alle blauen G\xE4nsebl\xFCmchen. Bitte such weiter!"
   spanishLines:
-  - "Quiero todas las flores para mi cumplea\xF1os. \xA1Por favor, seguid buscando!"
+  - "Seguro que estas no son todas las margaritas azules. \xA1Sigue buscando, por favor!"
   autoProgressLines: 01000000y
   autoProgressDelay: 1.5
   endDialogueLines: 

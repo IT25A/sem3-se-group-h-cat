@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Detects collected eggs and flowers via trigger collision and registers them in the global quest state
 public class PlayerCollector : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)

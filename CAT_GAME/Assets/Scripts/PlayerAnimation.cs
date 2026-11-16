@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-	[Header("Referenzen")]
+	[Header("References")]
 	public Animator animator;
 	public SpriteRenderer spriteRenderer;
 	public Rigidbody2D rb;
@@ -20,17 +20,16 @@ public class PlayerAnimation : MonoBehaviour
 
 		Vector2 velocity = rb.linearVelocity;
 
-		// Ausrichtung der Katze
+		// Flip sprite based on horizontal movement direction and control walking animation
 		if (velocity.x < -0.01f)
 		{
-			spriteRenderer.flipX = true; // Nach links
+			spriteRenderer.flipX = true;
 		}
 		else if (velocity.x > 0.01f)
 		{
-			spriteRenderer.flipX = false; // Nach rechts
+			spriteRenderer.flipX = false;
 		}
 
-		// Geht die Katze gerade? (Prüft, ob überhaupt Bewegung stattfindet)
 		bool isMoving = velocity.sqrMagnitude > 0.01f;
 		animator.SetBool("isWalking", isMoving);
 	}
