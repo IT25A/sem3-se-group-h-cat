@@ -7638,7 +7638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e86649fe23257e4086e5fa6e3d2fcd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnPoint
-  spawnID: Scene 4
+  spawnID: Scene4_DF
 --- !u!4 &1708932210
 Transform:
   m_ObjectHideFlags: 0
@@ -8255,8 +8255,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneTransition
   targetSceneName: Dark Forest
-  targetSpawnID: Scene5
-  returnID: Scene4
+  targetSpawnID: DarkForest
+  returnID: Scene4_DF
   isLocked: 0
 --- !u!4 &2068491302
 Transform:
@@ -8267,7 +8267,7 @@ Transform:
   m_GameObject: {fileID: 2068491298}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.97, y: -1.93, z: 0}
+  m_LocalPosition: {x: 14.77, y: -1.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
