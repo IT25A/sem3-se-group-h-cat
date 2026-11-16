@@ -9,6 +9,7 @@ public static class TaskCollectibleState
     public static int KeyCount { get; private set; } = 0;
     public static int SimbaNecklaceCount { get; private set; } = 0;
     public static int WoodCount { get; private set; } = 0;
+    public static int HealingPlantCount { get; private set; } = 0;
 
     public static bool eggNotificationSent = false;
     public static bool flowerNotificationSent = false;
@@ -16,6 +17,7 @@ public static class TaskCollectibleState
     public static bool simbaNecklaceNotificationSent = false;
     public static bool keyNotificationSent = false;
     public static bool woodNotificationSent = false;
+    public static bool HealingPlantNotificationSent = false;
 
     // Stores the unique IDs of all already collected items
     private static readonly HashSet<string> collectedIds = new HashSet<string>();
@@ -89,6 +91,18 @@ public static class TaskCollectibleState
         WoodCount++;
     }
 
+    public static void RegisterHealingPlant(string id)
+    {
+        if (!string.IsNullOrEmpty(id))
+        {
+            if (!collectedIds.Contains(id))
+            {
+                collectedIds.Add(id);
+                HealingPlantCount++;
+            }
+        }
+    }
+
     // Resets all counters and notification flags after completing a quest
     public static void ResetTaskCollectibles()
     {
@@ -98,6 +112,7 @@ public static class TaskCollectibleState
         SimbaNecklaceCount = 0;
         KeyCount = 0;
         WoodCount = 0;
+        HealingPlantCount = 0;
 
         eggNotificationSent = false;
         flowerNotificationSent = false;
@@ -105,6 +120,7 @@ public static class TaskCollectibleState
         simbaNecklaceNotificationSent = false;
         keyNotificationSent = false;
         woodNotificationSent = false;
+        HealingPlantNotificationSent = false;
 
         Debug.Log("Task collectibles wurden zurückgesetzt.");
     }
