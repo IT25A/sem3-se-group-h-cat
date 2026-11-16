@@ -1,12 +1,11 @@
 using UnityEngine;
 
-// Automatically switches to the next scene once the required amount of dry food is reached
 public class NextLevelManager:MonoBehaviour {
 
     [Header("Scenes")]
-    public string Scene1 = "GameScene";
-    public string Scene2 = "GameScene";
-    public string Scene3 = "GameScene";
+    public string Scene1 = "GameScene"; //hier GameScene name ändern
+    public string Scene2 = "GameScene"; //hier GameScene name ändern
+    public string Scene3 = "GameScene"; //hier GameScene name ändern
 
     [Header("Items")]
     public int Trockenfutter = 100;

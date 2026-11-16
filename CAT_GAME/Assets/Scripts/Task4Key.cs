@@ -22,7 +22,6 @@ public class Task4Key : MonoBehaviour
     {
         if (npcTalk == null || rewardGiven) return;
 
-        // Track when the completion dialogue (AfterKey) is active and only grant the reward after the dialogue closes
         if (npcTalk.IsTalking())
         {
             if (npcTalk.dialogueData == npcTalk.AfterKey)

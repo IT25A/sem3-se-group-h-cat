@@ -5,7 +5,7 @@ using System.Reflection;
 public class NPCDoorLock : MonoBehaviour
 {
     [Header("Lock Configuration")]
-    [Tooltip("NPC GameObject the player must talk to in order to unlock this door")]
+    [Tooltip("Drag the NPC GameObject here that the player needs to talk to.")]
     public GameObject targetNPC;
 
     private SceneTransition sceneTransition;
@@ -14,9 +14,10 @@ public class NPCDoorLock : MonoBehaviour
 
     void Start()
     {
+        // Get the reference to the SceneTransition on this same GameObject (the door)
         sceneTransition = GetComponent<SceneTransition>();
 
-        // Lock the door by default on start
+        // Lock the door right at the start
         if (sceneTransition != null)
         {
             sceneTransition.isLocked = true;
@@ -25,11 +26,12 @@ public class NPCDoorLock : MonoBehaviour
 
     void Update()
     {
+        // If it's already unlocked, we don't need to keep checking
         if (hasSpokenToNPC) return;
 
         if (targetNPC != null && sceneTransition != null)
         {
-            // Reads 'isDialogueActive' via reflection from NPCTalk to monitor the conversation state
+            // Use Reflection to read 'isDialogueActive' from NPCTalk without modifying its script
             Component npcTalkComponent = targetNPC.GetComponent("NPCTalk");
             if (npcTalkComponent != null)
             {
@@ -38,15 +40,17 @@ public class NPCDoorLock : MonoBehaviour
                 {
                     bool isDialogueActive = (bool)activeField.GetValue(npcTalkComponent);
 
+                    // Detect the dialogue lifecycle:
+                    // 1. The dialogue becomes active (wasDialogueActive turns true)
                     if (isDialogueActive)
                     {
                         wasDialogueActive = true;
                     }
-                    // Permanently unlock the door as soon as the previously active dialogue has ended
+                    // 2. The dialogue was active and now becomes inactive -> Means the conversation ended
                     else if (wasDialogueActive && !isDialogueActive)
                     {
                         hasSpokenToNPC = true;
-                        sceneTransition.isLocked = false;
+                        sceneTransition.isLocked = false; // Unlock the door!
                         Debug.Log("NPC dialogue finished! Door unlocked.");
                     }
                 }

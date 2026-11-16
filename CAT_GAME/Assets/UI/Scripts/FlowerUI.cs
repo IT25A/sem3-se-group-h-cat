@@ -3,7 +3,7 @@ using TMPro;
 
 public class FlowerUI : MonoBehaviour
 {
-    [Header("UI Elements")]
+    [Header("UI Elemente")]
     public GameObject flowerPanel;     
     public TextMeshProUGUI flowerText; 
 
@@ -22,7 +22,6 @@ public class FlowerUI : MonoBehaviour
         int count = FlowerQuestManager.Instance.currentFlowerCount;
         bool isCompleted = FlowerQuestManager.Instance.finalDialogueFinished;
 
-        // Only display the flower UI while at least one flower has been collected and the final dialogue is still pending
         if (count > 0 && !isCompleted)
         {
             if (flowerPanel != null && !flowerPanel.activeSelf)

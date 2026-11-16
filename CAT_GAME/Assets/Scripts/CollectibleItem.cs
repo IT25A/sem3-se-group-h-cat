@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CollectibleItem : MonoBehaviour
 {
@@ -16,64 +16,35 @@ public class CollectibleItem : MonoBehaviour
     [Header("Collectible Settings")]
     public CollectibleType type;
 
-    [Tooltip("Unique ID to persist collection state across scene transitions")]
+    [Tooltip("Unique ID for saving/tracking state")]
     public string uniqueId;
-
-    private Collider2D eggCollider;
-    private Collider2D collarCollider;
 
     private void Awake()
     {
-        // Generate a fallback ID if none was assigned in the Inspector
         if (string.IsNullOrEmpty(uniqueId))
         {
             uniqueId = System.Guid.NewGuid().ToString();
         }
-
-        eggCollider = GetComponent<Collider2D>();
-
     }
 
     private void Start()
     {
-        // Hide items that have already been collected when loading the scene
         if (TaskCollectibleState.IsCollected(uniqueId))
         {
             gameObject.SetActive(false);
-        }
-        if (type == CollectibleType.Egg)
-        {
-            eggCollider.isTrigger = NPCTalk.isEggTaskstarted;
-        }
-    }
-
-    private void Update()
-    {
-        // Only enable the trigger for eggs and the collar once the respective quest has been started in dialogue
-        if (type == CollectibleType.Egg && !eggCollider.isTrigger)
-        {
-            eggCollider.isTrigger = NPCTalk.isEggTaskstarted;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log($"Player entered trigger for {type} collectible with ID: {uniqueId}");
         if (other.CompareTag("Player"))
         {
-            // Wood, eggs, and the collar can only be collected after their corresponding quest has started
+            // Restricted collection logic specifically for Wood
             if (type == CollectibleType.Wood && !FireCampTask.isTaskActive)
             {
                 return;
             }
-            if (type == CollectibleType.Egg)
-            {
-                if (!NPCTalk.isEggTaskstarted)
-                {
-                    Debug.Log("Erst mit Farmer talken");
-                    return;
-                }
-            }
+
             Collect();
         }
     }

@@ -7,19 +7,29 @@ public class SceneTransition : MonoBehaviour
     public string targetSceneName;
 
     [InspectorName("Spawn ID in New Scene")]
-    [Tooltip("Target SpawnPoint ID in the new scene. If empty, the last return point will be used.")]
+    [Tooltip("Target SpawnPoint ID. If left empty, it will default to the player's last spawn point.")]
     public string targetSpawnID;
 
     [InspectorName("ID for returning")]
-    [Tooltip("Unique ID of this transition so the target scene knows the return point.")]
+    [Tooltip("Unique ID for THIS door/transition so the target scene knows where to return.")]
     public string returnID;
 
-    // Controlled by door lock scripts (e.g., QuestDoor, NPCDoorLock) to block scene transitions
+    // We make it private so normal doors never touch it, 
+    // but QuestDoor can still modify it safely.
     [HideInInspector] public bool isLocked = false;
+
+    public bool isOneWay = false; 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
+            // If the door is locked by a quest, stop execution
+            if (isOneWay)
+            {
+                return;
+            }
+
             if (isLocked)
             {
                 return;
@@ -30,7 +40,6 @@ public class SceneTransition : MonoBehaviour
                 SceneData.LastSpawnID = returnID;
             }
 
-            // If no fixed target ID is specified, return to the last saved spawn point
             if (!string.IsNullOrEmpty(targetSpawnID))
             {
                 SceneData.TargetSpawnID = targetSpawnID;
