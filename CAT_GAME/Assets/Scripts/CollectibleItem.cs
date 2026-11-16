@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class CollectibleItem : MonoBehaviour
 {
@@ -9,42 +9,70 @@ public class CollectibleItem : MonoBehaviour
         Mouse,
         Key,
         SimbaNecklace,
-        Wood,
-        HealingPlant
+        Wood
     }
 
     [Header("Collectible Settings")]
     public CollectibleType type;
 
-    [Tooltip("Unique ID for saving/tracking state")]
+    [Tooltip("Unique ID to persist collection state across scene transitions")]
     public string uniqueId;
+
+    private Collider2D eggCollider;
+    private Collider2D collarCollider;
 
     private void Awake()
     {
+        // Generate a fallback ID if none was assigned in the Inspector
         if (string.IsNullOrEmpty(uniqueId))
         {
             uniqueId = System.Guid.NewGuid().ToString();
         }
+
+        eggCollider = GetComponent<Collider2D>();
+
     }
 
     private void Start()
     {
+        // Hide items that have already been collected when loading the scene
         if (TaskCollectibleState.IsCollected(uniqueId))
         {
             gameObject.SetActive(false);
+        }
+        if (type == CollectibleType.Egg)
+        {
+            eggCollider.isTrigger = NPCTalk.isEggTaskstarted;
+        }
+    }
+
+    private void Update()
+    {
+        // Only enable the trigger for eggs and the collar once the respective quest has been started in dialogue
+        if (type == CollectibleType.Egg && !eggCollider.isTrigger)
+        {
+            eggCollider.isTrigger = NPCTalk.isEggTaskstarted;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log($"Player entered trigger for {type} collectible with ID: {uniqueId}");
         if (other.CompareTag("Player"))
         {
-            // Restricted collection logic specifically for Wood
+            // Wood, eggs, and the collar can only be collected after their corresponding quest has started
             if (type == CollectibleType.Wood && !FireCampTask.isTaskActive)
             {
                 return;
             }
-
+            if (type == CollectibleType.Egg)
+            {
+                if (!NPCTalk.isEggTaskstarted)
+                {
+                    Debug.Log("Erst mit Farmer talken");
+                    return;
+                }
+            }
             Collect();
         }
     }
@@ -70,9 +98,6 @@ public class CollectibleItem : MonoBehaviour
                 break;
             case CollectibleType.Wood:
                 TaskCollectibleState.RegisterWood(uniqueId);
-                break;
-            case CollectibleType.HealingPlant:
-                TaskCollectibleState.RegisterHealingPlant(uniqueId);
                 break;
         }
 
