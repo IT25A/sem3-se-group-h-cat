@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System.Threading.Tasks;
-using Unity.VectorGraphics;
 
 public class QuestItemUI : MonoBehaviour
 {
@@ -15,8 +13,8 @@ public class QuestItemUI : MonoBehaviour
     public Sprite itemSprite;
     public int requiredAmount = 10;
 
-    // Maps this UI element to its corresponding collection quest
-    public enum QuestType { Task1, Task2, Task3, Task4, Task5, Task6}
+    // Added Task7 for HealingPlant
+    public enum QuestType { Task1, Task2, Task3, Task4, Task5, Task6, Task7 }
     public QuestType questType;
 
     [Header("Localization Keys")]
@@ -24,6 +22,7 @@ public class QuestItemUI : MonoBehaviour
     public string warningKey = "received_flowers";
 
     public bool f = false;
+
     void Start()
     {
         if (itemIconImage != null && itemSprite != null)
@@ -41,14 +40,14 @@ public class QuestItemUI : MonoBehaviour
         }
 
         HideUI();
-
     }
 
     void Update()
     {
         int currentCount = 0;
         f = false;
-        // Check current collection progress of the selected quest and send a notification once when the target amount is reached
+
+        // Check current collection progress of the selected quest
         switch (questType)
         {
             case QuestType.Task1:
@@ -64,24 +63,17 @@ public class QuestItemUI : MonoBehaviour
                 }
                 if (currentCount >= requiredAmount && !TaskCollectibleState.flowerNotificationSent)
                 {
-                    if (NotificationManager.Instance != null)
-                    {
-                        NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
-                        Debug.Log("Notification für" + questType + " gesendet");
-                        TaskCollectibleState.flowerNotificationSent = true;
-                    }
+                    TriggerNotification();
+                    TaskCollectibleState.flowerNotificationSent = true;
                 }
                 break;
+
             case QuestType.Task2:
                 currentCount = TaskCollectibleState.EggCount;
                 if (currentCount >= requiredAmount && !TaskCollectibleState.eggNotificationSent)
                 {
-                    if (NotificationManager.Instance != null)
-                    {
-                        NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
-                        Debug.Log("Notification für" + questType + " gesendet");
-                        TaskCollectibleState.eggNotificationSent = true;
-                    }
+                    TriggerNotification();
+                    TaskCollectibleState.eggNotificationSent = true;
                 }
                 break;
 
@@ -89,12 +81,8 @@ public class QuestItemUI : MonoBehaviour
                 currentCount = TaskCollectibleState.MouseCount;
                 if (currentCount >= requiredAmount && !TaskCollectibleState.mouseNotificationSent)
                 {
-                    if (NotificationManager.Instance != null)
-                    {
-                        NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
-                        Debug.Log("Notification für" + questType + " gesendet");
-                        TaskCollectibleState.mouseNotificationSent = true;
-                    }
+                    TriggerNotification();
+                    TaskCollectibleState.mouseNotificationSent = true;
                 }
                 break;
 
@@ -102,12 +90,8 @@ public class QuestItemUI : MonoBehaviour
                 currentCount = TaskCollectibleState.KeyCount;
                 if (currentCount >= requiredAmount && !TaskCollectibleState.keyNotificationSent)
                 {
-                    if (NotificationManager.Instance != null)
-                    {
-                        NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
-                        Debug.Log("Notification für" + questType + " gesendet");
-                        TaskCollectibleState.keyNotificationSent = true;
-                    }
+                    TriggerNotification();
+                    TaskCollectibleState.keyNotificationSent = true;
                 }
                 break;
 
@@ -115,12 +99,8 @@ public class QuestItemUI : MonoBehaviour
                 currentCount = TaskCollectibleState.SimbaNecklaceCount;
                 if (currentCount >= requiredAmount && !TaskCollectibleState.simbaNecklaceNotificationSent)
                 {
-                    if (NotificationManager.Instance != null)
-                    {
-                        NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
-                        Debug.Log("Notification für" + questType + " gesendet");
-                        TaskCollectibleState.simbaNecklaceNotificationSent = true;
-                    }
+                    TriggerNotification();
+                    TaskCollectibleState.simbaNecklaceNotificationSent = true;
                 }
                 break;
 
@@ -128,12 +108,18 @@ public class QuestItemUI : MonoBehaviour
                 currentCount = TaskCollectibleState.WoodCount;
                 if (currentCount >= requiredAmount && !TaskCollectibleState.woodNotificationSent)
                 {
-                    if (NotificationManager.Instance != null)
-                    {
-                        NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
-                        Debug.Log("Notification für" + questType + " gesendet");
-                        TaskCollectibleState.woodNotificationSent = true;
-                    }
+                    TriggerNotification();
+                    TaskCollectibleState.woodNotificationSent = true;
+                }
+                break;
+
+            // --- NUEVO: Task7 para la HealingPlant ---
+            case QuestType.Task7:
+                currentCount = TaskCollectibleState.HealingPlantCount;
+                if (currentCount >= requiredAmount && !TaskCollectibleState.HealingPlantNotificationSent)
+                {
+                    TriggerNotification();
+                    TaskCollectibleState.HealingPlantNotificationSent = true;
                 }
                 break;
         }
@@ -152,6 +138,16 @@ public class QuestItemUI : MonoBehaviour
         else
         {
             HideUI();
+        }
+    }
+
+    // Helper method to avoid code repetition for notifications
+    private void TriggerNotification()
+    {
+        if (NotificationManager.Instance != null)
+        {
+            NotificationManager.Instance.ShowLocalizedNotification(tableName, warningKey);
+            Debug.Log($"Notification für {questType} gesendet");
         }
     }
 
