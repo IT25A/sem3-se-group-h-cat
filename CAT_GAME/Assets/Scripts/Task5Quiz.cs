@@ -8,8 +8,6 @@ public class Task5Quiz : MonoBehaviour
     private bool wasInCorrectDialogue = false;
     private NPCChoiceTalk npcTalk;
 
-    [Header("Quiz State")]
-    public bool playerWonQuiz = false;
     void Start()
     {
         npcTalk = GetComponent<NPCChoiceTalk>();
@@ -23,27 +21,30 @@ public class Task5Quiz : MonoBehaviour
     {
         if (npcTalk == null || rewardGiven) return;
 
-        // Only grant the reward after the quiz has been solved and the dialogue window is closed
-        if (playerWonQuiz && !npcTalk.IsTalking())
+        if (npcTalk.IsTalking())
         {
-            GiveRewardAndNotification();
+            if (npcTalk.dialogueData == npcTalk.AfterMouse && npcTalk.GetCurrentIndex() == npcTalk.quizCorrectAnswerIndex)
+            {
+                wasInCorrectDialogue = true;
+            }
         }
-    }
-
-    private void GiveRewardAndNotification()
-    {
-        rewardGiven = true;
-        playerWonQuiz = false;
-
-        if (FoodManager.Instance != null)
+        else if (wasInCorrectDialogue)
         {
-            FoodManager.Instance.AddFood(reward);
-            Debug.Log($"[Task5Quiz] {reward} Food erfolgreich nach dem Beenden des Dialogs hinzugefügt!");
-            SceneData.isQuizFireWoodKeyCompleted = true;
-        }
-        else
-        {
-            Debug.LogError("[Task5Quiz] FoodManager.Instance ist NULL!");
+            Debug.Log("[Task5Quiz] Quiz-Hint-Dialog beendet. Belohnung wird vergeben!");
+
+            rewardGiven = true;
+            wasInCorrectDialogue = false;
+
+            if (FoodManager.Instance != null)
+            {
+                FoodManager.Instance.AddFood(reward);
+                Debug.Log($"[Task5Quiz] {reward} Food erfolgreich nach dem Quiz hinzugefügt!");
+                SceneData.isQuizFireWoodKeyCompleted = true;
+            }
+            else
+            {
+                Debug.LogError("[Task5Quiz] FoodManager.Instance ist NULL!");
+            }
         }
     }
 }

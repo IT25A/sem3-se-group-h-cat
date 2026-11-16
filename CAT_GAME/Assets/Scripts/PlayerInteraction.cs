@@ -3,42 +3,35 @@ using UnityEngine.InputSystem;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    [Header("Settings")]
+    [Header("Einstellungen")]
     public float interactionRadius = 1.0f;
     public LayerMask interactableLayer; 
 
-    // Sent by the Input System
+    // Wird vom Input System gesendet
     void OnInteract(InputValue value)
     {
         if (value.isPressed)
         {
             Debug.Log("E-Taste wurde gedrückt");
 
-            // Priority 1: If a dialogue is already active, advance it
-            if (NPCTalk.activeTalker != null && NPCTalk.activeTalker.isDialogueActive)
-            {
-                NPCTalk.activeTalker.Interact();
-                return;
-            }
-
             Collider2D[] hitObjects = Physics2D.OverlapCircleAll(transform.position, interactionRadius);
 
-            // Trigger the first valid interactable object within range (excluding the player itself)
             if (hitObjects.Length > 0)
             {
                 bool interacted = false;
 
+                // Wir durchsuchen alle getroffenen Collider nach einem IInteractable
                 foreach (var hit in hitObjects)
                 {
-                    if (hit.gameObject != this.gameObject)
+                    if (hit.gameObject != this.gameObject) // Ignoriere den Spieler
                     {
                         IInteractable target = hit.GetComponent<IInteractable>();
-                        if (target != null && target.CanInteract())
+                        if (target != null)
                         {
                             target.Interact();
                             interacted = true;
                             Debug.Log("DIAGNOSE: Interaktion mit " + hit.gameObject.name + " erfolgreich ausgelöst!");
-                            break;
+                            break; // Sobald ein Ziel gefunden wurde, abbrechen
                         }
                     }
                 }

@@ -4,9 +4,9 @@ using UnityEngine;
 public class FlowerQuestCheck : MonoBehaviour
 {
 
-    public NPCDialogue startDialog;     // Initial dialogue: task to collect 10 flowers
-    public NPCDialogue inbetweenDialog; // Intermediate dialogue: not enough flowers collected yet
-    public NPCDialogue finalDialog;     // Final dialogue: all 10 flowers have been collected
+    public NPCDialogue startDialog;       // 1. "Sammle 10 Blumen!"
+    public NPCDialogue inbetweenDialog; // 2. "Du hast erst x Blumen..."
+    public NPCDialogue finalDialog;      // 3. "Klasse, geh zur Treppe!"
 
     [Header("Reward")]
     public int reward = 10;
@@ -16,14 +16,17 @@ public class FlowerQuestCheck : MonoBehaviour
     void Start()
     {
         npcTalk = GetComponent<NPCTalk>();
+
+        // Ganz am Anfang legen wir den 1. Dialog ein
         npcTalk.dialogueData = startDialog;
     }
 
     void Update()
     {
-        // Detects when the final dialogue finishes in order to grant the reward once
+        // SICHERHEITS-CHECK: Wird gerade gesprochen?
         if (dialogueActive && !npcTalk.isDialogueActive)
         {
+            // Wenn Simba gerade den allerersten Text liest, merkt sich das Skript
             if (npcTalk.dialogueData == finalDialog && SceneData.flowerQuestCompleted == false)
             {
                 if (FlowerQuestManager.Instance != null)
@@ -31,6 +34,7 @@ public class FlowerQuestCheck : MonoBehaviour
                     FlowerQuestManager.Instance.finalDialogueFinished = true;
                 }
 
+                // Wir brechen hier ab, damit der Text nicht mitten im Sprechen ausgetauscht wird
                 if (FoodManager.Instance != null)
                 {
                     FoodManager.Instance.AddFood(reward);
@@ -48,7 +52,7 @@ public class FlowerQuestCheck : MonoBehaviour
 
         }
 
-        // Only update dialogue data when the dialogue window is closed to prevent switching text mid-conversation
+        // Wenn das Fenster GESCHLOSSEN ist, bereiten wir den Text für das nächste Ansprechen vor:
         if (npcTalk.isDialogueActive)
         {
             return;

@@ -3,10 +3,10 @@ using System.Collections;
 
 public class AutoDialogueScene3 : MonoBehaviour
 {
-    [Header("Settings")]
+    [Header("Einstellungen")]
     public NPCTalk targetDialogue;
     public float delay = 0.5f;
-    [Tooltip("How long each line stays visible after finishing typing before advancing or closing.")]
+    [Tooltip("Wie lange soll jede Zeile nach dem Fertigtippen stehen bleiben, bevor die nächste kommt / geschlossen wird?")]
     public float pauseBetweenLines = 1.0f; 
 
     void Start()
@@ -19,12 +19,15 @@ public class AutoDialogueScene3 : MonoBehaviour
 
     IEnumerator TriggerAndAutoPlayAllLines()
     {
+        // 1. Warten bis der Dialog starten soll (0.5s)
         yield return new WaitForSeconds(delay);
+        
+        // 2. Erste Zeile starten
         targetDialogue.StartDialogue();
 
         if (targetDialogue.dialogueData != null)
         {
-            // Load language-specific lines to accurately calculate typing duration per line
+            // Aktuelle Sprache herausfinden
             int lang = PlayerPrefs.GetInt("Language", 0);
             string[] lines = targetDialogue.dialogueData.dialogueLines;
             
@@ -35,15 +38,19 @@ public class AutoDialogueScene3 : MonoBehaviour
 
             if (lines != null && lines.Length > 0)
             {
+                // 3. Jede Zeile durchgehen
                 for (int i = 0; i < lines.Length; i++)
                 {
-                    // Calculate typing duration from character count and typing speed (+ 0.1s buffer)
+                    // Exakte Tippdauer für die aktuelle Zeile (i) berechnen + 0.1s kleiner Puffer
                     float typingDuration = (lines[i].Length * targetDialogue.dialogueData.typingSpeed) + 0.1f;
+
+                    // Warten, bis die Zeile fertig getippt ist + 1 Sekunde Lesezeit
                     yield return new WaitForSeconds(typingDuration + pauseBetweenLines);
 
+                    // Wenn es NICHT die letzte Zeile ist -> nächste Zeile starten
                     if (i < lines.Length - 1)
                     {
-                        targetDialogue.Interact();
+                        targetDialogue.Interact(); // Springt automatisch zur nächsten Zeile (NextLine)
                     }
                 }
             }
@@ -53,6 +60,7 @@ public class AutoDialogueScene3 : MonoBehaviour
             yield return new WaitForSeconds(2.0f);
         }
 
+        // 4. Nach der letzten Zeile (+ 1 Sekunde) Dialogbox schließen
         targetDialogue.EndDialogue();
     }
 }

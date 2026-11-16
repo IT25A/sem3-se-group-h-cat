@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-// Allows refilling the water supply by pressing E while the player is inside the trigger zone
 public class WaterRefillTrigger : MonoBehaviour {
     [Header("Refill Settings")]
     public float refillAmount = 50f;
