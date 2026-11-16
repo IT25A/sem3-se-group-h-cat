@@ -112,23 +112,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 11530392715423744
-    m_Key: received_collar
+    m_Key: "received_collar\t"
     m_Metadata:
       m_Items: []
   - m_Id: 11530525309956096
     m_Key: received_wood
-    m_Metadata:
-      m_Items: []
-  - m_Id: 12880685780725760
-    m_Key: endText
-    m_Metadata:
-      m_Items: []
-  - m_Id: 12880797391155200
-    m_Key: endtyText
-    m_Metadata:
-      m_Items: []
-  - m_Id: 13717435176480768
-    m_Key: restartBtn
     m_Metadata:
       m_Items: []
   m_Metadata:
