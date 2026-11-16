@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb109fa977984832b53154bd07d68f7, type: 3}
   m_Name: WoundedDogDialogue
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
-  npcName: Luna
+  npcName: Mina
   npcPortrait: {fileID: 2026334582315897720, guid: ea1fa3722cdf0334c97542233974212c, type: 3}
   dialogueLines:
-  - I'm bleeding. Please bring me to a doctor called Cami
+  - Hi, little cat. Please take me to a doctor... I bumped into a rock. I'm also afraid to go by myself.
   germanLines:
-  - "Ich blute. Bitte bring mich zu einer \xC4rztin namens Cami."
+  - "Hallo, kleine Katze. Bitte bring mich zu einem Arzt... Ich habe mich an einem Stein angesto\xDFen. Ich habe auch Angst, alleine zu gehen."
   spanishLines:
-  - "Estoy sangrando. Por favor, ll\xE9vame con un doctor llamado Cami."
+  - "Hola, gatito. Por favor, ll\xE9vame al m\xE9dico... Me he dado un golpe con una piedra. Adem\xE1s, me da miedo ir solo."
   autoProgressLines: 
   autoProgressDelay: 1.5
   endDialogueLines: 

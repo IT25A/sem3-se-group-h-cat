@@ -118,6 +118,26 @@ MonoBehaviour:
     m_Localized: '- Encontrar un hogar - '
     m_Metadata:
       m_Items: []
+  - m_Id: 12880685780725760
+    m_Localized: The End
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12880797391155200
+    m_Localized: "\xA1Gracias por jugar!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11530525309956096
+    m_Localized: 'Ya has recibido toda la madera. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11530392715423744
+    m_Localized: "\xA1Ya has encontrado tu collar!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13717435176480768
+    m_Localized: Reiniciar
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

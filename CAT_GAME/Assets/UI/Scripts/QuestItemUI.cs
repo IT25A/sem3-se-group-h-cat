@@ -6,16 +6,17 @@ using Unity.VectorGraphics;
 
 public class QuestItemUI : MonoBehaviour
 {
-    [Header("UI Elemente")]
+    [Header("UI Elements")]
     public CanvasGroup canvasGroup;
     public Image itemIconImage;
     public TextMeshProUGUI itemText;
 
-    [Header("Gegenstands-Einstellungen")]
+    [Header("Item Settings")]
     public Sprite itemSprite;
     public int requiredAmount = 10;
 
-    public enum QuestType { Task1, Task2, Task3, Task4, Task5, Task6} //arten der task für switch 
+    // Maps this UI element to its corresponding collection quest
+    public enum QuestType { Task1, Task2, Task3, Task4, Task5, Task6}
     public QuestType questType;
 
     [Header("Localization Keys")]
@@ -25,13 +26,11 @@ public class QuestItemUI : MonoBehaviour
     public bool f = false;
     void Start()
     {
-        // Bild zuweisen
         if (itemIconImage != null && itemSprite != null)
         {
             itemIconImage.sprite = itemSprite;
         }
 
-        // CanvasGroup automatisch holen
         if (canvasGroup == null)
         {
             canvasGroup = GetComponent<CanvasGroup>();
@@ -49,6 +48,7 @@ public class QuestItemUI : MonoBehaviour
     {
         int currentCount = 0;
         f = false;
+        // Check current collection progress of the selected quest and send a notification once when the target amount is reached
         switch (questType)
         {
             case QuestType.Task1:

@@ -1,29 +1,64 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShadowFollower : MonoBehaviour
+public class ShadowFollower : MonoBehaviour, IInteractable
 {
-    [Header("Referenzen")]
-    public Transform playerTarget; // Ziehe deinen Spieler hier rein
+    [Header("References")]
+    public Transform playerTarget;
     public Rigidbody2D rb;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
     public bool isFollowing = false;
     public float stopDistance = 0.5f;
-    public void StartFollowing() => isFollowing = true;
 
-    [Header("Verzögerung")]
-    [Tooltip("Wie viele Positionen soll der NPC abwarten, bevor er losläuft?")]
+    [Header("Delay")]
+    [Tooltip("How many recorded positions should the NPC wait before starting to move?")]
     public int delayFrames = 25; 
-    public float moveSpeed = 5f; // Sollte exakt der Speed deines Spielers sein
+    public float moveSpeed = 5f;
 
-    // Die Liste, die die alten Positionen des Spielers speichert
+    [Header("Doctor Stay Settings")]
+    public Transform doctorTarget;
+    [Tooltip("Position offset relative to the doctor when the dog stays there (e.g., -1.2 for left, +1.2 for right)")]
+    public Vector2 doctorOffset = new Vector2(-1.2f, 0f);
+    public bool hasStayedAtDoctor = false;
+
+    // Buffer of past player positions to follow the player along the same path with a delay
     private Queue<Vector2> positionHistory = new Queue<Vector2>();
 
     void Start()
     {
+        NPCTalk npcTalk = GetComponent<NPCTalk>();
+        if (npcTalk != null)
+        {
+            npcTalk.onDialogueEnded.AddListener(StartFollowing);
+        }
+
+        // Automatically find the Doctor NPC in the scene if not assigned in the Inspector
+        if (doctorTarget == null)
+        {
+            NPCTalk[] allNpcs = FindObjectsByType<NPCTalk>(FindObjectsSortMode.None);
+            foreach (NPCTalk talker in allNpcs)
+            {
+                if (talker.gameObject.name == "Doctor" || (talker.dialogueData != null && talker.dialogueData.npcName != null && talker.dialogueData.npcName.Contains("Doctor")))
+                {
+                    doctorTarget = talker.transform;
+                    break;
+                }
+            }
+        }
+
+        if (doctorTarget != null)
+        {
+            NPCTalk doctorTalk = doctorTarget.GetComponent<NPCTalk>();
+            if (doctorTalk != null)
+            {
+                doctorTalk.onDialogueEnded.AddListener(StayAtDoctorPosition);
+            }
+        }
+
         if (rb == null) rb = GetComponent<Rigidbody2D>();
 
+        // Disable physical collision between the player and the follower so the follower does not block the player
         Collider2D myCollider = GetComponent<Collider2D>();
         if (myCollider != null && playerTarget != null)
         {
@@ -35,21 +70,67 @@ public class ShadowFollower : MonoBehaviour
             }
         }
     }
+    public void StartFollowing()
+    {
+        isFollowing = true;
+    }
+
+    public void Interact()
+    {
+        if (CanInteract())
+        {
+            StartFollowing();
+        }
+    }
+
+    public bool CanInteract()
+    {
+        return !isFollowing && !hasStayedAtDoctor;
+    }
+
+    // Permanently places the follower next to the doctor and stops following
+    public void StayAtDoctorPosition()
+    {
+        if (hasStayedAtDoctor || !isFollowing) return;
+
+        hasStayedAtDoctor = true;
+        isFollowing = false;
+        positionHistory.Clear();
+
+        if (doctorTarget != null)
+        {
+            transform.position = (Vector2)doctorTarget.position + doctorOffset;
+        }
+
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
+
+        if (animator != null)
+        {
+            animator.SetBool("isWalking", false);
+        }
+
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.flipX = doctorOffset.x >= 0;
+        }
+
+        this.enabled = false;
+    }
+
 
     void FixedUpdate()
     {
-        if (playerTarget == null) return;
+        if (playerTarget == null || !isFollowing) return;
 
-        // 1. Speichere die aktuelle Position des Spielers ab
         positionHistory.Enqueue(playerTarget.position);
-
-        // 2. Warte, bis der Puffer voll ist (Verzögerung)
-        if (positionHistory.Count > delayFrames)
+            
+        // Only start moving once enough positions have been stored in the delay buffer
+        if (positionHistory.Count > delayFrames )
         {
-            // 3. Hole die älteste gespeicherte Position aus der Liste
             Vector2 targetPosition = positionHistory.Dequeue();
-
-            // 4. Bewege den NPC zu dieser Position
             Vector2 currentPos = transform.position;
             float distance = Vector2.Distance(currentPos, playerTarget.position);
 
@@ -67,7 +148,6 @@ public class ShadowFollower : MonoBehaviour
         }
         else
         {
-            // Puffer füllt sich noch, NPC bleibt stehen
             rb.linearVelocity = Vector2.zero;
             animator.SetBool("isWalking", false);
         }
@@ -75,11 +155,9 @@ public class ShadowFollower : MonoBehaviour
 
     private void UpdateAnimation(Vector2 direction)
     {
-        // Links/Rechts drehen
         if (direction.x < -0.01f) spriteRenderer.flipX = true;
         else if (direction.x > 0.01f) spriteRenderer.flipX = false;
 
-        // Richtung an Animator senden
         if (direction.magnitude > 0.01f)
         {
             animator.SetFloat("MoveX", direction.x);
