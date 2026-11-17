@@ -131,6 +131,10 @@ MonoBehaviour:
     m_Key: restartBtn
     m_Metadata:
       m_Items: []
+  - m_Id: 14358088726114304
+    m_Key: received_healplant
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

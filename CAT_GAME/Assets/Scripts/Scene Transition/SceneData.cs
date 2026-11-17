@@ -21,7 +21,7 @@ public static class SceneData
 
     // Resets all stored runtime data on game start before loading the first scene
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-    private static void ResetOnStart() {
+    public static void ResetOnStart() {
         isGameStarted = false;
         savedWater = -1f;
         savedFood = 0;
