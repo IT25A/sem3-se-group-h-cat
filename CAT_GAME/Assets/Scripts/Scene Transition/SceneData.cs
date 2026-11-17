@@ -12,6 +12,8 @@ public static class SceneData
     public static bool mouseCatched = false;
     public static int savedKeyCount = 0;
     public static int savedWoodCount = 0;
+    public static bool isDogAtDoctor = false;
+    public static bool isDogQuestRewarded = false;
     public static bool flowerQuestCompleted = false;
     public static bool isGameStarted = false;
 
@@ -35,6 +37,8 @@ public static class SceneData
         savedNotificationHistorySprites.Clear();
         TaskCollectibleState.ClearAllCollectedData();
         flowerQuestCompleted = false;
+        isDogAtDoctor = false;
+        isDogQuestRewarded = false;
     }
 }
 

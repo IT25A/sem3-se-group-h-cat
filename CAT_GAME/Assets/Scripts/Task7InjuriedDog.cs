@@ -1,3 +1,4 @@
+using Unity.VectorGraphics;
 using UnityEngine;
 
 public class Task7InjuriedDog : MonoBehaviour
@@ -14,11 +15,15 @@ public class Task7InjuriedDog : MonoBehaviour
         {
             Debug.LogError("[Task7InjuriedDog] FEHLER: Kein NPCTalk auf diesem Objekt gefunden!");
         }
+        if (SceneData.isDogQuestRewarded)
+        {
+            rewardGiven = true; 
+        }
     }
 
     void Update()
     {
-        if (npcTalk == null || rewardGiven) return;
+        if (npcTalk == null || SceneData.isDogQuestRewarded) return;
 
         // Grant the reward once the injured dog has been delivered to the doctor and the conversation has ended
         if (npcTalk.requiredFollower.hasStayedAtDoctor && !npcTalk.IsTalking())
@@ -30,6 +35,7 @@ public class Task7InjuriedDog : MonoBehaviour
     private void GiveRewardAndNotification()
     {
         rewardGiven = true;
+        SceneData.isDogQuestRewarded = true;
 
         if (FoodManager.Instance != null)
         {

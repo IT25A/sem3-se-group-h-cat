@@ -39,12 +39,36 @@ public class ShadowFollower : MonoBehaviour, IInteractable
     {
         ResolvePlayer();
 
+        if (SceneData.isDogAtDoctor)
+        {
+            hasStayedAtDoctor = true;
+            isFollowing = false;
+            
+            FindDoctorTarget();
+            if (doctorTarget != null)
+            {
+                transform.position = (Vector2)doctorTarget.position + doctorOffset;
+            }
+
+            if (rb != null) rb.linearVelocity = Vector2.zero;
+            if (animator != null) animator.SetBool("isWalking", false);
+            if (spriteRenderer != null) spriteRenderer.flipX = doctorOffset.x >= 0;
+
+            this.enabled = false;
+            return; 
+        }
+
         NPCTalk npcTalk = GetComponent<NPCTalk>();
         if (npcTalk != null)
         {
             npcTalk.onDialogueEnded.AddListener(StartFollowing);
         }
 
+        FindDoctorTarget(); 
+    }
+
+    private void FindDoctorTarget()
+    {
         // Automatically find the Doctor NPC in the scene if not assigned in the Inspector
         if (doctorTarget == null)
         {
@@ -65,20 +89,6 @@ public class ShadowFollower : MonoBehaviour, IInteractable
             if (doctorTalk != null)
             {
                 doctorTalk.onDialogueEnded.AddListener(StayAtDoctorPosition);
-            }
-        }
-
-        if (rb == null) rb = GetComponent<Rigidbody2D>();
-
-        // Disable physical collision between the player and the follower so the follower does not block the player
-        Collider2D myCollider = GetComponent<Collider2D>();
-        if (myCollider != null && playerTarget != null)
-        {
-            Collider2D playerCollider = playerTarget.GetComponent<Collider2D>();
-
-            if (playerCollider != null)
-            {
-                Physics2D.IgnoreCollision(myCollider, playerCollider, true);
             }
         }
     }
@@ -106,6 +116,7 @@ public class ShadowFollower : MonoBehaviour, IInteractable
         if (hasStayedAtDoctor || !isFollowing) return;
 
         hasStayedAtDoctor = true;
+        SceneData.isDogAtDoctor = true; 
         isFollowing = false;
         positionHistory.Clear();
 

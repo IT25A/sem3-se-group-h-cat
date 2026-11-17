@@ -593,6 +593,8 @@ MonoBehaviour:
   noDogDialogue: {fileID: 11400000, guid: 1c130811c488b4d8ab59ad006651fa35, type: 2}
   afterItemDialogue: {fileID: 11400000, guid: 87c40f21a5e22456b920d97af9649489, type: 2}
   requiredCollectibleId: SimbaNecklace
+  requiredCollectiblePlant: HealingPlant
+  afterHealingPlantDialogue: {fileID: 11400000, guid: 4cfb9ed8b6239421c8b61aa1af77c8b7, type: 2}
   interactOnlyOnce: 0
   isDialogueActive: 0
   onDialogueEnded:
@@ -2720,6 +2722,8 @@ MonoBehaviour:
   noDogDialogue: {fileID: 0}
   afterItemDialogue: {fileID: 0}
   requiredCollectibleId: SimbaNecklace
+  requiredCollectiblePlant: HealingPlant
+  afterHealingPlantDialogue: {fileID: 0}
   interactOnlyOnce: 1
   isDialogueActive: 0
   onDialogueEnded:
@@ -7128,7 +7132,6 @@ GameObject:
   - component: {fileID: 1391768203}
   - component: {fileID: 1391768204}
   - component: {fileID: 1391768205}
-  - component: {fileID: 1391768206}
   m_Layer: 0
   m_Name: SceneTransitionEND
   m_TagString: Untagged
@@ -7214,19 +7217,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1391768206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391768202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ac3277d167cad1439f0bc340cd2b47e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::QuestDoorScene3
-  requiredFood: 100
 --- !u!1001 &1393023644
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -22,6 +22,9 @@ public class NPCTalk : MonoBehaviour, IInteractable
     [Tooltip("Dialogue when Simba has brought the dog AND collected the collar")]
     public NPCDialogue afterItemDialogue;
     public string requiredCollectibleId = "SimbaNecklace";
+    public string requiredCollectiblePlant = "HealingPlant";
+    [Tooltip("Dialogue when healing plant is collected")]
+    public NPCDialogue afterHealingPlantDialogue;
 
     [Header("Single Interaction")]
     public bool interactOnlyOnce = false;
@@ -81,7 +84,20 @@ public class NPCTalk : MonoBehaviour, IInteractable
     void Start()
     {
         patrolScript = GetComponent<NPCPatrol>();
-        isCollarTaskstarted = false;
+        if (SceneData.isDogAtDoctor)
+        {
+            isCollarTaskstarted = true;
+            if (requiredFollower != null)
+            {
+                requiredFollower.hasStayedAtDoctor = true;
+                requiredFollower.isFollowing = false;
+            }
+        }
+        else
+        {
+            isCollarTaskstarted = false;
+        }
+        
         if (SceneManager.GetActiveScene().name == "Scene 2") TaskCollectibleState.ResetTaskCollectibles();
     }
 
@@ -102,6 +118,11 @@ public class NPCTalk : MonoBehaviour, IInteractable
             }
         }
         // 2. If the dog is already at the doctor and the collar has been found:
+        else if (afterHealingPlantDialogue != null && TaskCollectibleState.IsCollected(requiredCollectiblePlant) || TaskCollectibleState.HealingPlantCount >= 1)
+        {
+            currentDialogue = afterHealingPlantDialogue;
+        }
+
         else if (afterItemDialogue != null && TaskCollectibleState.IsCollected(requiredCollectibleId))
         {
             currentDialogue = afterItemDialogue;
