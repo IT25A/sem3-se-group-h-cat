@@ -45,6 +45,8 @@ public class NPCTalk : MonoBehaviour, IInteractable
     private string[] activeLines;
     private NPCDialogue currentDialogue;
 
+    public bool isHealingPlantCollected = false; 
+
     public bool CanInteract()
     {
         if (interactOnlyOnce && hasCompletedDialogue)
@@ -86,6 +88,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
         patrolScript = GetComponent<NPCPatrol>();
         isCollarTaskstarted = false;
         if (SceneManager.GetActiveScene().name == "Scene 2") TaskCollectibleState.ResetTaskCollectibles();
+        isHealingPlantCollected = false; 
     }
 
     public void StartDialogue()
@@ -93,9 +96,11 @@ public class NPCTalk : MonoBehaviour, IInteractable
         currentDialogue = dialogueData;
 
         // 1. HÖCHSTE PRIORITÄT: Wenn Simba die Heilpflanze eingesammelt hat
-        if (DoctorAfterDialogue != null && TaskCollectibleState.HealingPlantCount > 0)
+        if (DoctorAfterDialogue != null && TaskCollectibleState.HealingPlantCount > 0 || isHealingPlantCollected)
         {
             currentDialogue = DoctorAfterDialogue;
+            TaskCollectibleState.ResetTaskCollectibles();
+            isHealingPlantCollected = true; 
         }
         // 2. ZWEITE PRIORITÄT: Wenn Simba das Halsband gefunden hat (aber noch keine Heilpflanze)
         else if (afterItemDialogue != null && TaskCollectibleState.IsCollected(requiredCollectibleId))
@@ -218,5 +223,10 @@ public class NPCTalk : MonoBehaviour, IInteractable
     public bool IsPlayingAfterItemDialogue()
     {
         return isDialogueActive && currentDialogue != null && currentDialogue == afterItemDialogue;
+    }
+
+    public bool IsPlayingAfterDoctorDialog()
+    {
+        return isDialogueActive && currentDialogue != null && currentDialogue == DoctorAfterDialogue;
     }
 }

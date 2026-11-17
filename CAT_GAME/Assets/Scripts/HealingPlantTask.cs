@@ -9,6 +9,12 @@ public class HealingPlantTask : MonoBehaviour
     [Header("Task Completion")]
     [SerializeField] private UnityEvent onTaskCompleted;
 
+    [Header("Reward")]
+    public int reward = 20;
+    private bool rewardGiven = false;
+    private bool wasInDialogue = false;
+    private NPCTalk npcTalk;
+
     private bool taskCompleted = false;
 
     // Call this method when talking to the doctor to check if the player has the plant
@@ -29,5 +35,49 @@ public class HealingPlantTask : MonoBehaviour
         {
             Debug.Log("Doctor: You still don't have the healing plant.");
         }
+    }
+
+    void Start()
+    {
+        npcTalk = GetComponent<NPCTalk>();
+        if (npcTalk == null)
+        {
+            Debug.LogError("FEHLER: Kein NPCTalk auf diesem Objekt gefunden!");
+        }
+    }
+
+    void Update()
+    {
+        if (npcTalk == null || rewardGiven) return;
+
+        // Wait until the completion dialogue after returning the collar has finished before granting the reward
+        if (npcTalk.IsPlayingAfterDoctorDialog())
+        {
+            wasInDialogue = true;
+        }
+        else if (!npcTalk.IsTalking() && wasInDialogue)
+        {
+            Debug.Log("[TaskHealingPlant] Finaler Arzt-Dialog geschlossen - Belohnung wird vergeben!");
+            GiveRewardAndNotification();
+        }
+    }
+
+    private void GiveRewardAndNotification()
+    {
+        rewardGiven = true;
+
+        if (FoodManager.Instance != null)
+        {
+            FoodManager.Instance.AddFood(reward);
+            Debug.Log($"[Task8collar] {reward} Food erfolgreich nach dem Beenden des Dialogs hinzugefügt!");
+        }
+        else
+        {
+            Debug.LogError("[TaskHealingPlant] FoodManager.Instance ist NULL!");
+        }
+
+        // Lock the healing plant notification and reset the collection state after receiving the reward
+        TaskCollectibleState.HealingPlantNotificationSent = true;
+        TaskCollectibleState.ResetTaskCollectibles();
     }
 }
