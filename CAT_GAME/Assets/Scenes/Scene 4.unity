@@ -592,6 +592,7 @@ MonoBehaviour:
   requiredFollower: {fileID: 700506407}
   noDogDialogue: {fileID: 11400000, guid: 1c130811c488b4d8ab59ad006651fa35, type: 2}
   afterItemDialogue: {fileID: 11400000, guid: 87c40f21a5e22456b920d97af9649489, type: 2}
+  DoctorAfterDialogue: {fileID: 11400000, guid: 4cfb9ed8b6239421c8b61aa1af77c8b7, type: 2}
   requiredCollectibleId: SimbaNecklace
   requiredCollectiblePlant: HealingPlant
   afterHealingPlantDialogue: {fileID: 11400000, guid: 4cfb9ed8b6239421c8b61aa1af77c8b7, type: 2}
@@ -2721,6 +2722,7 @@ MonoBehaviour:
   requiredFollower: {fileID: 0}
   noDogDialogue: {fileID: 0}
   afterItemDialogue: {fileID: 0}
+  DoctorAfterDialogue: {fileID: 0}
   requiredCollectibleId: SimbaNecklace
   requiredCollectiblePlant: HealingPlant
   afterHealingPlantDialogue: {fileID: 0}
@@ -4605,6 +4607,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1709594360592907923, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -55
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709594360592907923, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -80
+      objectReference: {fileID: 0}
     - target: {fileID: 1927520230656914793, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
       propertyPath: m_SizeDelta.x
       value: 106.4539
@@ -4730,6 +4740,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3751231702378146375, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3751231702378146375, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.00012207031
       objectReference: {fileID: 0}
@@ -4768,6 +4782,14 @@ PrefabInstance:
     - target: {fileID: 5131806786318153560, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498764952097938684, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -54.999756
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498764952097938684, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -132
       objectReference: {fileID: 0}
     - target: {fileID: 5519693793717013663, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -4843,6 +4865,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8884652153628847292, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156007744551457316, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9156007744551457316, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
@@ -7148,7 +7174,7 @@ Transform:
   m_GameObject: {fileID: 1391768202}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000015655767, y: 0.004356147, z: -0.00000006819665, w: 0.9999905}
-  m_LocalPosition: {x: -1.48, y: 8.99, z: 0}
+  m_LocalPosition: {x: 9.05, y: 10.02, z: -0.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

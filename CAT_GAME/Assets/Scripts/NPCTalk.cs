@@ -21,10 +21,10 @@ public class NPCTalk : MonoBehaviour, IInteractable
     public NPCDialogue noDogDialogue;
     [Tooltip("Dialogue when Simba has brought the dog AND collected the collar")]
     public NPCDialogue afterItemDialogue;
+    [Tooltip("Dialog, wenn Simba die Heilpflanze eingesammelt hat")]
+    public NPCDialogue DoctorAfterDialogue;
+    
     public string requiredCollectibleId = "SimbaNecklace";
-    public string requiredCollectiblePlant = "HealingPlant";
-    [Tooltip("Dialogue when healing plant is collected")]
-    public NPCDialogue afterHealingPlantDialogue;
 
     [Header("Single Interaction")]
     public bool interactOnlyOnce = false;
@@ -84,20 +84,7 @@ public class NPCTalk : MonoBehaviour, IInteractable
     void Start()
     {
         patrolScript = GetComponent<NPCPatrol>();
-        if (SceneData.isDogAtDoctor)
-        {
-            isCollarTaskstarted = true;
-            if (requiredFollower != null)
-            {
-                requiredFollower.hasStayedAtDoctor = true;
-                requiredFollower.isFollowing = false;
-            }
-        }
-        else
-        {
-            isCollarTaskstarted = false;
-        }
-        
+        isCollarTaskstarted = false;
         if (SceneManager.GetActiveScene().name == "Scene 2") TaskCollectibleState.ResetTaskCollectibles();
     }
 
@@ -105,8 +92,18 @@ public class NPCTalk : MonoBehaviour, IInteractable
     {
         currentDialogue = dialogueData;
 
-        // 1. If the injured dog is required, but has not followed the player yet:
-        if (requiredFollower != null && !requiredFollower.isFollowing && !requiredFollower.hasStayedAtDoctor)
+        // 1. HÖCHSTE PRIORITÄT: Wenn Simba die Heilpflanze eingesammelt hat
+        if (DoctorAfterDialogue != null && TaskCollectibleState.HealingPlantCount > 0)
+        {
+            currentDialogue = DoctorAfterDialogue;
+        }
+        // 2. ZWEITE PRIORITÄT: Wenn Simba das Halsband gefunden hat (aber noch keine Heilpflanze)
+        else if (afterItemDialogue != null && TaskCollectibleState.IsCollected(requiredCollectibleId))
+        {
+            currentDialogue = afterItemDialogue;
+        }
+        // 3. DRITTE PRIORITÄT: Wenn der Hund noch gar nicht zum Arzt gebracht wurde
+        else if (requiredFollower != null && !requiredFollower.isFollowing && !requiredFollower.hasStayedAtDoctor)
         {
             if (noDogDialogue != null)
             {
@@ -117,17 +114,6 @@ public class NPCTalk : MonoBehaviour, IInteractable
                 return;
             }
         }
-        // 2. If the dog is already at the doctor and the collar has been found:
-        else if (afterHealingPlantDialogue != null && TaskCollectibleState.IsCollected(requiredCollectiblePlant) || TaskCollectibleState.HealingPlantCount >= 1)
-        {
-            currentDialogue = afterHealingPlantDialogue;
-        }
-
-        else if (afterItemDialogue != null && TaskCollectibleState.IsCollected(requiredCollectibleId))
-        {
-            currentDialogue = afterItemDialogue;
-        }
-
         activeTalker = this;
         isDialogueActive = true;
         isEggTaskstarted = true;

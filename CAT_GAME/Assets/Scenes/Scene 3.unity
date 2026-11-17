@@ -1324,6 +1324,7 @@ MonoBehaviour:
   requiredFollower: {fileID: 0}
   noDogDialogue: {fileID: 0}
   afterItemDialogue: {fileID: 0}
+  DoctorAfterDialogue: {fileID: 0}
   requiredCollectibleId: SimbaNecklace
   interactOnlyOnce: 0
   isDialogueActive: 0
@@ -1718,35 +1719,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4175292183775637175, guid: 36199b066e9c94662a0af076d73eac45, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000022888
+      value: -4.9
       objectReference: {fileID: 0}
     - target: {fileID: 4175292183775637175, guid: 36199b066e9c94662a0af076d73eac45, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -26.238
+      value: 13.1
       objectReference: {fileID: 0}
     - target: {fileID: 4307833997301646635, guid: 36199b066e9c94662a0af076d73eac45, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 365
+      value: 523
       objectReference: {fileID: 0}
     - target: {fileID: 4307833997301646635, guid: 36199b066e9c94662a0af076d73eac45, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -39
+      value: -17.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630345715136821677, guid: 36199b066e9c94662a0af076d73eac45, type: 3}
+      propertyPath: m_margin.w
+      value: -53.172035
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630345715136821677, guid: 36199b066e9c94662a0af076d73eac45, type: 3}
+      propertyPath: m_margin.z
+      value: -148.6689
       objectReference: {fileID: 0}
     - target: {fileID: 6985043821809291257, guid: 36199b066e9c94662a0af076d73eac45, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 415
+      value: 424.5
       objectReference: {fileID: 0}
     - target: {fileID: 6985043821809291257, guid: 36199b066e9c94662a0af076d73eac45, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 62.762
+      value: 87.3
       objectReference: {fileID: 0}
     - target: {fileID: 7508035251111635867, guid: 36199b066e9c94662a0af076d73eac45, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -193
+      value: -198.9
       objectReference: {fileID: 0}
     - target: {fileID: 7508035251111635867, guid: 36199b066e9c94662a0af076d73eac45, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 26.238
+      value: 69.6
       objectReference: {fileID: 0}
     - target: {fileID: 7740305198879007743, guid: 36199b066e9c94662a0af076d73eac45, type: 3}
       propertyPath: m_Pivot.x
@@ -1846,7 +1855,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9183907661690666633, guid: 36199b066e9c94662a0af076d73eac45, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6291,6 +6300,7 @@ MonoBehaviour:
   targetSceneName: Scene 4
   targetSpawnID: Scene4
   returnID: Scene3
+  destroyPlayerOnTransition: 0
   isLocked: 0
 --- !u!4 &1249460396
 Transform:
