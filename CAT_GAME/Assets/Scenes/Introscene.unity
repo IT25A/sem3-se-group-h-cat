@@ -411,9 +411,6 @@ MonoBehaviour:
   slides:
   - {fileID: -8433506513580554440, guid: 8c45653094bff418ea024c295b842fc9, type: 3}
   - {fileID: -1232739388263985545, guid: ea1fa3722cdf0334c97542233974212c, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   timePerSlide: 5
   allowManualSkip: 1
   nextSceneName: Scene 1
