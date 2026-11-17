@@ -134,6 +134,10 @@ MonoBehaviour:
     m_Localized: Neustart
     m_Metadata:
       m_Items: []
+  - m_Id: 14358088726114304
+    m_Localized: Du hast die Heilpflanze eingesammelt!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

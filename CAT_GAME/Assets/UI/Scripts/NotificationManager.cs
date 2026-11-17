@@ -26,6 +26,7 @@ public class NotificationManager : MonoBehaviour
     public Sprite keyIcon;
     public Sprite woodIcon;
     public Sprite simbaNecklaceIcon;
+    public Sprite healplantIcon;
     public Sprite defaultIcon;
 
     [Header("History")]
@@ -67,6 +68,7 @@ public class NotificationManager : MonoBehaviour
         if (entryKey.Contains("received_key")) return keyIcon;
         if (entryKey.Contains("received_wood")) return woodIcon;
         if (entryKey.Contains("received_collar")) return simbaNecklaceIcon;
+        if (entryKey.Contains("received_healplant")) return healplantIcon;
         return defaultIcon;
     }
     public void ShowLocalizedNotification(string tableCollectionName, string entryKey, float duration = 5f)
@@ -135,6 +137,10 @@ public class NotificationManager : MonoBehaviour
             else if (entryKey.Contains("received_wood"))
             {
                 notificationIcon.sprite = woodIcon;
+            }
+            else if (entryKey.Contains("received_healplant"))
+            {
+                notificationIcon.sprite = healplantIcon;
             }
             else
             {

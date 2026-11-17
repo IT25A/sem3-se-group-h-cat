@@ -1588,7 +1588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6595445968831153431, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6844626637132494065, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
       propertyPath: m_SizeDelta.y
@@ -8401,6 +8401,7 @@ MonoBehaviour:
   targetSceneName: Flower Field
   targetSpawnID: FlowerField
   returnID: Scene1
+  destroyPlayerOnTransition: 0
   isLocked: 0
 --- !u!4 &504930182
 Transform:
@@ -8571,6 +8572,7 @@ MonoBehaviour:
   targetSceneName: Scene 2
   targetSpawnID: Scene2
   returnID: Scene1
+  destroyPlayerOnTransition: 0
   isLocked: 0
 --- !u!114 &533670096
 MonoBehaviour:

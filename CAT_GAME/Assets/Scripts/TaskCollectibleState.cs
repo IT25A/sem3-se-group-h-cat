@@ -102,8 +102,8 @@ public static class TaskCollectibleState
             if (!collectedIds.Contains(id))
             {
                 collectedIds.Add(id);
-                HealingPlantCount++;
             }
+            HealingPlantCount++;
         }
     }
 

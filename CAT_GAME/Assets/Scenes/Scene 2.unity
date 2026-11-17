@@ -7687,7 +7687,7 @@ GameObject:
   - component: {fileID: 1486477650}
   - component: {fileID: 1486477649}
   - component: {fileID: 1486477648}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Square (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11519,6 +11519,7 @@ MonoBehaviour:
   targetSceneName: Scene 3
   targetSpawnID: Scene3
   returnID: Scene2
+  destroyPlayerOnTransition: 0
   isLocked: 0
 --- !u!4 &2102643662
 Transform:

@@ -12,6 +12,8 @@ public static class SceneData
     public static bool mouseCatched = false;
     public static int savedKeyCount = 0;
     public static int savedWoodCount = 0;
+    public static bool isDogAtDoctor = false;
+    public static bool isDogQuestRewarded = false;
     public static bool flowerQuestCompleted = false;
     public static bool isGameStarted = false;
 
@@ -21,7 +23,7 @@ public static class SceneData
 
     // Resets all stored runtime data on game start before loading the first scene
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-    private static void ResetOnStart() {
+    public static void ResetOnStart() {
         isGameStarted = false;
         savedWater = -1f;
         savedFood = 0;
@@ -35,6 +37,8 @@ public static class SceneData
         savedNotificationHistorySprites.Clear();
         TaskCollectibleState.ClearAllCollectedData();
         flowerQuestCompleted = false;
+        isDogAtDoctor = false;
+        isDogQuestRewarded = false;
     }
 }
 

@@ -21,6 +21,14 @@ public class FlowerQuestCheck : MonoBehaviour
 
     void Update()
     {
+        if (FlowerQuestManager.Instance != null && FlowerQuestManager.Instance.currentFlowerCount == 0 && !SceneData.flowerQuestCompleted)
+        {
+            if (!npcTalk.isDialogueActive)
+            {
+                npcTalk.dialogueData = startDialog;
+            }
+            return;
+        }
         // Detects when the final dialogue finishes in order to grant the reward once
         if (dialogueActive && !npcTalk.isDialogueActive)
         {
@@ -41,12 +49,6 @@ public class FlowerQuestCheck : MonoBehaviour
         }
 
         dialogueActive = npcTalk.isDialogueActive;
-        if (FlowerQuestManager.Instance != null)
-        {
-            int current = FlowerQuestManager.Instance.currentFlowerCount;
-            bool finished = FlowerQuestManager.Instance.finalDialogueFinished;
-
-        }
 
         // Only update dialogue data when the dialogue window is closed to prevent switching text mid-conversation
         if (npcTalk.isDialogueActive)
@@ -58,6 +60,10 @@ public class FlowerQuestCheck : MonoBehaviour
             if (FlowerQuestManager.Instance.currentFlowerCount >= 10)
             {
                 npcTalk.dialogueData = finalDialog;
+            }
+            else if (FlowerQuestManager.Instance.currentFlowerCount > 0)
+            {
+                npcTalk.dialogueData = inbetweenDialog;
             }
             else
             {
