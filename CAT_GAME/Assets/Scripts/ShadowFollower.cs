@@ -25,8 +25,20 @@ public class ShadowFollower : MonoBehaviour, IInteractable
     // Buffer of past player positions to follow the player along the same path with a delay
     private Queue<Vector2> positionHistory = new Queue<Vector2>();
 
+    // The scene's own Player copy is destroyed when the persistent Player already exists,
+    // so always resolve the live Player at runtime instead of trusting the Inspector reference.
+    private bool ResolvePlayer()
+    {
+        GameObject player = GameObject.FindWithTag("Player");
+        if (player == null) return false;
+        playerTarget = player.transform;
+        return true;
+    }
+
     void Start()
     {
+        ResolvePlayer();
+
         NPCTalk npcTalk = GetComponent<NPCTalk>();
         if (npcTalk != null)
         {
@@ -123,7 +135,8 @@ public class ShadowFollower : MonoBehaviour, IInteractable
 
     void FixedUpdate()
     {
-        if (playerTarget == null || !isFollowing) return;
+        if (!isFollowing) return;
+        if (playerTarget == null && !ResolvePlayer()) return;
 
         positionHistory.Enqueue(playerTarget.position);
             
