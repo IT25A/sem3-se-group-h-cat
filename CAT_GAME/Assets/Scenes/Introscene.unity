@@ -256,7 +256,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2026334582315897720, guid: ea1fa3722cdf0334c97542233974212c, type: 3}
+  m_Sprite: {fileID: -8433506513580554440, guid: 8c45653094bff418ea024c295b842fc9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CutsceneSlideshow
   displayImage: {fileID: 0}
   slides: []
-  timePerSlide: 5
+  timePerSlide: 3
   allowManualSkip: 1
   nextSceneName: Scene 1
 --- !u!1 &1450937243
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CutsceneSlideshow
   displayImage: {fileID: 786685889}
   slides:
-  - {fileID: -2039861004087712155, guid: ea1fa3722cdf0334c97542233974212c, type: 3}
+  - {fileID: -8433506513580554440, guid: 8c45653094bff418ea024c295b842fc9, type: 3}
   - {fileID: -1232739388263985545, guid: ea1fa3722cdf0334c97542233974212c, type: 3}
   - {fileID: 0}
   - {fileID: 0}
