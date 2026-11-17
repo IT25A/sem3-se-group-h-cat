@@ -7128,6 +7128,7 @@ GameObject:
   - component: {fileID: 1391768203}
   - component: {fileID: 1391768204}
   - component: {fileID: 1391768205}
+  - component: {fileID: 1391768206}
   m_Layer: 0
   m_Name: SceneTransitionEND
   m_TagString: Untagged
@@ -7213,6 +7214,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1391768206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391768202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac3277d167cad1439f0bc340cd2b47e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestDoorScene3
+  requiredFood: 100
 --- !u!1001 &1393023644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7722,11 +7736,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3042703038440092805, guid: a2034902f62b053489ec3e1882f1a019, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.16
+      value: -3.64
       objectReference: {fileID: 0}
     - target: {fileID: 3042703038440092805, guid: a2034902f62b053489ec3e1882f1a019, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.37
+      value: 3.03
       objectReference: {fileID: 0}
     - target: {fileID: 3042703038440092805, guid: a2034902f62b053489ec3e1882f1a019, type: 3}
       propertyPath: m_LocalPosition.z
