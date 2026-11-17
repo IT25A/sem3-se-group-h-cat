@@ -19,7 +19,7 @@ public class SceneTransition : MonoBehaviour
     public bool destroyPlayerOnTransition = false;
 
     // Controlled by door lock scripts (e.g., QuestDoor, NPCDoorLock) to block scene transitions
-    [HideInInspector] public bool isLocked = false;
+    public bool isLocked = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -14,8 +14,8 @@ public class HealingPlantTask : MonoBehaviour
     private bool rewardGiven = false;
     private bool wasInDialogue = false;
     private NPCTalk npcTalk;
-
     private bool taskCompleted = false;
+    public SceneTransition finalDoor;
 
     // Call this method when talking to the doctor to check if the player has the plant
     public void CheckHealingPlant()
@@ -76,8 +76,20 @@ public class HealingPlantTask : MonoBehaviour
             Debug.LogError("[TaskHealingPlant] FoodManager.Instance ist NULL!");
         }
 
+        // Unlock the final door so the player can pass to the end scene
+        if (finalDoor != null)
+        {
+            finalDoor.isLocked = false;
+            Debug.Log("[TaskHealingPlant] SUCCESS: Final door is now UNLOCKED!");
+        }
+        else
+        {
+            Debug.LogWarning("[TaskHealingPlant] Warning: Final Door reference is missing in the Inspector!");
+        }
+
         // Lock the healing plant notification and reset the collection state after receiving the reward
         TaskCollectibleState.HealingPlantNotificationSent = true;
         TaskCollectibleState.ResetTaskCollectibles();
     }
 }
+

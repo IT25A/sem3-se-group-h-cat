@@ -594,13 +594,12 @@ MonoBehaviour:
   afterItemDialogue: {fileID: 11400000, guid: 87c40f21a5e22456b920d97af9649489, type: 2}
   DoctorAfterDialogue: {fileID: 11400000, guid: 4cfb9ed8b6239421c8b61aa1af77c8b7, type: 2}
   requiredCollectibleId: SimbaNecklace
-  requiredCollectiblePlant: HealingPlant
-  afterHealingPlantDialogue: {fileID: 11400000, guid: 4cfb9ed8b6239421c8b61aa1af77c8b7, type: 2}
   interactOnlyOnce: 0
   isDialogueActive: 0
   onDialogueEnded:
     m_PersistentCalls:
       m_Calls: []
+  isHealingPlantCollected: 0
 --- !u!210 &192185729
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -826,6 +825,8 @@ MonoBehaviour:
   onTaskCompleted:
     m_PersistentCalls:
       m_Calls: []
+  reward: 20
+  finalDoor: {fileID: 1391768204}
 --- !u!1 &228288765
 GameObject:
   m_ObjectHideFlags: 0
@@ -2724,8 +2725,6 @@ MonoBehaviour:
   afterItemDialogue: {fileID: 0}
   DoctorAfterDialogue: {fileID: 0}
   requiredCollectibleId: SimbaNecklace
-  requiredCollectiblePlant: HealingPlant
-  afterHealingPlantDialogue: {fileID: 0}
   interactOnlyOnce: 1
   isDialogueActive: 0
   onDialogueEnded:
@@ -2743,6 +2742,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isHealingPlantCollected: 0
 --- !u!210 &700506400
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -7196,7 +7196,7 @@ MonoBehaviour:
   targetSpawnID: 
   returnID: 
   destroyPlayerOnTransition: 1
-  isLocked: 0
+  isLocked: 1
 --- !u!61 &1391768205
 BoxCollider2D:
   m_ObjectHideFlags: 0
