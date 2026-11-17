@@ -14,8 +14,13 @@ public class SceneTransition : MonoBehaviour
     [Tooltip("Unique ID of this transition so the target scene knows the return point.")]
     public string returnID;
 
+    [Header("End Scene Settings")]
+    [Tooltip("Check this if this transition leads to the final scene and should destroy the player.")]
+    public bool destroyPlayerOnTransition = false;
+
     // Controlled by door lock scripts (e.g., QuestDoor, NPCDoorLock) to block scene transitions
     [HideInInspector] public bool isLocked = false;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -40,7 +45,13 @@ public class SceneTransition : MonoBehaviour
                 SceneData.TargetSpawnID = SceneData.LastSpawnID;
             }
 
-            isLocked = true; 
+            // Destroy the player object before loading the new scene if enabled
+            if (destroyPlayerOnTransition)
+            {
+                Destroy(collision.gameObject);
+            }
+
+            isLocked = true;
             SceneManager.LoadScene(targetSceneName);
         }
     }

@@ -9,7 +9,8 @@ public class CollectibleItem : MonoBehaviour
         Mouse,
         Key,
         SimbaNecklace,
-        Wood
+        Wood,
+        HealingPlant
     }
 
     [Header("Collectible Settings")]
@@ -30,7 +31,6 @@ public class CollectibleItem : MonoBehaviour
         }
 
         eggCollider = GetComponent<Collider2D>();
-        collarCollider = GetComponent<Collider2D>();
 
     }
 
@@ -45,10 +45,6 @@ public class CollectibleItem : MonoBehaviour
         {
             eggCollider.isTrigger = NPCTalk.isEggTaskstarted;
         }
-        if (type == CollectibleType.SimbaNecklace && collarCollider != null)
-        {
-            collarCollider.isTrigger = NPCTalk.isCollarTaskstarted;
-        }
     }
 
     private void Update()
@@ -57,10 +53,6 @@ public class CollectibleItem : MonoBehaviour
         if (type == CollectibleType.Egg && !eggCollider.isTrigger)
         {
             eggCollider.isTrigger = NPCTalk.isEggTaskstarted;
-        }
-        if (type == CollectibleType.SimbaNecklace && collarCollider != null && !collarCollider.isTrigger)
-        {
-            collarCollider.isTrigger = NPCTalk.isCollarTaskstarted;
         }
     }
 
@@ -82,20 +74,6 @@ public class CollectibleItem : MonoBehaviour
                     return;
                 }
             }
-
-            if (type == CollectibleType.SimbaNecklace)
-            {
-                if (!NPCTalk.isCollarTaskstarted)
-                {
-                    Debug.Log("Erst mit Arzt talken");
-                    return;
-                }
-                else
-                {
-                    Debug.Log("Simba's Halsband kann eingesammelt werden");
-                }
-            }
-
             Collect();
         }
     }
@@ -121,6 +99,9 @@ public class CollectibleItem : MonoBehaviour
                 break;
             case CollectibleType.Wood:
                 TaskCollectibleState.RegisterWood(uniqueId);
+                break;
+            case CollectibleType.HealingPlant:
+                TaskCollectibleState.RegisterHealingPlant(uniqueId);
                 break;
         }
 
