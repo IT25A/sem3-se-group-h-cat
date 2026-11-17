@@ -28,7 +28,7 @@ MonoBehaviour:
   - "\xA1Oye, mira lo que tienes ah\xED: un collar!"
   - "\xBFD\xF3nde est\xE1 tu due\xF1a? \xBFPor qu\xE9 andas por aqu\xED completamente solo?"
   - Parece que te has perdido. Puedo ayudarte leyendo lo que dice en tu collar...
-  - "...\xA1pero a cambio tienes que encontrar primero un remedio para m\xED en el bosque!"
+  - "...\xA1pero a cambio tienes que encontrar primero una planta para m\xED en el bosque!"
   autoProgressLines: 0100y
   autoProgressDelay: 1.5
   endDialogueLines: 

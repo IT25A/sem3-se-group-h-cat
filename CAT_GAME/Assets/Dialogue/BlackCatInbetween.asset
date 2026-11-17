@@ -19,7 +19,7 @@ MonoBehaviour:
   germanLines:
   - "Das sind sicher nicht alle blauen G\xE4nsebl\xFCmchen. Bitte such weiter!"
   spanishLines:
-  - "Seguro que estas no son todas las margaritas azules. \xA1Sigue buscando, por favor!"
+  - "No parece que estas sean todas margaritas azules. \xA1Sigue buscando, por favor!"
   autoProgressLines: 01000000y
   autoProgressDelay: 1.5
   endDialogueLines: 

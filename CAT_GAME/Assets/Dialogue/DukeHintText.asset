@@ -23,7 +23,7 @@ MonoBehaviour:
   - Ich habe sie hier herumlaufen sehen. Versuch mal, sie zu fangen, falls du Hunger hast.
   - "Das k\xF6nnte deine letzte Chance sein."
   spanishLines:
-  - "\xBFHas estado cazando una rata hace un rato?"
+  - "\xBFHas estado cazando un rat\xF3n hace un rato?"
   - "La he visto por aqu\xED. Intenta atraparla, por si tienes hambre."
   - "Esta podr\xEDa ser tu \xFAltima oportunidad."
   autoProgressLines: 0101y

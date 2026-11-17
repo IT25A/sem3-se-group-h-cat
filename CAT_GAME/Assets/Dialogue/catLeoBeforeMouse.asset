@@ -19,7 +19,7 @@ MonoBehaviour:
   germanLines:
   - "Diese Maus nervt mich, aber ich bin zu m\xFCde, um mich zu bewegen."
   spanishLines:
-  - "Este rat\xF3n me saca de quicio, pero estoy demasiado cansado para moverme."
+  - " Este rat\xF3n es muy molesto, pero estoy demasiado cansado para moverme."
   autoProgressLines: 
   autoProgressDelay: 1.5
   endDialogueLines: 
