@@ -124,7 +124,8 @@ public class MenuManager : MonoBehaviour
     public void StartGame()
     {
         Debug.Log("Start Game");
-
+        SceneData.ResetOnStart();
+        SceneManager.LoadScene(gameSceneName);
         SceneData.isGameStarted = true;
 
         if (menuMusic != null) menuMusic.Stop();
@@ -194,14 +195,19 @@ public class MenuManager : MonoBehaviour
     {
         SceneData.isGameStarted = false;
 
+        SceneData.savedFood = 0;
+        SceneData.savedWater = 0;
+
+        TaskCollectibleState.ResetTaskCollectibles();
+        TaskCollectibleState.ClearAllCollectedData();
+        FlowerQuestManager.ResetFlowerQuest();
+
         // Destroy the persistent player so the default player is spawned again when reloading the starting scene
         PersistentPlayer player = FindAnyObjectByType<PersistentPlayer>();
         if (player != null)
         {
             Destroy(player.gameObject);
         }
-
-        SceneManager.LoadScene(gameSceneName);
 
         SceneManager.LoadScene("Scene 1");
 
@@ -296,12 +302,36 @@ public class MenuManager : MonoBehaviour
 
     public void RestartGame()
     {
-        autoStartGame = true;
+        if (gameOver != null) gameOver.SetActive(false);
+        if (pausePanel != null) pausePanel.SetActive(false);
         SetGameState(GameState.Playing);
-        gameOver.SetActive(false);
+        Time.timeScale = 1f;
+
+        SceneData.isGameStarted = false; 
+
         SceneData.savedWater = 100f;
+        SceneData.savedFood = 0;
+        TaskCollectibleState.ResetTaskCollectibles();
+        TaskCollectibleState.ClearAllCollectedData();
+        FlowerQuestManager flowerManager = FindAnyObjectByType<FlowerQuestManager>();
+        if (flowerManager != null)
+        {
+            Destroy(flowerManager.gameObject);
+        }
+
+        PersistentPlayer player = FindAnyObjectByType<PersistentPlayer>();
+        if (player != null)
+        {
+            Destroy(player.gameObject);
+        }
+
+        SceneData.isGameStarted = true;
         SceneManager.LoadScene("Scene 1");
-        StartGame();
+
+        if (NotificationManager.Instance != null)
+        {
+            NotificationManager.Instance.ShowLocalizedNotification(tableName, sM);
+        }
     }
 
     public void FinishGame()
