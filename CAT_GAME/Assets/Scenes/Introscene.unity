@@ -702,7 +702,10 @@ MonoBehaviour:
   displayImage: {fileID: 786685889}
   slides:
   - {fileID: -8433506513580554440, guid: 8c45653094bff418ea024c295b842fc9, type: 3}
-  - {fileID: -1232739388263985545, guid: ea1fa3722cdf0334c97542233974212c, type: 3}
+  - {fileID: -3860021900251561208, guid: b1537aba6397b437eb452bbac081e5ba, type: 3}
+  - {fileID: -5549216263457704684, guid: 7fd78e39b169f4675a6e97d98df73d16, type: 3}
+  - {fileID: -7866203562069969139, guid: 4779221ca42a847ce89b1bbcfc8c0411, type: 3}
+  - {fileID: -9021162283328293155, guid: cc295a138bd0b4ddcb66d34091fae6ec, type: 3}
   timePerSlide: 5
   allowManualSkip: 1
   nextSceneName: Scene 1
@@ -787,11 +790,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebd792d25c086fa489bddfb7c0f37a32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraDrift
-  direction: {x: -1, y: -1}
-  speed: 0.3
-  startDelay: 0
-  duration: 5
-  timer: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
