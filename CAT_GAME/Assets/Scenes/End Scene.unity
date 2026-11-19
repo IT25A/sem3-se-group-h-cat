@@ -743,6 +743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dee789e2a3c73e4c9b65485b1afe10b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuManager
+  notificationHistoryUI: {fileID: 0}
   menuMusic: {fileID: 0}
   startPanel: {fileID: 0}
   settingsPanel: {fileID: 0}
@@ -6063,7 +6064,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7575023706846161090, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.8047724
+      value: -7.8029947
       objectReference: {fileID: 0}
     - target: {fileID: 7575023706846161090, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6075,7 +6076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414980027500515728, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.8047724
+      value: -7.8029947
       objectReference: {fileID: 0}
     - target: {fileID: 8414980027500515728, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8291,7 +8292,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 231253600}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: RestartGame
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
