@@ -7,7 +7,7 @@ public class MenuManager : MonoBehaviour
 {
 
     public static bool autoStartGame = false;
-
+    public NotificationHistoryUI notificationHistoryUI;
     public enum GameState { MainMenu, Playing, Paused, GameOver }
     public static GameState currentState;
     public AudioSource menuMusic;
@@ -166,6 +166,7 @@ public class MenuManager : MonoBehaviour
         }
         SceneData.savedFood = 0;
         TaskCollectibleState.ResetTaskCollectibles();
+        notificationHistoryUI.ResetHistory(); 
         SetGameState(GameState.Playing);
     }
 
