@@ -1331,6 +1331,7 @@ MonoBehaviour:
   onDialogueEnded:
     m_PersistentCalls:
       m_Calls: []
+  isHealingPlantCollected: 0
 --- !u!114 &230967854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3213,7 +3214,7 @@ GameObject:
   - component: {fileID: 803543331}
   - component: {fileID: 803543330}
   - component: {fileID: 803543334}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4462,7 +4463,7 @@ GameObject:
   - component: {fileID: 946928351}
   - component: {fileID: 946928350}
   - component: {fileID: 946928349}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4478,8 +4479,8 @@ Transform:
   m_GameObject: {fileID: 946928347}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.9677, y: -1.3522, z: 0}
-  m_LocalScale: {x: 2.0987265, y: 1.4532288, z: 1}
+  m_LocalPosition: {x: 7.9987, y: -1.0113, z: 0}
+  m_LocalScale: {x: 2.160639, y: 2.1349385, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1939416887}
@@ -11125,7 +11126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1939416887}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: waterSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}

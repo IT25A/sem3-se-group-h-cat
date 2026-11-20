@@ -13,7 +13,6 @@ public class FoodManager : MonoBehaviour {
     [Header("Localization Keys")]
     public string tableName = "MenuText";
     public string foodReceivedKey = "foodCount";
-    public string hundredfoodKey = "100food";
 
     private void Awake() {
         if (Instance == null) {
@@ -33,12 +32,7 @@ public class FoodManager : MonoBehaviour {
 
         // Show special notification at 100 food, otherwise display standard notification
         if (NotificationManager.Instance != null) {
-            if (SceneData.savedFood == 100) {
-                NotificationManager.Instance.ShowLocalizedNotification(tableName, hundredfoodKey);
-            } else {
-                NotificationManager.Instance.ShowLocalizedNotification(tableName, foodReceivedKey);
-
-            }
+            NotificationManager.Instance.ShowLocalizedNotification(tableName, foodReceivedKey);
         }
     }
 
