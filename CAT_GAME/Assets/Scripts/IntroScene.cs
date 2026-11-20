@@ -8,14 +8,14 @@ public class CutsceneSlideshow : MonoBehaviour
     [Header("Bilder & UI")]
     [Tooltip("Das UI-Image auf dem Canvas, das die Bilder anzeigt (SlideDisplay)")]
     public Image displayImage;
-    
+
     [Tooltip("Ziehe hier alle gezeichneten Skizzen in der richtigen Reihenfolge rein")]
     public Sprite[] slides;
 
     [Header("Ablauf & Zeiten")]
     [Tooltip("Wie viele Sekunden soll jedes Bild angezeigt werden?")]
     public float timePerSlide = 5.0f;
-    
+
     [Tooltip("Darf der Spieler mit Leertaste / E / Mausklick schneller weiterklicken?")]
     public bool allowManualSkip = true;
 
@@ -44,10 +44,10 @@ public class CutsceneSlideshow : MonoBehaviour
         bool skipPressed = false;
         if (allowManualSkip)
         {
-            bool spaceOrE = Keyboard.current != null && 
+            bool spaceOrE = Keyboard.current != null &&
                             (Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.eKey.wasPressedThisFrame);
             bool mouseClick = Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame;
-            
+
             skipPressed = spaceOrE || mouseClick;
         }
 
@@ -70,6 +70,8 @@ public class CutsceneSlideshow : MonoBehaviour
         {
             if (!string.IsNullOrEmpty(nextSceneName))
             {
+                SceneData.isGameStarted = true;
+
                 SceneManager.LoadScene(nextSceneName);
             }
         }

@@ -11,6 +11,8 @@ public class MenuManager : MonoBehaviour
     public enum GameState { MainMenu, Playing, Paused, GameOver }
     public static GameState currentState;
     public AudioSource menuMusic;
+    public GameObject cutsceneCanvas;
+    public static bool hasShownStartNotification = false;
 
     [Header("Panels")]
     public GameObject startPanel;
@@ -29,14 +31,17 @@ public class MenuManager : MonoBehaviour
     public GameObject closeButton;
 
     [Header("Settings")]
-    public string gameSceneName = "Scene 1";
+    public string gameSceneName = "Introscene";
 
     [Header("LocalizationKeys")]
     public string tableName = "UI_TextTable";
     public string sM = "startMessage";
     private void Start()
     {
-
+        if (cutsceneCanvas != null)
+        {
+            cutsceneCanvas.SetActive(false);
+        }
         string currentSceneName = SceneManager.GetActiveScene().name;
 
         // Depending on the game state, play either the main menu music or the scene's background music
@@ -75,6 +80,12 @@ public class MenuManager : MonoBehaviour
             if (inGamePanel != null) inGamePanel.SetActive(true);
 
             Time.timeScale = 1f;
+
+            if (!hasShownStartNotification && NotificationManager.Instance != null)
+            {
+                NotificationManager.Instance.ShowLocalizedNotification("MenuText", "startMessage");
+                hasShownStartNotification = true; 
+            }
 
             WaterManager waterManager = FindAnyObjectByType<WaterManager>();
             if (waterManager != null)
@@ -125,8 +136,6 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("Start Game");
         SceneData.ResetOnStart();
-        SceneManager.LoadScene(gameSceneName);
-        SceneData.isGameStarted = true;
 
         if (menuMusic != null) menuMusic.Stop();
 
@@ -147,26 +156,12 @@ public class MenuManager : MonoBehaviour
         endPanel.SetActive(false);
         creditsPanel.SetActive(false);
 
-        inGamePanel.SetActive(true);
-        if (NotificationManager.Instance != null)
+        if (cutsceneCanvas != null)
         {
-            NotificationManager.Instance.ShowLocalizedNotification(tableName, sM);
+            cutsceneCanvas.SetActive(true);
         }
+
         Time.timeScale = 1;
-
-        WaterManager waterManager = FindAnyObjectByType<WaterManager>();
-        if (waterManager != null)
-        {
-            waterManager.isGameOver = false;
-            waterManager.isGameStarted = false;
-
-            waterManager.RefillWater(100f);
-            SceneData.savedWater = 100f;
-            waterManager.StartWaterDecrease();
-        }
-        SceneData.savedFood = 0;
-        TaskCollectibleState.ResetTaskCollectibles();
-        notificationHistoryUI.ResetHistory(); 
         SetGameState(GameState.Playing);
     }
 
@@ -184,17 +179,18 @@ public class MenuManager : MonoBehaviour
 
     public void ShowStartPanel()
     {
-       if (startPanel != null) startPanel.SetActive(true);
-       if (settingsPanel != null) settingsPanel.SetActive(false);
-       if (pausePanel != null) pausePanel.SetActive(false);
-       if (inGamePanel != null) inGamePanel.SetActive(false);
-       if (endPanel != null) endPanel.SetActive(false);
-       if (creditsPanel != null) creditsPanel.SetActive(false);
+        if (startPanel != null) startPanel.SetActive(true);
+        if (settingsPanel != null) settingsPanel.SetActive(false);
+        if (pausePanel != null) pausePanel.SetActive(false);
+        if (inGamePanel != null) inGamePanel.SetActive(false);
+        if (endPanel != null) endPanel.SetActive(false);
+        if (creditsPanel != null) creditsPanel.SetActive(false);
     }
 
     public void QuitToMainMenu()
     {
         SceneData.isGameStarted = false;
+        hasShownStartNotification = false;
 
         SceneData.savedFood = 0;
         SceneData.savedWater = 0;
@@ -210,7 +206,7 @@ public class MenuManager : MonoBehaviour
             Destroy(player.gameObject);
         }
 
-        SceneManager.LoadScene("Scene 1");
+        SceneManager.LoadScene("Introscene");
 
         GameObject sceneMusicObj = GameObject.Find("Music");
         if (sceneMusicObj != null)
@@ -303,12 +299,13 @@ public class MenuManager : MonoBehaviour
 
     public void RestartGame()
     {
+        hasShownStartNotification = false;
         if (gameOver != null) gameOver.SetActive(false);
         if (pausePanel != null) pausePanel.SetActive(false);
         SetGameState(GameState.Playing);
         Time.timeScale = 1f;
 
-        SceneData.isGameStarted = false; 
+        SceneData.isGameStarted = false;
 
         SceneData.savedWater = 100f;
         SceneData.savedFood = 0;
@@ -327,7 +324,7 @@ public class MenuManager : MonoBehaviour
         }
 
         SceneData.isGameStarted = true;
-        SceneManager.LoadScene("Scene 1");
+        SceneManager.LoadScene("Introscene");
 
         if (NotificationManager.Instance != null)
         {
