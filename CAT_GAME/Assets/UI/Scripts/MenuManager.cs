@@ -44,6 +44,11 @@ public class MenuManager : MonoBehaviour
         }
         string currentSceneName = SceneManager.GetActiveScene().name;
 
+        if (currentSceneName != gameSceneName && !SceneData.isGameStarted)
+        {
+            SceneData.isGameStarted = true;
+        }
+
         // Depending on the game state, play either the main menu music or the scene's background music
         if (!SceneData.isGameStarted)
         {
@@ -318,16 +323,22 @@ public class MenuManager : MonoBehaviour
 
     private System.Collections.IEnumerator ShowStartNotificationDelayed()
     {
-        yield return null;
+        // Nur ausführen, wenn sie wirklich noch nicht gezeigt wurde
+        if (hasShownStartNotification) yield break;
 
-        if (NotificationManager.Instance != null)
+        float timeout = 2f;
+        while (NotificationManager.Instance == null && timeout > 0f)
         {
-            NotificationManager.Instance.ShowLocalizedNotification("MenuText", "startMessage");
-            hasShownStartNotification = true;
+            timeout -= Time.deltaTime;
+            yield return null;
         }
-        else
+
+        yield return new WaitForSeconds(0.1f);
+
+        if (NotificationManager.Instance != null && !hasShownStartNotification)
         {
-            Debug.LogWarning("NotificationManager.Instance war beim Start immer noch null!");
+            hasShownStartNotification = true; // Direkt sperren, bevor sie angezeigt wird
+            NotificationManager.Instance.ShowLocalizedNotification("MenuText", "startMessage");
         }
     }
 }
