@@ -195,6 +195,7 @@ public class MenuManager : MonoBehaviour
     {
         SceneData.isGameStarted = false;
         hasShownStartNotification = false;
+        AutoDialogueScene3.ResetAutoDialogue();
 
         SceneData.savedFood = 0;
         SceneData.savedWater = 0;
@@ -280,6 +281,7 @@ public class MenuManager : MonoBehaviour
         Time.timeScale = 1f;
         SceneData.isGameStarted = false; // MUSS false bleiben, damit das Menü kommt!
         hasShownStartNotification = false;
+        AutoDialogueScene3.ResetAutoDialogue();
 
         SceneData.savedWater = 100f;
         SceneData.savedFood = 0;
