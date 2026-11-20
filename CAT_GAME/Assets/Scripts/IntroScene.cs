@@ -32,6 +32,11 @@ public class CutsceneSlideshow : MonoBehaviour
         {
             displayImage.sprite = slides[0];
         }
+        if (!PlayerPrefs.HasKey("Language"))
+        {
+            PlayerPrefs.SetInt("Language", 1);
+            PlayerPrefs.Save();
+        }
     }
 
     void Update()
