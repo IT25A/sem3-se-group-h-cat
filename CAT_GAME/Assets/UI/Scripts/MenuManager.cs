@@ -81,10 +81,9 @@ public class MenuManager : MonoBehaviour
 
             Time.timeScale = 1f;
 
-            if (!hasShownStartNotification && NotificationManager.Instance != null)
+            if (!hasShownStartNotification)
             {
-                NotificationManager.Instance.ShowLocalizedNotification("MenuText", "startMessage");
-                hasShownStartNotification = true; 
+                StartCoroutine(ShowStartNotificationDelayed());
             }
 
             WaterManager waterManager = FindAnyObjectByType<WaterManager>();
@@ -199,40 +198,14 @@ public class MenuManager : MonoBehaviour
         TaskCollectibleState.ClearAllCollectedData();
         FlowerQuestManager.ResetFlowerQuest();
 
-        // Destroy the persistent player so the default player is spawned again when reloading the starting scene
         PersistentPlayer player = FindAnyObjectByType<PersistentPlayer>();
         if (player != null)
         {
             Destroy(player.gameObject);
         }
 
-        SceneManager.LoadScene("Introscene");
-
-        GameObject sceneMusicObj = GameObject.Find("Music");
-        if (sceneMusicObj != null)
-        {
-            AudioSource sceneAudio =
-            sceneMusicObj.GetComponent<AudioSource>();
-            if (sceneAudio != null && sceneAudio != menuMusic)
-            {
-                sceneAudio.Stop();
-            }
-        }
-
-        if (menuMusic != null) menuMusic.Play();
-
-        SetGameState(GameState.MainMenu);
-
-        WaterManager waterManager = FindAnyObjectByType<WaterManager>();
-        if (waterManager != null)
-        {
-            waterManager.isGameOver = false;
-            waterManager.isGameStarted = false;
-        }
-
-        if (gameOver != null) gameOver.SetActive(false);
-        if (pausePanel != null) pausePanel.SetActive(false);
-        ShowStartPanel();
+        Time.timeScale = 1f; // Wichtig, falls das Spiel pausiert war
+        SceneManager.LoadScene(gameSceneName); // Lädt die Introscene (Hauptmenü)
     }
 
     public void PauseMenu()
@@ -299,18 +272,15 @@ public class MenuManager : MonoBehaviour
 
     public void RestartGame()
     {
-        hasShownStartNotification = false;
-        if (gameOver != null) gameOver.SetActive(false);
-        if (pausePanel != null) pausePanel.SetActive(false);
-        SetGameState(GameState.Playing);
         Time.timeScale = 1f;
-
-        SceneData.isGameStarted = false;
+        SceneData.isGameStarted = false; // MUSS false bleiben, damit das Menü kommt!
+        hasShownStartNotification = false;
 
         SceneData.savedWater = 100f;
         SceneData.savedFood = 0;
         TaskCollectibleState.ResetTaskCollectibles();
         TaskCollectibleState.ClearAllCollectedData();
+
         FlowerQuestManager flowerManager = FindAnyObjectByType<FlowerQuestManager>();
         if (flowerManager != null)
         {
@@ -323,13 +293,8 @@ public class MenuManager : MonoBehaviour
             Destroy(player.gameObject);
         }
 
-        SceneData.isGameStarted = true;
+        // Lädt die Introscene zurück zum Startmenü (kein sofortiges Starten mehr)
         SceneManager.LoadScene("Introscene");
-
-        if (NotificationManager.Instance != null)
-        {
-            NotificationManager.Instance.ShowLocalizedNotification(tableName, sM);
-        }
     }
 
     public void FinishGame()
@@ -349,5 +314,20 @@ public class MenuManager : MonoBehaviour
     public void CloseNotify()
     {
         notifyPanel.SetActive(false);
+    }
+
+    private System.Collections.IEnumerator ShowStartNotificationDelayed()
+    {
+        yield return null;
+
+        if (NotificationManager.Instance != null)
+        {
+            NotificationManager.Instance.ShowLocalizedNotification("MenuText", "startMessage");
+            hasShownStartNotification = true;
+        }
+        else
+        {
+            Debug.LogWarning("NotificationManager.Instance war beim Start immer noch null!");
+        }
     }
 }

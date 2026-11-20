@@ -1009,6 +1009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MenuManager
   notificationHistoryUI: {fileID: 0}
   menuMusic: {fileID: 0}
+  cutsceneCanvas: {fileID: 0}
   startPanel: {fileID: 6595445968831153431}
   settingsPanel: {fileID: 2093294499729395032}
   inGamePanel: {fileID: 2176819755674106743}
@@ -1021,7 +1022,7 @@ MonoBehaviour:
   notifyHistory: {fileID: 3818372412328335481}
   openButton: {fileID: 6767570329428473942}
   closeButton: {fileID: 905739434069012330}
-  gameSceneName: Scene 1 - Phase 1
+  gameSceneName: Introscene
   tableName: MenuText
   sM: startMessage
 --- !u!114 &6449698515462384038
@@ -1082,7 +1083,6 @@ MonoBehaviour:
   foodText: {fileID: 1621367050611631832}
   tableName: MenuText
   foodReceivedKey: foodCount
-  hundredfoodKey: 100food
 --- !u!1 &305512937984693350
 GameObject:
   m_ObjectHideFlags: 0
