@@ -7,17 +7,29 @@ public class QuestDoorScene3 : MonoBehaviour
     [Header("Condition")]
     public int requiredFood = 50;
 
+    [Tooltip("If enabled, the door ignores food and unlocks only after the dog is at the doctor AND Simba's collar is collected (Scene 4).")]
+    public bool requireDogAtDoctorAndCollar = false;
+
     void Awake()
     {
         sceneTransition = GetComponent<SceneTransition>();
     }
 
+    private bool IsUnlocked()
+    {
+        if (requireDogAtDoctorAndCollar)
+        {
+            return SceneData.isDogAtDoctor && TaskCollectibleState.IsCollected("SimbaNecklace");
+        }
+        return SceneData.savedFood >= requiredFood;
+    }
+
     void Update()
     {
-        // Only unlock the transition once the required amount of food has been reached
+        // Only unlock the transition once the condition is met
         if (sceneTransition != null)
         {
-            if ( SceneData.savedFood >= requiredFood)
+            if (IsUnlocked())
             {
                 sceneTransition.isLocked = false;
             }
@@ -32,9 +44,9 @@ public class QuestDoorScene3 : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (SceneData.savedFood < requiredFood)
+            if (!IsUnlocked())
             {
-                Debug.Log("Door is locked! Collect all 50 food first.");
+                Debug.Log("Door is locked!");
             }
         }
     }
