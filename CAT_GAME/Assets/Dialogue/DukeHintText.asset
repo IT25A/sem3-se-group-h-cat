@@ -19,12 +19,13 @@ MonoBehaviour:
   - 'I''ve seen it running around here. Try catching it if you''re hungry. '
   - This might be your last chance.
   germanLines:
-  - Lass mich raten... du warst hinter dieser kleinen Stinkemaus her, oder?
-  - Ich habe sie hier herumflitzen sehen. Vielleicht erwischst du sie noch!
+  - Hast du vorhin eine Ratte gejagt?
+  - Ich habe sie hier herumlaufen sehen. Versuch mal, sie zu fangen, falls du Hunger hast.
+  - "Das k\xF6nnte deine letzte Chance sein."
   spanishLines:
-  - "D\xE9jame adivinar... estabas persiguiendo a ese ratoncito apestoso, \xBFverdad?\""
-  - "Lo vi correteando por aqu\xED. \xA1Quiz\xE1s a\xFAn puedas atraparlo!\""
-  - "Puede que esta sea tu \xFAltima oportunidad.s"
+  - "\xBFHas estado cazando un rat\xF3n hace un rato?"
+  - "La he visto por aqu\xED. Intenta atraparla, por si tienes hambre."
+  - "Esta podr\xEDa ser tu \xFAltima oportunidad."
   autoProgressLines: 0101y
   autoProgressDelay: 1.5
   endDialogueLines: 

@@ -26,6 +26,7 @@ public class VolumeValueDisplay : MonoBehaviour
         }
         UpdateMusicText(savedMusic);
 
+        SetMixerVolume("MusicVolume", savedMusic);
         float savedSound = PlayerPrefs.GetFloat(soundKey, defaultValueSound);
         if (sliderSound != null) {
             sliderSound.SetValueWithoutNotify(savedSound);
@@ -94,6 +95,7 @@ public class VolumeValueDisplay : MonoBehaviour
             sliderMusic.value = defaultValueMusic;
         }
         UpdateMusicText(defaultValueMusic);
+        SetMixerVolume("MusicVolume", defaultValueMusic);
 
         if (sliderSound != null) {
             sliderSound.value = defaultValueSound;

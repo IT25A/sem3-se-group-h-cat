@@ -67,4 +67,15 @@ public class FlowerQuestManager : MonoBehaviour
 
         Debug.Log("Quest Completed: All specific flowers collected!");
     }
+    public static void ResetFlowerQuest()
+    {
+        if (Instance != null)
+        {
+            Instance.currentFlowerCount = 0;
+            Instance.isQuestCompleted = false;
+            Instance.finalDialogueFinished = false;
+            Instance.collectedFlowerIDs.Clear();
+            Debug.Log("[FlowerQuestManager] Blumen-Quest wurde komplett zurückgesetzt.");
+        }
+    }
 }

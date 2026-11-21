@@ -25,7 +25,7 @@ MonoBehaviour:
   spanishLines:
   - "\xA1Genial! Por fin puedo irme a casa."
   - "\xBFAh, te has perdido y est\xE1s buscando a tu due\xF1o?"
-  - "Mmm\u2026 parece que antes llevabas un collar. Quiz\xE1 lo hayas perdido por aqu\xED. \xA1As\xED podremos ayudarte a encontrar a tu due\xF1o!"
+  - "Mmm\u2026 parece que antes llevabas un collar. Quiz\xE1 lo has perdido por aqu\xED. \xA1As\xED podremos ayudarte a encontrar a tu due\xF1o! "
   autoProgressLines: 
   autoProgressDelay: 1.5
   endDialogueLines: 000001y

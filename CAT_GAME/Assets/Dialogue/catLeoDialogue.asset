@@ -40,13 +40,13 @@ MonoBehaviour:
   - Falsch.
   - 
   spanishLines:
-  - "\xBFPodr\xEDas echarme una mano? He perdido la llave de casa."
+  - "\xBFPodr\xEDas ayudarme? He perdido la llave de casa."
   - "No seas tan ego\xEDsta. \xBFPodr\xEDas al menos hacerme otro favor?"
-  - "\xBFEn qu\xE9 te gustar\xEDa echar una mano?"
-  - "\xA1Genial! Ya ten\xEDa la sensaci\xF3n de que eras un chico majo."
-  - "Dios m\xEDo, estoy muy nerviosa/o. De todos modos estoy muy indefensa/o. \xBFCu\xE1l podr\xEDas hacerme el favor?"
-  - "Un p\xE1jaro me lo ha robado... por favor, echa un vistazo. Quiz\xE1 est\xE9 atrapado en un \xE1rbol."
-  - "\xBFPodr\xEDas recoger 10 trozos de le\xF1a para que pueda encender un fuego? Date prisa, por favor, que ya tengo fr\xEDo."
+  - "\xBFEn qu\xE9 te gustar\xEDa ayudarme?"
+  - "\xA1S\xFAper! Ten\xEDa la sensaci\xF3n de que eras agradable."
+  - "\xBFCon qu\xE9 favor podr\xEDas ayudarme?"
+  - "Un p\xE1jaro me la ha robado... por favor, echa un vistazo. Quiz\xE1 est\xE9 atrapado en un \xE1rbol."
+  - "\xBFPodr\xEDas recoger 10 trozos de le\xF1a para que pueda encender una fogata? Date prisa, por favor, que ya tengo fr\xEDo."
   - "Los gatos duermen mucho, pero \xBFcu\xE1ntas horas duerme realmente un gato adulto?"
   - "\xA1Correcto! "
   - Incorrecto.
@@ -72,36 +72,36 @@ MonoBehaviour:
   - dialogueIndex: 2
     choices:
     - Find the house key
-    - 'Make a fire '
-    - 'Answer a tricky quiz '
+    - Gathering wood to build a fire
+    - Answer a quiz question
     germanChoices:
-    - "Finde den Hausschl\xFCssel"
-    - Feuer machen
-    - eine Quizfrage antworten
+    - "Hausschl\xFCssel finden"
+    - Holz sammeln, um ein Feuer zu machen
+    - Eine Quizfrage beantworten
     spanishChoices:
-    - Find the house key
-    - 'Make a fire '
-    - 'Answer a tricky quiz '
+    - Encuentra la llave de casa
+    - "Recoger le\xF1a para hacer una hoguera"
+    - Responde a una pregunta del cuestionario
     nextDialogueIndexes: 050000000600000007000000i
   - dialogueIndex: 4
     choices:
     - Find the house key
-    - Make a fire
-    - Answer a tricky quiz
+    - Gathering wood to build a fire
+    - Answer a quiz question
     germanChoices:
-    - "Finde den Hausschl\xFCssel "
-    - Feuer machen
-    - eine Quizfrage antworten
+    - "Hausschl\xFCssel finden"
+    - Feuerholz sammeln
+    - Eine Quizfrage beantworten
     spanishChoices:
-    - Find the house key
-    - Make a fire
-    - Answer a tricky quiz
+    - Encuentra la llave de casa
+    - "Recoger le\xF1a para hacer una fogata"
+    - Responde a una pregunta del cuestionario
     nextDialogueIndexes: 050000000600000007000000i
   - dialogueIndex: 7
     choices:
-    - 6-8h
-    - 12-16h
-    - 18-20h
+    - 6-8 hours
+    - 12-16 hours
+    - 18-20 hours
     germanChoices:
     - 6-8 Stunden
     - 12-16 Stunden
@@ -113,9 +113,9 @@ MonoBehaviour:
     nextDialogueIndexes: 090000000800000009000000i
   - dialogueIndex: 9
     choices:
-    - Try again
+    - Unfortunately, that's wrong. Try again.
     germanChoices:
-    - Versuche nochmals
+    - Leider ist das falsch. Versuche es noch einmal.
     spanishChoices:
-    - Intentar de nuevo
+    - "Lamentablemente, eso es incorrecto. Int\xE9ntalo de nuevo."
     nextDialogueIndexes: 07000000i

@@ -9,7 +9,7 @@ public class NotificationManager : MonoBehaviour
 {
     public static NotificationManager Instance;
 
-    [Header("UI Elemente")]
+    [Header("UI Elements")]
     public GameObject notificationPanel;
     public TextMeshProUGUI messageText;
     public CanvasGroup canvasGroup;
@@ -24,11 +24,12 @@ public class NotificationManager : MonoBehaviour
     public Sprite eggs;
     public Sprite mouseIcon;
     public Sprite keyIcon;
-
+    public Sprite woodIcon;
     public Sprite simbaNecklaceIcon;
+    public Sprite healplantIcon;
     public Sprite defaultIcon;
 
-    [Header("Verlauf (History)")]
+    [Header("History")]
     public List<string> notificationHistory = new List<string>();
 
     public List<Sprite> notificationSpriteHistory = new List<Sprite>();
@@ -65,7 +66,9 @@ public class NotificationManager : MonoBehaviour
         if (entryKey.Contains("received_eggs")) return eggs;
         if (entryKey.Contains("received_mouse")) return mouseIcon;
         if (entryKey.Contains("received_key")) return keyIcon;
-        if (entryKey.Contains("received_simba_necklace")) return simbaNecklaceIcon;
+        if (entryKey.Contains("received_wood")) return woodIcon;
+        if (entryKey.Contains("received_collar")) return simbaNecklaceIcon;
+        if (entryKey.Contains("received_healplant")) return healplantIcon;
         return defaultIcon;
     }
     public void ShowLocalizedNotification(string tableCollectionName, string entryKey, float duration = 5f)
@@ -74,6 +77,7 @@ public class NotificationManager : MonoBehaviour
         StartCoroutine(DisplayLocalizedRoutine(tableCollectionName, entryKey, duration));
     }
 
+    // Asynchronously loads the localized text by key, assigns the matching icon, and fades in the notification
     private IEnumerator DisplayLocalizedRoutine(string tableCollectionName, string entryKey, float duration)
     {
         yield return LocalizationSettings.InitializationOperation;
@@ -126,9 +130,17 @@ public class NotificationManager : MonoBehaviour
             {
                 notificationIcon.sprite = keyIcon;
             }
-            else if (entryKey.Contains("received_simba_necklace"))
+            else if (entryKey.Contains("received_collar"))
             {
                 notificationIcon.sprite = simbaNecklaceIcon;
+            }
+            else if (entryKey.Contains("received_wood"))
+            {
+                notificationIcon.sprite = woodIcon;
+            }
+            else if (entryKey.Contains("received_healplant"))
+            {
+                notificationIcon.sprite = healplantIcon;
             }
             else
             {

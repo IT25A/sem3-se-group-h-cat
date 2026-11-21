@@ -4105,6 +4105,10 @@ PrefabInstance:
       propertyPath: menuMusic
       value: 
       objectReference: {fileID: 821703759}
+    - target: {fileID: 6949622402661544363, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
+      propertyPath: gameSceneName
+      value: Introscene
+      objectReference: {fileID: 0}
     - target: {fileID: 8884652153628847292, guid: f2a792c434a9acd4e8c76e1dc73cb08d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4293,7 +4297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4315927722946953401, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4319729219423304061, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4511,7 +4515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4315927722946953401, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4319729219423304061, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5167,6 +5171,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1111468667708981939, guid: a2034902f62b053489ec3e1882f1a019, type: 3}
+      propertyPath: moveSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3042703038440092805, guid: a2034902f62b053489ec3e1882f1a019, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.93
@@ -5460,7 +5468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4315927722946953401, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4319729219423304061, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5531,8 +5539,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7701c6311e218e74480d07dd1c24c528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  type: 1
   uniqueId: 
-  collectibleType: 1
 --- !u!1001 &623385586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5731,7 +5739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4315927722946953401, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4319729219423304061, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6521,8 +6529,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7701c6311e218e74480d07dd1c24c528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  type: 1
   uniqueId: 
-  collectibleType: 1
 --- !u!1001 &789996045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11755,7 +11763,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -6624228904528083182, guid: 2fa2e97f989ca2a4fae7a745e7956807, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 0c153a4d72487ff4f867d79eccd9c422, type: 3}
+  m_Resource: {fileID: 8300000, guid: 93abb88e6cc90aa4ba28c50bc4dd221b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -12784,7 +12792,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4315927722946953401, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4319729219423304061, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12855,8 +12863,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7701c6311e218e74480d07dd1c24c528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  type: 1
   uniqueId: 
-  collectibleType: 1
 --- !u!4 &896060212 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6546730991220994824, guid: b9213b90abbfe284ba4ffffdaf709899, type: 3}
@@ -13303,6 +13311,7 @@ MonoBehaviour:
   targetSceneName: Scene 1
   targetSpawnID: Scene1
   returnID: FlowerField
+  destroyPlayerOnTransition: 0
   isLocked: 0
 --- !u!61 &940025354
 BoxCollider2D:
@@ -13711,7 +13720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4315927722946953401, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4319729219423304061, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15404,7 +15413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4315927722946953401, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4319729219423304061, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15475,8 +15484,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7701c6311e218e74480d07dd1c24c528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  type: 1
   uniqueId: 
-  collectibleType: 1
 --- !u!1001 &1147383529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16958,8 +16967,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7701c6311e218e74480d07dd1c24c528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  type: 1
   uniqueId: 
-  collectibleType: 1
 --- !u!1001 &1352692009
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17145,7 +17154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7575023706846161090, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.1606874
+      value: -3.1621513
       objectReference: {fileID: 0}
     - target: {fileID: 7575023706846161090, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17157,7 +17166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414980027500515728, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.1606874
+      value: -3.1621513
       objectReference: {fileID: 0}
     - target: {fileID: 8414980027500515728, guid: 54b1054c87f91b941a5e675c6510e865, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17334,8 +17343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7701c6311e218e74480d07dd1c24c528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  type: 1
   uniqueId: 
-  collectibleType: 1
 --- !u!1001 &1372058121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18389,7 +18398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4315927722946953401, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4319729219423304061, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18460,8 +18469,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7701c6311e218e74480d07dd1c24c528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  type: 1
   uniqueId: 
-  collectibleType: 1
 --- !u!1001 &1451923926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20268,7 +20277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4315927722946953401, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4319729219423304061, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20339,8 +20348,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7701c6311e218e74480d07dd1c24c528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  type: 1
   uniqueId: 
-  collectibleType: 1
 --- !u!1001 &1634323901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21109,7 +21118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4315927722946953401, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4319729219423304061, guid: f7a5d3fff03971649bc2fe42bfc51265, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21180,8 +21189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7701c6311e218e74480d07dd1c24c528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  type: 1
   uniqueId: 
-  collectibleType: 1
 --- !u!4 &1736184203 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5080491302493382335, guid: 8d52b740d795ef742b81aae8290b74fd, type: 3}
@@ -23629,8 +23638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7701c6311e218e74480d07dd1c24c528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  type: 1
   uniqueId: 
-  collectibleType: 1
 --- !u!1001 &1983913580
 PrefabInstance:
   m_ObjectHideFlags: 0

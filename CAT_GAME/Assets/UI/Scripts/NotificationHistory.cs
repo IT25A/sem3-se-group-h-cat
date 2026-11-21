@@ -62,4 +62,20 @@ public class NotificationHistoryUI : MonoBehaviour
             }
         }
     }
+    public void ResetHistory()
+    {
+        if (NotificationManager.Instance != null)
+        {
+            NotificationManager.Instance.notificationHistory.Clear();
+            NotificationManager.Instance.notificationSpriteHistory.Clear();
+        }
+
+        if (contentParent != null)
+        {
+            foreach (Transform child in contentParent)
+            {
+                Destroy(child.gameObject);
+            }
+        }
+    }
 }

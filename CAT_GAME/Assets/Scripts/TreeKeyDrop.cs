@@ -10,8 +10,8 @@ public class TreeKeyDrop : MonoBehaviour, IInteractable
 
     public bool CanInteract()
     {
-        return !hasDropped;
-        
+        return !hasDropped && TaskCollectibleState.keyQuestStarted;
+
     }
 
     public void Interact()

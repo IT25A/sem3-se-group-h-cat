@@ -294,6 +294,7 @@ public class NPCChoiceTalk : MonoBehaviour, IInteractable
             if (nextIndex == keyQuestStartIndex) // 5
             {
                 keyQuestActive = true;
+                TaskCollectibleState.keyQuestStarted = true;
             }
             else if (nextIndex == fireQuestStartIndex) // 6
             {

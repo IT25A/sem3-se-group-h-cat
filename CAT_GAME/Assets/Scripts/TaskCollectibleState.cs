@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 
 public static class TaskCollectibleState
@@ -9,7 +9,7 @@ public static class TaskCollectibleState
     public static int KeyCount { get; private set; } = 0;
     public static int SimbaNecklaceCount { get; private set; } = 0;
     public static int WoodCount { get; private set; } = 0;
-    public static int HealingPlant { get; private set; } = 0;
+    public static int HealingPlantCount { get; private set; } = 0;
 
     public static bool eggNotificationSent = false;
     public static bool flowerNotificationSent = false;
@@ -17,15 +17,19 @@ public static class TaskCollectibleState
     public static bool simbaNecklaceNotificationSent = false;
     public static bool keyNotificationSent = false;
     public static bool woodNotificationSent = false;
-    public static bool healingPlantNotificationSent = false;
+    public static bool HealingPlantNotificationSent = false;
 
-    // Stores unique IDs of collectibles picked up during the current task
+    // True once Leo's key task has been selected; the tree only drops the key after this
+    public static bool keyQuestStarted = false;
+
+    // Stores the unique IDs of all already collected items
     private static readonly HashSet<string> collectedIds = new HashSet<string>();
 
-    // Ensures clean state when entering Play Mode in the Unity Editor
+    // Cleanly resets counters when entering Play Mode in the Unity Editor
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     private static void Init()
     {
+        keyQuestStarted = false;
         ResetTaskCollectibles();
     }
 
@@ -90,16 +94,20 @@ public static class TaskCollectibleState
         }
         WoodCount++;
     }
+
     public static void RegisterHealingPlant(string id)
     {
         if (!string.IsNullOrEmpty(id))
         {
-            collectedIds.Add(id);
+            if (!collectedIds.Contains(id))
+            {
+                collectedIds.Add(id);
+            }
+            HealingPlantCount++;
         }
-        HealingPlant++;
     }
 
-    // Call this when your task/event is completed!
+    // Resets all counters and notification flags after completing a quest
     public static void ResetTaskCollectibles()
     {
         EggCount = 0;
@@ -108,7 +116,7 @@ public static class TaskCollectibleState
         SimbaNecklaceCount = 0;
         KeyCount = 0;
         WoodCount = 0;
-        HealingPlant = 0;
+        HealingPlantCount = 0;
 
         eggNotificationSent = false;
         flowerNotificationSent = false;
@@ -116,8 +124,8 @@ public static class TaskCollectibleState
         simbaNecklaceNotificationSent = false;
         keyNotificationSent = false;
         woodNotificationSent = false;
+        HealingPlantNotificationSent = false;
 
-        //collectedIds.Clear();
         Debug.Log("Task collectibles wurden zurückgesetzt.");
     }
 

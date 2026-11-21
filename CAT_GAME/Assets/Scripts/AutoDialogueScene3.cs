@@ -9,10 +9,15 @@ public class AutoDialogueScene3 : MonoBehaviour
     [Tooltip("Wie lange soll jede Zeile nach dem Fertigtippen stehen bleiben, bevor die nächste kommt / geschlossen wird?")]
     public float pauseBetweenLines = 1.0f; 
 
+    private static bool hasPlayedAutoDialogue = false;
+
     void Start()
     {
+        if (hasPlayedAutoDialogue) return;
+
         if (targetDialogue != null)
         {
+            hasPlayedAutoDialogue = true; 
             StartCoroutine(TriggerAndAutoPlayAllLines());
         }    
     }
@@ -62,5 +67,10 @@ public class AutoDialogueScene3 : MonoBehaviour
 
         // 4. Nach der letzten Zeile (+ 1 Sekunde) Dialogbox schließen
         targetDialogue.EndDialogue();
+    }
+
+    public static void ResetAutoDialogue()
+    {
+        hasPlayedAutoDialogue = false;
     }
 }

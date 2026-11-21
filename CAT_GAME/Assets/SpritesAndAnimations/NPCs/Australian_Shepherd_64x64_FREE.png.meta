@@ -635,6 +635,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -642,10 +655,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 2558
-        width: 26
-        height: 36
+        x: 0
+        y: 2544
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -664,10 +677,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_1
       rect:
         serializedVersion: 2
-        x: 83
-        y: 2556
-        width: 25
-        height: 38
+        x: 64
+        y: 2544
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -686,10 +699,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_2
       rect:
         serializedVersion: 2
-        x: 142
-        y: 2555
-        width: 36
-        height: 39
+        x: 128
+        y: 2544
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -708,10 +721,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_3
       rect:
         serializedVersion: 2
-        x: 206
-        y: 2555
-        width: 36
-        height: 39
+        x: 192
+        y: 2544
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -730,10 +743,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_4
       rect:
         serializedVersion: 2
-        x: 277
-        y: 2557
-        width: 24
-        height: 36
+        x: 256
+        y: 2544
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -752,10 +765,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_5
       rect:
         serializedVersion: 2
-        x: 20
-        y: 2491
-        width: 25
-        height: 39
+        x: 0
+        y: 2480
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -774,10 +787,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_6
       rect:
         serializedVersion: 2
-        x: 84
-        y: 2486
-        width: 24
-        height: 44
+        x: 64
+        y: 2480
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -796,10 +809,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_7
       rect:
         serializedVersion: 2
-        x: 139
-        y: 2495
-        width: 44
-        height: 35
+        x: 128
+        y: 2480
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -818,10 +831,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_8
       rect:
         serializedVersion: 2
-        x: 201
-        y: 2495
-        width: 44
-        height: 35
+        x: 192
+        y: 2480
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -840,10 +853,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_9
       rect:
         serializedVersion: 2
-        x: 8
-        y: 2427
-        width: 45
-        height: 40
+        x: 0
+        y: 2416
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -862,10 +875,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_10
       rect:
         serializedVersion: 2
-        x: 72
-        y: 2427
-        width: 45
-        height: 27
+        x: 64
+        y: 2416
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -884,10 +897,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_11
       rect:
         serializedVersion: 2
-        x: 137
-        y: 2427
-        width: 45
-        height: 27
+        x: 128
+        y: 2416
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -906,10 +919,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_12
       rect:
         serializedVersion: 2
-        x: 200
-        y: 2427
-        width: 45
-        height: 38
+        x: 192
+        y: 2416
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -928,10 +941,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_13
       rect:
         serializedVersion: 2
-        x: 261
-        y: 2427
-        width: 48
-        height: 27
+        x: 256
+        y: 2416
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -950,10 +963,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_14
       rect:
         serializedVersion: 2
-        x: 326
-        y: 2427
-        width: 47
-        height: 27
+        x: 320
+        y: 2416
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -972,10 +985,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_15
       rect:
         serializedVersion: 2
-        x: 11
-        y: 2363
-        width: 45
-        height: 40
+        x: 0
+        y: 2352
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -994,10 +1007,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_16
       rect:
         serializedVersion: 2
-        x: 75
-        y: 2363
-        width: 45
-        height: 27
+        x: 64
+        y: 2352
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1016,10 +1029,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_17
       rect:
         serializedVersion: 2
-        x: 139
-        y: 2363
-        width: 44
-        height: 27
+        x: 128
+        y: 2352
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1038,10 +1051,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_18
       rect:
         serializedVersion: 2
-        x: 203
-        y: 2363
-        width: 45
-        height: 37
+        x: 192
+        y: 2352
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1060,10 +1073,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_19
       rect:
         serializedVersion: 2
-        x: 267
-        y: 2363
-        width: 48
-        height: 27
+        x: 256
+        y: 2352
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1082,10 +1095,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_20
       rect:
         serializedVersion: 2
-        x: 331
-        y: 2363
-        width: 48
-        height: 27
+        x: 320
+        y: 2352
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1104,10 +1117,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_21
       rect:
         serializedVersion: 2
-        x: 20
-        y: 2299
-        width: 25
-        height: 40
+        x: 0
+        y: 2288
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1126,10 +1139,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_22
       rect:
         serializedVersion: 2
-        x: 84
-        y: 2297
-        width: 24
-        height: 42
+        x: 64
+        y: 2288
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1148,10 +1161,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_23
       rect:
         serializedVersion: 2
-        x: 147
-        y: 2299
-        width: 25
-        height: 40
+        x: 128
+        y: 2288
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1170,10 +1183,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_24
       rect:
         serializedVersion: 2
-        x: 212
-        y: 2299
-        width: 25
-        height: 40
+        x: 192
+        y: 2288
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1192,10 +1205,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_25
       rect:
         serializedVersion: 2
-        x: 276
-        y: 2297
-        width: 24
-        height: 42
+        x: 256
+        y: 2288
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1214,10 +1227,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_26
       rect:
         serializedVersion: 2
-        x: 339
-        y: 2299
-        width: 25
-        height: 40
+        x: 320
+        y: 2288
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1236,10 +1249,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_27
       rect:
         serializedVersion: 2
-        x: 20
-        y: 2229
-        width: 25
-        height: 47
+        x: 0
+        y: 2224
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1258,10 +1271,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_28
       rect:
         serializedVersion: 2
-        x: 84
-        y: 2229
-        width: 24
-        height: 48
+        x: 64
+        y: 2224
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1280,10 +1293,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_29
       rect:
         serializedVersion: 2
-        x: 147
-        y: 2229
-        width: 25
-        height: 45
+        x: 128
+        y: 2224
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1302,10 +1315,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_30
       rect:
         serializedVersion: 2
-        x: 212
-        y: 2229
-        width: 25
-        height: 47
+        x: 192
+        y: 2224
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1324,10 +1337,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_31
       rect:
         serializedVersion: 2
-        x: 276
-        y: 2229
-        width: 24
-        height: 48
+        x: 256
+        y: 2224
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1346,10 +1359,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_32
       rect:
         serializedVersion: 2
-        x: 339
-        y: 2229
-        width: 25
-        height: 45
+        x: 320
+        y: 2224
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1368,10 +1381,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_33
       rect:
         serializedVersion: 2
-        x: 10
-        y: 2175
-        width: 45
-        height: 37
+        x: 0
+        y: 2160
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1390,10 +1403,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_34
       rect:
         serializedVersion: 2
-        x: 74
-        y: 2175
-        width: 46
-        height: 36
+        x: 64
+        y: 2160
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1412,10 +1425,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_35
       rect:
         serializedVersion: 2
-        x: 139
-        y: 2175
-        width: 43
-        height: 36
+        x: 128
+        y: 2160
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1434,10 +1447,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_36
       rect:
         serializedVersion: 2
-        x: 202
-        y: 2175
-        width: 43
-        height: 37
+        x: 192
+        y: 2160
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1456,10 +1469,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_37
       rect:
         serializedVersion: 2
-        x: 266
-        y: 2175
-        width: 46
-        height: 36
+        x: 256
+        y: 2160
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1478,10 +1491,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_38
       rect:
         serializedVersion: 2
-        x: 331
-        y: 2175
-        width: 44
-        height: 36
+        x: 320
+        y: 2160
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1500,10 +1513,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_39
       rect:
         serializedVersion: 2
-        x: 9
-        y: 2111
-        width: 44
-        height: 37
+        x: 0
+        y: 2096
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1522,10 +1535,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_40
       rect:
         serializedVersion: 2
-        x: 72
-        y: 2111
-        width: 46
-        height: 36
+        x: 64
+        y: 2096
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1544,10 +1557,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_41
       rect:
         serializedVersion: 2
-        x: 139
-        y: 2111
-        width: 43
-        height: 36
+        x: 128
+        y: 2096
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1566,10 +1579,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_42
       rect:
         serializedVersion: 2
-        x: 202
-        y: 2111
-        width: 43
-        height: 37
+        x: 192
+        y: 2096
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1588,10 +1601,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_43
       rect:
         serializedVersion: 2
-        x: 264
-        y: 2111
-        width: 46
-        height: 36
+        x: 256
+        y: 2096
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1610,10 +1623,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_44
       rect:
         serializedVersion: 2
-        x: 329
-        y: 2111
-        width: 45
-        height: 36
+        x: 320
+        y: 2096
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1632,10 +1645,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_45
       rect:
         serializedVersion: 2
-        x: 20
-        y: 2049
-        width: 25
-        height: 32
+        x: 0
+        y: 2032
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1654,10 +1667,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_46
       rect:
         serializedVersion: 2
-        x: 84
-        y: 2048
-        width: 24
-        height: 32
+        x: 64
+        y: 2032
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1676,10 +1689,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_47
       rect:
         serializedVersion: 2
-        x: 147
-        y: 2048
-        width: 25
-        height: 34
+        x: 128
+        y: 2032
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1698,10 +1711,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_48
       rect:
         serializedVersion: 2
-        x: 212
-        y: 2041
-        width: 25
-        height: 42
+        x: 192
+        y: 2032
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1720,10 +1733,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_49
       rect:
         serializedVersion: 2
-        x: 20
-        y: 1975
-        width: 25
-        height: 43
+        x: 0
+        y: 1968
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1742,10 +1755,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_50
       rect:
         serializedVersion: 2
-        x: 84
-        y: 1970
-        width: 24
-        height: 52
+        x: 64
+        y: 1968
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1764,10 +1777,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_51
       rect:
         serializedVersion: 2
-        x: 147
-        y: 1974
-        width: 25
-        height: 44
+        x: 128
+        y: 1968
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1786,10 +1799,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_52
       rect:
         serializedVersion: 2
-        x: 212
-        y: 1978
-        width: 25
-        height: 39
+        x: 192
+        y: 1968
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1808,10 +1821,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_53
       rect:
         serializedVersion: 2
-        x: 10
-        y: 1919
-        width: 47
-        height: 34
+        x: 0
+        y: 1904
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1830,10 +1843,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_54
       rect:
         serializedVersion: 2
-        x: 70
-        y: 1919
-        width: 52
-        height: 38
+        x: 64
+        y: 1904
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1852,10 +1865,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_55
       rect:
         serializedVersion: 2
-        x: 134
-        y: 1925
-        width: 55
-        height: 30
+        x: 128
+        y: 1904
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1874,10 +1887,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_56
       rect:
         serializedVersion: 2
-        x: 202
-        y: 1919
-        width: 46
-        height: 34
+        x: 192
+        y: 1904
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1896,10 +1909,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_57
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1855
-        width: 45
-        height: 35
+        x: 0
+        y: 1840
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1918,10 +1931,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_58
       rect:
         serializedVersion: 2
-        x: 70
-        y: 1855
-        width: 52
-        height: 37
+        x: 64
+        y: 1840
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1940,10 +1953,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_59
       rect:
         serializedVersion: 2
-        x: 130
-        y: 1862
-        width: 56
-        height: 29
+        x: 128
+        y: 1840
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1962,10 +1975,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_60
       rect:
         serializedVersion: 2
-        x: 200
-        y: 1855
-        width: 45
-        height: 34
+        x: 192
+        y: 1840
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1984,10 +1997,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_61
       rect:
         serializedVersion: 2
-        x: 20
-        y: 1787
-        width: 25
-        height: 40
+        x: 0
+        y: 1776
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2006,10 +2019,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_62
       rect:
         serializedVersion: 2
-        x: 84
-        y: 1785
-        width: 24
-        height: 41
+        x: 64
+        y: 1776
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2028,10 +2041,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_63
       rect:
         serializedVersion: 2
-        x: 147
-        y: 1785
-        width: 25
-        height: 47
+        x: 128
+        y: 1776
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2050,10 +2063,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_64
       rect:
         serializedVersion: 2
-        x: 212
-        y: 1785
-        width: 25
-        height: 47
+        x: 192
+        y: 1776
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2072,10 +2085,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_65
       rect:
         serializedVersion: 2
-        x: 20
-        y: 1718
-        width: 25
-        height: 44
+        x: 0
+        y: 1712
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2094,10 +2107,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_66
       rect:
         serializedVersion: 2
-        x: 84
-        y: 1718
-        width: 24
-        height: 43
+        x: 64
+        y: 1712
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2116,10 +2129,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_67
       rect:
         serializedVersion: 2
-        x: 147
-        y: 1718
-        width: 25
-        height: 41
+        x: 128
+        y: 1712
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2138,10 +2151,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_68
       rect:
         serializedVersion: 2
-        x: 212
-        y: 1718
-        width: 25
-        height: 39
+        x: 192
+        y: 1712
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2160,10 +2173,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_69
       rect:
         serializedVersion: 2
-        x: 10
-        y: 1663
-        width: 45
-        height: 36
+        x: 0
+        y: 1648
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2182,10 +2195,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_70
       rect:
         serializedVersion: 2
-        x: 74
-        y: 1663
-        width: 46
-        height: 32
+        x: 64
+        y: 1648
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2204,10 +2217,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_71
       rect:
         serializedVersion: 2
-        x: 139
-        y: 1663
-        width: 40
-        height: 29
+        x: 128
+        y: 1648
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2226,10 +2239,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_72
       rect:
         serializedVersion: 2
-        x: 202
-        y: 1663
-        width: 46
-        height: 29
+        x: 192
+        y: 1648
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2248,10 +2261,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_73
       rect:
         serializedVersion: 2
-        x: 9
-        y: 1599
-        width: 44
-        height: 36
+        x: 0
+        y: 1584
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2270,10 +2283,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_74
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1599
-        width: 46
-        height: 32
+        x: 64
+        y: 1584
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2292,10 +2305,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_75
       rect:
         serializedVersion: 2
-        x: 141
-        y: 1599
-        width: 41
-        height: 30
+        x: 128
+        y: 1584
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2314,10 +2327,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_76
       rect:
         serializedVersion: 2
-        x: 200
-        y: 1599
-        width: 45
-        height: 28
+        x: 192
+        y: 1584
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2336,10 +2349,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_77
       rect:
         serializedVersion: 2
-        x: 19
-        y: 1532
-        width: 28
-        height: 34
+        x: 0
+        y: 1520
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2358,10 +2371,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_78
       rect:
         serializedVersion: 2
-        x: 85
-        y: 1531
-        width: 26
-        height: 37
+        x: 64
+        y: 1520
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2380,10 +2393,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_79
       rect:
         serializedVersion: 2
-        x: 149
-        y: 1531
-        width: 26
-        height: 35
+        x: 128
+        y: 1520
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2402,10 +2415,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_80
       rect:
         serializedVersion: 2
-        x: 214
-        y: 1531
-        width: 25
-        height: 35
+        x: 192
+        y: 1520
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2424,10 +2437,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_81
       rect:
         serializedVersion: 2
-        x: 277
-        y: 1531
-        width: 26
-        height: 37
+        x: 256
+        y: 1520
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2446,10 +2459,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_82
       rect:
         serializedVersion: 2
-        x: 339
-        y: 1532
-        width: 28
-        height: 34
+        x: 320
+        y: 1520
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2468,10 +2481,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_83
       rect:
         serializedVersion: 2
-        x: 17
-        y: 1468
-        width: 28
-        height: 35
+        x: 0
+        y: 1456
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2490,10 +2503,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_84
       rect:
         serializedVersion: 2
-        x: 81
-        y: 1467
-        width: 26
-        height: 37
+        x: 64
+        y: 1456
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2512,10 +2525,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_85
       rect:
         serializedVersion: 2
-        x: 144
-        y: 1467
-        width: 26
-        height: 36
+        x: 128
+        y: 1456
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2534,10 +2547,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_86
       rect:
         serializedVersion: 2
-        x: 209
-        y: 1467
-        width: 26
-        height: 36
+        x: 192
+        y: 1456
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2556,10 +2569,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_87
       rect:
         serializedVersion: 2
-        x: 273
-        y: 1467
-        width: 26
-        height: 37
+        x: 256
+        y: 1456
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2578,10 +2591,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_88
       rect:
         serializedVersion: 2
-        x: 337
-        y: 1468
-        width: 28
-        height: 35
+        x: 320
+        y: 1456
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2600,10 +2613,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_89
       rect:
         serializedVersion: 2
-        x: 20
-        y: 1406
-        width: 26
-        height: 36
+        x: 0
+        y: 1392
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2622,10 +2635,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_90
       rect:
         serializedVersion: 2
-        x: 84
-        y: 1406
-        width: 25
-        height: 36
+        x: 64
+        y: 1392
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2644,10 +2657,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_91
       rect:
         serializedVersion: 2
-        x: 147
-        y: 1406
-        width: 27
-        height: 34
+        x: 128
+        y: 1392
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2666,10 +2679,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_92
       rect:
         serializedVersion: 2
-        x: 212
-        y: 1406
-        width: 26
-        height: 36
+        x: 192
+        y: 1392
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2688,10 +2701,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_93
       rect:
         serializedVersion: 2
-        x: 276
-        y: 1406
-        width: 25
-        height: 36
+        x: 256
+        y: 1392
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2710,10 +2723,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_94
       rect:
         serializedVersion: 2
-        x: 20
-        y: 1342
-        width: 26
-        height: 36
+        x: 0
+        y: 1328
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2732,10 +2745,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_95
       rect:
         serializedVersion: 2
-        x: 84
-        y: 1342
-        width: 25
-        height: 35
+        x: 64
+        y: 1328
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2754,10 +2767,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_96
       rect:
         serializedVersion: 2
-        x: 147
-        y: 1342
-        width: 27
-        height: 36
+        x: 128
+        y: 1328
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2776,10 +2789,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_97
       rect:
         serializedVersion: 2
-        x: 20
-        y: 1275
-        width: 25
-        height: 40
+        x: 0
+        y: 1264
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2798,10 +2811,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_98
       rect:
         serializedVersion: 2
-        x: 84
-        y: 1275
-        width: 24
-        height: 40
+        x: 64
+        y: 1264
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2820,10 +2833,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_99
       rect:
         serializedVersion: 2
-        x: 147
-        y: 1275
-        width: 25
-        height: 40
+        x: 128
+        y: 1264
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2842,10 +2855,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_100
       rect:
         serializedVersion: 2
-        x: 20
-        y: 1214
-        width: 26
-        height: 37
+        x: 0
+        y: 1200
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2864,10 +2877,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_101
       rect:
         serializedVersion: 2
-        x: 84
-        y: 1211
-        width: 24
-        height: 40
+        x: 64
+        y: 1200
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2886,10 +2899,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_102
       rect:
         serializedVersion: 2
-        x: 20
-        y: 1150
-        width: 26
-        height: 36
+        x: 0
+        y: 1136
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2908,10 +2921,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_103
       rect:
         serializedVersion: 2
-        x: 84
-        y: 1150
-        width: 25
-        height: 36
+        x: 64
+        y: 1136
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2930,10 +2943,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_104
       rect:
         serializedVersion: 2
-        x: 147
-        y: 1150
-        width: 27
-        height: 36
+        x: 128
+        y: 1136
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2952,10 +2965,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_105
       rect:
         serializedVersion: 2
-        x: 20
-        y: 1084
-        width: 25
-        height: 39
+        x: 0
+        y: 1072
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2974,10 +2987,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_106
       rect:
         serializedVersion: 2
-        x: 84
-        y: 1084
-        width: 24
-        height: 39
+        x: 64
+        y: 1072
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2996,10 +3009,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_107
       rect:
         serializedVersion: 2
-        x: 147
-        y: 1084
-        width: 25
-        height: 39
+        x: 128
+        y: 1072
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3018,10 +3031,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_108
       rect:
         serializedVersion: 2
-        x: 9
-        y: 1019
-        width: 44
-        height: 26
+        x: 0
+        y: 1008
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3040,10 +3053,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_109
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1019
-        width: 46
-        height: 28
+        x: 64
+        y: 1008
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3062,10 +3075,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_110
       rect:
         serializedVersion: 2
-        x: 9
-        y: 955
-        width: 44
-        height: 27
+        x: 0
+        y: 944
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3084,10 +3097,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_111
       rect:
         serializedVersion: 2
-        x: 74
-        y: 955
-        width: 46
-        height: 28
+        x: 64
+        y: 944
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3106,10 +3119,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_112
       rect:
         serializedVersion: 2
-        x: 5
-        y: 891
-        width: 48
-        height: 27
+        x: 0
+        y: 880
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3128,10 +3141,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_113
       rect:
         serializedVersion: 2
-        x: 69
-        y: 891
-        width: 48
-        height: 27
+        x: 64
+        y: 880
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3150,10 +3163,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_114
       rect:
         serializedVersion: 2
-        x: 10
-        y: 826
-        width: 48
-        height: 28
+        x: 0
+        y: 816
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3172,10 +3185,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_115
       rect:
         serializedVersion: 2
-        x: 74
-        y: 826
-        width: 48
-        height: 28
+        x: 64
+        y: 816
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3194,10 +3207,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_116
       rect:
         serializedVersion: 2
-        x: 20
-        y: 767
-        width: 26
-        height: 34
+        x: 0
+        y: 752
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3216,10 +3229,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_117
       rect:
         serializedVersion: 2
-        x: 84
-        y: 767
-        width: 25
-        height: 30
+        x: 64
+        y: 752
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3238,10 +3251,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_118
       rect:
         serializedVersion: 2
-        x: 147
-        y: 767
-        width: 27
-        height: 25
+        x: 128
+        y: 752
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3260,10 +3273,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_119
       rect:
         serializedVersion: 2
-        x: 212
-        y: 767
-        width: 26
-        height: 25
+        x: 192
+        y: 752
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3282,10 +3295,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_120
       rect:
         serializedVersion: 2
-        x: 276
-        y: 767
-        width: 25
-        height: 30
+        x: 256
+        y: 752
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3304,10 +3317,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_121
       rect:
         serializedVersion: 2
-        x: 339
-        y: 767
-        width: 27
-        height: 34
+        x: 320
+        y: 752
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3326,10 +3339,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_122
       rect:
         serializedVersion: 2
-        x: 18
-        y: 700
-        width: 27
-        height: 36
+        x: 0
+        y: 688
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3348,10 +3361,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_123
       rect:
         serializedVersion: 2
-        x: 83
-        y: 700
-        width: 25
-        height: 33
+        x: 64
+        y: 688
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3370,10 +3383,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_124
       rect:
         serializedVersion: 2
-        x: 146
-        y: 700
-        width: 26
-        height: 33
+        x: 128
+        y: 688
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3392,10 +3405,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_125
       rect:
         serializedVersion: 2
-        x: 210
-        y: 700
-        width: 27
-        height: 32
+        x: 192
+        y: 688
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3414,10 +3427,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_126
       rect:
         serializedVersion: 2
-        x: 275
-        y: 700
-        width: 25
-        height: 33
+        x: 256
+        y: 688
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3436,10 +3449,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_127
       rect:
         serializedVersion: 2
-        x: 338
-        y: 700
-        width: 26
-        height: 36
+        x: 320
+        y: 688
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3458,10 +3471,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_128
       rect:
         serializedVersion: 2
-        x: 14
-        y: 635
-        width: 36
-        height: 37
+        x: 0
+        y: 624
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3480,10 +3493,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_129
       rect:
         serializedVersion: 2
-        x: 76
-        y: 635
-        width: 38
-        height: 34
+        x: 64
+        y: 624
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3502,10 +3515,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_130
       rect:
         serializedVersion: 2
-        x: 141
-        y: 635
-        width: 37
-        height: 28
+        x: 128
+        y: 624
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3524,10 +3537,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_131
       rect:
         serializedVersion: 2
-        x: 205
-        y: 635
-        width: 37
-        height: 27
+        x: 192
+        y: 624
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3546,10 +3559,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_132
       rect:
         serializedVersion: 2
-        x: 268
-        y: 635
-        width: 38
-        height: 34
+        x: 256
+        y: 624
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3568,10 +3581,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_133
       rect:
         serializedVersion: 2
-        x: 334
-        y: 635
-        width: 36
-        height: 37
+        x: 320
+        y: 624
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3590,10 +3603,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_134
       rect:
         serializedVersion: 2
-        x: 14
-        y: 570
-        width: 36
-        height: 37
+        x: 0
+        y: 560
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3612,10 +3625,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_135
       rect:
         serializedVersion: 2
-        x: 78
-        y: 570
-        width: 38
-        height: 35
+        x: 64
+        y: 560
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3634,10 +3647,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_136
       rect:
         serializedVersion: 2
-        x: 142
-        y: 570
-        width: 37
-        height: 30
+        x: 128
+        y: 560
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3656,10 +3669,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_137
       rect:
         serializedVersion: 2
-        x: 206
-        y: 570
-        width: 37
-        height: 29
+        x: 192
+        y: 560
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3678,10 +3691,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_138
       rect:
         serializedVersion: 2
-        x: 270
-        y: 570
-        width: 38
-        height: 35
+        x: 256
+        y: 560
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3700,10 +3713,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_139
       rect:
         serializedVersion: 2
-        x: 334
-        y: 570
-        width: 36
-        height: 37
+        x: 320
+        y: 560
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3722,10 +3735,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_140
       rect:
         serializedVersion: 2
-        x: 20
-        y: 507
-        width: 25
-        height: 39
+        x: 0
+        y: 496
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3744,10 +3757,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_141
       rect:
         serializedVersion: 2
-        x: 84
-        y: 507
-        width: 24
-        height: 39
+        x: 64
+        y: 496
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3766,10 +3779,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_142
       rect:
         serializedVersion: 2
-        x: 147
-        y: 507
-        width: 25
-        height: 39
+        x: 128
+        y: 496
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3788,10 +3801,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_143
       rect:
         serializedVersion: 2
-        x: 212
-        y: 507
-        width: 25
-        height: 39
+        x: 192
+        y: 496
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3810,10 +3823,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_144
       rect:
         serializedVersion: 2
-        x: 276
-        y: 507
-        width: 24
-        height: 39
+        x: 256
+        y: 496
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3832,10 +3845,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_145
       rect:
         serializedVersion: 2
-        x: 339
-        y: 507
-        width: 25
-        height: 39
+        x: 320
+        y: 496
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3854,10 +3867,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_146
       rect:
         serializedVersion: 2
-        x: 20
-        y: 438
-        width: 25
-        height: 43
+        x: 0
+        y: 432
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3876,10 +3889,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_147
       rect:
         serializedVersion: 2
-        x: 84
-        y: 438
-        width: 24
-        height: 41
+        x: 64
+        y: 432
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3898,10 +3911,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_148
       rect:
         serializedVersion: 2
-        x: 147
-        y: 438
-        width: 25
-        height: 40
+        x: 128
+        y: 432
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3920,10 +3933,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_149
       rect:
         serializedVersion: 2
-        x: 212
-        y: 438
-        width: 25
-        height: 40
+        x: 192
+        y: 432
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3942,10 +3955,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_150
       rect:
         serializedVersion: 2
-        x: 276
-        y: 438
-        width: 24
-        height: 41
+        x: 256
+        y: 432
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3964,10 +3977,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_151
       rect:
         serializedVersion: 2
-        x: 339
-        y: 438
-        width: 25
-        height: 43
+        x: 320
+        y: 432
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3986,10 +3999,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_152
       rect:
         serializedVersion: 2
-        x: 10
-        y: 382
-        width: 45
-        height: 34
+        x: 0
+        y: 368
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4008,10 +4021,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_153
       rect:
         serializedVersion: 2
-        x: 72
-        y: 382
-        width: 48
-        height: 32
+        x: 64
+        y: 368
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4030,10 +4043,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_154
       rect:
         serializedVersion: 2
-        x: 137
-        y: 382
-        width: 46
-        height: 27
+        x: 128
+        y: 368
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4052,10 +4065,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_155
       rect:
         serializedVersion: 2
-        x: 201
-        y: 382
-        width: 46
-        height: 25
+        x: 192
+        y: 368
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4074,10 +4087,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_156
       rect:
         serializedVersion: 2
-        x: 264
-        y: 382
-        width: 48
-        height: 32
+        x: 256
+        y: 368
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4096,10 +4109,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_157
       rect:
         serializedVersion: 2
-        x: 331
-        y: 382
-        width: 44
-        height: 34
+        x: 320
+        y: 368
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4118,10 +4131,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_158
       rect:
         serializedVersion: 2
-        x: 9
-        y: 318
-        width: 44
-        height: 35
+        x: 0
+        y: 304
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4140,10 +4153,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_159
       rect:
         serializedVersion: 2
-        x: 72
-        y: 318
-        width: 48
-        height: 32
+        x: 64
+        y: 304
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4162,10 +4175,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_160
       rect:
         serializedVersion: 2
-        x: 137
-        y: 318
-        width: 46
-        height: 27
+        x: 128
+        y: 304
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4184,10 +4197,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_161
       rect:
         serializedVersion: 2
-        x: 201
-        y: 318
-        width: 46
-        height: 25
+        x: 192
+        y: 304
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4206,10 +4219,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_162
       rect:
         serializedVersion: 2
-        x: 264
-        y: 318
-        width: 48
-        height: 32
+        x: 256
+        y: 304
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4228,10 +4241,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_163
       rect:
         serializedVersion: 2
-        x: 329
-        y: 318
-        width: 45
-        height: 35
+        x: 320
+        y: 304
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4250,10 +4263,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_164
       rect:
         serializedVersion: 2
-        x: 20
-        y: 260
-        width: 25
-        height: 29
+        x: 0
+        y: 240
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4272,10 +4285,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_165
       rect:
         serializedVersion: 2
-        x: 84
-        y: 256
-        width: 24
-        height: 31
+        x: 64
+        y: 240
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4294,10 +4307,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_166
       rect:
         serializedVersion: 2
-        x: 147
-        y: 253
-        width: 25
-        height: 37
+        x: 128
+        y: 240
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4316,10 +4329,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_167
       rect:
         serializedVersion: 2
-        x: 212
-        y: 250
-        width: 25
-        height: 39
+        x: 192
+        y: 240
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4338,10 +4351,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_168
       rect:
         serializedVersion: 2
-        x: 20
-        y: 183
-        width: 25
-        height: 42
+        x: 0
+        y: 176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4360,10 +4373,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_169
       rect:
         serializedVersion: 2
-        x: 84
-        y: 178
-        width: 24
-        height: 52
+        x: 64
+        y: 176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4382,10 +4395,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_170
       rect:
         serializedVersion: 2
-        x: 147
-        y: 182
-        width: 25
-        height: 43
+        x: 128
+        y: 176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4404,10 +4417,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_171
       rect:
         serializedVersion: 2
-        x: 212
-        y: 185
-        width: 25
-        height: 40
+        x: 192
+        y: 176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4426,10 +4439,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_172
       rect:
         serializedVersion: 2
-        x: 10
-        y: 127
-        width: 47
-        height: 39
+        x: 0
+        y: 112
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4448,10 +4461,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_173
       rect:
         serializedVersion: 2
-        x: 75
-        y: 127
-        width: 47
-        height: 42
+        x: 64
+        y: 112
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4470,10 +4483,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_174
       rect:
         serializedVersion: 2
-        x: 134
-        y: 134
-        width: 55
-        height: 32
+        x: 128
+        y: 112
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4492,10 +4505,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_175
       rect:
         serializedVersion: 2
-        x: 202
-        y: 127
-        width: 46
-        height: 33
+        x: 192
+        y: 112
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4514,10 +4527,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_176
       rect:
         serializedVersion: 2
-        x: 8
-        y: 64
-        width: 45
-        height: 37
+        x: 0
+        y: 48
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4536,10 +4549,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_177
       rect:
         serializedVersion: 2
-        x: 70
-        y: 64
-        width: 47
-        height: 42
+        x: 64
+        y: 48
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4558,10 +4571,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_178
       rect:
         serializedVersion: 2
-        x: 130
-        y: 70
-        width: 56
-        height: 32
+        x: 128
+        y: 48
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4580,10 +4593,10 @@ TextureImporter:
       name: Australian_Shepherd_64x64_FREE_179
       rect:
         serializedVersion: 2
-        x: 200
-        y: 64
-        width: 45
-        height: 33
+        x: 192
+        y: 48
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4612,7 +4625,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Australian_Shepherd_64x64_FREE_0: 2026334582315897720
       Australian_Shepherd_64x64_FREE_1: 3497120587458402752
