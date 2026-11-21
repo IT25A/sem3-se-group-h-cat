@@ -9,10 +9,15 @@ public class AutoDialogueScene3 : MonoBehaviour
     [Tooltip("How long each line stays visible after finishing typing before advancing or closing.")]
     public float pauseBetweenLines = 1.0f; 
 
+    private static bool hasPlayedAutoDialogue = false;
+
     void Start()
     {
+        if (hasPlayedAutoDialogue) return;
+
         if (targetDialogue != null)
         {
+            hasPlayedAutoDialogue = true; 
             StartCoroutine(TriggerAndAutoPlayAllLines());
         }    
     }
@@ -54,5 +59,10 @@ public class AutoDialogueScene3 : MonoBehaviour
         }
 
         targetDialogue.EndDialogue();
+    }
+
+    public static void ResetAutoDialogue()
+    {
+        hasPlayedAutoDialogue = false;
     }
 }

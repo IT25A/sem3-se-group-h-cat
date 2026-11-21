@@ -65,6 +65,7 @@ public class HealingPlantTask : MonoBehaviour
     private void GiveRewardAndNotification()
     {
         rewardGiven = true;
+        reward = 100 - SceneData.savedFood;
 
         if (FoodManager.Instance != null)
         {

@@ -4241,7 +4241,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 945619478}
   itemIconImage: {fileID: 1723159085}
   itemText: {fileID: 2098829826}
-  itemSprite: {fileID: -123087896, guid: 38355e17c41064f488b55e1151ae244a, type: 3}
+  itemSprite: {fileID: -395085810, guid: 1e03e2a9a5526644b8629d1029edc7fd, type: 3}
   requiredAmount: 1
   questType: 6
   tableName: MenuText
