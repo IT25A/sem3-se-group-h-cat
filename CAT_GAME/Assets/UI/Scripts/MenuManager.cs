@@ -53,6 +53,14 @@ public class MenuManager : MonoBehaviour
         if (!SceneData.isGameStarted)
         {
             if (menuMusic != null) menuMusic.Play();
+
+            // Scene music may auto-play (Play On Awake); silence it until Start is pressed
+            GameObject introMusicObj = GameObject.Find("Music");
+            if (introMusicObj != null)
+            {
+                AudioSource introAudio = introMusicObj.GetComponent<AudioSource>();
+                if (introAudio != null && introAudio != menuMusic) introAudio.Stop();
+            }
         }
         else
         {
