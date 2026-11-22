@@ -8610,6 +8610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestDoorScene3
   requiredFood: 10
+  requireDogAtDoctorAndCollar: 1
 --- !u!61 &2068491300
 BoxCollider2D:
   m_ObjectHideFlags: 0
