@@ -113,7 +113,10 @@ public class ShadowFollower : MonoBehaviour, IInteractable
     // Permanently places the follower next to the doctor and stops following
     public void StayAtDoctorPosition()
     {
-        if (hasStayedAtDoctor || !isFollowing) return;
+        // NPCTalk.EndDialogue already sets hasStayedAtDoctor/isFollowing before this listener runs,
+        // so only bail out if the dog was already registered at the doctor (or never joined).
+        if (SceneData.isDogAtDoctor) return;
+        if (!isFollowing && !hasStayedAtDoctor) return;
 
         hasStayedAtDoctor = true;
         SceneData.isDogAtDoctor = true; 
