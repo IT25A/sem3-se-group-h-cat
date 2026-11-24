@@ -24,7 +24,7 @@ Alle Spielskripte sind in **C#** implementiert und befinden sich im Repository u
 
 ## 3. Lokales Öffnen im Unity Editor
 
-1. **Unity Hub** sowie die verwendete Editor-Version (**Unity `6000.6.3f1`**) installieren:  
+1. **Unity Hub** sowie die verwendete Editor-Version (**Unity `6000.6.4f1`**) installieren:  
    https://docs.unity.com/en-us/hub/install-hub-win-mac
 2. Dieses Repository klonen oder als ZIP herunterladen und vollständig entpacken.
 3. Im Unity Hub über **Add → Add project from disk** den Unterordner `CAT_GAME` auswählen und das Projekt öffnen.
